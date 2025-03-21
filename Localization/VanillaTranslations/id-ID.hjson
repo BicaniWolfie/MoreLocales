@@ -1,71 +1,71 @@
 tModLoader: {
-	// PatreonSupport: "Please show your support: "
-	// MenuModBrowser: Mod Browser
-	// MenuDownloadMods: Download Mods
-	// MenuDownloadModsDescription: The in-game Mod Browser to find, download, and update your Mods.
-	// MenuMods: Mods
-	// MenuManageMods: Manage Mods
-	// MenuManageModsDescription: Manage which Mods are active, delete Mods, and configure your Modpacks.
-	// MenuModSources: Mod Sources
-	// MenuDevelopMods: Develop Mods
-	// MenuDevelopModsDescription: Develop and publish Mods for others to use, using your Mod Source code
-	// ModsModPacks: Mod Packs
-	// MenuModPackDescription: Manage Mod Packs, for features like saving your current list of mods & config, and Import & Export Mod Packs. Experimental.
-	// MenuEnableDeveloperMode: Enable Developer Mode
-	/* WelcomeMessagePreview:
+	 PatreonSupport: "Tolong lihatkan support kamu: "
+	 MenuModBrowser: Telusuri Mod
+	 MenuDownloadMods: Unduh Mod
+	 MenuDownloadModsDescription: Brosur mod didalam game untuk mencari, mengunduh, dan memperbarui mod kalian.
+	 MenuMods: Modifikasi
+	 MenuManageMods: Kelola Mod
+	 MenuManageModsDescription: Kelola mod mana yang aktif, hapus mod, dan konfigurasi Kumpulan Mod anda.
+	 MenuModSources: Sumber Mod
+	 MenuDevelopMods: Buat Mod
+	 MenuDevelopModsDescription: Buat dan publikasi Mod untuk digunakan lainnya, menggunakan sumber kode Mod kamu
+	 ModsModPacks: Kumpulan Mod
+	 MenuModPackDescription: Kelola Kumpulan Mod, untuk fitur seperti menyimpan daftar mod & konfigurasi mu saat ini, dan Impor & Ekspor Kumpulan Mod. Eksperimental.
+	 MenuEnableDeveloperMode: Nyalakan Mode Pengembang
+	 WelcomeMessagePreview:
 		'''
-		WARNING: Player Beware!!
-		This is a monthly preview build with breaking changes, and thus mods will be broken.
-		[c/ff1919:DO NOT ask modders to fix their mods for this preview build.]
-		This Preview branch provides opportunity for modders to update their mods on THEIR own schedule.
+		PERINGATAN: Pemain Berhati-hatilah!!
+		Ini adalah versi preview dengan perubahan yang merusak, dan karena itu mod akan rusak.
+		[c/ff1919:JANGAN meminta modder untuk memperbaiki mod untuk versi preview ini.]
+		Versi Preview ini memberikan kesempatan para modder untuk memperbarui mod MEREKA dengan jadwal mereka sendiri.
 
-		Click "More Info" to learn more about the continuous release cycle.
+		Klik "Info Lainnya" untuk mengetahui lebih banyak tentang siklus rilis yang berkelanjutan.
 
-		Join the tModLoader Discord to learn more about the changes from this month and view migration notes.
-		''' */
-	/* FirstLaunchWelcomeMessage:
+		Gabung Discord tModLoader untuk mengetahui lebih banyak tentang perubahan yang dibuat bulan ini dan melihat catatan migrasi.
+		''' 
+	 FirstLaunchWelcomeMessage:
 		'''
-		Welcome to tModLoader.
+		Selamat datang di tModLoader
 
-		You have successfully installed tModLoader. Use the Workshop menu to access tModLoader Mod related functions.
+		Kamu sudah berhasil menginstall tModLoader. Gunakan menu Workshop ununtuk mengakses fungsi terkait Mod tModLoader.
 
-		If you were playing through 1.3 prior to today you can revert back by switching to the 1.3-legacy beta branch in Steam. If you can't find the mods you were planning to play with, they might only exist on 1.3 for now.
-		''' */
-	/* WhatsNewMessage:
+		Jika anda memainkan versi 1.3 sebelumnya, kamu bisa kembali ke versi 1.3-legacy beta di Steam. Jika kamu tidak menemukan mod yang kamu rencanakan untuk dimainkan, mod itu mungkin hanya ada di versi 1.3 untuk sekarang.
+		''' 
+	 WhatsNewMessage:
 		'''
-		The following are basic change notes from the last time you launched Preview. You may find that mods that relate to these changes need to be rebuilt by the author. Visit GitHub to see more details:
+		Berikut adalah perubahan basis dari terakhir kalinya kamu menjalankan versi Preview. kamu mungkin menemukan mod yang terkait dengan perubahan ini yang dibutuhkan pembuatan ulang oleh pembuatnya. Kunjungi GitHub untuk melihat detil lebih banyak:
 
-		''' */
-	/* ShowNewUpdatedModsInfoMessage:
+		''' 
+	 ShowNewUpdatedModsInfoMessage:
 		'''
-		The following mods were added or updated from the workshop since last launch (you can disable this message in the settings):
-
-		''' */
-	/* ShowNewUpdatedModsInfoMessageNewMods:
-		'''
-
-		New Mods:
-		''' */
-	/* ShowNewUpdatedModsInfoMessageUpdatedMods:
+		Berikut adalah mod yang ditambahkan atau diperbarui dari workshop sejak peluncuran terakhir (kamu bisa mematikan pesan ini di pengaturan)
+		
+		''' 
+	 ShowNewUpdatedModsInfoMessageNewMods:
 		'''
 
-		Updated Mods:
-		''' */
-	/* DependenciesNeededForOtherMods:
+		Mod Baru:
+		''' 
+	 ShowNewUpdatedModsInfoMessageUpdatedMods:
 		'''
 
-		Some dependencies are missing:
-		''' */
-	// InstallDependencies: Install Dependencies
-	// ContinueAnyway: Continue Anyway
-	/* ModUpdatedSinceLastLaunchMessage:
+		Mod Yang diperbarui:
+		''' 
+	 DependenciesNeededForOtherMods:
 		'''
-		This mod has been automatically updated
-		since last launch from version {0}
-		''' */
+
+		Beberapa kebutuhan yang hilang:
+		''' 
+	 InstallDependencies: Install Kebutuhan
+	 ContinueAnyway: Tetap Lanjutkan
+	 ModUpdatedSinceLastLaunchMessage:
+		'''
+		Mod ini sudah diperbarui secara otomatis
+		sejak peluncuran terakhir dari versi {0}
+		''' 
 	// ModAddedSinceLastLaunchMessage: This mod has been added since last launch
 	// ViewOnGitHub: View on GitHub
-	// tModLoaderSettings: tModLoader Settings
+	 tModLoaderSettings: Pengaturan tModLoader
 	// ModMenuSwap: Switch Menu Theme
 	// MenuModsEnabled: "{0} {^0:Mod;Mods} Enabled"
 	// MenuModUpdatesAvailable: ({0} {^0:Update;Updates} Available!)
@@ -4191,24 +4191,24 @@ UI: {
 	// Unfavorite: Unfavorite
 	// MoveToCloud: Move to cloud
 	// MoveOffCloud: Move off cloud
-	// Play: Play
-	// Delete: Delete
-	// Softcore: Classic
-	// Mediumcore: Mediumcore
-	// Hardcore: Hardcore
-	// Master: Master
-	// Expert: Expert
-	// Normal: Classic
-	// Creative: Journey
-	// CreativeDescriptionPlayer: Journey characters start with extra equipment. Can only be played on Journey worlds.
-	// WorldSizeFormat: "{0} World"
-	// WorldCreatedFormat: Created: {0}
-	// SelectWorld: Select World
-	// SelectPlayer: Select Player
-	// Back: Back
-	// New: New
-	// EnterMessage: Enter message:
-	// EnterNewName: Enter new name:
+	 Play: Main
+	 Delete: Hapus
+	 Softcore: Mudah
+	 Mediumcore: Sedang
+	 Hardcore: Susah
+	 Master: Mahir
+	 Expert: Ahli
+	 Normal: Klasik
+	 Creative: Journey
+	 CreativeDescriptionPlayer: Karakter Journey mulai dengan peralatan ekstra. Hanya bisa dimainkan di Dunia Journey
+	 WorldSizeFormat: "Dunia {0}"
+	 WorldCreatedFormat: Sudah dibuat: {0}
+	 SelectWorld: Pilih Dunia
+	 SelectPlayer: Pilih Player
+	 Back: Kembali
+	 New: Baru
+	 EnterMessage: Masukan pesan:
+	 EnterNewName: Masukan nama baru:
 	// Achievements: Achievements
 	// Keybindings: Keybindings
 	// Save: Save
@@ -4217,9 +4217,9 @@ UI: {
 	// SpaceButton: Space
 	// EnterButton: Enter
 	// RestoreButton: Restore
-	// WorldSizeSmall: Small
-	// WorldSizeMedium: Medium
-	// WorldSizeLarge: Large
+	 WorldSizeSmall: Kecil
+	 WorldSizeMedium: Sedang
+	 WorldSizeLarge: Besar
 	// WorldSizeUnknown: Unknown
 	// NormalDescriptionFlavor: Your Adventure Begins...
 	// NormalDescription: (The Standard Terraria Experience)
@@ -4268,7 +4268,7 @@ UI: {
 	// ShowBossLifeTextOff: Boss Health Bar Numbers: Off
 	// SpawnPoint: Spawn
 	// SpawnBed: Home
-	// EmoteCategoryGeneral: General
+	 EmoteCategoryGeneral: Umum
 	// EmoteCategoryRPS: Rock, Paper, Scissors!
 	// EmoteCategoryItems: Items
 	// EmoteCategoryBiomesAndEvents: Nature & Weather
@@ -4328,14 +4328,14 @@ UI: {
 	// ToggleCreativeMenu: Toggle Journey Powers
 	// WorldCannotBeLoadedBecauseItHasAnInvalidGameMode: Error: This world has an invalid data!
 	// WorldGenEasterEgg_GeneratingBees: Generating bees
-	// Credits: Credits
+	 Credits: Kredit
 	// WorkshopImportWorld: Import Workshop Worlds
-	// Rename: Rename
-	// Workshop: Workshop
-	// WorkshopHub: Workshop Hub
+	 Rename: Ganti Nama
+	 Workshop: Workshop
+	 WorkshopHub: Pusat Workshop
 	// WorkshopSelectWorldToPublishMenuTitle: Select World To Publish
 	// WorkshopSelectResourcePackToPublishMenuTitle: Select Resource Pack To Publish
-	// Import: Import
+	 Import: Impor
 	// ReportsPage: Reports Page
 	// EnableSuperCart: Enable Minecart Boost
 	// DisableSuperCart: Disable Minecart Boost
@@ -4367,18 +4367,18 @@ CaptureBiomeChoice: {
 }
 
 Workshop: {
-	// HubDescriptionDefault: Choose an option for more information.
-	// HubWorlds: Import Worlds
-	// HubDescriptionImportWorlds: Import Worlds you've subscribed to from the Steam Workshop to your own list of Worlds, so that you can explore them.
-	// HubPublishWorlds: Publish Worlds
-	// HubDescriptionPublishWorlds: Publish your Worlds to the Steam Workshop, so that others can enjoy them.
-	// HubResourcePacks: Use Resource Packs
-	// HubDescriptionUseResourcePacks: Use Resource Packs you've downloaded or subscribed to from the Steam Workshop, so that you can enjoy their art & localizations.
-	// HubPublishResourcePacks: Publish Resource Packs
-	// HubDescriptionPublishResourcePacks: Publish your Resource Packs to the Steam Workshop, so that others can enjoy them.
-	// Publish: Publish
-	// WorldName: Name:
-	// ResourcePackName: Name:
+	 HubDescriptionDefault: Pilih opsi untuk informasi lebih banyak.
+	 HubWorlds: Impor Dunia
+	 HubDescriptionImportWorlds: Impor Dunia yang kalian subscribe dari Workshop Steam ke daftar Dunia kalian, supaya kalian bisa mengeksplor itu.
+	 HubPublishWorlds: Publikasi Dunia
+	 HubDescriptionPublishWorlds: Publikasi Dunia kamu ke Workshop Steam, supaya lainnya bisa menikmati itu.
+	 HubResourcePacks: Gunakan Resource Packs
+	 HubDescriptionUseResourcePacks: Gunakan Resource Packs yang kalian unduh atau subscribe dari Workshop Steam, supaya kalian bisa menikmati karya & lokalisasi mereka.
+	 HubPublishResourcePacks: Publikasi Resource Packs
+	 HubDescriptionPublishResourcePacks: Publikasi Resource Packs kamu ke Workshop Steam, supaya lainnya bisa menikmati itu.
+	 Publish: Publikasi
+	 WorldName: Nama:
+	 ResourcePackName: Nama:
 	// WorldPublishDescription: Publishing a world will upload it to the Steam Workshop as private - visibly only to you, by default. You can adjust its preview image, title, and description as you wish from its steam Entry page, and then set it public when you're ready. By submitting this world, you agree to the workshop terms of service.
 	// ResourcePackPublishDescription: Publishing a resource pack will upload it to the Steam Workshop as private - visibly only to you, by default. You can adjust its preview image, title, and description as you wish from its steam Entry page, and then set it public when you're ready. By submitting this resource pack, you agree to the workshop terms of service.
 	// SettingsPublicityPublic: Public
@@ -4435,7 +4435,7 @@ Workshop: {
 		The image you're trying to use has to be 512x512 pixels or less in size!
 		Current Size: {Width}x{Height}.
 		''' */
-	// ReportLogsButton: Logs
+	 ReportLogsButton: Log
 	// ReportLogsInitialMessage: There is nothing to show yet.
 }
 
@@ -4462,11 +4462,11 @@ WorkshopTags: {
 	// CorruptionWorldsDescription: Worlds infected by the evil Corruption.
 	// CrimsonWorlds: Crimson
 	// CrimsonWorldsDescription: Worlds afflicted by the all-devouring Crimson.
-	// SmallWorlds: Small
+	 SmallWorlds: Kecil
 	// SmallWorldsDescription: Worlds that are small, compact, and comfortable!
-	// MediumWorlds: Medium
+	 MediumWorlds: Sedang
 	// MediumWorldsDescription: Worlds sized not too small or large, just right!
-	// LargeWorlds: Large
+	 LargeWorlds: Besar
 	// LargeWorldsDescription: Worlds large enough for a full party!
 	// OtherWorlds: Other
 	// OtherWorldsDescription: Worlds that serve another purpose, not to be confused with Otherworlds!
@@ -5603,7 +5603,7 @@ RandomWorldName_Adjective: {
 	// Keen: Keen
 	// Kind: Kind
 	// Kooky: Kooky
-	// Large: Large
+	 Large: Besar
 	// Lasting: Lasting
 	// Lavish: Lavish
 	// Lazy: Lazy
@@ -11773,7 +11773,7 @@ Prefix: {
 	// Rapid: Rapid
 	// Hasty: Hasty
 	// Intimidating: Intimidating
-	// Large: Large
+	 Large: Besar
 	// Deadly: Deadly
 	// Staunch: Staunch
 	// Awful: Awful
@@ -22476,21 +22476,21 @@ LegacyMenu: {
 	// 0: Start a new instance of Terraria to join!
 	// 1: "Running on port "
 	// 2: Disconnect
-	// 3: Server Requires Password:
-	// 4: Accept
-	// 5: Back
-	// 6: Cancel
-	// 7: Enter Server Password:
-	// 8: Starting server...
-	// 9: Load failed!
-	// 10: Load Backup
-	// 11: No backup found
-	// 12: Single Player
-	// 13: Multiplayer
-	// 14: Settings
-	// 15: Exit
-	// 16: Create Character
-	// 17: Delete
+	 3: Server Ini Memerlukan Password:
+	 4: Terima
+	 5: Kembali
+	 6: Batal
+	 7: Masukan Password server:
+	 8: Memulai Server...
+	 9: Gagal memuat!
+	 10: Muat Cadangan
+	 11: Tidak ada cadangan ditemukan
+	 12: Main Sendiri	
+	 13: Main Bersama
+	 14: Pengaturan
+	 15: Keluar
+	 16: Buat Karakter
+	 17: Hapus
 	// 18: Hair
 	// 19: Eyes
 	// 20: Skin
@@ -22532,14 +22532,14 @@ LegacyMenu: {
 	// 56: Lighting: White
 	// 57: Lighting: Retro
 	// 58: Lighting: Trippy
-	// 59: Quality: Auto
-	// 60: Quality: High
-	// 61: Quality: Medium
-	// 62: Quality: Low
-	// 63: Video
+	 59: Quality: Otomatis
+	 60: Quality: Tinggi
+	 61: Quality: Sedang
+	 62: Quality: Rendah
+	 63: Video
 	// 64: Cursor Color
 	// 65: Volume
-	// 66: Controls
+	 66: Kontrol
 	// 67: Autosave On
 	// 68: Autosave Off
 	// 69: Autopause On
@@ -22565,9 +22565,9 @@ LegacyMenu: {
 	// 89: Enter Server IP Address:
 	// 90: Enter Server Port:
 	// 91: Choose world size:
-	// 92: Small
-	// 93: Medium
-	// 94: Large
+	 92: Kecil
+	 93: Sedang
+	 94: Besar
 	// 95: Red:
 	// 96: Green:
 	// 97: Blue:
@@ -22576,7 +22576,7 @@ LegacyMenu: {
 	// 100: Background On
 	// 101: Background Off
 	// 102: Select language
-	// 103: Language
+	 103: Bahasa
 	// 104: Yes
 	// 105: No
 	// 106: "Toggle Map Style           "
@@ -22587,7 +22587,7 @@ LegacyMenu: {
 	// 111: "Increase Transparency      "
 	// 112: Map Enabled
 	// 113: Map Disabled
-	// 114: General
+	 114: Umum
 	// 115: Map Controls
 	// 116: Multicore Lighting:
 	// 117: Off
@@ -22604,7 +22604,7 @@ LegacyMenu: {
 	// 128: Placement Preview On
 	// 129: Placement Preview Off
 	// 130: "Mount             "
-	// 131: Achievements
+	 131: Pencapaian
 	// 132: Blood and Gore On
 	// 133: Blood and Gore Off
 	// 134: Apply
@@ -22683,16 +22683,16 @@ LegacyMenu: {
 	// 207: Invert Right Thumbstick Horizontally
 	// 208: Invert Right Thumbstick Vertical
 	// 209: Utilize
-	// 210: Interface
+	 210: Tampilan
 	// 211: Passwords: Visible
 	// 212: Passwords: Hidden
 	// 213: Smart Cursor Priority: Pickaxe -> Axe
 	// 214: Smart Cursor Priority: Axe -> Pickaxe
 	// 215: Smart Block Placement: To Cursor
 	// 216: Smart Block Placement: Disabled
-	// 217: Border Color
-	// 218: Cursor
-	// 219: Controls
+	 217: Warna Border
+	 218: Kursor
+	 219: Kontrol
 	// 220: Activate Set Bonuses: Up
 	// 221: Activate Set Bonuses: Down
 	// 222: Keybindings
