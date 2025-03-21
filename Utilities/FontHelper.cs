@@ -5,6 +5,7 @@ using Terraria;
 using Terraria.GameContent;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace MoreLocales.Utilities
 {
@@ -50,6 +51,8 @@ namespace MoreLocales.Utilities
         private static readonly GameFonts defaultFonts;
         private static GameFonts japaneseFonts;
         private static GameFonts koreanFonts;
+        private static GameFonts thaiFonts;
+        private static GameFonts vietnameseFonts;
         private static bool forcedFont = false;
         public static bool usingLocalizedFont = false;
         public static LocalizedFont currentLocalizedFont = LocalizedFont.None;
@@ -70,6 +73,8 @@ namespace MoreLocales.Utilities
 
             japaneseFonts = GameFonts.Create("JP");
             koreanFonts = GameFonts.Create("KR");
+            thaiFonts = GameFonts.Create("TH");
+            vietnameseFonts = GameFonts.Create("VN");
         }
         public static void ResetFont(bool bypassForced = false)
         {
@@ -101,6 +106,8 @@ namespace MoreLocales.Utilities
             {
                 LocalizedFont.Japanese => japaneseFonts,
                 LocalizedFont.Korean => koreanFonts,
+                LocalizedFont.Thai => thaiFonts,
+                LocalizedFont.Vietnamese => vietnameseFonts,
                 _ => defaultFonts
             };
 
@@ -127,7 +134,7 @@ namespace MoreLocales.Utilities
             LocalizedFont font = culture.GetLocalizedFont();
             if (font == LocalizedFont.None)
                 return null;
-            return font < LocalizedFont.Thai;
+            return true;
         }
         public static bool IsUsingAppropriateFont(GameCulture culture)
         {
@@ -152,5 +159,6 @@ namespace MoreLocales.Utilities
                 _ => LocalizedFont.None
             };
         }
+        public static bool IsThaiDiacritic(char c) => c == '\u0E31' || (c >= '\u0E34' && c <= '\u0E3A') || (c >= '\u0E47' && c <= '\u0E4E');
     }
 }

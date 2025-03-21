@@ -11,6 +11,8 @@ using MonoMod.Cil;
 using System;
 using MoreLocales.Common;
 using System.Reflection;
+using MoreLocales.Utilities;
+using Terraria.ID;
 
 namespace MoreLocales.Core
 {
@@ -22,7 +24,9 @@ namespace MoreLocales.Core
         public override void Load()
         {
             IL_Main.DrawMenu += GoToBetterLangMenuInstead;
+            //On_Main.DrawInterface += On_Main_DrawInterface;
         }
+
         private static void GoToBetterLangMenuInstead(ILContext il)
         {
             Mod mod = ModContent.GetInstance<MoreLocales>();
@@ -61,14 +65,14 @@ namespace MoreLocales.Core
                 return;
 
             Main.MenuUI.SetState(betterLangMenu);
-            Main.menuMode = 888;
+            Main.menuMode = MenuID.FancyUI;
         }
         #region DEBUGGING
         private static void On_Main_DrawInterface(On_Main.orig_DrawInterface orig, Main self, GameTime gameTime)
         {
             orig(self, gameTime);
 
-            string desiredFont = "MoreLocales/Assets/CritText-KR";
+            string desiredFont = "MoreLocales/Assets/Fonts/MouseText-TH";
             if (!ModContent.HasAsset(desiredFont))
             {
                 Main.NewText("Asset not found");
@@ -82,7 +86,7 @@ namespace MoreLocales.Core
 
             Vector2 padding = new(128f);
             float yBetween = 32f;
-            float xBetween = 150f;
+            float xBetween = 559f;
 
             SpriteBatch sb = Main.spriteBatch;
             DynamicSpriteFont testVanilla = FontAssets.CombatText[1].Value;
@@ -94,14 +98,14 @@ namespace MoreLocales.Core
                     0 => "abc01234",
                     1 => "áêç",
                     2 => "бгд",
-                    3 => "한국어 테스트 문장입니다",
+                    3 => "เกี๊ยว",
                     _ => ""
                 };
 
                 for (int j = 0; j < 2; j++)
                 {
                     DynamicSpriteFont font = j == 0 ? testVanilla : testFont.Value;
-                    sb.DrawString(font, testString, padding + new Vector2(j == 0 ? 0 : true ? 0 : xBetween, i * yBetween), Color.White);
+                    sb.DrawString(font, testString, padding + new Vector2(j == 0 ? 0 : false ? 0 : xBetween, i * yBetween), Color.White);
                 }
             }
 
