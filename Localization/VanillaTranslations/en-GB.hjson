@@ -3014,12 +3014,12 @@ AnglerQuestText: {
 
 		(Caught in Corruption)
 		''' */
-	/* Quest_Mudfish:
+	Quest_Mudfish:
 		'''
-		Watch your step when wading through jungle waters! Why? No, not because I care about you being eaten by piranhas. I care because you'll step on one of my favorite kinds of fish, the Mud Fish! I also care a lot that you're going to grab me one as a pet!
+		Watch your step when wading through jungle waters! Why? No, not because I care about you being eaten by piranhas. I care because you'll step on one of my favourite kinds of fish, the Mud Fish! I also care a lot that you're going to grab me one as a pet!
 
 		(Caught in Jungle)
-		''' */
+		'''
 	/* Quest_TropicalBarracuda:
 		'''
 		Piranhas and sharks are ugly! Soooo ugly! Did you know there's a fish that looks very pretty and still can eat your face off? I would pay 2 platinum to see that happen, by the way... To the point, though, you catchy for me. Just make sure I have it before you lose your face!
@@ -3634,7 +3634,7 @@ TownNPCMood_Angler: {
 	// DislikeCrowded: I don't like all these people scaring my fish, so make them go away!
 	// HateCrowded: I hate all these strangers - they scared all my fish half to death!
 	// LoveSpace: Yes! I get to be alone with all my fish!
-	// LikeBiome: Why is {BiomeName} my favorite place to go? It has tons of cool fish, duh!
+	LikeBiome: Why is {BiomeName} my favourite place to go? It has tons of cool fish, duh!
 	// LoveBiome: I love {BiomeName}.
 	// DislikeBiome: Did you hit your head? Duh, {BiomeName} doesn't have fish!
 	// HateBiome: Hey stupid, the fish here in {BiomeName} are all trying to kill me!
@@ -3760,7 +3760,7 @@ TownNPCMood_WitchDoctor: {
 	// DislikeCrowded: The close presence of others disrupts my juju and comfort.
 	// HateCrowded: Too many of your kind are gathering too near, growing much malice in my soul.
 	// LoveSpace: Strong energy flows through unimpeded by neighboring presence, very pleasant.
-	// LikeBiome: I cannot fathom existing elsewhere, {BiomeName} is the center of my voodoo spirits.
+	LikeBiome: I cannot fathom existing elsewhere, {BiomeName} is the centre of my voodoo spirits.
 	// LoveBiome: I love {BiomeName}.
 	// DislikeBiome: The magicks of {BiomeName} are of oppression, not true purity, my heart and soul are enraged.
 	// HateBiome: I sense a grim evil pervading the land and all living things in {BiomeName}.
@@ -3840,7 +3840,7 @@ TownNPCMood_Pirate: {
 	// LoveNPC: Ahoy, me takes {NPCName} under me wing, landlubber. Me love raisin' sea pups!
 	// DislikeNPC: Ye know me don't like that {NPCName} tries to cut me beard, I've slit scurvy throats fer less!
 	// HateNPC: Me want to make {NPCName} walk ye plank, sea dog! Hate the coddlin' and the dastardly smell!
-	// LikeNPC_Princess: Yarr, {NPCName}'d fetch a hefty reward on the seas... jus' kidding, she's me favorite lass.
+	LikeNPC_Princess: Yarr, {NPCName}'d fetch a hefty reward on the seas... jus' kidding, she's me favourite lass.
 }
 
 TownNPCMood_Wizard: {
@@ -3882,7 +3882,7 @@ TownNPCMood_Steampunker: {
 TownNPCMood_Cyborg: {
 	// Content: All neural functions appear to be operating smoothly.
 	// NoHome: Error 404: Living arrangements not found.
-	// FarFromHome: I have wandered beyond the signal range of my datacenter.
+	FarFromHome: I have wandered beyond the signal range of my data centre.
 	// DislikeCrowded: Too many other lifeforms. I am experiencing negative emotional neural patterns.
 	// HateCrowded: Lifeform limit exceeded. Neural functions overloaded. Translation: I hate this.
 	// LoveSpace: Zero close proximity life signs detected. This is fortunate.
@@ -3977,7 +3977,7 @@ TownNPCMood_BestiaryGirlTransformed: {
 	// HateCrowded: Snarrrrrll... CANNOT. STAND. CROWDING!
 	// LoveSpace: Rrrrr... open space. HAPPY.
 	// LikeBiome: In {BiomeName}... Good RUN! PLAY! HUNT! Yee!
-	// LoveBiome: FAVORITE LAND... {BiomeName}. DELIGHT.
+	LoveBiome: FAVOURITE LAND... {BiomeName}. DELIGHT.
 	// DislikeBiome: Mrrrr... {BiomeName}. NO SMELL GOOD.
 	// HateBiome: Gughhh, {BiomeName}... I LOATHE. BAD SCENERY.
 	// LikeNPC: "{NPCName}. Rrr... GOOD. FEEL."
@@ -4014,7 +4014,7 @@ TownNPCMood_Princess: {
 	// LoveNPC_Mechanic: "{NPCName} can fix up just about anything, I admire her!"
 	// LoveNPC_SantaClaus: "{NPCName} is so jolly, I just want to give him a gift!"
 	// LoveNPC_Truffle: "{NPCName} is a really fun guy!"
-	// LoveNPC_Steampunker: "{NPCName} is my favorite tea time partner!"
+	LoveNPC_Steampunker: "{NPCName} is my favourite tea time partner!"
 	LoveNPC_DyeTrader: "{NPCName} always helps me choose the best colour dresses!"
 	// LoveNPC_PartyGirl: "{NPCName} is always the life of the party!"
 	// LoveNPC_Cyborg: "{NPCName} is so cool, he seems to know everything!"
@@ -4187,8 +4187,8 @@ CLI: {
 UI: {
 	// Effects: Effects
 	// LoadingCode: Loading:
-	// Favorite: Favorite
-	// Unfavorite: Unfavorite
+	Favorite: Favourite
+	Unfavorite: Unfavourite
 	// MoveToCloud: Move to cloud
 	// MoveOffCloud: Move off cloud
 	// Play: Play
@@ -4306,7 +4306,7 @@ UI: {
 	// SmartDoorsDisabled: Smart Doors: Disabled
 	// SmartDoorsEnabled: Smart Doors: Enabled
 	// SmartDoorsGamepad: Smart Doors: Gamepad Only
-	// CannotDeleteFavorited: Cannot Delete (Favorited)
+	CannotDeleteFavorited: Cannot Delete (Favourited)
 	// NPCCheckHappiness: " Happiness"
 	// QuickUseItem: Quick Use
 	// TilesSwayInWindOn: Windy Environment: Enabled
@@ -4559,7 +4559,7 @@ GameUI: {
 	// Speed: "{0} mph"
 	// CompassEast: "{0}' East"
 	// CompassWest: "{0}' West"
-	// CompassCenter: Center
+	CompassCenter: Centre
 	// LayerUnderworld: Underworld
 	// LayerCaverns: Caverns
 	// LayerUnderground: Underground
@@ -5533,7 +5533,7 @@ RandomWorldName_Adjective: {
 	// Graceful: Graceful
 	// Grand: Grand
 	// Grassy: Grassy
-	// Gray: Gray
+	Gray: Grey
 	// Greasy: Greasy
 	// Great: Great
 	// Greedy: Greedy
@@ -5819,7 +5819,7 @@ RandomWorldName_Adjective: {
 	// Topaz: Topaz
 	// Tough: Tough
 	// Tranquil: Tranquil
-	// Trashy: Trashy
+	Trashy: Rubbish
 	// Tropical: Tropical
 	// Troubled: Troubled
 	// Trusting: Trusting
@@ -6069,7 +6069,7 @@ RandomWorldName_Location: {
 	// Canvas: Canvas
 	// Canyon: Canyon
 	// Cape: Cape
-	// Center: Center
+	Center: Centre
 	// Chaparral: Chaparral
 	// Chasm: Chasm
 	// Citadel: Citadel
@@ -7238,7 +7238,7 @@ RandomWorldName_Noun: {
 	// Tramps: Tramps
 	// Tranquility: Tranquility
 	// Traps: Traps
-	// Trash: Trash
+	Trash: Rubbish
 	// Treasure: Treasure
 	// Trees: Trees
 	// Trends: Trends
@@ -7731,15 +7731,15 @@ LoadingTips_Default: {
 }
 
 LoadingTips_GamePad: {
-	// 0: You can assign your favorite items to the DPad for rapid use by enabling DPad Hotbar in Gamepad Settings!
+	0: You can assign your favourite items to the DPad for rapid use by enabling DPad Hotbar in Gamepad Settings!
 	// 1: You can continuously use some items by holding down the {InputTrigger_UseOrAttack} button.
 	// 2: Press {InputTrigger_SmartCursor} to switch between Cursor Modes.
-	// 3: If your Inventory is full, you can press {InputTriggerUI_Trash} to send items to the Trash.
+	3: If your Inventory is full, you can press {InputTriggerUI_Trash} to send items to the Bin.
 	// 4: When speaking to a vendor, you can sell items in your Inventory by pressing {InputTriggerUI_SellItem}.
 	// 5: You can remove Torches with {InputTrigger_InteractWithTile} or with a pickaxe.
 	6: In your Inventory, you can press {InputTrigger_QuickEquip} to equip items such as armour or accessories directly to a usable slot.
 	// 7: Hold {InputTrigger_SmartSelect} to use Auto Select, a versatile feature that adapts to your environment. It will allow you to automatically hold your Torches in dark caves, Glowsticks when underwater, or even select the right tool for breaking something.
-	// 8: Press {InputTriggerUI_FavoriteItem} to Favorite an item. Favorited items can no longer be sold, thrown away, or dropped. No more accidentally losing your favorite items!
+	8: Press {InputTriggerUI_FavoriteItem} to Favourite an item. Favourited items can no longer be sold, thrown away, or dropped. No more accidentally losing your favourite items!
 	// 9: While navigating your Inventory, press {InputTriggerUI_BuildFromInventory} while highlighting a tool or block to build directly from your Inventory.
 	// 10: Hold {InputTrigger_RadialQuickbar} and {InputTrigger_RadialHotbar} to bring up the Radial Quickbar and Radial Hotbar menus. These will allow you to quickly access potions, mounts, and the items in your hotbar.
 	// 11: There are multiple Gamepad control layouts available in the menu. Choose from Redigit's Pick, Yoraiz0r's Pick, Xbox, Playstation, or even make your own Custom settings!
@@ -7751,12 +7751,12 @@ LoadingTips_GamePad: {
 LoadingTips_Keyboard: {
 	// 0: You can continuously use some items by holding down the {InputTrigger_UseOrAttack} button.
 	// 1: Press {InputTrigger_SmartCursor} to switch between Cursor Modes.
-	// 2: If your Inventory is full, you can press {InputTriggerUI_Trash} and {InputTrigger_UseOrAttack} to send items to the Trash.
+	2: If your Inventory is full, you can press {InputTriggerUI_Trash} and {InputTrigger_UseOrAttack} to send items to the Bin.
 	// 3: When speaking to a vendor, you can sell items in your Inventory by pressing {InputTriggerUI_Trash} and {InputTrigger_UseOrAttack}.
 	// 4: You can remove Torches with {InputTrigger_InteractWithTile} or with a pickaxe.
 	5: In your Inventory, you can press {InputTrigger_InteractWithTile} to equip items such as armour or accessories directly to a usable slot.
 	// 6: Hold {InputTrigger_SmartSelect} to use Auto Select, a versatile feature that adapts to your environment. It will allow you to automatically hold your Torches in dark caves, Glowsticks when underwater, or even select the right tool for breaking something.
-	// 7: Press {InputTriggerUI_FavoriteItem} and {InputTrigger_UseOrAttack} to Favorite an item. Favorited items can no longer be sold, thrown away, or dropped. No more accidentally losing your favorite items!
+	7: Press {InputTriggerUI_FavoriteItem} and {InputTrigger_UseOrAttack} to Favourite an item. Favourited items can no longer be sold, thrown away, or dropped. No more accidentally losing your favourite items!
 	// 8: You can assign or remove NPCs from houses! From the housing interface, {InputTrigger_UseOrAttack} to assign them to a home, and {InputTrigger_InteractWithTile} their banner to kick them out!
 }
 
@@ -10283,7 +10283,7 @@ NPCName: {
 	// RayGunner: Ray Gunner
 	// MartianOfficer: Martian Officer
 	// ForceBubble: Bubble Shield
-	// GrayGrunt: Gray Grunt
+	GrayGrunt: Grey Grunt
 	// MartianEngineer: Martian Engineer
 	// MartianTurret: Tesla Turret
 	// MartianDrone: Martian Drone
@@ -10647,7 +10647,7 @@ NPCName: {
 	// BlueMacaw: Blue Macaw
 	// Toucan: Toucan
 	// YellowCockatiel: Yellow Cockatiel
-	// GrayCockatiel: Gray Cockatiel
+	GrayCockatiel: Grey Cockatiel
 	// ShimmerSlime: Shimmer Slime
 	// Shimmerfly: Faeling
 	// TownSlimeBlue: Nerdy Slime
@@ -10943,7 +10943,7 @@ Bestiary_FlavorText: {
 	// npc_MeteorHead: When meteorites strike the surface, their fragments lay scattered for the taking. Some pieces are alive, and will attack.
 	// npc_FireImp: A lesser demon imbued with hell magic. Capable of teleporting and hurling phantom fireballs towards their foes.
 	// npc_GoblinPeon: Common footsoldiers of the Goblin Army, these foul creatures are good for little more than cannon fodder... and breaking down doors.
-	// npc_GoblinThief: Quick strike units of the Goblin Army, these pesky foes specialize in nimble movement and close-quarters combat.
+	npc_GoblinThief: Quick strike units of the Goblin Army, these pesky foes specialise in nimble movement and close-quarters combat.
 	npc_GoblinWarrior: The backbone of the Goblin Army infantry, these heavily-armoured soldiers can take tremendous damage as they march undeterred.
 	// npc_GoblinSorcerer: As primitive as they are, some goblins have the potential for manipulating magicked shadow energy through a form of hexing.
 	// npc_AngryBones: "{$CommonBestiaryFlavor.AngryBones}"
@@ -11169,7 +11169,7 @@ Bestiary_FlavorText: {
 	// npc_AngryBonesBigHelmet: "{$CommonBestiaryFlavor.AngryBones}"
 	// npc_BirdBlue: This little blue bird came looking for worms.
 	// npc_BirdRed: A rare, red-crested friend of the forest.
-	// npc_Squirrel: "Fast moving and erratic woodland creatures with grayish-brown fur. Got nuts? "
+	npc_Squirrel: "Fast moving and erratic woodland creatures with greyish-brown fur. Got nuts? "
 	// npc_Mouse: Mice squeak around harmlessly, looking for small insects in damp underground locations.
 	// npc_Raven: Nevermore. Nevermore. Nevermore. Nevermore. Nevermore. Nevermore. Nevermore. Nevermore.
 	// npc_SlimeMasked: Is it a slime in a bunny costume? Or is it a bunny in a slime costume? Halloween can be very confusing sometimes.
@@ -11966,7 +11966,7 @@ ItemName: {
 	// DeepPinkPaint: Deep Pink Paint
 	// BlackPaint: Black Paint
 	// WhitePaint: White Paint
-	// GrayPaint: Gray Paint
+	GrayPaint: Grey Paint
 	// IronOre: Iron Ore
 	// LesserManaPotion: Lesser Mana Potion
 	// PaintScraper: Paint Scraper
@@ -12178,7 +12178,7 @@ ItemName: {
 	// DiamondRobe: Diamond Robe
 	// WhiteTuxedoShirt: White Tuxedo Shirt
 	WhiteTuxedoPants: White Tuxedo Trousers
-	// GrayBrick: Gray Brick
+	GrayBrick: Grey Brick
 	// PanicNecklace: Panic Necklace
 	// LifeFruit: Life Fruit
 	// LihzahrdAltar: Lihzahrd Altar
@@ -12190,7 +12190,7 @@ ItemName: {
 	// WaterChest: Water Chest
 	// Binoculars: Binoculars
 	// GoldOre: Gold Ore
-	// GrayBrickWall: Gray Brick Wall
+	GrayBrickWall: Grey Brick Wall
 	// RifleScope: Rifle Scope
 	// DestroyerEmblem: Destroyer Emblem
 	// HighVelocityBullet: High Velocity Bullet
@@ -12879,7 +12879,7 @@ ItemName: {
 	// FruitcakeChakram: Fruitcake Chakram
 	// SugarCookie: Sugar Cookie
 	// ObsidianBrick: Obsidian Brick
-	// GingerbreadCookie: Gingerbread Cookie
+	GingerbreadCookie: Gingerbread Man
 	// HandWarmer: Hand Warmer
 	// Coal: Coal
 	// Toolbox: Toolbox
@@ -12977,7 +12977,7 @@ ItemName: {
 	// LightningBuginaBottle: Lightning Bug in a Bottle
 	// Snail: Snail
 	// GlowingSnail: Glowing Snail
-	// FancyGreyWallpaper: Fancy Gray Wallpaper
+	FancyGreyWallpaper: Fancy Grey Wallpaper
 	// IceFloeWallpaper: Ice Floe Wallpaper
 	// PurplePhaseblade: Purple Phaseblade
 	// MusicWallpaper: Music Wallpaper
@@ -13451,7 +13451,7 @@ ItemName: {
 	// MartianDroneBanner: Martian Drone Banner
 	// MartianEngineerBanner: Martian Engineer Banner
 	// MartianGigazapperBanner: Martian Gigazapper Banner
-	// MartianGreyGruntBanner: Martian Gray Grunt Banner
+	MartianGreyGruntBanner: Martian Grey Grunt Banner
 	// FeatherfallPotion: Featherfall Potion
 	// MartianOfficerBanner: Martian Officer Banner
 	// MartianRaygunnerBanner: Martian Ray Gunner Banner
@@ -13814,7 +13814,7 @@ ItemName: {
 	// HermesBoots: Hermes Boots
 	// Boulder: Boulder
 	// GreenPressurePlate: Green Pressure Plate
-	// GrayPressurePlate: Gray Pressure Plate
+	GrayPressurePlate: Grey Pressure Plate
 	// BrownPressurePlate: Brown Pressure Plate
 	// MechanicalEye: Mechanical Eye
 	// CursedArrow: Cursed Arrow
@@ -13894,11 +13894,11 @@ ItemName: {
 	// RedStucco: Red Stucco
 	// YellowStucco: Yellow Stucco
 	// GreenStucco: Green Stucco
-	// GrayStucco: Gray Stucco
+	GrayStucco: Grey Stucco
 	// RedStuccoWall: Red Stucco Wall
 	// YellowStuccoWall: Yellow Stucco Wall
 	// GreenStuccoWall: Green Stucco Wall
-	// GrayStuccoWall: Gray Stucco Wall
+	GrayStuccoWall: Grey Stucco Wall
 	// Ebonwood: Ebonwood
 	// GrassSeeds: Grass Seeds
 	// RichMahogany: Rich Mahogany
@@ -15224,7 +15224,7 @@ ItemName: {
 	// PartyBundleOfBalloonTile: Silly Tied Bundle of Balloons
 	// PartyGirlGrenade: Happy Grenade
 	// PartyHat: Party Hat
-	// PartyMonolith: Party Center
+	PartyMonolith: Party Centre
 	// PartyPresent: Party Present
 	// PDA: PDA
 	// PeaceCandle: Peace Candle
@@ -16607,7 +16607,7 @@ ItemName: {
 	// MushroomVest: Mushroom Vest
 	MushroomPants: Mushroom Trousers
 	// HunterCloak: Hunter Cloak
-	// ZapinatorGray: Gray Zapinator
+	ZapinatorGray: Grey Zapinator
 	// ZapinatorOrange: Orange Zapinator
 	// TreeGlobe: Tree Globe
 	// WorldGlobe: World Globe
@@ -17073,7 +17073,7 @@ ItemName: {
 	// Thunderbolt: Thunderbolt
 	// TheWerewolf: The Werewolf
 	// BlessingfromTheHeavens: Blessing from the Heavens
-	// LoveisintheTrashSlot: Love is in the Trash Slot
+	LoveisintheTrashSlot: Love is in the Bin Slot
 	// Crustography: Crustography
 	// Fangs: Fangs
 	// HailtotheKing: Hail to the King
@@ -17150,8 +17150,8 @@ ItemName: {
 	// ToucanCage: Toucan Cage
 	// YellowCockatiel: Yellow Cockatiel
 	// YellowCockatielCage: Yellow Cockatiel Cage
-	// GrayCockatiel: Gray Cockatiel
-	// GrayCockatielCage: Gray Cockatiel Cage
+	GrayCockatiel: Grey Cockatiel
+	GrayCockatielCage: Grey Cockatiel Cage
 	// MacawStatue: Macaw Statue
 	// ToucanStatue: Toucan Statue
 	// CockatielStatue: Cockatiel Statue
@@ -22331,7 +22331,7 @@ LegacyDialog: {
 	// 252: I know the difference between turquoise and blue-green. But I won't tell you.
 	// 253: I'm all out of titanium white, so don't even ask.
 	// 254: Try swirly pink and purple, it works, I swear!
-	// 255: No, no, no... There's TONS of different grays! Don't get me started...
+	255: No, no, no... There's TONS of different greys! Don't get me started...
 	// 256: I hope it doesn't rain again until this paint dries. That would be a disaster!
 	257: I bring you the richest colours in exchange for your riches!
 	// 258: My dear, what you're wearing is much too drab. You absolutely must take a lesson in dyeing your tired attire!
@@ -22368,7 +22368,7 @@ LegacyDialog: {
 	// 289: My hands are sticky from all that... wax.
 	// 290: Tea? Coffee? Or is it just orange juice again?
 	// 291: Doll, we seriously need to fix those split ends.
-	// 292: Gurrllll! You are my favorite gossip ever.
+	292: Gurrllll! You are my favourite gossip ever.
 	// 293: Which aftershave can I interest you in today, sir?
 	// 294: Sit down for a second and I'll have you steppin' razor.
 	// 295: Either you have style, or you get styled.
@@ -22696,8 +22696,8 @@ LegacyMenu: {
 	// 220: Activate Set Bonuses: Up
 	// 221: Activate Set Bonuses: Down
 	// 222: Keybindings
-	// 223: Quick Trash: Left Shift
-	// 224: Quick Trash: Left Control
+	223: Quick Bin: Left Shift
+	224: Quick Bin: Left Control
 	// 225: Quick Wall Replace: Disabled
 	// 226: Quick Wall Replace: Enabled
 	// 227: Hotbar Scroll Time To Radial: On
@@ -22726,7 +22726,7 @@ LegacyMenu: {
 	// 250: Miner's Wobble: Enabled
 	// 251: Miner's Wobble: Disabled
 	// 252: Interface Movement Delay
-	// 253: Quick Trash: Disabled
+	253: Quick Bin: Disabled
 }
 
 LegacyTooltip: {
@@ -22786,8 +22786,8 @@ LegacyTooltip: {
 	// 53: " summon damage"
 	// 54: " range"
 	// 55: " damage"
-	// 56: Marked as favorite
-	// 57: Quick trash, stacking, and selling will be blocked
+	56: Marked as favourite
+	57: Quick bin, stacking, and selling will be blocked
 	// 58: " throwing damage"
 	// 59: It has been cursed by a powerful Jungle creature
 	// 60: Cannot be equipped or removed while shopping
@@ -22895,7 +22895,7 @@ LegacyMisc: {
 	// 71: Quick craft
 	// 72: Craft
 	// 73: Select
-	// 74: Trash
+	74: Bin
 	// 75: Sell
 	// 76: Transfer
 	// 77: Show visuals
@@ -22904,7 +22904,7 @@ LegacyMisc: {
 	// 80: Talk
 	// 81: Read
 	// 82: Back
-	// 83: Favorite
+	83: Favourite
 	// 84: You can't change teams inside your team's blocks!
 	// 85: Jungle Bug
 	// 86: Duck
@@ -22936,7 +22936,7 @@ LegacyInterface: {
 	// 0: Life:
 	// 1: Breath
 	// 2: Mana
-	// 3: Trash Can
+	3: Rubbish Bin
 	// 4: Inventory
 	// 5: Hotbar unlocked
 	// 6: Hotbar locked
