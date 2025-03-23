@@ -87,8 +87,8 @@ Cultures: {
 	}
 
 	Korean: {
-		// Only display as 한국어 with correct LocalizedFont
-		// Otherwise Hangug-eo
+		# Only display as 한국어 with correct LocalizedFont
+		# Otherwise Hangug-eo
 		LocalizedFont: 한국어
 		DefaultFont: Hangug-eo
 		Title: "{0} (Korean)"
@@ -106,8 +106,8 @@ Cultures: {
 	}
 
 	Thai: {
-		// Only display as ภาษาไทย with correct LocalizedFont
-		// Otherwise Phasa Thai
+		# Only display as ภาษาไทย with correct LocalizedFont
+		# Otherwise Phasa Thai
 		LocalizedFont: ภาษาไทย
 		DefaultFont: Phasa Thai
 		Title: "{0} (Thai)"
@@ -154,8 +154,8 @@ Cultures: {
 		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
-	// Only display as Tiếng Việt with correct LocalizedFont
-	// Otherwise Tieng Viet
+	# Only display as Tiếng Việt with correct LocalizedFont
+	# Otherwise Tieng Viet
 	Vietnamese: {
 		LocalizedFont: Tiếng Việt
 		DefaultFont: Tieng Viet
