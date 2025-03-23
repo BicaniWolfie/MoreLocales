@@ -98,8 +98,8 @@ Cultures: {
 	}
 
 	Korean: {
-		// Only d한국어 with correct LocalizedFont
-		// Otherwise Hangug-eo
+		# Only d한국어 with correct LocalizedFont
+		# Otherwise Hangug-eo
 		LocalizedFont: 한국어
 		DefaultFont: 韩语
 		Title: "{0} (韩语)"
