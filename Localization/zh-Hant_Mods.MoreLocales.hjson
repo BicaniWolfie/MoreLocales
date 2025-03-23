@@ -1,179 +1,190 @@
 Configs: {
-	// Headers.Fonts: Font Settings
+	Headers.Fonts: 字體配置
 
 	ClientSideConfig: {
-		// DisplayName: Client Side Config
+		DisplayName: 客戶端配置
 
 		ForcedFont: {
-			// Label: Force Localized Font Type
-			// Tooltip: Forces the game to use this type of localized font, disregarding the current language settings. This is {$Configs.LocalizedFont.None.Label} by default, which means the font will dynamically change with the chosen language.
+			Label: 強製使用本地字體
+			Tooltip: 
+			    '''
+			    強製遊戲使用本地字體，忽略當前的語言設置
+			    默認為{$Configs.LocalizedFont.None.Label}
+			    這意味著字體將會跟隨所選語言而自動變化
+			    '''
 		}
 	}
 
 	LocalizedFont: {
-		// Tooltip: The type of font the game uses. Changes to the font for different languages are necessary due to Unicode and Terraria restrictions
-		// None.Label: None
-		// Default.Label: Default
-		// Japanese.Label: Japanese
-		// Korean.Label: Korean
-		// Thai.Label: Thai
-		// Vietnamese.Label: Vietnamese
+		Tooltip: 
+			'''
+			遊戲使用的字體
+			由於Unicode和Terraria的限製
+			需要根據語言來選擇合適的字體
+			'''
+		None.Label: 無
+		Default.Label: 默認
+		Japanese.Label: 日語
+		Korean.Label: 韓語
+		Thai.Label: 泰語
+		Vietnamese.Label: 越南語
 	}
 }
 
 Cultures: {
 	Common: {
-		// StandardSubtitle: Standard
-		/* LocalizedFontUnavailable:
+		StandardSubtitle: 標準
+		LocalizedFontUnavailable:
 			'''
-			This language cannot be used because it requires a font that is currently not in the mod.
-			Please wait for the next update!
-			''' */
+			暫時無法使用該語言
+			因為缺失所需字體
+			請等待下次更新！
+			'''
 	}
 
 	English: {
-		// Title: English (English)
-		// Subtitle: United States
+		Title: English (英語)
+		Subtitle: 美式英語
 	}
 
 	German: {
-		// Title: Deutsch (German)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Deutsch (德語)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}德語"
 	}
 
 	Italian: {
-		// Title: Italiano (Italian)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Italiano (意大利語)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}意大利語"
 	}
 
 	French: {
-		// Title: Français (French)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Français (法語)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}法語"
 	}
 
 	Spanish: {
-		// Title: Español (Spanish)
-		// Subtitle: Spain
+		Title: Español (西班牙語)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}西班牙語"
 	}
 
 	Russian: {
-		// Title: Русский (Russian)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Русский (俄語)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}俄語"
 	}
 
 	Chinese: {
-		// Title: 中文 (Chinese)
-		// Subtitle: Simplified
+		Title: 簡體中文
+		Subtitle: (中國大陸地區)
 	}
 
 	Portuguese: {
-		// Title: Português (Portuguese)
-		// Subtitle: Brazil
+		Title: Português (葡萄牙語)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}葡萄牙語"
 	}
 
 	Polish: {
-		// Title: Polski (Polish)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Polski (波蘭語)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}波蘭語"
 	}
 
 	BritishEnglish: {
-		// Title: English (English)
-		// Subtitle: United Kingdom
+		Title: English (英語)
+		Subtitle: 英式英語
 	}
 
 	Japanese: {
-		// Title: 日本語 (Japanese)
-		// Subtitle: Hyoujungo
+		Title: 日本語 (日語)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}日語"
 	}
 
 	Korean: {
-		// Only display as 한국어 with correct LocalizedFont
-		// Otherwise Hangug-eo
-		// LocalizedFont: 한국어
-		// DefaultFont: Hangug-eo
-		// Title: "{0} (Korean)"
-		// Subtitle: South Korea
+		# Only d한국어 with correct LocalizedFont
+		# Otherwise Hangug-eo
+		LocalizedFont: 한국어
+		DefaultFont: 韓語
+		Title: "{0} (韓語)"
+		Subtitle: "{$Cultures.Common.StandardSubtitle}韓語"
 	}
 
 	TraditionalChinese: {
-		// Title: 中文 (Chinese)
-		// Subtitle: Traditional
+		Title: 繁體中文
+		Subtitle: (中國臺灣地區)
 	}
 
 	Turkish: {
-		// Title: Türkçe (Turkish)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Türkçe (土耳其語)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}土耳其語"
 	}
 
 	Thai: {
-		// Only display as ภาษาไทย with correct LocalizedFont
-		// Otherwise Phasa Thai
-		// LocalizedFont: ภาษาไทย
-		// DefaultFont: Phasa Thai
-		// Title: "{0} (Thai)"
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		# Only display as ภาษาไทย with correct LocalizedFont
+		# Otherwise Phasa Thai
+		LocalizedFont: ภาษาไทย
+		DefaultFont: 泰語
+		Title: "{0} (泰語)"
+		Subtitle: "{$Cultures.Common.StandardSubtitle}泰語"
 	}
 
 	Ukrainian: {
-		// Title: Українська (Ukrainian)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Українська (烏克蘭語)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}烏克蘭語"
 	}
 
 	LatinAmericanSpanish: {
-		// Title: Español (Spanish)
-		// Subtitle: Standard Latin American
+		Title: Español (西班牙語)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}語拉丁美洲語"
 	}
 
 	Czech: {
-		// Title: Čeština (Czech)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Čeština (捷克語)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}捷克語"
 	}
 
 	Hungarian: {
-		// Title: Magyar (Hungarian)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Magyar (匈牙利語)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}匈牙利語"
 	}
 
 	PortugalPortuguese: {
-		// Title: Português (Portuguese)
-		// Subtitle: Portugal
+		Title: Português (葡萄牙語)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}葡萄牙語"
 	}
 
 	Swedish: {
-		// Title: Svenska (Swedish)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Svenska (瑞典語)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}瑞典語"
 	}
 
 	Dutch: {
-		// Title: Nederlands (Dutch)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Nederlands (荷蘭語)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}荷蘭語"
 	}
 
 	Danish: {
-		// Title: Dansk (Danish)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Dansk (丹麥語)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}丹麥語"
 	}
 
-	// Only display as Tiếng Việt with correct LocalizedFont
-	// Otherwise Tieng Viet
+	# Only display as Tiếng Việt with correct LocalizedFont
+	# Otherwise Tieng Viet
 	Vietnamese: {
-		// LocalizedFont: Tiếng Việt
-		// DefaultFont: Tieng Viet
-		// Title: "{0} (Vietnamese)"
+		LocalizedFont: Tiếng Việt
+		DefaultFont: Tieng Viet
+		Title: "{0} (越南語)"
 	}
 
 	Finnish: {
-		// Title: Suomi (Finnish)
-		// Subtitle: Kirjakieli
+		Title: Suomi (芬蘭語)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}芬蘭語"
 	}
 
 	Romanian: {
-		// Title: Română (Romanian)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Română (羅馬尼亞語)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}羅馬尼亞語"
 	}
 
 	Indonesian: {
-		// Title: Bahasa Indonesia (Indonesian)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Bahasa Indonesia (印度尼西亞語)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}印尼語"
 	}
 }
