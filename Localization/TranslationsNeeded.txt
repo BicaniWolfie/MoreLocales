@@ -1,5 +1,7 @@
 en-US, 57/287, 20%, missing 230
+fr-FR, 0/287, 0%, missing 287
 es-ES, 57/287, 20%, missing 230
+zh-Hans, 0/287, 0%, missing 287
 en-GB, 287/287, 100%, missing 0
 ja-JP, 1/287, 0%, missing 286
 ko-KR, 1/287, 0%, missing 286
