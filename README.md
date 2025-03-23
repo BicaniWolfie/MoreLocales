@@ -37,7 +37,7 @@ qAngel
 ### Localization
 qAngel - Spanish (Both)  
 InfinaMii, TechnicalitiesDevelopment - British English  
-Jharim - Indonesian  
+Alone - Indonesian  
 Thai Localization Team - Thai  
 
 ## LICENSE
