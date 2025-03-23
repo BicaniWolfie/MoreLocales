@@ -117,8 +117,8 @@ Cultures: {
 	}
 
 	Thai: {
-		// Only display as ภาษาไทย with correct LocalizedFont
-		// Otherwise Phasa Thai
+		# Only display as ภาษาไทย with correct LocalizedFont
+		# Otherwise Phasa Thai
 		LocalizedFont: ภาษาไทย
 		DefaultFont: 泰语
 		Title: "{0} (泰语)"
