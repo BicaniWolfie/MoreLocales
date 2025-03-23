@@ -27,11 +27,23 @@ Indonesian (id-ID) <img src="https://catamphetamine.github.io/country-flag-icons
 
 # Important Note
 Localization for vanilla entries is not currently supported in all of these languages. 
-However, that is what I'm striving for, and if you speak any of these languages, I would greatly appreciate any contribution.
+However, that is what I'm striving for, and if you speak any of these languages, I would greatly appreciate any contribution.  
 
-## License
+# Credit
+### Code
+qAngel  
+### Art
+qAngel  
+### Localization
+qAngel - Spanish (Both)  
+InfinaMii, TechnicalitiesDevelopment - British English  
+Jharim - Indonesian  
+Thai Localization Team - Thai  
+
+## LICENSE
 This mod is open source under the [GPL v.3.0 License](https://www.gnu.org/licenses/gpl-3.0.html).
 
 ## Special Thanks
 [Jopo](https://github.com/JavidPack) (for pointers on how to fix font issues and on how to give languages proper fallback values)  
 [Tomat](https://github.com/steviegt6/) (for the interesting insight on font assets)  
+[Tine](https://github.com/TineTheUnc) and the [Thai Localization Team](https://github.com/Thai-Localization-Team) (for help with Thai fonts)

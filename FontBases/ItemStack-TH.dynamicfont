@@ -83,8 +83,8 @@
 
 			<!-- Thai -->
 			<CharacterRegion>
-				<FontName>Segoe UI</FontName>
-				<Size>12</Size>
+				<FontName>Printable4U</FontName>
+				<Size>15</Size>
 				<Style>Bold</Style>
 				<Start>&#x0E00;</Start>
 				<End>&#x0E7F;</End>

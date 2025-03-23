@@ -1,10 +1,11 @@
 en-US, 57/287, 20%, missing 230
+es-ES, 57/287, 20%, missing 230
 en-GB, 287/287, 100%, missing 0
 ja-JP, 1/287, 0%, missing 286
 ko-KR, 1/287, 0%, missing 286
 zh-Hant, 0/287, 0%, missing 287
 tr-TR, 0/287, 0%, missing 287
-th-TH, 0/287, 0%, missing 287
+th-TH, 185/287, 64%, missing 102
 uk-UA, 0/287, 0%, missing 287
 es-LA, 0/287, 0%, missing 287
 cs-CZ, 0/287, 0%, missing 287

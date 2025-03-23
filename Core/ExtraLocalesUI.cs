@@ -11,7 +11,6 @@ using MonoMod.Cil;
 using System;
 using MoreLocales.Common;
 using System.Reflection;
-using MoreLocales.Utilities;
 using Terraria.ID;
 
 namespace MoreLocales.Core

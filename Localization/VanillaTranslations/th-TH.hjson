@@ -1,16 +1,16 @@
 tModLoader: {
-	// PatreonSupport: "Please show your support: "
-	// MenuModBrowser: Mod Browser
-	// MenuDownloadMods: Download Mods
-	// MenuDownloadModsDescription: The in-game Mod Browser to find, download, and update your Mods.
-	// MenuMods: Mods
-	// MenuManageMods: Manage Mods
-	// MenuManageModsDescription: Manage which Mods are active, delete Mods, and configure your Modpacks.
-	// MenuModSources: Mod Sources
-	// MenuDevelopMods: Develop Mods
-	// MenuDevelopModsDescription: Develop and publish Mods for others to use, using your Mod Source code
-	// ModsModPacks: Mod Packs
-	// MenuModPackDescription: Manage Mod Packs, for features like saving your current list of mods & config, and Import & Export Mod Packs. Experimental.
+	PatreonSupport: "กรุณาสนับสนุนพวกเราได้ที่: "
+	MenuModBrowser: ม็อดเบราว์เซอร์
+	MenuDownloadMods: ดาวน์โหลดม็อด
+	MenuDownloadModsDescription: ม็อดเบราว์เซอร์ในเกมเพื่อค้นหา, ดาวน์โหลด, และอัปเดตม็อดของคุณ
+	MenuMods: จัดการม็อดที่มี
+	MenuManageMods: จัดการม็อด
+	MenuManageModsDescription: จัดการว่า ม็อดใดทำงานอยู่ ลบม็อด และตั้งค่าแพ็คมัดรวมม็อดของคุณ
+	MenuModSources: แหล่งม็อด
+	MenuDevelopMods: การพัฒนาม็อด
+	MenuDevelopModsDescription: พัฒนาและเผยแพร่ม็อดเพื่อให้ผู้อื่นใช้โดยใช้โค้ดต้นฉบับของม็อดของคุณ
+	ModsModPacks: แพ็คมัดรวมม็อด
+	MenuModPackDescription: จัดการแพ็คมัดรวมม็อดสำหรับคุณสมบัติต่างๆ เช่น การบันทึกรายการม็อด และการตั้งค่าปัจจุบันของคุณ และนำเข้าและส่งออกแพ็คมัดรวมม็อด และการทดลอง
 	// MenuEnableDeveloperMode: Enable Developer Mode
 	/* WelcomeMessagePreview:
 		'''
@@ -86,13 +86,13 @@ tModLoader: {
 	// WaitXSeconds: Wait {0} {^0:second;seconds}...
 	// ViewInstructions: View Instructions
 	// ModReadyFor144: This mod has been updated to 1.4.4
-	// ModsModsList: Mods List
-	// ModsEnableAll: Enable All
+	ModsModsList: รายชื่อม็อด
+	ModsEnableAll: เปิดใช้ทั้งหมด
 	// ModsEnableAllConfirm: Are you sure you want to enable all mods?
-	// ModsDisableAll: Disable All
+	ModsDisableAll: ปิดใช้ทั้งหมด
 	// ModsDisableAllConfirm: Are you sure you want to disable all mods?
 	// YesDontAskAgain: Yes, don't ask again
-	// ModsReloadMods: Reload Mods
+	ModsReloadMods: รีโหลดม็อด
 	// ModsForceReload: Force Reload
 	// ModsOpenModsFolders: Open Mods Folders
 	/* ModsOpenModsFoldersTooltip:
@@ -104,13 +104,13 @@ tModLoader: {
 	// DeactivateModPack: Unload Mod Pack
 	// ActivateModPack: Load Mod Pack
 	// DownloadMissingMods: Download Missing Mods
-	// ModsDisable: Click to disable
-	// ModsEnable: Click to enable
+	ModsDisable: เปิดใช้งาน
+	ModsEnable: ปิดใช้งาน
 	// ModsDisableAndDependents: Click to disable {0} and {1} {^1:dependent;dependents}
 	// ModsEnableAndDependencies: Click to enable {0} and {1} {^1:dependency;dependencies}
 	// ModConfiguration: Mod Configuration
 	// ModsOpenConfig: Click to open config
-	// ModOldWarning: Old mod, enable at own risk
+	ModOldWarning: เวอร์ชั่นเก่าเกินไป อาจจะใช้งานไม่ได้หรือมีปัญหาในการใช้งาน
 	// ModStableOnPreviewWarning: No Preview Build. Enable At Own Risk
 	/* ModDependencyTooltip:
 		'''
@@ -125,50 +125,50 @@ tModLoader: {
 	// TranslationModTooltip: This mod provides translations for: {0}
 	/* ModDependencyClickTooltip:
 		'''
-		This mod depends on: {0}
-		 (click to enable)
+		ม็อดตัวนี้ต้องการม็อดเสริม: {0}
+		 (คลิกเพื่อเปิดใช้งาน)
 		''' */
-	// ModDependencyModsNotFound: The following mods were not found: {0}
+	ModDependencyModsNotFound: ไม่พบม็อดที่ต้องติดตั้งก่อน: {0}
 	/* ModDidNotFullyUnloadWarning:
 		'''
 		This mod did not fully unload during last unload.
 		(This is a message for the mod creator)
 		''' */
-	// BetaModCantPublishError: You cannot publish a Mod built on a beta version of tModLoader
+	BetaModCantPublishError: คุณไม่สามารถปล่อยม็อดสู่สาธารณะเมื่อคุณใช้ tModLoader ตัวเบต้าได้
 	// ModDescriptionMissing: The file {0} doesn't exist. Please create a valid description for your mod.
 	// ModDescriptionLengthTooShort: Mod description is too short, please create a valid description for your mod by modifying {0}.
 	// ModWorkshopIconResizeWarning: Will be resized from {0} to {1}.
 	// ModUsesDefaultIcon: Please create a custom icon for your mod by modifying {0}.
 	// OutdatedModCantPublishError: You cannot publish a Mod built on an old version of tModLoader
 	// WrongVersionCantPublishError: You cannot publish a Mod built on a different version of tModLoader than what it was built with
-	// ModReloadRequired: Reload Required
+	ModReloadRequired: จำเป็นต้องรีโหลด
 	// ModReloadRequiredMemberTooltip: Changing this will necessitate a reload
 	// ModReloadForced: Reload Forced
 	// ModIsServerSide: This is a server side mod
 	// ModFromWorkshop: Loading from workshop
 	// ModFromModpack: Loading from active mod pack
 	// ModFromLocal: Loading from local mods folder
-	// ModsByline: By: {0}
-	// ModsMoreInfo: More Info
-	// ModsOriginatedFromModBrowser: This mod originated from the Mod Browser
-	// ModsTypeToSearch: Type to search
-	// ModsSearchByModName: Search by Mod name
-	// ModsSearchByAuthor: Search by Author name
-	// ModsSortRecently: Sort by recently changed
-	// ModsSortNamesAlph: Sort mod names alphabetically
-	// ModsSortNamesReverseAlph: Sort mod names reverse-alphabetically
-	// ModsShowAllMods: Show all mods
-	// ModsShowEnabledMods: Show only enabled mods
-	// ModsShowDisabledMods: Show only disabled mods
+	ModsByline: โดย: {0}
+	ModsMoreInfo: ข้อมูลอื่น ๆ
+	ModsOriginatedFromModBrowser: ม็อดตัวนี้ถูกสร้างเพื่อลงตัวม็อดบราวเซอร์ตั้งแต่แรก
+	ModsTypeToSearch: พิมพ์เพื่อค้นหา
+	ModsSearchByModName: ค้นหาโดยชื่อม็อด
+	ModsSearchByAuthor: ค้นหาโดยชื่อผู้สร้าง
+	ModsSortRecently: ค้นหาโดยอัพเดทล่าสุด
+	ModsSortNamesAlph: ค้นหาโดยเรียงตามตัวอักษรจาก A-Z
+	ModsSortNamesReverseAlph: ค้นหาโดยเรียงตามตัวอักษรจาก Z-A
+	ModsShowAllMods: แสดงม็อดทั้งหมด
+	ModsShowEnabledMods: แสดงเฉพาะม็อดที่เปิดใช้งานเท่านั้น
+	ModsShowDisabledMods: แสดงเฉพาะม็อดที่ปิดใช้งานเท่านั้น
 	// ModsXModsFilteredByEnabled: "{0} {^0:mod;mods} filtered by enabled filter."
 	// ModsXModsFilteredByModSide: "{0} {^0:mod;mods} filtered by enabled mod side filter."
 	// ModsXModsFilteredBySearch: "{0} {^0:mod;mods} filtered by enabled search filter."
-	// ModsXItems: "{0} {^0:item;items}"
-	// ModsXNPCs: "{0} {^0:NPC;NPCs}"
-	// ModsXTiles: "{0} {^0:tile;tiles}"
-	// ModsXWalls: "{0} {^0:wall;walls}"
-	// ModsXBuffs: "{0} {^0:buff;buffs}"
-	// ModsXMounts: "{0} {^0:mount;mounts}"
+	ModsXItems: "ไอเทม {0} ชิ้น"
+	ModsXNPCs: "NPCs {0} ตัว"
+	ModsXTiles: "บล็อก {0} ตัว"
+	ModsXWalls: "ผนัง {0} ตัว"
+	ModsXBuffs: "บัฟ {0} ตัว"
+	ModsXMounts: "สัตว์ขี่ {0} ตัว"
 	// ModsReloadAndReturn: Reload and return to world menu
 	/* ModsNotFoundServer:
 		'''
@@ -272,23 +272,23 @@ tModLoader: {
 	// PublishNewButton: Publish New
 	// DownloadProgress: Download {0}% Complete
 	// DescriptionLengthExceedLimit: The (Workshop) Description of this mod exceeds the Steam Limit of {0} characters
-	// LoadError: An error occurred while loading {0}
+	LoadError: เกิดข้อผิดพลาดระหว่างการโหลด {0}
 	// LoadErrorDisabled: The mod(s) and any dependencies have been automatically disabled.
 	// LoadErrorCulpritUnknown: The mod responsible is unknown and tModLoader must be restarted.
 	// LoadErrorContentType: This error was caused by the "{0}" class.
 	// LoadErrorMissingModQualifier: The asset path "{0}" is missing the mod qualifier. Asset paths should start with the mod name or "Terraria" followed by a slash ("/").
 	// LoadErrorModNotFoundDuringAsset: A mod named "{0}" was not found while attempting to load the asset with the path of "{1}". Check that this path starts with the correct mod name.
-	/* LoadErrorVersionMessage:
+	LoadErrorVersionMessage:
 		'''
-		It has been detected that this mod was built for tModLoader v{0}
-		However, you are using {1}
-		''' */
+		ดูเหมือนม็อดนี้ถูกสร้างเพื่อใช้ใน tModLoader เวอร์ชั่น {0}
+		แต่ คุณกำลังใช้เวอร์ชั่น {1}
+		'''
 	// LoadErrorDotNet45Required: .NET Framework 4.5 or newer is required to use mods. Please download the latest .NET Framework
-	// LoadErrorDependencyMissing: Missing mod: {0} required by {1}
-	// LoadErrorErrorReadingModFile: Error reading mod file {0}
-	// LoadErrorHashMismatchCorrupted: Hash mismatch, data blob has been modified or corrupted
+	LoadErrorDependencyMissing: "ม็อดที่ขาด: {0} ต้องการโดย {1}"
+	LoadErrorErrorReadingModFile: ผิดพลาดระหว่างการอ่านไฟล์ม็อด {0}
+	LoadErrorHashMismatchCorrupted: Hash ไม่ตรงกัน data blob อาจถูกปรับแต่ง หรือเสียหาย
 	// LoadErrorHashMismatchCorruptedWithModName: Unable to verify integrity of {0}: hash mismatch; data blob has been modified or corrupted
-	// LoadErrorDependencyVersionTooLow: "{0} requires {2} version {1} or greater but version {3} is installed"
+	LoadErrorDependencyVersionTooLow: "{0} นี้ จำเป็นต้องมี {2} เวอร์ชัน {1} แต่ที่ติดตั้งไว้ เป็นเวอรชัน {3}"
 	// LoadErrorMajorVersionMismatch: "{0} targets {2} version {1} but you have a newer major version ({3}) which may not be compatible. {0} must be updated."
 	/* LoadErrorRecentlyBuiltLocalModWithLowerVersionWorkshop:
 		'''
@@ -300,15 +300,15 @@ tModLoader: {
 		{0} v{1} was recently built, but was not selected to load because a frozen copy (v{2}) is present in the active modpack.
 		The mod pack will need to be disabled to test this mod.
 		''' */
-	// LoadWarningBannerOrBannerItemNotSet: "{0}: {1}. You have set ModNPC.Banner or ModNPC.BannerItem, but not the other. Or, the BannerItem value conflicts with other ModNPC sharing the same banner. Make sure you set both for the representative ModNPC, check your spelling, and that the item exists if you are using Mod.Find<ModItem>().Type. Report this to the {0} developers."
+	LoadWarningBannerOrBannerItemNotSet: "{0}: {1}. ดูเหมือนคุณจะตั้งชื่อ ModNPC.Banner หรือ ModNPC.BannerItem เพียงแค่อย่างใดอย่างหนึ่ง โปรดตรวจดูให้มั่นใจว่าคุณตั้งชื่อทั้งสองอย่าง ตรวจการสะกดคำ และไอเท็มจะคงอยู่ถ้าคุณใช้ Mod.Find<ModItem>().Type. โปรดรายงานผู้พัฒนาม็อด {0}"
 	// UnloadError: One or more errors occurred while unloading and tModLoader must be restarted to prevent further issues.
 	// DefensiveUnload: "{0} was unable to unload properly. Modders must use defensive programming to ensure unloading completes regardless of any errors during loading."
 	// BuildError: An error occurred while building {0}
 	// CompileError: Compiling {0} failed with {1} errors and {2} warnings
-	// BuildErrorModNameEmpty: Mods must actually have stuff in their names
-	// BuildErrorModNamedTerraria: Mods names cannot be named Terraria
-	// BuildErrorModNameHasPeriod: A mod's internal name cannot contain a period
-	// BuildErrorTwoModsSameName: Two mods share the internal name {0}
+	BuildErrorModNameEmpty: โปรดตั้งชื่อม็อด
+	BuildErrorModNamedTerraria: ห้ามตั้งชื่อม็อดว่า Terraria
+	BuildErrorModNameHasPeriod: ชื่อม็อดห้ามมีจุด
+	BuildErrorTwoModsSameName: พบม็อดสองม็อดใช้ชื่อ {0} เหมือนกัน
 	// BuildErrorModReference: Failed to read mod reference {0}
 	/* BuildErrorMissingNoCompile:
 		'''
@@ -317,91 +317,91 @@ tModLoader: {
 		All.dll must not have any references to Microsoft.Xna.Framework or FNA
 		XNA.dll must reference the appropriate tModLoader.exe and framework
 		''' */
-	// BuildErrorModNameDoesntMatchAssemblyName: Mod name {0} does not match assembly name {1}
-	// BuildErrorNamespaceFolderDontMatch: Namespace and Folder name do not match. The top level namespace must match the folder name.
-	// BuildErrorNoModClass: Make sure you have exactly one class extending Mod.
+	BuildErrorModNameDoesntMatchAssemblyName: ชื่อม็อด  {0} ไม่ตรงกับชื่อ  assembly {1}
+	BuildErrorNamespaceFolderDontMatch: ชื่อของ Namespace กับชื่อ Folder ไม่ตรงกัน. Namespace ชั้นนอกสุดจำเป็นต้องตรงกับชื่อ Folder
+	BuildErrorNoModClass: ตรวจสอบให้แน่ใจ ว่ามี class ที่ extend จาก Mod หนึ่งคลาส
 	// BuildErrorLoadingPrecompiled: Failed to load precompiled: {0}
-	// BuildErrorFailedLoadBuildTxt: Failed to load {0}
+	BuildErrorFailedLoadBuildTxt: โหลด {0} ไม่สำเร็จ
 	// BuildWarningEACWindowsOnly: Edit and continue is only supported on windows.
-	// LoadErrorTextureFailedToLoad: The texture file at {0} failed to load
-	// LoadErrorWavSoundFailedToLoad: The wav sound file at {0} failed to load
-	// LoadErrorMP3SoundFailedToLoad: The mp3 sound file at {0} failed to load
-	// LoadErrorSoundFailedToLoadAudioDeviceHint: (Try making sure your computer has speakers attached and audio devices enabled)
-	// LoadErrorFontFailedToLoad: The font file at {0} failed to load
-	// LoadErrorEffectFailedToLoad: The effect file at {0} failed to load
-	// LoadErrorUnknownXNBFileHint: Unknown xnb file {0}. Perhaps it should be in Fonts/ or Effects/
-	// LoadErrorCannotLoadCompressedEffects: Cannot load compressed effects.
+	LoadErrorTextureFailedToLoad: โหลดไฟล์ Texture {0} ไม่สำเร็จ
+	LoadErrorWavSoundFailedToLoad: โหลดไฟล์ wav {0} ไม่สำเร็จ
+	LoadErrorMP3SoundFailedToLoad: โหลดไฟล์ mp3 {0} ไม่สำเร็จ
+	LoadErrorSoundFailedToLoadAudioDeviceHint: (กรุณาตรวจสอบว่าคอมพิวเตอร์ เชื่อมต่อลำโพงหรือสปีกเกอร์ไว้หรือไม่)
+	LoadErrorFontFailedToLoad: โหลดฟอนท์ {0} ไม่สำเร็จ
+	LoadErrorEffectFailedToLoad: โหลดไฟล์เอฟเฟค {0} ไม่สำเร็จ
+	LoadErrorUnknownXNBFileHint: พบไฟล์ xnb ที่ไม่รู้จัก {0} ไฟล์นี้อาจต้องใส่ไว้ในโฟลเดอร์ Fonts หรือ Effects 
+	LoadErrorCannotLoadCompressedEffects: โหลดไฟล์เอฟเฟคแบบบีบอัดไม่สำเร็จ
 	// LoadErrorNotLoading: Mod.AddContent can only be called during loading
 	// LoadErrorDuplicateName: Cannot add two {0} with the same name: {1}. Maybe 2 classes share a classname but in different namespaces while autoloading or you manually called AddContent with 2 {0} of the same name, or maybe there is a duplicate/already in use legacyname
-	/* LoadErrorResourceNotFoundPathHint:
+	LoadErrorResourceNotFoundPathHint:
 		'''
-		Expected resource not found:
-		    {0}
-		Closest guess: (Is there a spelling or folder placement error?)
+		ไม่พบ resource ที่ต้องการ:
+			{0}
+		(ลองตรวจสอบชื่อและตำแหน่งโฟลเดอร์)
 		    {1}
-		''' */
+		'''
 	// LoadErrorResourceNotFoundEquipTextureHint: Equipment items require an additional texture that is drawn on the player. This is separate from the item texture shown in the inventory. This is the texture that can't be found.
-	// RuntimeErrorSilentlyCaughtException: "Silently Caught Exception: "
-	// RuntimeErrorSeeLogsForFullTrace: (see {0} for full trace)
+	RuntimeErrorSilentlyCaughtException: "ไม่ต้องแสดงผล Exception: "
+	RuntimeErrorSeeLogsForFullTrace: "(ดูล็อกเต็มได้ใน {0})"
 	// ShopOverflow: Not all items could fit in the shop!
 	// PlayerSaveFail: An error occurred while saving the player
 	// BackingUpPlayerFile: Backing up player file
-	// OpenLogs: Open Logs
-	// OpenWebHelp: Open Web Help
+	OpenLogs: อ่านล็อก
+	OpenWebHelp: เปิดคู่มือบนเวบไซต์
 	// SkipToMainMenu: Skip Loading Mods
 	// Retry: Retry
 	// Exit: Exit
 	// ExitAndDisableAll: Exit and Disable All
-	// ModInfoHeader: "Mod Info: "
+	ModInfoHeader: "ข้อมูลม็อด: "
 	// ModInfoVisitHomepage: Homepage
 	// ModInfoExtract: Extract
-	// ModInfoNoDescriptionAvailable: No description available
-	// ModInfoProblemTryAgain: There was a problem, try again
+	ModInfoNoDescriptionAvailable: ไม่มีคำอธิบาย
+	ModInfoProblemTryAgain: เกิดข้อผิดพลาด กรุณาลองใหม่
 	// ModInfoDisableModToDelete: Disable Mod to Delete
 	// ModInfoVisitSteampage: Steam Workshop Page
 	// ModInfoExtractLocalization: Extract Localization
 	// ModInfoExtracted: Extracted
 	// ModInfoEnableModToExtractLocalizationFiles: Enable Mod to Extract Localization Files
-	// ModPacksHeader: Mod Packs
-	// ModPacksSaveEnabledAsNewPack: Save Enabled as New Mod Pack
-	// ModPacksEnterModPackName: Enter Mod Pack name
-	// ModPackViewList: View List
-	// ModPackEnableThisList: Enable this List
+	ModPacksHeader: ม็อดแพก
+	ModPacksSaveEnabledAsNewPack: เซฟม็อดแพกใหม่
+	ModPacksEnterModPackName: ตั้งชื่อม็อดแพก
+	ModPackViewList: ดูรายชื่อ
+	ModPackEnableThisList: เปิดใช้งานทุกอย่างในรายการ
 	/* ModPackEnableThisListDesc:
 		'''
 		Enables all mods included in modpack using
 		latest mod versions found on Steam Workshop
 		''' */
-	// ModPackEnableOnlyThisList: Enable only this List
+	ModPackEnableOnlyThisList: เปิดใช้งานเฉพาะรายการนี้
 	/* ModPackEnableOnlyThisListDesc:
 		'''
 		Disables all mods & enables the modpack using
 		latest mod versions found on Steam Workshop
 		''' */
-	// ModPackUpdateListWithEnabled: Update List with Enabled
+	ModPackUpdateListWithEnabled: อัพเดตรายชื่อม็อดที่เปิดใช้งาน
 	/* ModPackUpdateListWithEnabledDesc:
 		'''
 		Updates the mod pack or collection with the
 		currently enabled set of mods
 		''' */
-	// ModPackViewModsInModBrowser: View Mods in Mod Browser
+	ModPackViewModsInModBrowser: เปิดดูใน Mod Browser
 	// ModPackViewModsInModBrowserDesc: View the mods included in pack on Mod Browser
-	// ModPackModsAvailableStatus: "{0} Total, {1} Enabled, {2} Disabled, {3} Missing"
-	/* ModPackModsMissing:
+	ModPackModsAvailableStatus: ยอดรวม {0}, เปิดใช้ {1}, ปิด {2}, ไฟล์ขาด {3}
+	ModPackModsMissing:
 		'''
-		The following mods were not found:
+		ไม่พบม็อดต่อไปนี้:
 		{0}
-		''' */
-	/* ModPackModsContained:
 		'''
-		This list contains the following mods:
+	ModPackModsContained:
+		'''
+		ม็อดในรายการนี้:
 		{0}
-		''' */
-	// ModPackMissing: " - Missing"
-	// ModPackDisabled: " - Disabled"
-	// ModPackLoadingSpecifiedModPack: Loading specified modpack: {0}
-	// ModPackDoesNotExist: Modpack {0} does not exist.
-	// ModPackMalformed: The {0} modpack failed to be read properly, it might be malformed.
+		'''
+	ModPackMissing: " - ไม่พบ"
+	ModPackDisabled: " - ปิดใช้งาน"
+	ModPackLoadingSpecifiedModPack: โหลดม็อดแพค: {0}
+	ModPackDoesNotExist: ไม่พบไฟล์ม็อดแพค {0}
+	ModPackMalformed: ไม่สามารถอ่านไฟล์ม็อดแพค {0} ได้ ไฟล์อาจไม่สมบูรณ์
 	// CurrentModPack: Current Mod Pack: {0}
 	// ExportPackInstance: Export Pack Instance
 	/* ExportPackInstanceDesc:
@@ -428,16 +428,16 @@ tModLoader: {
 	// ModPackDelete: Delete Mod Pack
 	// ModPackDisableToDelete: Remove Mod Pack to Delete
 	// MPSyncingMods: Syncing Mods
-	// MPServerModsCantDownload: The following mods are installed on the server but cannot be downloaded
-	// MPServerModsCantDownloadReasonSigned: because you only accept mods signed by the mod browser
-	// MPServerModsCantDownloadReasonAutomaticDownloadDisabled: because you have disabled automatic mod downloading
-	// MPServerModsCantDownloadChangeSettingsHint: You will need to change your settings or acquire the mods from the server owner.
+	MPServerModsCantDownload: ม็อดต่อไปนี้ ติดตั้งไว้บนเซอร์เวอร์ แต่ไม่อาจดาวน์โหลดได้
+	// MPServerModsCantDownloadReasonSigned: เพราะคุณตั้งรับเฉพาะม็อดที่ Mod Browser รับรองเท่านั้น
+	// MPServerModsCantDownloadReasonAutomaticDownloadDisabled: เพราะคุณไม่ได้เปิดใช้งานระบบดาวน์โหลดม็อดอัตโนมัติ
+	// MPServerModsCantDownloadChangeSettingsHint: คุณต้องปรับการตั้งค่า หรือขอม็อดจากเจ้าของเซอร์เวอร์
 	// MPShowServerConsoleYes: Show Server Console: On
 	// MPShowServerConsoleNo: Show Server Console: Off
-	// MPErrorModHashMismatch: Hash mismatch
-	// MPErrorModNotSigned: Mod was not signed by the Mod Browser
-	// MPErrorModDownloadError: An error occurred while downloading {0}
-	// MPPacketTooLarge: Packet too large {0} > {1}
+	MPErrorModHashMismatch: Hash ไฟล์ไม่ตรงกัน
+	MPErrorModNotSigned: ม็อดนี้ไม่ได้รับการรับรองใน Mod Browser
+	MPErrorModDownloadError: เกิดข้อผิดพลาดระหว่างดาวน์โหลด {0}
+	MPPacketTooLarge: Packet ใหญ่เกินไป {0} > {1}
 	// ReloadRequiredDownloadAndContinue: Download and Continue
 	// ReloadRequiredReloadAndContinue: Reload and Continue
 	// ReloadRequiredServerJoinMessage: The following changes to your enabled mods will be automatically applied if you join this server. Press "{0}" to reload mods and join this server.
@@ -487,50 +487,50 @@ tModLoader: {
 	// ALNoEntries: No matching entries
 	// ALCancel: Loading cancelled, refresh to see all entries
 	// ALError: An error occurred, try refreshing
-	// MBDownload: Download
-	// MBDownloadAll: Download All
-	// MBDownloadingMod: Downloading: {0}
+	MBDownload: ดาวน์โหลด
+	MBDownloadAll: ดาวน์โหลดทั้งหมด
+	MBDownloadingMod: กำลังดาวน์โหลด: {0}
 	// MBInstallingMod: Installing: {0}
 	// MBDownloadFileProblem: Failed to handle {0}
 	// MBReleaseFileHandle: Releasing file handle for {0}
 	// MBDownloadFinished: Downloading mods finished, returning to browser
-	// MBUploadingMod: Uploading: {0}
-	// MBDowngrade: Downgrade
-	// MBUpdate: Update
+	MBUploadingMod: กำลังอัพโหลด: {0}
+	MBDowngrade: ย้อนเวอร์ชัน
+	MBUpdate: อัพเดต
 	// MBRequiresTMLUpdate: Requires {0}
 	// MBClickToUpdate: Click to update
 	// MBDowngradeWithDependencies: Downgrade with dependencies
 	// MBUpdateWithDependencies: Update with dependencies
 	// MBDownloadWithDependencies: Download with dependencies
-	// MBUpdateAll: Update All
-	// MBReloadBrowser: Reload browser
-	// MBGettingData: Getting data...
+	MBUpdateAll: อัพเดตทั้งหมด
+	MBReloadBrowser: รีโหลด Browser
+	MBGettingData: กำลังโหลดข้อมูล...
 	// MBCancelLoading: Cancel loading
-	// MBPopulatingBrowser: Populating browser...
-	// MBSortByRecentlyUpdated: Sort by recently updated
+	MBPopulatingBrowser: เพิ่มรายชื่อเข้า Browser...
+	MBSortByRecentlyUpdated: เรียงตามอัพเดตล่าสุด
 	// MBSortByRecentlyPublished: Sort by recently published
-	// MBSortByPopularity: Sort by popularity
-	// MBSortDownloadDesc: Sort by downloads descending
-	// MBSortDownloadAsc: Sort by downloads ascending
+	MBSortByPopularity: เรียงตามความนิยม
+	MBSortDownloadDesc: เรียงตามจำนวนดาวน์โหลด มากไปน้อย
+	MBSortDownloadAsc: เรียงตามจำนวนดาวน์โหลด น้อยไปมาก
 	// MBTimePeriodToggleDisabled: "[c/{0}:{1} (Disabled in this sort mode)]"
 	// MBSortByRelevance: Sort by text relevance
-	// MBShowAllMods: Show all mods
-	// MBShowNotInstalledUpdates: Show mods not installed and updates
-	// MBShowUpdates: Show only updates
+	MBShowAllMods: แสดงม็อดทั้งหมด
+	MBShowNotInstalledUpdates: แสดงม็อดที่ไม่ได้ติดตั้ง และไม่ได้อัพเดต
+	MBShowUpdates: แสดงม็อดที่มีการอัพเดตเท่านั้น
 	// MBShowInstalled: Show installed mods
-	// MBShowMSAll: Show all mods
-	// MBShowMSBoth: Show normal side only mods
-	// MBShowMSClient: Show client side only mods
-	// MBShowMSServer: Show server side only mods
-	// MBShowMSNoSync: Show no sync only mods
+	MBShowMSAll: แสดงม็อดทั้งหมด
+	MBShowMSBoth: แสดงม็อดที่ใช้ทั้งสองฝั่ง
+	MBShowMSClient: แสดงเฉพาะม็อดที่ใช้ฝั่งผู้เล่น
+	MBShowMSServer: แสดงเฉพาะม็อดที่ใช้ฝั่งเซอร์เวอร์
+	MBShowMSNoSync: แสดงม็อดที่ไม่ต้อง sync
 	// MBTagsSelected: Tags:
 	// MBTagsCategories: Categories: {0}
 	// MBTagsLanguage: Language: {0}
 	// MBTagsClear: Clear all tag selections
-	// MBClearSpecialFilter: Clear Special Filter: {0}
+	MBClearSpecialFilter: ล้างฟิลเตอร์: {0}
 	// MBOfflineWithReason: Offline ({0})
 	// MBBusy: Busy
-	// MBUnknown: Unknown
+	MBUnknown: ไม่สามารถระบุได้
 	/* MBOfflineTroubleshooting:
 		'''
 		The Mod Browser can't be reached, this can be due to many reasons.
@@ -539,24 +539,24 @@ tModLoader: {
 		 3. Double-click this message to open the Mod Browser website. You can use this to manually download mods. If this works, you should check your firewall to allow Terraria.exe through or try disabling your VPN if you are using one.
 		 4. If that website does not work, the Mod Browser server might be blocked by your Government, Internet Service Provider, Router, or Web Filter. If that is the case, you'll need to figure it out on your own.
 		''' */
-	/* MBClickToViewDependencyMods:
+	MBClickToViewDependencyMods:
 		'''
-		Click to view dependency mods:
+		คลิ๊กเพื่อดูม็อดอื่นที่จำเป็นต้องลงก่อน:
 		{0}
-		''' */
-	// MBModsNotFoundOnline: The following mods were not found on the Mod Browser: {0}
-	// MBFilterDependencies: Dependencies
-	// MBFilterModlist: Modlist
-	// MBExceededBandwidth: The Mod Browser server has exceeded its daily bandwidth allotment. Please consult this mod's homepage for an alternate download or try again later.
-	// MBUnknownMBError: Unknown Mod Browser Error. Try again later.
-	// MBNoModsFound: No mods found
+		'''
+	MBModsNotFoundOnline: ไม่พบม็อดต่อไปนี้ใน Mod Browser: {0}
+	MBFilterDependencies: ม็อดอื่นที่จำเป็นต้องลงก่อน
+	MBFilterModlist: รายการม็อด
+	MBExceededBandwidth: เซอร์เวอร์ของ Mod Browser มีการโหลดไฟล์เกินขีดจำกัด กรุณาอ่านโฮมเพจของม็อดเพื่อหาช่องทางดาวน์โหลดอื่น หรือรอดาวน์โหลดในภายหน้า
+	MBUnknownMBError: Mod Browser เกิด Error ที่ไม่อาจระบุสาเหตุได้ กรุณาลองใหม่อีกครั้ง
+	MBNoModsFound: ไม่พบม็อด
 	// MBBrowserError: The mod browser encountered an error.
-	// XSecondsAgo: "{0} {^0:second;seconds} ago"
-	// XMinutesAgo: "{0} {^0:minute;minutes} ago"
-	// XHoursAgo: "{0} {^0:hour;hours} ago"
-	// XDaysAgo: "{0} {^0:day;days} ago"
-	// XMonthsAgo: "{0} {^0:month;months} ago"
-	// XYearsAgo: "{0} {^0:year;years} ago"
+	XSecondsAgo: "{0} วินาทีก่อน"
+	XMinutesAgo: "{0} นาทีก่อน"
+	XHoursAgo: "{0} ชั่วโมงก่อน"
+	XDaysAgo: "{0} วันก่อน"
+	XMonthsAgo: "{0} เดือนก่อน"
+	XYearsAgo: "{0} ปีก่อน"
 	// Today: Today
 	// OneWeek: One Week
 	// ThreeMonths: Three Months
@@ -565,50 +565,50 @@ tModLoader: {
 	// AllTime: All Time
 	// MBServerReturnToMenu: Return to world menu
 	// MBServerAskForModName: "Type an exact ModName to download: "
-	// MBPublishEnterPassphrase: Please Enter Your Passcode
-	// MBPublishVisitWebsiteForPassphrase: Visit Website to Generate Passphrase
+	MBPublishEnterPassphrase: กรุณาใส่ Passcode
+	MBPublishVisitWebsiteForPassphrase: กรุณาสร้าง Passphrase จากหน้าเวบไซต์
 	// MBPublishPastePassphrase: Paste Passphrase (ctrl-v)
-	// MBMyPublishedMods: My Published Mods
-	// MBUnpublish: Unpublish
-	// MBMyPublishedModsStats: "{0} {^0:download;downloads} ({1} - of the latest version)"
-	// EnterSteamID: Please Enter Your SteamID
+	MBMyPublishedMods: ม็อดทีเปิดสาธารณะแล้วของฉัน
+	MBUnpublish: ยกเลิกเปิดสาธารณะ
+	MBMyPublishedModsStats: "ดาวน์โหลดแล้ว {0} ครั้ง (เวอร์ชันล่าสุด {1} ครั้ง)"
+	EnterSteamID: กรุณาใส่ SteamID
 	// PasteSteamID: Paste SteamID (ctrl-v)
-	/* MBServerResponse:
+	MBServerResponse:
 		'''
-		The Mod Browser server response:
+		ข้อความตอบจากเซอร์เวอร์ Mod Browser:
 
 		{0}
-		''' */
+		'''
 	// SettingsPublicityUnlisted: Unlisted
 	/* SettingsPublicityUnlistedDescription:
 		'''
 		Item does not show up in general searches unless subscribed to it.
 		You can adjust the visibility setting on the Workshop page at any time.
 		''' */
-	// DownloadFromServersYes: Download Mods From Servers: On
-	// DownloadFromServersNo: Download Mods From Servers: Off
-	// DownloadSignedYes: Only Download Signed Mods From Servers: On
-	// DownloadSignedNo: Only Download Signed Mods From Servers: Off
-	// MusicStreamModeConvert: Music Stream Mode: Convert On Demand
-	// MusicStreamModeStream: Music Stream Mode: Stream From Cache
-	// AlwaysLogExceptionsYes: Always Log Exceptions: On
-	// AlwaysLogExceptionsNo: Always Log Exceptions: Off
-	// ExperimentalFeaturesYes: Experimental Features: On
-	// ExperimentalFeaturesNo: Experimental Features: Off
-	// RemoveForcedMinimumZoomYes: Remove Forced Minimum Zoom: On
-	// RemoveForcedMinimumZoomNo: Remove Forced Minimum Zoom: Off
+	DownloadFromServersYes: ดาวน์โหลดม็อดจากเซอร์เวอร์: เปิด
+	DownloadFromServersNo: ดาวน์โหลดม็อดจากเซอร์เวอร์: ปิด
+	DownloadSignedYes: ดาวน์โหลดม็อดที่เซอร์เวอร์รับรองเท่านั้น: ใช่
+	DownloadSignedNo: ดาวน์โหลดม็อดที่เซอร์เวอร์รับรองเท่านั้น: ไม่ใช่
+	MusicStreamModeConvert: โหมดสตรีมเพลง: แปลงไฟล์เมื่อมีการเล่น
+	MusicStreamModeStream: โหมดสตรีมเพลง: เล่นจากแคช
+	AlwaysLogExceptionsYes: บันทึก Exception: ใช่
+	AlwaysLogExceptionsNo: บันทึก Exception: ไม่
+	ExperimentalFeaturesYes: ฟีเจอร์ทดลอง: เปิดใช้
+	ExperimentalFeaturesNo: ฟีเจอร์ทดลอง: ปิด
+	RemoveForcedMinimumZoomYes: จำกัดการซูม: จำกัด
+	RemoveForcedMinimumZoomNo: จำกัดการซูม: อิสระ
 	// AttackSpeedScalingTooltipVisibility0: Attack Speed Effect Tooltips: Show All
 	// AttackSpeedScalingTooltipVisibility1: Attack Speed Effect Tooltips: Show Adjusted Effectiveness
 	// AttackSpeedScalingTooltipVisibility2: Attack Speed Effect Tooltips: Hidden
-	// AllowGreaterResolutionsYes: Allow Greater Resolutions: On
-	// AllowGreaterResolutionsNo: Allow Greater Resolutions: Off
+	AllowGreaterResolutionsYes: เพิ่ม resolution แสดงผล: อนุญาต
+	AllowGreaterResolutionsNo: เพิ่ม resolution แสดงผล: ไม่อนุญาต
 	// ShowMemoryEstimatesYes: Show Mod Memory Estimates: On
 	// ShowMemoryEstimatesNo: Show Mod Memory Estimates: Off
 	// ShowModMenuNotificationsYes: Notify When a New Main Menu Theme Is Unlocked: On
 	// ShowModMenuNotificationsNo: Notify When a New Main Menu Theme Is Unlocked: Off
 	// ShowNewUpdatedModsInfoYes: Show Which Workshop Mods Updated Since Last Launch: On
 	// ShowNewUpdatedModsInfoNo: Show Which Workshop Mods Updated Since Last Launch: Off
-	// ClearMBCredentials: Clear Mod Browser Credentials
+	// ClearMBCredentials: ล้าง Credential Mod Browser
 	// AutomaticallyEnableNewlyDownloadedModsYes: Automatically enabled newly downloaded mods: On
 	// AutomaticallyEnableNewlyDownloadedModsNo: Automatically enabled newly downloaded mods: Off
 	// AutomaticallyReloadAndEnableModsLeavingModBrowserYes: Automatically Enable and Reload Mods When Leaving Mod Browser: On
@@ -617,55 +617,55 @@ tModLoader: {
 	// AutomaticallyReloadRequiredModsLeavingModsScreenNo: Automatically Reload Required Mods When Leaving Mods Screen: Off
 	// ShowConfirmationWindowWhenEnableDisableAllModsYes: Show Confirmation Window For Enable/Disable All Mods: On
 	// ShowConfirmationWindowWhenEnableDisableAllModsNo: Show Confirmation Window For Enable/Disable All Mods: Off
-	// DontShowAgain: Don't show again
-	// ModControls: Mod Controls
-	/* MigratePlayersMessage:
+	DontShowAgain: ไม่ต้องเตือนซ้ำอีก
+	ModControls: คอนโทรลม็อด
+	MigratePlayersMessage:
 		'''
-		You have no players.
-		If you'd like to manually migrate your players from vanilla to tModLoader,
-		please copy them from
+		คุณยังไม่มีผู้เล่น
+		ถ้าอยากย้ายผู้เล่นจากเกมต้นแบบมา tModLoader
+		กรุณาก็อปปี้ผู้เล่นเหล่านั้นจาก
 		/Terraria/Players
-		to
+		ไปยัง
 		/Terraria/{0}/Players.
-		Copy the .plr file and the similarly named folder over.
-		Click me to open those folders.
-		After copying over the players you want, press back.
-		''' */
+		ไฟล์ที่ต้องก็อปปี้ ได้แก่ไฟล์ .plr และโฟลเดอร์ที่ชื่อคล้ายกัน
+		คลิ๊กที่นี่เพื่อเปิดโฟลเดอร์
+		หลังจากก็อปปี้เสร็จแล้ว กด Back
+		'''
 	// MigratePlayersText: Click here to automatically migrate players from Terraria...
 	// MigratePlayersException: There was a problem while trying to migrate Player files
 	/* MigrateWorldsMessage:
 		'''
-		You have no worlds.
-		If you'd like to manually migrate your worlds from vanilla to tModLoader,
+		คุณยังไม่มีโลก
+		ถ้าอยากย้ายโลกจากเกมต้นแบบมา tModLoader
 		you can press the migrate button below to do so automatically.
 		Alternatively, you can copy them from
 		/Terraria/Worlds
-		to
+		ไปยัง
 		/Terraria/{0}/Worlds manually.
-		Copy the .wld files over.
-		Click this text to open those folders.
-		After copying over the worlds you want, press back.
+		ไฟล์ที่ต้องก็อปปี้ ได้แก่ไฟล์ .wld
+		คลิ๊กที่นี่เพื่อเปิดโฟลเดอร์
+		หลังจากก็อปปี้เสร็จแล้ว กด Back
 		''' */
 	// MigrateWorldsText: Click here to automatically migrate worlds from Terraria...
 	// MigrateWorldsException: There was a problem while trying to migrate World files
 	// MigrateIndividualPlayersHeader: Migrate individual players...
 	// MigrateIndividualWorldsHeader: Migrate individual worlds...
 	// MigratingWorldsText: Migrating...
-	// ModsDifferentSinceLastPlay: "The following mods are different since last time you played: "
-	// Missing1Mod: Missing 1 mod
-	// MissingXMods: Missing {0} mods
-	/* MissingModsListing:
+	ModsDifferentSinceLastPlay: "ม็อดต่อไปนี้ มีการเปลี่ยนแปลงจากเมื่อคุณเข้าเล่นครั้งล่าสุด: "
+	Missing1Mod: ขาดไป 1 ม็อด
+	MissingXMods: ขาดไป {0} ม็อด
+	MissingModsListing:
 		'''
-		Missing mods:
+		ม็อดที่ขาด:
 		{0}
-		''' */
-	// New1Mod: 1 new mod
-	// NewXMods: "{0} new mods"
-	/* NewModsListing:
 		'''
-		New mods:
+	New1Mod: มีม็อดใหม่ 1 ม็อด
+	NewXMods: มีม็อดใหม่ {0} ม็อด
+	NewModsListing:
+		'''
+		ม็อดใหม่:
 		{0}
-		''' */
+		'''
 	// PlayerCustomDataFail: A problem was encountered when loading custom data for a player
 	// PlayerCustomDataSaveFail: The following errors were reported when this player was last saved. There might be lost data from the associated mods: {0}
 	// WorldCustomDataSaveFail: The following errors were reported when this world was last saved. There might be lost data from the associated mods: {0}
@@ -682,10 +682,10 @@ tModLoader: {
 	// ExistingPlayerPlayedMoreRecently: The existing player was last played more recently
 	// ExistingWorldPlayedMoreRecently: The existing world was last played more recently
 	// SavingModdedWorldData: Saving modded world data
-	// MSBuild: Build
-	// MSBuildReload: Build + Reload
-	// MSBuildAll: Build All
-	// MSBuildReloadAll: Build + Reload All
+	MSBuild: สร้าง
+	MSBuildReload: สร้าง + รีโหลด
+	MSBuildAll: สร้างทั้งหมด
+	MSBuildReloadAll: สร้าง + รีโหลดทั้งหมด
 	// MSUpgradeCSProj: Upgrade .csproj file
 	// MSOpenCSProj: Open .csproj
 	// MSUpgradeLangFiles: Upgrade .lang files to .hjson (non-destructive)
@@ -696,9 +696,9 @@ tModLoader: {
 		a rebuild is required prior to publishing
 		''' */
 	// MSOpenSources: Open Sources
-	// MSManagePublished: Manage Published
-	// MSPublish: Publish
-	// MSModSourcesCantHaveSpaces: (ModSources folders can't have spaces)
+	MSManagePublished: จัดการม็อดสาธารณะ
+	MSPublish: เปิดสู่สาธารณะ
+	// MSModSourcesCantHaveSpaces: (โฟลเดอร์ม็อด มีช่องว่างไม่ได้)
 	// MSLastBuilt: Last built: {0}
 	// MSCreateMod: Create Mod
 	// VersionUpgrade: Learn about Mod Migration
@@ -755,24 +755,24 @@ tModLoader: {
 	// DMUpdateScripts: Update Scripts
 	// DMScriptsRequireRestart: Start scripts have been updated and require tModLoader to be restarted.
 	// DMUpdateMonoToDownloadModCompile: Extra libraries can be downloaded from github when running on an up-to-date version of Mono.
-	// ExtractErrorWhileExtractingMod: An error occurred while extracting {0}
-	// ExtractHideCodeMessage: The modder has chosen to hide the code from tModReader.
-	// ExtractNoSourceCodeMessage: The modder has not chosen to include their source code.
-	// ExtractHideResourcesMessage: The modder has chosen to hide resources (ie. images) from tModReader.
-	// ExtractFileListing: Files:
-	// CommandModListDescription: Displays a list of loaded mods.
-	// CommandModListServerMods: Server Mods:
-	// CommandModListSyncedMods: Synced Mods:
-	// CommandModListClientMods: Client Mods:
-	// CommandModListModlist: Modlist:
-	// Building: Building: {0}
-	// ReadingProperties: Reading properties: {0}
+	ExtractErrorWhileExtractingMod: เกิดข้อผิดพลาดระหว่างแตกไฟล์ {0}
+	ExtractHideCodeMessage: เจ้าของม็อด เซตไม่ให้แสดงโค้ด ใน tModReader
+	ExtractNoSourceCodeMessage: เจ้าของม็อดไม่ได้แนบซอร์สโค้ดมากับตัวม็อด
+	ExtractHideResourcesMessage: เจ้าของม็อดตั้งค่าให้ซ่อนไฟล์ของตนเองใน tModReader
+	ExtractFileListing: รายชื่อไฟล์:
+	CommandModListDescription: แสดงรายชื่อม็อดที่โหลดไว้
+	CommandModListServerMods: ม็อดสำหรับเซิฟเวอร์:
+	CommandModListSyncedMods: ม็อดที่ sync แล้ว:
+	CommandModListClientMods: ม็อดฝั่งผู้เล่น:
+	CommandModListModlist: รายชื่อม็อด:
+	Building: กำลังสร้าง: {0}
+	ReadingProperties: กำลังอ่านคุณลักษณะ: {0}
 	// Compiling: Compiling {0}
 	// CompilationResult: Compilation finished with {0} errors and {1} warnings
 	// LoadingPrecompiled: Loading pre-compiled {0} from {1}
 	// EnabledEAC: Edit and continue path: {0}
 	// Packaging: Packaging: {0}
-	// MSFinding: Finding Mods...
+	MSFinding: กำลังค้นหาม็อด...
 	// MSInstantiating: Constructing Mods...
 	// MSSandboxing: Sandboxing: {0}
 	// MSLoading: Adding Content: {0}
@@ -785,7 +785,7 @@ tModLoader: {
 	// CancellingLoading: Cancelling loading...
 	// LoadingCancelled: Loading Cancelled
 	// DefaultTownNPCName: No-Name
-	// DefaultTownNPCChat: My modder forgot to give me a chat message.
+	DefaultTownNPCChat: คนทำม็อดนี้ลืมให้บทพูดข้า
 	// DefaultNurseCantHealChat: I don't know why I can't heal you, the modder forgot to give me a chat message.
 	// NoAttackSpeedScaling: Does not scale with attack speed
 	// SpecialAttackSpeedScaling: "{0}% benefit from attack speed boosts"
@@ -801,16 +801,16 @@ tModLoader: {
 	// SoundMemory: Sounds: {0}
 	// TextureMemory: Textures: {0}
 	// TotalMemory: Total: {0}
-	// MouseMiddle: Middle Mouse
-	// MouseXButton1: Mouse 4
-	// MouseXButton2: Mouse 5
+	MouseMiddle: เมาส์กลาง
+	MouseXButton1: เมาส์ 4
+	MouseXButton2: เมาส์ 5
 	// slotStack: Stack
 	// slotScroll: Scroll
 	// PressXToClose: Press {0} to close
-	// OK: OK
-	// Continue: Continue
+	OK: ตกลง
+	Continue: ไปต่อ
 	// DeleteModConfirm: Are you sure you want to delete this mod permanently?
-	// PatreonSetTooltip: Thank you for your support!
+	// PatreonSetTooltip: ขอบคุณที่สนับสนุนเรา!
 	// WorldGenError: A problem was encountered during world generation
 	// WorldIODataException: The game encountered a mod data problem for a world.
 	/* ServerCrash:
