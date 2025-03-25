@@ -226,9 +226,6 @@ namespace MoreLocales.Common
             {
                 int cultureID = (_culture.LegacyId > (int)CultureNamePlus.Indonesian || _culture.LegacyId >= _flagFrames) ? 0 : _culture.LegacyId;
 
-                if (((CultureNamePlus)cultureID) == CultureNamePlus.TraditionalChinese)
-                    cultureID = (int)GameCulture.CultureName.Chinese;
-
                 _flagFrame = _flagAtlas.Frame(1, _flagFrames, 0, cultureID);
             }
 
