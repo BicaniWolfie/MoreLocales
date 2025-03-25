@@ -30,134 +30,134 @@ Cultures: {
 	}
 
 	English: {
-		// Title: English (English)
-		// Subtitle: United States
+		Title: English (Inggris)
+		Subtitle: Amerika Serikat
 	}
 
 	German: {
-		// Title: Deutsch (German)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Deutsch (German)
+		Subtitle: Standar
 	}
 
 	Italian: {
-		// Title: Italiano (Italian)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Italiano (Italia)
+		Subtitle: Standar
 	}
 
 	French: {
-		// Title: Français (French)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Français (Perancis)
+		Subtitle: Standar
 	}
 
 	Spanish: {
-		// Title: Español (Spanish)
-		// Subtitle: Spain
+		Title: Español (Spanyol)
+		Subtitle: Spanyol
 	}
 
 	Russian: {
 		// Title: Русский (Russian)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Subtitle: Standar
 	}
 
 	Chinese: {
-		// Title: 中文 (Chinese)
-		// Subtitle: Simplified
+		Title: 中文 (China)
+		Subtitle: Simpel
 	}
 
 	Portuguese: {
-		// Title: Português (Portuguese)
+		Title: Português (Portugal)
 		// Subtitle: Brazil
 	}
 
 	Polish: {
-		// Title: Polski (Polish)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Polski (Polandia)
+		Subtitle: Standar
 	}
 
 	BritishEnglish: {
-		// Title: English (English)
-		// Subtitle: United Kingdom
+		Title: English (Inggris)
+		Subtitle: Inggris
 	}
 
 	Japanese: {
-		// Title: 日本語 (Japanese)
-		// Subtitle: Hyoujungo
+		Title: 日本語 (Jepang)
+		Subtitle: Standar
 	}
 
 	Korean: {
-		// Title: 한국어 (Korean)
-		// Subtitle: South Korea
+		Title: 한국어 (Korea)
+		Subtitle: Korea Selatan
 	}
 
 	TraditionalChinese: {
-		// Title: 中文 (Chinese)
-		// Subtitle: Traditional
+		Title: 中文 (China)
+		Subtitle: Tradisional
 	}
 
 	Turkish: {
-		// Title: Türkçe (Turkish)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Türkçe (Turki)
+		Subtitle: Standar
 	}
 
 	Thai: {
-		// Title: ภาษาไทย (Thai)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: ภาษาไทย (Thailand)
+		Subtitle: Standar
 	}
 
 	Ukrainian: {
-		// Title: Українська (Ukrainian)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Українська (Ukraina)
+		Subtitle: Standar
 	}
 
 	LatinAmericanSpanish: {
-		// Title: Español (Spanish)
-		// Subtitle: Standard Latin American
+		Title: Español (Spanyol)
+		Subtitle: Standar Amerika Latin
 	}
 
 	Czech: {
-		// Title: Čeština (Czech)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Čeština (Ceko)
+		Subtitle: Standar
 	}
 
 	Hungarian: {
-		// Title: Magyar (Hungarian)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Magyar (Hungaria)
+		Subtitle: Standar
 	}
 
 	PortugalPortuguese: {
-		// Title: Português (Portuguese)
+		Title: Português (Portugal)
 		// Subtitle: Portugal
 	}
 
 	Swedish: {
-		// Title: Svenska (Swedish)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Svenska (Swedia)
+		Subtitle: Standar
 	}
 
 	Dutch: {
-		// Title: Nederlands (Dutch)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Nederlands (Belanda)
+		Subtitle: Standar
 	}
 
 	Danish: {
-		// Title: Dansk (Danish)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Dansk (Denmark)
+		Subtitle: Standar
 	}
 
-	// Vietnamese.Title: Tiếng Việt (Vietnamese)
+	Vietnamese.Title: Tiếng Việt (Vietnam)
 
 	Finnish: {
-		// Title: Suomi (Finnish)
-		// Subtitle: Kirjakieli
+		Title: Suomi (Finlandia)
+		Subtitle: Literatur
 	}
 
 	Romanian: {
-		// Title: Română (Romanian)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Română (Romania)
+		Subtitle: Standar
 	}
 
 	Indonesian: {
 		// Title: Bahasa Indonesia (Indonesian)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Subtitle: Standar
 	}
 }

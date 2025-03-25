@@ -25,7 +25,7 @@ tModLoader: {
 		''' 
 	 FirstLaunchWelcomeMessage:
 		'''
-		Selamat datang di tModLoader
+		Selamat datang di tModLoader.
 
 		Kamu sudah berhasil menginstall tModLoader. Gunakan menu Workshop ununtuk mengakses fungsi terkait Mod tModLoader.
 
@@ -66,14 +66,14 @@ tModLoader: {
 	// ModAddedSinceLastLaunchMessage: This mod has been added since last launch
 	// ViewOnGitHub: View on GitHub
 	 tModLoaderSettings: Pengaturan tModLoader
-	// ModMenuSwap: Switch Menu Theme
-	// MenuModsEnabled: "{0} {^0:Mod;Mods} Enabled"
+	 ModMenuSwap: Ganti Tema Menu
+	 MenuModsEnabled: "{0} {^0:Mod;Mods} Diaktifkan"
 	// MenuModUpdatesAvailable: ({0} {^0:Update;Updates} Available!)
 	// AudioNotSupported: No audio hardware found. Disabling all audio.
-	// SwitchVersionInfoButton: Switch to a different tModLoader version
-	// LatestNews: Latest News: {0}
-	// LatestNewsOffline: Offline
-	// LatestNewsChecking: Checking...
+	 SwitchVersionInfoButton: Ganti ke versi tModLoader yang berbeda.
+	 LatestNews: Berita Terbaru: {0}
+	 LatestNewsOffline: Offline
+	 LatestNewsChecking: Mengecek...
 	/* SteamFamilyShareWarning:
 		'''
 		It has been detected you are using Family Share copy of Terraria.
@@ -83,15 +83,15 @@ tModLoader: {
 		 - Steam Overlay
 		 - Steam Multiplayer
 		''' */
-	// WaitXSeconds: Wait {0} {^0:second;seconds}...
-	// ViewInstructions: View Instructions
-	// ModReadyFor144: This mod has been updated to 1.4.4
-	// ModsModsList: Mods List
-	// ModsEnableAll: Enable All
-	// ModsEnableAllConfirm: Are you sure you want to enable all mods?
-	// ModsDisableAll: Disable All
-	// ModsDisableAllConfirm: Are you sure you want to disable all mods?
-	// YesDontAskAgain: Yes, don't ask again
+	 WaitXSeconds: Tunggu {0} {^0:second;seconds}...
+	 ViewInstructions: Lihat Instruksi
+	 ModReadyFor144: Mod ini sudah diperbarui ke versi 1.4.4
+	 ModsModsList: Daftar Mod
+	 ModsEnableAll: Aktifkan Semua
+	 ModsEnableAllConfirm: Apakah kamu yakin untuk mengaktifkan Semua Mod?
+	 ModsDisableAll: Matikan Semua
+	 ModsDisableAllConfirm: Apa kamu yakin untuk mematikan Semua Mod?
+	 YesDontAskAgain: Ya, Jangan Tanya Lagi
 	// ModsReloadMods: Reload Mods
 	// ModsForceReload: Force Reload
 	// ModsOpenModsFolders: Open Mods Folders
@@ -112,16 +112,16 @@ tModLoader: {
 	// ModsOpenConfig: Click to open config
 	// ModOldWarning: Old mod, enable at own risk
 	// ModStableOnPreviewWarning: No Preview Build. Enable At Own Risk
-	/* ModDependencyTooltip:
+	 ModDependencyTooltip:
 		'''
-		Requires:
+		Diperlukan:
 		{0}
-		''' */
-	/* ModDependentsTooltip:
+		''' 
+	 ModDependentsTooltip:
 		'''
-		Required by:
+		Diperlukan oleh:
 		{0}
-		''' */
+		''' 
 	// TranslationModTooltip: This mod provides translations for: {0}
 	/* ModDependencyClickTooltip:
 		'''
@@ -192,7 +192,7 @@ tModLoader: {
 	// DedConfigErrorOutOfOptionStrings: The only possible values are: {0}
 	// DedConfigErrorOutOfRange: The value must be between {0} and {1}
 	// DedConfigErrorNotParsable: Invalid input
-	// ModConfigs: Configs
+	 ModConfigs: Konfigurasi
 	// ModConfigFilterOptions: Filter Options
 	// ModConfigFilterByName: Filter by Name
 	// ModConfigFilterByMod: Filter by Mod
@@ -222,8 +222,8 @@ tModLoader: {
 	// ModConfigAccepted: Accepted
 	// ModConfigRejectChangesNotHost: Only the host can change this config
 	// ModConfigModLoaderButNoConfigs: This mod is loaded but has no config options
-	// BossBarStyle: Boss Bar Style: {0}
-	// BossBarStyleNoOptions: No Options
+	 BossBarStyle: Tipe Bar Boss: {0}
+	 BossBarStyleNoOptions: Tidak Ada Opsi
 	// WorkshopDisclaimer: By submitting this item, you agree to the tModLoader Terms of Service
 	// NonModOwnerPublishWarning: A mod with the name "{0}" has already been published to the workshop by another modder. If you are not a contributor to that mod then attempting to publish will fail. If this is your mod, double check that you are logged into the correct Steam account. Every mod must have a unique internal name.
 	// SteamPublishingLimit: Error: Only Steam tModLoader owners can publish to Workshop in-game.
@@ -284,7 +284,7 @@ tModLoader: {
 		However, you are using {1}
 		''' */
 	// LoadErrorDotNet45Required: .NET Framework 4.5 or newer is required to use mods. Please download the latest .NET Framework
-	// LoadErrorDependencyMissing: Missing mod: {0} required by {1}
+	 LoadErrorDependencyMissing: Mod yang hilang: {0} diperlukan oleh {1}
 	// LoadErrorErrorReadingModFile: Error reading mod file {0}
 	// LoadErrorHashMismatchCorrupted: Hash mismatch, data blob has been modified or corrupted
 	// LoadErrorHashMismatchCorruptedWithModName: Unable to verify integrity of {0}: hash mismatch; data blob has been modified or corrupted
@@ -432,8 +432,8 @@ tModLoader: {
 	// MPServerModsCantDownloadReasonSigned: because you only accept mods signed by the mod browser
 	// MPServerModsCantDownloadReasonAutomaticDownloadDisabled: because you have disabled automatic mod downloading
 	// MPServerModsCantDownloadChangeSettingsHint: You will need to change your settings or acquire the mods from the server owner.
-	// MPShowServerConsoleYes: Show Server Console: On
-	// MPShowServerConsoleNo: Show Server Console: Off
+	 MPShowServerConsoleYes: Lihatkan Konsol Server: Aktif
+	 MPShowServerConsoleNo: Lihatkan Konsol Server: Mati
 	// MPErrorModHashMismatch: Hash mismatch
 	// MPErrorModNotSigned: Mod was not signed by the Mod Browser
 	// MPErrorModDownloadError: An error occurred while downloading {0}
@@ -585,38 +585,38 @@ tModLoader: {
 		Item does not show up in general searches unless subscribed to it.
 		You can adjust the visibility setting on the Workshop page at any time.
 		''' */
-	// DownloadFromServersYes: Download Mods From Servers: On
-	// DownloadFromServersNo: Download Mods From Servers: Off
-	// DownloadSignedYes: Only Download Signed Mods From Servers: On
-	// DownloadSignedNo: Only Download Signed Mods From Servers: Off
+	 DownloadFromServersYes: Unduh Mod dari Server: Aktif
+	 DownloadFromServersNo: Unduh Mod dari Server: Mati
+	 DownloadSignedYes: Hanya Unduh Mod Yang Ditanda Tangani dari Server: Aktif
+	 DownloadSignedNo: Hanya Unduh Mod Yang Ditanda Tangani dari Server: Mati
 	// MusicStreamModeConvert: Music Stream Mode: Convert On Demand
 	// MusicStreamModeStream: Music Stream Mode: Stream From Cache
 	// AlwaysLogExceptionsYes: Always Log Exceptions: On
 	// AlwaysLogExceptionsNo: Always Log Exceptions: Off
-	// ExperimentalFeaturesYes: Experimental Features: On
-	// ExperimentalFeaturesNo: Experimental Features: Off
-	// RemoveForcedMinimumZoomYes: Remove Forced Minimum Zoom: On
-	// RemoveForcedMinimumZoomNo: Remove Forced Minimum Zoom: Off
-	// AttackSpeedScalingTooltipVisibility0: Attack Speed Effect Tooltips: Show All
-	// AttackSpeedScalingTooltipVisibility1: Attack Speed Effect Tooltips: Show Adjusted Effectiveness
-	// AttackSpeedScalingTooltipVisibility2: Attack Speed Effect Tooltips: Hidden
+	 ExperimentalFeaturesYes: Fitur Eksperimental: Aktif
+	 ExperimentalFeaturesNo: Fitur Eksperimental: Mati
+	 RemoveForcedMinimumZoomYes: Hapus Zoom Minimum Paksa: Aktif
+	 RemoveForcedMinimumZoomNo: Hapus Zoom Minimum Paksa: Mati
+	 AttackSpeedScalingTooltipVisibility0: Tooltip Efek Kecepatan Serangan: Lihatkan Semua
+	 AttackSpeedScalingTooltipVisibility1: Tooltip Efek Kecepatan Serangan: Tampilkan Efektivitas yang Disesuaikan
+	 AttackSpeedScalingTooltipVisibility2: Tooltip Efek Kecepatan Serangan: Disembunyikan
 	// AllowGreaterResolutionsYes: Allow Greater Resolutions: On
 	// AllowGreaterResolutionsNo: Allow Greater Resolutions: Off
-	// ShowMemoryEstimatesYes: Show Mod Memory Estimates: On
-	// ShowMemoryEstimatesNo: Show Mod Memory Estimates: Off
-	// ShowModMenuNotificationsYes: Notify When a New Main Menu Theme Is Unlocked: On
-	// ShowModMenuNotificationsNo: Notify When a New Main Menu Theme Is Unlocked: Off
-	// ShowNewUpdatedModsInfoYes: Show Which Workshop Mods Updated Since Last Launch: On
-	// ShowNewUpdatedModsInfoNo: Show Which Workshop Mods Updated Since Last Launch: Off
+	 ShowMemoryEstimatesYes: Lihatkan Estimasi Memori Mod: Aktif
+	 ShowMemoryEstimatesNo: Lihatkan Estimasi Memori Mod: Mati
+	 ShowModMenuNotificationsYes: Ingatkan ketika Tema Main Menu Baru Terbuka: Aktif
+	 ShowModMenuNotificationsNo: Ingatkan ketika Tema Main Menu Baru Terbuka: Mati
+	 ShowNewUpdatedModsInfoYes: Lihatkan Mod Mana Yang Diperbarui Dari Workshop Sejak Terakhir kali diluncurkan: Aktif
+	 ShowNewUpdatedModsInfoNo: Lihatkan Mod Mana Yang Diperbarui Dari Workshop Sejak Terakhir kali diluncurkan: Mati
 	// ClearMBCredentials: Clear Mod Browser Credentials
-	// AutomaticallyEnableNewlyDownloadedModsYes: Automatically enabled newly downloaded mods: On
-	// AutomaticallyEnableNewlyDownloadedModsNo: Automatically enabled newly downloaded mods: Off
-	// AutomaticallyReloadAndEnableModsLeavingModBrowserYes: Automatically Enable and Reload Mods When Leaving Mod Browser: On
-	// AutomaticallyReloadAndEnableModsLeavingModBrowserNo: Automatically Enable and Reload Mods When Leaving Mod Browser: Off
-	// AutomaticallyReloadRequiredModsLeavingModsScreenYes: Automatically Reload Required Mods When Leaving Mods Screen: On
-	// AutomaticallyReloadRequiredModsLeavingModsScreenNo: Automatically Reload Required Mods When Leaving Mods Screen: Off
-	// ShowConfirmationWindowWhenEnableDisableAllModsYes: Show Confirmation Window For Enable/Disable All Mods: On
-	// ShowConfirmationWindowWhenEnableDisableAllModsNo: Show Confirmation Window For Enable/Disable All Mods: Off
+	 AutomaticallyEnableNewlyDownloadedModsYes: Aktifkan otomatis mod yang baru di unduh: Aktif
+	 AutomaticallyEnableNewlyDownloadedModsNo: Aktifkan otomatis mod yang baru di unduh: Mati
+	 AutomaticallyReloadAndEnableModsLeavingModBrowserYes: Mengaktifkan dan Memuat Ulang Mod saat Meninggalkan Brosur Mod: Aktif
+	 AutomaticallyReloadAndEnableModsLeavingModBrowserNo: Mengaktifkan dan Memuat Ulang Mod saat Meninggalkan Brosur Mod: Mati
+	 AutomaticallyReloadRequiredModsLeavingModsScreenYes: Memuat Ulang Mod Secara Otomatis saat Meninggalkan Menu Mod: Aktif
+	 AutomaticallyReloadRequiredModsLeavingModsScreenNo: Memuat Ulang Mod Secara Otomatis saat Meninggalkan Menu Mod: Mati
+	 ShowConfirmationWindowWhenEnableDisableAllModsYes: Munculkan Jendela Konfirmasi untuk Mengaktifkan/Mematikan Semua Mod: Aktif
+	 ShowConfirmationWindowWhenEnableDisableAllModsNo: Munculkan Jendela Konfirmasi untuk Mengaktifkan/Mematikan Semua Mod: Aktif
 	// DontShowAgain: Don't show again
 	// ModControls: Mod Controls
 	/* MigratePlayersMessage:
@@ -651,21 +651,21 @@ tModLoader: {
 	// MigrateIndividualPlayersHeader: Migrate individual players...
 	// MigrateIndividualWorldsHeader: Migrate individual worlds...
 	// MigratingWorldsText: Migrating...
-	// ModsDifferentSinceLastPlay: "The following mods are different since last time you played: "
-	// Missing1Mod: Missing 1 mod
-	// MissingXMods: Missing {0} mods
-	/* MissingModsListing:
+	 ModsDifferentSinceLastPlay: "Mod berikut berbeda dengan mod yang terakhir-kali anda mainkan: "
+	 Missing1Mod: Kehilangan 1 mod
+	 MissingXMods: Kehilangan {0} mod
+	 MissingModsListing:
 		'''
-		Missing mods:
+		Mod yang hilang:
 		{0}
-		''' */
-	// New1Mod: 1 new mod
-	// NewXMods: "{0} new mods"
-	/* NewModsListing:
+		''' 
+	 New1Mod: 1 mod baru
+	 NewXMods: "{0} mod baru"
+	 NewModsListing:
 		'''
-		New mods:
+		Mod baru:
 		{0}
-		''' */
+		''' 
 	// PlayerCustomDataFail: A problem was encountered when loading custom data for a player
 	// PlayerCustomDataSaveFail: The following errors were reported when this player was last saved. There might be lost data from the associated mods: {0}
 	// WorldCustomDataSaveFail: The following errors were reported when this world was last saved. There might be lost data from the associated mods: {0}
@@ -4187,10 +4187,10 @@ CLI: {
 UI: {
 	// Effects: Effects
 	// LoadingCode: Loading:
-	// Favorite: Favorite
-	// Unfavorite: Unfavorite
-	// MoveToCloud: Move to cloud
-	// MoveOffCloud: Move off cloud
+	 Favorite: Favorit
+	 Unfavorite: Tidak Favorit
+	 MoveToCloud: Pindahkan ke cloud
+	 MoveOffCloud: Hilangkan dari cloud
 	 Play: Main
 	 Delete: Hapus
 	 Softcore: Mudah
@@ -4209,8 +4209,8 @@ UI: {
 	 New: Baru
 	 EnterMessage: Masukan pesan:
 	 EnterNewName: Masukan nama baru:
-	// Achievements: Achievements
-	// Keybindings: Keybindings
+	 Achievements: Pencapaian
+	 Keybindings: Pengaturan Tombol
 	// Save: Save
 	// Submit: Submit
 	// Cancel: Cancel
@@ -4226,7 +4226,7 @@ UI: {
 	// ExpertDescriptionFlavor: Fortune & Glory, Kid.
 	// ExpertDescription: (Far Greater Difficulty & Loot)
 	// More: more
-	// CopySeed: Copy Seed: {0}
+	 CopySeed: Salin Seed: {0}
 	// SeedCopied: Seed Copied
 	// EnterSeed: Enter Seed (Leave Blank For Random)
 	// BartenderHelp: Eternia Crystal
@@ -4238,16 +4238,16 @@ UI: {
 	// LightMode_White: "{$LegacyMenu.56}"
 	// LightMode_Retro: "{$LegacyMenu.57}"
 	// LightMode_Trippy: "{$LegacyMenu.58}"
-	// CopyColorToClipboard: Copy color code to clipboard
-	// PasteColorFromClipboard: Paste color code from clipboard
-	// RandomizeColor: Randomize color
-	// RandomizePlayer: Randomize player
-	// CopyPlayerToClipboard: Copy player template to clipboard
-	// PastePlayerFromClipboard: Paste player template from clipboard
-	// PlayerNameSlot: Name:
-	// PlayerEmptyName: "{$Net.EmptyName}"
-	// Create: Create
-	// SelectMapBorder: Minimap Border: {0}
+	 CopyColorToClipboard: Salin kode warna dari papanklip
+	 PasteColorFromClipboard: Tempel kode warna dari papanklip
+	 RandomizeColor: Acak warna
+	 RandomizePlayer: Acak player
+	 CopyPlayerToClipboard: Salin template player ke papanklip
+	 PastePlayerFromClipboard: Tempel template player ke papanklip
+	 PlayerNameSlot: Nama:
+	 PlayerEmptyName: "Nama Kosong"
+	 Create: Buat
+	 SelectMapBorder: Batasan Minimap: {0}
 	// MinimapFrame_Default: Default
 	// MinimapFrame_Golden: Golden
 	// MinimapFrame_Remix: Remix
@@ -4257,15 +4257,15 @@ UI: {
 	// MinimapFrame_Leaf: Leaf
 	// MinimapFrame_Retro: Retro
 	// MinimapFrame_Valkyrie: Valkyrie
-	// SelectHealthStyle: Health and Mana Style: {0}
-	// HealthManaStyle_Default: Classic
-	// HealthManaStyle_New: Fancy
-	// HealthManaStyle_NewWithText: Fancy 2
-	// HealthManaStyle_HorizontalBars: Bars
-	// HealthManaStyle_HorizontalBarsWithText: Bars 2
-	// HealthManaStyle_HorizontalBarsWithFullText: Bars 3
-	// ShowBossLifeTextOn: Boss Health Bar Numbers: On
-	// ShowBossLifeTextOff: Boss Health Bar Numbers: Off
+	 SelectHealthStyle: Tipe Darah dan Mana: {0}
+	 HealthManaStyle_Default: Klasik
+	 HealthManaStyle_New: Mewah
+	 HealthManaStyle_NewWithText: Mewah 2
+	 HealthManaStyle_HorizontalBars: Bar
+	 HealthManaStyle_HorizontalBarsWithText: Bar 2
+	 HealthManaStyle_HorizontalBarsWithFullText: Bar 3
+	 ShowBossLifeTextOn: Nilai Darah Boss: Aktif
+	 ShowBossLifeTextOff: Nilai Darah Boss: Mati
 	// SpawnPoint: Spawn
 	// SpawnBed: Home
 	 EmoteCategoryGeneral: Umum
@@ -4278,43 +4278,43 @@ UI: {
 	// ToggleBank4VacuumIsOn: Void Pull: On
 	// ToggleBank4VacuumIsOff: Void Pull: Off
 	// Author: by {0}
-	// WorldCreationName: Name:
+	 WorldCreationName: Nama:
 	// WorldCreationNameEmpty: <Empty>
-	// WorldCreationRandomizeNameDescription: Randomize your world's name.
+	 WorldCreationRandomizeNameDescription: Acak nama dunia kamu.
 	// WorldCreationSeed: Seed:
-	// WorldCreationSeedEmpty: <Leave Blank For Random>
-	// WorldCreationRandomizeSeedDescription: Randomize your world's seed.
+	 WorldCreationSeedEmpty: <Tinggalkan kosong untuk acak>
+	 WorldCreationRandomizeSeedDescription: Acak seed dunia kamu.
 	// WorldCreationSize: Size:
 	// WorldCreationDifficulty: Difficulty:
 	// WorldCreationEvil: Evil:
 	// WorldCreationNumberOfWorlds: "# of Worlds:"
 	// WorldCreationNumberOfWorldsDescription: Number of worlds to generate at once
 	// ItemCannotBePlacedInsideItself: Placing into itself will be blocked
-	// WorldDescriptionName: Give your world a name! You can always change it later if needed!
-	// WorldDescriptionSeed: The DNA marker that defines your world's specific shape and traits.
-	// WorldDescriptionSizeSmall: Ideal for a quick, single player experience.
-	// WorldDescriptionSizeMedium: Bigger and better for prolonged exploration, or bringing a friend.
-	// WorldDescriptionSizeLarge: Super-sized for long term progression and multiple players.
-	// WorldDescriptionCreative: With great power comes great responsibility (Unearth your creativity)
-	// WorldDescriptionNormal: Your Adventure Begins... (The Standard Terraria Experience)
-	// WorldDescriptionExpert: Fortune & Glory, Kid. (Far Greater Difficulty & Loot)
-	// WorldDescriptionMaster: Game over man, game over! (Brutally hard, for the truly brave)
-	// WorldDescriptionEvilRandom: Let nature decide whether corruption or crimson infects your world.
-	// WorldDescriptionEvilCorrupt: Disease-like corruption is guaranteed to be present in your world.
-	// WorldDescriptionEvilCrimson: Macabre, grotesque crimson is guaranteed to be present in your world.
-	// WorldDescriptionDefault: Please choose how your world will be built with the options above.
+	 WorldDescriptionName: Berikan duniamu Nama, kamu bisa menggantinya nanti jika perlu!
+	 WorldDescriptionSeed: DNA yang mendefinisikan bentuk dan sifat duniamu
+	 WorldDescriptionSizeSmall: Ideal untuk pengalaman bermain sendiri.
+	 WorldDescriptionSizeMedium: Lebih besar dan lebih baik untuk eksplorasi, atau mengajak teman.
+	 WorldDescriptionSizeLarge: Ukuran super untuk proses yang panjang dan main bersama.
+	 WorldDescriptionCreative: Main dengan santai (Keluarkan kreativitas anda)
+	 WorldDescriptionNormal: Petualangan mu dimulai... (Pengalaman Terraria Standar)
+	 WorldDescriptionExpert: Keberuntungan & Kemuliaan. (Kesulitan & Loot yang jauh lebih baik)
+	 WorldDescriptionMaster: Selamat datang di Neraka (Sangat sulit, hanya untuk pemberani)
+	 WorldDescriptionEvilRandom: Biarkan alam memilih untuk menginfeksi duniamu.
+	 WorldDescriptionEvilCorrupt: Penyakit corruption sudah dipastikan ada di duniamu.
+	 WorldDescriptionEvilCrimson: Mengerikan, aneh crimson sudah dipastikan ada di duniamu.
+	 WorldDescriptionDefault: Tolong pilih bagaimana duniamu akan dibuat dengan opsi diatas.
 	// SmartDoorsDisabled: Smart Doors: Disabled
 	// SmartDoorsEnabled: Smart Doors: Enabled
 	// SmartDoorsGamepad: Smart Doors: Gamepad Only
 	// CannotDeleteFavorited: Cannot Delete (Favorited)
 	// NPCCheckHappiness: " Happiness"
 	// QuickUseItem: Quick Use
-	// TilesSwayInWindOn: Windy Environment: Enabled
-	// TilesSwayInWindOff: Windy Environment: Disabled
+	 TilesSwayInWindOn: Lingkungan Berangin: Aktif
+	 TilesSwayInWindOff: Lingkungan Berangin: Mati
 	// Info: Info
 	// Version: Version {0}
-	// AvailableResourcePacksTitle: Available Packs ({Amount})
-	// EnabledResourcePacksTitle: Enabled Packs ({Amount})
+	 AvailableResourcePacksTitle: Pack yang tersedia ({Amount})
+	 EnabledResourcePacksTitle: Pack yang diaktifkan ({Amount})
 	// OffsetTexturePackPriorityUp: Move Frontwards
 	// OffsetTexturePackPriorityDown: Move Backwards
 	// EnableTexturePack: Enable
@@ -4513,8 +4513,8 @@ Net: {
 	// RequestingWorldInformation: Requesting world information
 	// RequestingTileData: Requesting tile data
 	// StatusComplete: "{0}: Complete!"
-	// NameTooLong: Name is too long.
-	// EmptyName: Empty name.
+	 NameTooLong: Nama Terlalu Panjang.
+	 EmptyName: Nama Kosong.
 	// PlayerIsNotCreativeAndWorldIsCreative: Only Journey characters may enter a Journey server.
 	// PlayerIsCreativeAndWorldIsNotCreative: Only Non-Journey characters may enter a Non-Journey server.
 	// CannotTeleportToPylonBecausePlayerIsNotNearAPylon: You are not close enough to a pylon to teleport with the pylon network
@@ -4599,18 +4599,18 @@ GameUI: {
 	// Bright: Bright
 	// Normal: Classic
 	// Faded: Faded
-	// Hidden: Hidden
-	// WaveQuality: Waves Quality: {0}
+	 Hidden: Disembunyikan
+	 WaveQuality: Kualitas Ombak: {0}
 	// HeatDistortion: Heat Distortion: {0}
-	// Enabled: Enabled
-	// Disabled: Disabled
+	 Enabled: Diaktifkan
+	 Disabled: Dimatikan
 	// StormEffects: Storm Effects: {0}
-	// QualityHigh: High
-	// QualityMedium: Medium
-	// QualityLow: Low
-	// QualityOff: Off
+	 QualityHigh: Tinggi
+	 QualityMedium: Sedang
+	 QualityLow: Rendah
+	 QualityOff: Mati
 	// GameZoom: Zoom: {0}% ({1}%)
-	// UIScale: UI Scale: {0}% ({1}%)
+	 UIScale: Skala UI: {0}% ({1}%)
 	// ZoomCategory: Zoom
 	// Misc: Misc
 	// Gameplay: Gameplay
@@ -4923,10 +4923,10 @@ Currency: {
 }
 
 Achievements: {
-	// ChallengerCategory: Challenger
-	// CollectorCategory: Collector
-	// ExplorerCategory: Explorer
-	// SlayerCategory: Slayer
+	 ChallengerCategory: Penantang
+	 CollectorCategory: Pengkoleksi
+	 ExplorerCategory: Penjelajah
+	 SlayerCategory: Pembunuh
 	// NoCategory: None
 	// Completed: Achievement complete! {0}
 	// TIMBER_Name: Timber!!
@@ -10757,7 +10757,7 @@ BestiaryInfo: {
 	// Sort_ID: ID
 	// Sort_BestiaryID: Bestiary ID
 	// Sort_Rarity: Rarity
-	// Sort_Alphabetical: Name
+	 Sort_Alphabetical: Nama
 	// Sort_Attack: Attack
 	// Sort_Defense: Defense
 	// Sort_Coins: Coins
@@ -11555,7 +11555,7 @@ CreativePowers: {
 	// Sort_PlacableObjects: Placable Objects
 	// Sort_Walls: Walls
 	// Sort_Blocks: Blocks
-	// Sort_Alphabetical: Name
+	 Sort_Alphabetical: Nama
 	// CantUsePowerBecauseOfNoPermissionFromServer: You have no permission for this power
 }
 
@@ -22500,53 +22500,53 @@ LegacyMenu: {
 	// 24: Hardcore
 	// 25: Mediumcore
 	// 26: Classic
-	// 27: Random
+	 27: Acak
 	// 28: Create
-	// 29: Hardcore characters die for good.
-	// 30: Mediumcore characters drop items on death.
-	// 31: Classic characters drop money on death.
+	 29: Karakter hardcore mati dengan tenang.
+	 30: Karakter mediumcore menjatuhkan item saat mati.
+	 31: Karakter classic menjatuhkan uang saat mati.
 	// 32: Select difficulty
 	// 33: Shirt
 	// 34: Undershirt
 	// 35: Pants
 	// 36: Shoes
-	// 37: Hair
-	// 38: Hair Color
-	// 39: Eye Color
-	// 40: Skin Color
-	// 41: Shirt Color
-	// 42: Undershirt Color
-	// 43: Pants Color
-	// 44: Shoe Color
-	// 45: Enter Character Name:
-	// 46: Delete
-	// 47: Create World
-	// 48: Enter World Name:
-	// 49: Go Windowed
-	// 50: Go Fullscreen
-	// 51: Resolution
-	// 52: Parallax
-	// 53: Frame Skip Off
-	// 54: Frame Skip On
-	// 55: Lighting: Color
-	// 56: Lighting: White
-	// 57: Lighting: Retro
-	// 58: Lighting: Trippy
-	 59: Quality: Otomatis
-	 60: Quality: Tinggi
-	 61: Quality: Sedang
-	 62: Quality: Rendah
+	 37: Rambut
+	 38: Warna Rambut
+	 39: Warna Mata
+	 40: Warna Kulit
+	 41: Warna Kemeja
+	 42: Warna Kaos
+	 43: Warna Celana
+	 44: Warna Sepatu
+	 45: Masukan Nama Karakter:
+	 46: Hapus
+	 47: Buat Dunia
+	 48: Masukan Nama Dunia:
+	 49: Beralih ke Jendela
+	 50: Beralih ke Layar Penuh
+	 51: Resolusi
+	 52: Paralaks
+	 53: Lewati Frame Mati
+	 54: Lewati Frame Aktif
+	 55: Pencahayaan: Warna
+	 56: Pencahayaan: Putih
+	 57: Pencahayaan: Retro
+	 58: Pencahayaan: Trippy
+	 59: Kualitas: Otomatis
+	 60: Kualitas: Tinggi
+	 61: Kualitas: Sedang
+	 62: Kualitas: Rendah
 	 63: Video
-	// 64: Cursor Color
+	 64: Warna Kursor
 	// 65: Volume
 	 66: Kontrol
-	// 67: Autosave On
-	// 68: Autosave Off
-	// 69: Autopause On
-	// 70: Autopause Off
-	// 71: Pickup Text On
-	// 72: Pickup Text Off
-	// 73: Fullscreen Resolution
+	 67: Simpan Otomatis Aktif
+	 68: Simpan Otomatis Mati
+	 69: Pause Otomatis Aktif
+	 70: Pause Otomatis Mati
+	 71: Teks Pengambilan Item Aktif
+	 72: Teks Pengambilan Item Mati
+	 73: Resolusi Layar Penuh
 	// 74: "Up                "
 	// 75: "Down             "
 	// 76: "Left               "
@@ -22560,22 +22560,22 @@ LegacyMenu: {
 	// 84: "Grapple           "
 	// 85: "Auto Select       "
 	// 86: Reset to Default
-	// 87: Join
-	// 88: Host & Play
-	// 89: Enter Server IP Address:
-	// 90: Enter Server Port:
-	// 91: Choose world size:
+	 87: Gabung
+	 88: Buat Sesi & Main
+	 89: Masukan Alamat IP Server:
+	 90: Masukan Port Server:
+	 91: Pilih Besar Dunia:
 	 92: Kecil
 	 93: Sedang
 	 94: Besar
-	// 95: Red:
-	// 96: Green:
-	// 97: Blue:
-	// 98: Sound:
-	// 99: Music:
-	// 100: Background On
-	// 101: Background Off
-	// 102: Select language
+	 95: Merah:
+	 96: Hijau:
+	 97: Biru:
+	 98: Suara:
+	 99: Musik:
+	 100: Latar Belakang Aktif
+	 101: Latar Belakang Mati
+	 102: Select language
 	 103: Bahasa
 	// 104: Yes
 	// 105: No
@@ -22585,42 +22585,42 @@ LegacyMenu: {
 	// 109: "Zoom Out                    "
 	// 110: "Decrease Transparency     "
 	// 111: "Increase Transparency      "
-	// 112: Map Enabled
-	// 113: Map Disabled
+	 112: Map Aktif
+	 113: Map Mati
 	 114: Umum
 	// 115: Map Controls
 	// 116: Multicore Lighting:
 	// 117: Off
 	// 118: Close Menu
-	// 119: Ambient:
-	// 120: "Smart Cursor    "
-	// 121: Smart Cursor Mode: Toggle
-	// 122: Smart Cursor Mode: Hold
-	// 123: Event Progress Bar
-	// 124: Off
-	// 125: Timed
-	// 126: On
+	 119: Ambien:
+	 120: "Kursor Pintar    "
+	 121: Mode Kursor Pintar: Beralih
+	 122: Mode Kursor Pintar: Tekan
+	 123: Indikator Proses Event
+	 124: Mati
+	 125: Waktu
+	 126: Aktif
 	// 127: Style
-	// 128: Placement Preview On
-	// 129: Placement Preview Off
+	 128: Tampilkan Penempatan Aktif
+	 129: Tampilkan Penempatan Mati
 	// 130: "Mount             "
 	 131: Pencapaian
-	// 132: Blood and Gore On
-	// 133: Blood and Gore Off
-	// 134: Apply
-	// 135: Server Settings
-	// 136: Steam Multiplayer: Disabled
-	// 137: Steam Multiplayer: Enabled
-	// 138: Allowed Users: Invite Only
-	// 139: Allowed Users: Friends
-	// 140: Friends Can Invite: Off
-	// 141: Friends Can Invite: On
-	// 142: Allow Friends Of Friends: Off
-	// 143: Allow Friends Of Friends: On
-	// 144: Start
-	// 145: Join via Steam
-	// 146: Join via IP
-	// 147: Invite Friends
+	 132: Darah dan Kesadisan Aktif
+	 133: Darah dan Kesadisan Mati
+	 134: Terapkan
+	 135: Pengaturan Server
+	 136: Main Bersama di Steam: Mati
+	 137: Main Bersama di Steam: Aktif
+	 138: Pemain yang dibolehkan: Hanya dari ajakan
+	 139: Pemain yang dibolehkan: Teman
+	 140: Teman Bisa Mengajak: Mati
+	 141: Teman Bisa Mengajak: Aktif
+	 142: Izinkan Teman dari Teman: Mati
+	 143: Izinkan Teman dari Teman: Aktif
+	 144: Mulai
+	 145: Gabung melalui Steam
+	 146: Gabung melalui IP
+	 147: Ajak Teman
 	// 148: Up
 	// 149: Down
 	// 150: Left
@@ -22684,47 +22684,47 @@ LegacyMenu: {
 	// 208: Invert Right Thumbstick Vertical
 	// 209: Utilize
 	 210: Tampilan
-	// 211: Passwords: Visible
-	// 212: Passwords: Hidden
-	// 213: Smart Cursor Priority: Pickaxe -> Axe
-	// 214: Smart Cursor Priority: Axe -> Pickaxe
-	// 215: Smart Block Placement: To Cursor
-	// 216: Smart Block Placement: Disabled
-	 217: Warna Border
+	 211: Password: Dilihatkan
+	 212: Password: Disembunyikan
+	 213: Prioritas Kursor Pintar: Pickaxe -> Axe
+	 214: Prioritas Kursor Pintar: Axe -> Pickaxe
+	 215: Pemasangan Blok Pintar: Aktif
+	 216: Pemasangan Blok Pintar: Mati
+	 217: Warna Batasan
 	 218: Kursor
 	 219: Kontrol
-	// 220: Activate Set Bonuses: Up
-	// 221: Activate Set Bonuses: Down
-	// 222: Keybindings
-	// 223: Quick Trash: Left Shift
-	// 224: Quick Trash: Left Control
+	 220: Aktifan Bonus Set: Atas
+	 221: Aktifan Bonus Set: Bawah
+	 222: Pengaturan Tombol
+	 223: Shortcut Sampah: Shift Kiri
+	 224: Shortcut Sampah: Control Kiri
 	// 225: Quick Wall Replace: Disabled
 	// 226: Quick Wall Replace: Enabled
 	// 227: Hotbar Scroll Time To Radial: On
 	// 228: Hotbar Scroll Time To Radial: Off
-	// 229: Tile Grid On
-	// 230: Tile Grid Off
-	// 231: Lock On
-	// 232: Lock On Priority: Focus Target
-	// 233: Lock On Priority: Target Closest
-	// 234: Lock On Priority: Clearest Line
+	 229: Kisi Petak Aktif
+	 230: Kisi Petak Mati
+	 231: Mode Lock
+	 232: Prioritas Mode Lock: Fokus Target
+	 233: Prioritas Mode Lock: Target Terdekat Pada Player
+	 234: Prioritas Mode Lock: Target Terdekat Pada Kursor
 	// 235: abc / ABC / !@#
 	// 236: Backspace
 	// 237: Submit
 	// 238: Space
 	// 239: <-
 	// 240: ->
-	// 241: Gamepad Instructions Off
-	// 242: Gamepad Instructions On
+	 241: Instruksi Gamepad Mati
+	 242: Instruksi Gamepad Hidup
 	// 243: Menu Controls
 	// 244: Radial Quickbar
-	// 245: Borderless Window: Enabled
-	// 246: Borderless Window: Disabled
-	// 247: Frame Skip Off
-	// 248: Frame Skip On
-	// 249: Frame Skip Subtle
-	// 250: Miner's Wobble: Enabled
-	// 251: Miner's Wobble: Disabled
+	 245: Jendela Tanpa Batas: Aktif
+	 246: Jendela Tanpa Batas: Mati
+	 247: Lewati Frame Mati
+	 248: Lewati Frame Aktif
+	 249: Lewati Frame Halus
+	 250: Efek Mining: Aktif
+	 251: Efek Mining: Mati
 	// 252: Interface Movement Delay
 	// 253: Quick Trash: Disabled
 }
@@ -22833,7 +22833,7 @@ LegacyMisc: {
 	// 6: The Frost Legion is approaching from the east!
 	// 7: The Frost Legion has arrived!
 	// 8: The Blood Moon is rising...
-	// 9: You feel an evil presence watching you...
+	 9: Kamu merasakan sosok jahat mengintai mu...
 	// 10: A horrible chill goes down your spine...
 	// 11: Screams echo around you...
 	// 12: Your world has been blessed with Cobalt!
@@ -22924,7 +22924,7 @@ LegacyMisc: {
 	// 100: Pick world evil
 	// 101: Corruption
 	// 102: Crimson
-	// 103: Random
+	 103: Acak
 	// 104: Cannot be used without Etherian Mana until the Eternia Crystal has been defended
 	// 105: Dragonfly
 	// 106: The horrors have arrived!
@@ -23049,8 +23049,8 @@ LegacyInterface: {
 	// 113: Only available in windowed mode
 	// 114: Only available if map is enabled
 	// 115: Camera Mode Disabled
-	// 116: Highlight New Items Off
-	// 117: Highlight New Items On
+	 116: Sorot Item Baru Mati
+	 117: Sorot Item Baru Hidup
 	// 118: Zoom In
 	// 119: Zoom Out
 	// 120: Teleport to ally
