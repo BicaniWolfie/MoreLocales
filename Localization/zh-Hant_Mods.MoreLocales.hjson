@@ -1,16 +1,15 @@
 Configs: {
-	Headers.Fonts: 字體配置
+	Headers.Fonts: 字體設定
 
 	ClientSideConfig: {
-		DisplayName: 客戶端配置
+		DisplayName: 客戶端設定
 
 		ForcedFont: {
-			Label: 強製使用本地字體
+			Label: 強制使用在地化字體類型
 			Tooltip:
 				'''
-				強製遊戲使用本地字體，忽略當前的語言設置
-				默認為{$Configs.LocalizedFont.None.Label}
-				這意味著字體將會跟隨所選語言而自動變化
+				強制遊戲使用此類型的在地化字體，忽略目前的語言設置。
+				預設為{$Configs.LocalizedFont.None.Label}，代表字體會根據所選語言動態變更。
 				'''
 		}
 	}
@@ -18,14 +17,13 @@ Configs: {
 	LocalizedFont: {
 		Tooltip:
 			'''
-			遊戲使用的字體
-			由於Unicode和Terraria的限製
-			需要根據語言來選擇合適的字體
+			遊戲使用的字體類型。
+			由於 Unicode 的限制，針對不同語言的字體需要進行微調。
 			'''
 		None.Label: 無
-		Default.Label: 默認
-		Japanese.Label: 日語
-		Korean.Label: 韓語
+		Default.Label: 預設
+		Japanese.Label: 日文
+		Korean.Label: 韓文
 	}
 }
 
@@ -34,141 +32,140 @@ Cultures: {
 		StandardSubtitle: 標準
 		LocalizedFontUnavailable:
 			'''
-			暫時無法使用該語言
-			因為缺失所需字體
-			請等待下次更新！
+			此語言無法使用，因為它需要模組中目前沒有的字體。
+			請等待下一次更新！
 			'''
 	}
 
 	English: {
-		Title: English (英語)
-		Subtitle: 美式英語
+		Title: English (英文)
+		Subtitle: 美式英文
 	}
 
 	German: {
-		Title: Deutsch (德語)
-		Subtitle: "{$Cultures.Common.StandardSubtitle}德語"
+		Title: Deutsch (德文)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Italian: {
-		Title: Italiano (意大利語)
-		Subtitle: "{$Cultures.Common.StandardSubtitle}意大利語"
+		Title: Italiano (義大利文)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	French: {
-		Title: Français (法語)
-		Subtitle: "{$Cultures.Common.StandardSubtitle}法語"
+		Title: Français (法文)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Spanish: {
-		Title: Español (西班牙語)
-		Subtitle: "{$Cultures.Common.StandardSubtitle}西班牙語"
+		Title: Español (西班牙文)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Russian: {
-		Title: Русский (俄語)
-		Subtitle: "{$Cultures.Common.StandardSubtitle}俄語"
+		Title: Русский (俄文)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Chinese: {
 		Title: 簡體中文
-		Subtitle: (中國大陸地區)
+		Subtitle: 中文（簡體）
 	}
 
 	Portuguese: {
-		Title: Português (葡萄牙語)
-		Subtitle: "{$Cultures.Common.StandardSubtitle}葡萄牙語"
+		Title: Português (葡萄牙文)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Polish: {
-		Title: Polski (波蘭語)
-		Subtitle: "{$Cultures.Common.StandardSubtitle}波蘭語"
+		Title: Polski (波蘭文)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	BritishEnglish: {
-		Title: English (英語)
-		Subtitle: 英式英語
+		Title: English (英文)
+		Subtitle: 英式英文
 	}
 
 	Japanese: {
-		Title: 日本語 (日語)
-		Subtitle: "{$Cultures.Common.StandardSubtitle}日語"
+		Title: 日本語 (日文)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Korean: {
-		Title: 한국어 (韓語)
-		Subtitle: "{$Cultures.Common.StandardSubtitle}韓語"
+		Title: 한국어 (韓文)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	TraditionalChinese: {
 		Title: 正體中文
-		Subtitle: (中國臺灣地區)
+		Subtitle: 中文（繁體）
 	}
 
 	Turkish: {
-		Title: Türkçe (土耳其語)
-		Subtitle: "{$Cultures.Common.StandardSubtitle}土耳其語"
+		Title: Türkçe (土耳其文)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Thai: {
-		Title: ภาษาไทย (泰語)
-		Subtitle: "{$Cultures.Common.StandardSubtitle}泰語"
+		Title: ภาษาไทย (泰文)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Ukrainian: {
-		Title: Українська (烏克蘭語)
-		Subtitle: "{$Cultures.Common.StandardSubtitle}烏克蘭語"
+		Title: Українська (烏克蘭文)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	LatinAmericanSpanish: {
-		Title: Español (西班牙語)
-		Subtitle: "{$Cultures.Common.StandardSubtitle}語拉丁美洲語"
+		Title: Español (西班牙文)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}拉丁美洲語"
 	}
 
 	Czech: {
-		Title: Čeština (捷克語)
-		Subtitle: "{$Cultures.Common.StandardSubtitle}捷克語"
+		Title: Čeština (捷克文)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Hungarian: {
-		Title: Magyar (匈牙利語)
-		Subtitle: "{$Cultures.Common.StandardSubtitle}匈牙利語"
+		Title: Magyar (匈牙利文)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	PortugalPortuguese: {
-		Title: Português (葡萄牙語)
-		Subtitle: "{$Cultures.Common.StandardSubtitle}葡萄牙語"
+		Title: Português (葡萄牙文)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Swedish: {
-		Title: Svenska (瑞典語)
-		Subtitle: "{$Cultures.Common.StandardSubtitle}瑞典語"
+		Title: Svenska (瑞典文)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Dutch: {
-		Title: Nederlands (荷蘭語)
-		Subtitle: "{$Cultures.Common.StandardSubtitle}荷蘭語"
+		Title: Nederlands (荷蘭文)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Danish: {
-		Title: Dansk (丹麥語)
-		Subtitle: "{$Cultures.Common.StandardSubtitle}丹麥語"
+		Title: Dansk (丹麥文)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
-	Vietnamese.Title: Tiếng Việt (越南語)
+	Vietnamese.Title: Tiếng Việt (越南文)
 
 	Finnish: {
-		Title: Suomi (芬蘭語)
-		Subtitle: "{$Cultures.Common.StandardSubtitle}芬蘭語"
+		Title: Suomi (芬蘭文)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Romanian: {
-		Title: Română (羅馬尼亞語)
-		Subtitle: "{$Cultures.Common.StandardSubtitle}羅馬尼亞語"
+		Title: Română (羅馬尼亞文)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Indonesian: {
-		Title: Bahasa Indonesia (印度尼西亞語)
-		Subtitle: "{$Cultures.Common.StandardSubtitle}印尼語"
+		Title: Bahasa Indonesia (印尼文)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 }
