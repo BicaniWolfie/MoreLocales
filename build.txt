@@ -1,5 +1,5 @@
-displayName = Localization Plus
+displayName = Localization Plus (More Languages Mod)
 author = qAngel
 side = Client
 buildIgnore = *.csproj, *.user, obj\*, bin\*, lib\*, .vs\*, FontBases\*
-version = 0.2.0.0
+version = 1.0.0.0

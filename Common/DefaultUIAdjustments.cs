@@ -2,10 +2,6 @@
 using Terraria.GameContent.UI.Elements;
 using Terraria.GameContent.UI.States;
 using Terraria.Localization;
-using Terraria.ModLoader;
-using MonoMod.Cil;
-using MoreLocales.Core;
-using System.Linq;
 using System.Collections.Generic;
 
 namespace MoreLocales.Common

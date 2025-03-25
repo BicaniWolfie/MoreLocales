@@ -1,6 +1,4 @@
-﻿using MoreLocales.Core;
-using MoreLocales.Utilities;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using Terraria.ModLoader.Config;
 
 namespace MoreLocales.Config
@@ -16,7 +14,7 @@ namespace MoreLocales.Config
 
         public override void OnChanged()
         {
-            FontHelper.SwitchFont(ForcedFont, true);
+            FontHelperV2.ForcedFont = ForcedFont;
         }
     }
 }

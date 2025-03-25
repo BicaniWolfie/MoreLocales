@@ -1,6 +1,4 @@
-﻿using MoreLocales.Utilities;
-
-namespace MoreLocales.Core
+﻿namespace MoreLocales.Core
 {
     /// <summary>
     /// The new added cultures. Enums can be freely cast into other enums without any errors. The enum underneath will keep the value.
@@ -39,7 +37,5 @@ namespace MoreLocales.Core
         Default,
         Japanese,
         Korean,
-        Thai,
-        Vietnamese
     }
 }

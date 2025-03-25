@@ -1,9 +1,5 @@
-﻿using Microsoft.Xna.Framework.Graphics;
-using System;
-using Microsoft.Xna.Framework;
+﻿using System;
 using Terraria;
-using System.Reflection.Metadata;
-using MoreLocales.Utilities;
 
 namespace MoreLocales.Utilities
 {

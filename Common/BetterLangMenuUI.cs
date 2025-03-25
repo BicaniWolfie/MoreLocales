@@ -1,27 +1,13 @@
-﻿using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Terraria;
-using Terraria.GameContent.UI.Elements;
 using Terraria.UI;
 using ReLogic.Content;
-using Terraria.ModLoader;
 using Terraria.Localization;
-using MoreLocales.Core;
-using MoreLocales.Utilities;
-using Terraria.Chat;
 using Terraria.UI.Chat;
 using Terraria.GameContent;
-using Humanizer;
 using Terraria.Audio;
 using Terraria.ID;
-using System.Text.RegularExpressions;
-using ReLogic.Graphics;
-using Terraria.ModLoader.UI;
 
 namespace MoreLocales.Common
 {
@@ -151,11 +137,9 @@ namespace MoreLocales.Common
         private readonly LocalizedText _cultureSubtitle;
         private readonly LocalizedText _cultureDescription = null;
         private bool Active => _culture == LanguageManager.Instance.ActiveCulture;
-        private bool HasUsableOrDoesntNeedLocalizedFont => ((CultureNamePlus)_culture.LegacyId).LocalizedFontAvailable() != false;
-        private bool Interactable => !Active && HasUsableOrDoesntNeedLocalizedFont;
+        private bool Interactable => !Active;
         private const string _culturesKey = "Mods.MoreLocales.Cultures";
         private bool hovered = false;
-        private bool needsLocalizedFontTitle = false;
         static LanguageButton()
         {
             _flagAtlas = ModContent.Request<Texture2D>("MoreLocales/Assets/Flags");
@@ -176,11 +160,6 @@ namespace MoreLocales.Common
             if (culture.HasDescription())
                 _cultureDescription = Language.GetOrRegister($"{cultureKey}.Description");
 
-            if (CultureHelper.NeedsLocalizedTitle(cultureKey))
-            {
-                needsLocalizedFontTitle = true;
-            }
-
             OnLeftClick += Clicked;
             OnMouseOver += Hovered;
             OnMouseOut += Unhovered;
@@ -191,7 +170,7 @@ namespace MoreLocales.Common
         {
             if (!ContainsPoint(Main.MouseScreen))
                 return;
-            bool available = HasUsableOrDoesntNeedLocalizedFont;
+            bool available = true;
             if (available)
             {
                 if (_cultureDescription != null)
@@ -231,10 +210,8 @@ namespace MoreLocales.Common
             Texture2D tex = BetterLangMenuUI._panelTexture.Value;
 
             bool active = Active;
-            bool availableLocalizedFont = HasUsableOrDoesntNeedLocalizedFont;
-            bool usable = !active && availableLocalizedFont;
 
-            Color drawColor = active ? Color.DarkGray : !availableLocalizedFont ? Color.Gray : Color.White;
+            Color drawColor = active ? Color.Gray : Color.White;
 
             Rectangle bounds = GetDimensions().ToRectangle();
 
@@ -242,7 +219,7 @@ namespace MoreLocales.Common
 
             UIHelper.DrawAdjustableBox(spriteBatch, tex, bounds, drawColor);
 
-            if (active || (hovered && usable))
+            if (active || hovered)
                 UIHelper.DrawAdjustableBox(spriteBatch, _panelHighlight.Value, bounds, Color.White);
 
             if (_flagFrame == Rectangle.Empty)
@@ -275,7 +252,7 @@ namespace MoreLocales.Common
                 Color drawSubColor = Color.Lerp(drawColor, Color.Black, 0.25f);
                 ChatManager.DrawColorCodedStringWithShadow(spriteBatch, font, subtitle, center - new Vector2(xSize * 0.5f, 0f), drawSubColor, 0f, Vector2.Zero, new Vector2(subSize));
             }
-            string title = needsLocalizedFontTitle ? _cultureTitle.Format(Language.GetTextValue($"{_culturesKey}.{_culture.FullName()}.{(FontHelper.IsUsingAppropriateFont(_culture) ? "LocalizedFont" : "DefaultFont")}")) : _cultureTitle.Value;
+            string title = _cultureTitle.Value;
             float xSizeTitle = font.MeasureString(title).X;
             ChatManager.DrawColorCodedStringWithShadow(spriteBatch, font, title, center - new Vector2(xSizeTitle * 0.5f, sub ? 18f : 10f), drawColor, 0f, Vector2.Zero, Vector2.One);
 

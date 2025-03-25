@@ -36,7 +36,6 @@ namespace MoreLocales.Core
         internal static void DoLoad()
         {
             IL_LanguageManager.ReloadLanguage += AddFallbacks;
-            On_LanguageManager.SetLanguage_GameCulture += SetCulture;
             On_Main.SaveSettings += Save;
 
             var vanillaNamedCultures = GetNamedCultures();
@@ -68,22 +67,6 @@ namespace MoreLocales.Core
             // Then, bring it back (if settings are saved outside of game exit, this is necessary)
             LanguageManager.Instance?.SetLanguage(customCulture);
             return result;
-        }
-
-        private static void SetCulture(On_LanguageManager.orig_SetLanguage_GameCulture orig, LanguageManager self, GameCulture culture)
-        {
-            if (culture.TryGetLocalizedFont(out LocalizedFont font))
-            {
-                FontHelper.SwitchFont(font);
-            }
-            else
-            {
-                FontHelper.SwitchFont(LocalizedFont.Default);
-                // none of the vanilla cultures need a localized font so we can do this logic here to save 0.000004 nanoseconds
-                if (!culture.IsCustom())
-                    cachedVanillaCulture = culture.LegacyId;
-            }
-            orig(self, culture);
         }
 
         private static void AddFallbacks(ILContext il)

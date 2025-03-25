@@ -1,13 +1,8 @@
 ﻿using ReLogic.Content;
-using ReLogic.Graphics;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.Localization;
-using Terraria.ModLoader;
 using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework;
-using MonoMod.Cil;
 using System;
 using MoreLocales.Common;
 using System.Reflection;

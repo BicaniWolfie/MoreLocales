@@ -11,13 +11,11 @@ Configs: {
 	}
 
 	LocalizedFont: {
-		// Tooltip: The type of font the game uses. Changes to the font for different languages are necessary due to Unicode and Terraria restrictions
+		// Tooltip: The type of font the game uses. Small changes to the font for different languages are necessary due to Unicode restrictions
 		// None.Label: None
 		// Default.Label: Default
 		// Japanese.Label: Japanese
 		// Korean.Label: Korean
-		// Thai.Label: Thai
-		// Vietnamese.Label: Vietnamese
 	}
 }
 
@@ -86,12 +84,8 @@ Cultures: {
 		// Subtitle: Hyoujungo
 	}
 
-	# Only display as 한국어 with correct LocalizedFont
-	# Otherwise Hangug-eo
 	Korean: {
-		// LocalizedFont: 한국어
-		// DefaultFont: Hangug-eo
-		// Title: "{0} (Korean)"
+		// Title: 한국어 (Korean)
 		// Subtitle: South Korea
 	}
 
@@ -105,12 +99,8 @@ Cultures: {
 		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
-	# Only display as ภาษาไทย with correct LocalizedFont
-	# Otherwise Phasa Thai
 	Thai: {
-		// LocalizedFont: ภาษาไทย
-		// DefaultFont: Phasa Thai
-		// Title: "{0} (Thai)"
+		// Title: ภาษาไทย (Thai)
 		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
@@ -154,13 +144,7 @@ Cultures: {
 		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
-	# Only display as Tiếng Việt with correct LocalizedFont
-	# Otherwise Tieng Viet
-	Vietnamese: {
-		// LocalizedFont: Tiếng Việt
-		// DefaultFont: Tieng Viet
-		// Title: "{0} (Vietnamese)"
-	}
+	// Vietnamese.Title: Tiếng Việt (Vietnamese)
 
 	Finnish: {
 		// Title: Suomi (Finnish)

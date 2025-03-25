@@ -15,22 +15,20 @@
  * along with this program; if not, see <https://www.gnu.org/licenses/>.
  */
 
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Mono.Cecil.Cil;
-using MonoMod.Cil;
-using MonoMod.RuntimeDetour;
-using MoreLocales.Core;
-using MoreLocales.Utilities;
-using ReLogic.Graphics;
+global using Microsoft.Xna.Framework;
+global using Microsoft.Xna.Framework.Graphics;
+global using Mono.Cecil.Cil;
+global using MonoMod.Cil;
+global using MonoMod.RuntimeDetour;
+global using MoreLocales.Core;
+global using MoreLocales.Utilities;
+global using ReLogic.Graphics;
+global using Terraria.ModLoader;
 using System;
 using System.IO;
 using System.Reflection;
-using System.Runtime.CompilerServices;
+using Terraria;
 using Terraria.Localization;
-using Terraria.ModLoader;
-using Terraria.UI;
-using static ReLogic.Graphics.DynamicSpriteFont;
 
 namespace MoreLocales
 {
@@ -39,7 +37,6 @@ namespace MoreLocales
         private static ILHook hook;
         public override void PostSetupContent()
         {
-            FontHelper.InitLocalizedFonts();
             ExtraLocalesSupport.cachedVanillaCulture = LanguageManager.Instance.ActiveCulture.LegacyId;
             ExtraLocalesSupport.LoadCustomCultureData();
         }
@@ -67,13 +64,10 @@ namespace MoreLocales
                 var c = new ILCursor(il);
 
                 MethodInfo move = typeof(File).GetMethod("Move", [typeof(string), typeof(string)]);
+                PropertyInfo getTMLprop = typeof(Logging).GetProperty("tML", BindingFlags.Static | BindingFlags.NonPublic);
+                MethodInfo getTML = getTMLprop.GetGetMethod(true);
 
-                if (!c.TryGotoNext
-                (
-                    i => i.MatchLdloc(out _),
-                    i => i.MatchLdloc(out _),
-                    i => i.MatchCall(move)
-                ))
+                if (!c.TryGotoNext(i => i.MatchCall(getTML)))
                 {
                     mod.Logger.Warn("FixPeskyLegacyMarking: Couldn't find start of legacy marking");
                     return;
@@ -105,7 +99,6 @@ namespace MoreLocales
         }
         public override void Unload()
         {
-            FontHelper.ResetFont(true);
             ExtraLocalesSupport.DoUnload();
             hook?.Dispose();
         }

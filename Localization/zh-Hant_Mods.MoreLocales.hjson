@@ -6,17 +6,17 @@ Configs: {
 
 		ForcedFont: {
 			Label: 強製使用本地字體
-			Tooltip: 
-			    '''
-			    強製遊戲使用本地字體，忽略當前的語言設置
-			    默認為{$Configs.LocalizedFont.None.Label}
-			    這意味著字體將會跟隨所選語言而自動變化
-			    '''
+			Tooltip:
+				'''
+				強製遊戲使用本地字體，忽略當前的語言設置
+				默認為{$Configs.LocalizedFont.None.Label}
+				這意味著字體將會跟隨所選語言而自動變化
+				'''
 		}
 	}
 
 	LocalizedFont: {
-		Tooltip: 
+		Tooltip:
 			'''
 			遊戲使用的字體
 			由於Unicode和Terraria的限製
@@ -26,8 +26,6 @@ Configs: {
 		Default.Label: 默認
 		Japanese.Label: 日語
 		Korean.Label: 韓語
-		Thai.Label: 泰語
-		Vietnamese.Label: 越南語
 	}
 }
 
@@ -98,11 +96,7 @@ Cultures: {
 	}
 
 	Korean: {
-		# Only d한국어 with correct LocalizedFont
-		# Otherwise Hangug-eo
-		LocalizedFont: 한국어
-		DefaultFont: 韓語
-		Title: "{0} (韓語)"
+		Title: 한국어 (韓語)
 		Subtitle: "{$Cultures.Common.StandardSubtitle}韓語"
 	}
 
@@ -117,11 +111,7 @@ Cultures: {
 	}
 
 	Thai: {
-		# Only display as ภาษาไทย with correct LocalizedFont
-		# Otherwise Phasa Thai
-		LocalizedFont: ภาษาไทย
-		DefaultFont: 泰語
-		Title: "{0} (泰語)"
+		Title: ภาษาไทย (泰語)
 		Subtitle: "{$Cultures.Common.StandardSubtitle}泰語"
 	}
 
@@ -165,13 +155,7 @@ Cultures: {
 		Subtitle: "{$Cultures.Common.StandardSubtitle}丹麥語"
 	}
 
-	# Only display as Tiếng Việt with correct LocalizedFont
-	# Otherwise Tieng Viet
-	Vietnamese: {
-		LocalizedFont: Tiếng Việt
-		DefaultFont: Tieng Viet
-		Title: "{0} (越南語)"
-	}
+	Vietnamese.Title: Tiếng Việt (越南語)
 
 	Finnish: {
 		Title: Suomi (芬蘭語)

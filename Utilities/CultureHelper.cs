@@ -1,5 +1,4 @@
-﻿using MoreLocales.Core;
-using System;
+﻿using System;
 using Terraria.Localization;
 using static Terraria.Localization.GameCulture;
 
@@ -7,16 +6,10 @@ namespace MoreLocales.Utilities
 {
     public static class CultureHelper
     {
+        public static bool CustomCultureActive(CultureNamePlus customCulture) => LanguageManager.Instance.ActiveCulture.LegacyId == (int)customCulture;
         public static bool NeedsLocalizedTitle(string cultureKey) => Language.Exists($"{cultureKey}.LocalizedFont");
         public static string FullName(this GameCulture culture) => culture.IsCustom() ? ((CultureNamePlus)culture.LegacyId).ToString() : ((CultureName)culture.LegacyId).ToString();
         public static bool IsCustom(this GameCulture culture) => ExtraLocalesSupport.extraCultures.ContainsValue(culture);
-        public static bool TryGetLocalizedFont(this GameCulture culture, out LocalizedFont font)
-        {
-            font = ((CultureNamePlus)culture.LegacyId).GetLocalizedFont();
-            if (font == LocalizedFont.None)
-                return false;
-            return true;
-        }
         public static bool HasSubtitle(this GameCulture culture)
         {
             if (!Enum.IsDefined((CultureName)culture.LegacyId))

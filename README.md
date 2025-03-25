@@ -36,9 +36,10 @@ qAngel
 qAngel  
 ### Localization
 qAngel - Spanish (Both)  
-InfinaMii, TechnicalitiesDevelopment - British English  
+InfinaMii, TechnicalitiesDevelopment - English (United Kingdom)  
 Alone - Indonesian  
 Thai Localization Team - Thai  
+Yu Bell - Chinese (Traditional)  
 
 ## LICENSE
 This mod is open source under the [GPL v.3.0 License](https://www.gnu.org/licenses/gpl-3.0.html).
