@@ -1,163 +1,163 @@
 Configs: {
-	// Headers.Fonts: Font Settings
+	 Headers.Fonts: Cài Đặt Phông Chữ
 
 	ClientSideConfig: {
-		// DisplayName: Client Side Config
+		 DisplayName: Cấu Hình Bên Máy Chủ
 
 		ForcedFont: {
-			// Label: Force Localized Font Type
-			// Tooltip: Forces the game to use this type of localized font, disregarding the current language settings. This is {$Configs.LocalizedFont.None.Label} by default, which means the font will dynamically change with the chosen language.
+			 Label: Buộc Thể Loại Phông
+			 Tooltip: Buộc game phải sử dung loại phông này, bỏ qua chế độ ngôn ngữ hiện tại. Mặc định là {$Configs.LocalizedFont.None.Label}, nghĩa là phông sẽ thay đổi linh hoạt cho với ngôn ngữ được chọn.
 		}
 	}
 
 	LocalizedFont: {
-		// Tooltip: The type of font the game uses. Small changes to the font for different languages are necessary due to Unicode restrictions
-		// None.Label: None
-		// Default.Label: Default
-		// Japanese.Label: Japanese
-		// Korean.Label: Korean
+		Tooltip: Thể loại phông mà game dùng. Một vài thay đổi nhỏ tới các ngôn ngữ là cần thiết do hạn chế của Unicode
+		 None.Label: Không
+		 Default.Label: Mặc Định
+		 Japanese.Label: Tiếng Nhật
+		 Korean.Label: Tiếng Hàn
 	}
 }
 
 Cultures: {
 	Common: {
-		// StandardSubtitle: Standard
-		/* LocalizedFontUnavailable:
+		 StandardSubtitle: Tiêu Chuẩn
+		LocalizedFontUnavailable:
 			'''
-			This language cannot be used because it requires a font that is currently not in the mod.
-			Please wait for the next update!
-			''' */
+			Ngôn ngữ này không thể được sử dụng vì nó cần một phông chữ hiện chưa có trong mod.
+			Xin hãy chờ bản cập nhật sau!
+			''' 
 	}
 
 	English: {
-		// Title: English (English)
-		// Subtitle: United States
+		 Title: English (Tiếng Anh)
+		 Subtitle: Hợp Chủng Quốc Hoa Kỳ
 	}
 
 	German: {
-		// Title: Deutsch (German)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		 Title: Deutsch (Tiếng Đức)
+		 Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Italian: {
-		// Title: Italiano (Italian)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		 Title: Italiano (Tiếng Ý)
+		 Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	French: {
-		// Title: Français (French)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		 Title: Français (Tiếng Pháp)
+		 Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Spanish: {
-		// Title: Español (Spanish)
-		// Subtitle: Spain
+		 Title: Español (Tiếng Tây Ba Nha)
+		 Subtitle: Tây Ba Nha
 	}
 
 	Russian: {
-		// Title: Русский (Russian)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		 Title: Русский (Tiếng Nga)
+		 Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Chinese: {
-		// Title: 中文 (Chinese)
-		// Subtitle: Simplified
+		 Title: 中文 (Tiếng Trung)
+		 Subtitle: Giản Thể
 	}
 
 	Portuguese: {
-		// Title: Português (Portuguese)
-		// Subtitle: Brazil
+		 Title: Português (Tiếng Bồ Đào Nha)
+		 Subtitle: Brazil
 	}
 
 	Polish: {
-		// Title: Polski (Polish)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		 Title: Polski (Tiếng Ba Lan)
+		 Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	BritishEnglish: {
-		// Title: English (English)
-		// Subtitle: United Kingdom
+		 Title: English (Tiếng Anh)
+		 Subtitle: Vương Quốc Anh
 	}
 
 	Japanese: {
-		// Title: 日本語 (Japanese)
-		// Subtitle: Hyoujungo
+		 Title: 日本語 (Tiếng Nhật)
+		 Subtitle: Phổ Thông
 	}
 
 	Korean: {
-		// Title: 한국어 (Korean)
-		// Subtitle: South Korea
+		 Title: 한국어 (Tiếng Hàn)
+		 Subtitle: Hàn Quốc
 	}
 
 	TraditionalChinese: {
-		// Title: 中文 (Chinese)
-		// Subtitle: Traditional
+		 Title: 中文 (Tiếng Trung)
+		 Subtitle: Phồn Thể
 	}
 
 	Turkish: {
-		// Title: Türkçe (Turkish)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		 Title: Türkçe (Tiếng Thổ Nhĩ Kỳ)
+		 Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Thai: {
-		// Title: ภาษาไทย (Thai)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		 Title: ภาษาไทย (Tiếng Thái)
+		 Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Ukrainian: {
-		// Title: Українська (Ukrainian)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		 Title: Українська (Tiếng U-kren)
+		 Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	LatinAmericanSpanish: {
-		// Title: Español (Spanish)
-		// Subtitle: Standard Latin American
+		 Title: Español (Tiếng Tây Ba Nha)
+		 Subtitle: Mỹ La Tinh
 	}
 
 	Czech: {
-		// Title: Čeština (Czech)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		 Title: Čeština (Tiếng Séc)
+		 Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Hungarian: {
-		// Title: Magyar (Hungarian)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		 Title: Magyar (Tiếng Hungary)
+		 Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	PortugalPortuguese: {
-		// Title: Português (Portuguese)
-		// Subtitle: Portugal
+		 Title: Português (Tiếng Bồ Đào Nha)
+		 Subtitle: Bồ Đào Nha
 	}
 
 	Swedish: {
-		// Title: Svenska (Swedish)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		 Title: Svenska (Tiếng Thụy Điển)
+		 Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Dutch: {
-		// Title: Nederlands (Dutch)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		 Title: Nederlands (Tiếng Hà Lan)
+		 Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Danish: {
-		// Title: Dansk (Danish)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		 Title: Dansk (Tiếng Đan Mạch)
+		 Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
-	// Vietnamese.Title: Tiếng Việt (Vietnamese)
+	 Vietnamese.Title: Tiếng Việt (Tiếng Việt)
 
 	Finnish: {
-		// Title: Suomi (Finnish)
-		// Subtitle: Kirjakieli
+		 Title: Suomi (Tiếng Phần Lan)
+		 Subtitle: Thông Dụng
 	}
 
 	Romanian: {
-		// Title: Română (Romanian)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		 Title: Română (Tiếng Rumani)
+		 Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Indonesian: {
-		// Title: Bahasa Indonesia (Indonesian)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		 Title: Bahasa Indonesia (Tiếng Indo)
+		 Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 }
