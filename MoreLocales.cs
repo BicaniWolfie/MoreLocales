@@ -27,7 +27,6 @@ global using Terraria.ModLoader;
 using System;
 using System.IO;
 using System.Reflection;
-using Terraria;
 using Terraria.Localization;
 
 namespace MoreLocales
@@ -42,6 +41,8 @@ namespace MoreLocales
         }
         public override void Load()
         {
+            FontHelperV2.DoLoad();
+
             Type[] mParams =
             [
                 typeof(Mod),

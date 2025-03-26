@@ -10,16 +10,16 @@ Have you ever been disappointed in the lack of language variety Terraria offers 
 
 • A brand new Language menu
 
+• You can now freely use Hangul, Hiragana, Katakana, Vietnamese and Thai Script characters without compromising the base game fonts
+
 [i]Like this mod? Like this mod![/i]
 
 [img]https://i.imgur.com/ki1CPZe.gif[/img]
 
 [hr][/hr]
 [b]Notes[/b]
-The mod currently contains scarce localizations for vanilla content in British English, Thai, and Indonesian, however, if you'd like to help out with making some translations, you can join the Discord or make direct contributions through GitHub.
+The mod currently contains scarce localizations for vanilla content in a small amount of the new languages, however, if you'd like to help out with making some translations, you can join the Discord or make direct contributions through GitHub.
 
 If you're seeing this mod right after the release and you're a user, please realize that the mod does basically nothing other than give you a pretty language menu until other modders add the appropriate localizations into their mods, and until people contribute translations for vanilla content to this mod.
-I am currently in the process of porting the Thai Localization Team's Thai localization into the mod, but this will take a while.
 
-[quote=tModLoader]
-Developed By qAngel[/quote]
+[spoiler]British English, 日本語 Japanese, 한국어 Korean, 中文 Traditional Chinese, Türkçe Turkish, ภาษาไทย Thai, Українська Ukrainian, Español Latin America American Spanish, Čeština Czech, Magyar Hungarian, Português Portugal Portuguese, Svenska Swedish, Nederlands Dutch, Dansk Danish, Tiếng Việt Vietnamese, Suomi Finnish, Română Romanian, Bahasa Indonesia Indonesian[/spoiler]

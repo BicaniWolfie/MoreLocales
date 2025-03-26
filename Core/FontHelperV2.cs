@@ -55,7 +55,7 @@ namespace MoreLocales.Core
             return Children.GetEnumerator();
         }
     }
-    public class FontHelperV2 : ILoadable
+    public class FontHelperV2
     {
         /// <summary>
         /// I'm DEAD my guy
@@ -87,7 +87,7 @@ namespace MoreLocales.Core
         private const string combatTextName = "CombatText-";
         private const string critTextName = "CritText-";
 
-        public static LocalizedFont ForcedFont = LocalizedFont.None;
+        public static LocalizedFont ForcedFont { get; set; } = LocalizedFont.None;
 
         [UnsafeAccessor(UnsafeAccessorKind.Field, Name = "_spriteCharacters")]
         public static extern ref Dictionary<char, SpriteCharacterData> GetSpriteCharacters(DynamicSpriteFont instance);
@@ -95,13 +95,10 @@ namespace MoreLocales.Core
         [UnsafeAccessor(UnsafeAccessorKind.Field, Name = "_defaultCharacterData")]
         public static extern ref SpriteCharacterData GetDefaultCharacterData(DynamicSpriteFont instance);
 
-        private static Hook detourCharSupported;
-        private static Hook detourGetCharData;
-
         public delegate bool IsCharacterSupported_orig(DynamicSpriteFont self, char character);
         public delegate SpriteCharacterData GetCharacterData_orig(DynamicSpriteFont self, char character);
 
-        void ILoadable.Load(Mod mod)
+        public static void DoLoad()
         {
             static bool japaneseActive() => CultureHelper.CustomCultureActive(CultureNamePlus.Japanese);
             static bool koreanActive() => CultureHelper.CustomCultureActive(CultureNamePlus.Korean);
@@ -159,10 +156,8 @@ namespace MoreLocales.Core
             MethodInfo isCharSupported = typeof(DynamicSpriteFont).GetMethod("IsCharacterSupported");
             MethodInfo getCharData = typeof(DynamicSpriteFont).GetMethod("GetCharacterData", BindingFlags.Instance | BindingFlags.NonPublic);
 
-            detourCharSupported = new Hook(isCharSupported, OnIsCharacterSupported, true);
-            detourGetCharData = new Hook(getCharData, OnGetCharacterData, true);
-            detourCharSupported.Apply();
-            detourGetCharData.Apply();
+            MonoModHooks.Add(isCharSupported, OnIsCharacterSupported);
+            MonoModHooks.Add(getCharData, OnGetCharacterData);
         }
 
         private static bool OnIsCharacterSupported(IsCharacterSupported_orig orig, DynamicSpriteFont self, char character)
@@ -211,12 +206,6 @@ namespace MoreLocales.Core
             }
 
             return GetDefaultCharacterData(self);
-        }
-
-        void ILoadable.Unload()
-        {
-            detourCharSupported?.Dispose();
-            detourGetCharData?.Dispose();
         }
     }
 }
