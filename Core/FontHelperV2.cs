@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using Terraria;
 using Terraria.GameContent;
 using Terraria.GameContent.UI.Elements;
 using static ReLogic.Graphics.DynamicSpriteFont;
@@ -98,6 +99,10 @@ namespace MoreLocales.Core
         public delegate bool IsCharacterSupported_orig(DynamicSpriteFont self, char character);
         public delegate SpriteCharacterData GetCharacterData_orig(DynamicSpriteFont self, char character);
 
+        public static MethodInfo isCharSupported;
+        public static MethodInfo getCharData;
+        public static MethodInfo internalDraw;
+
         public static void DoLoad()
         {
             static bool japaneseActive() => CultureHelper.CustomCultureActive(CultureNamePlus.Japanese);
@@ -153,11 +158,15 @@ namespace MoreLocales.Core
             CombatTextChildren = ChildFontData.Create(combatTextChildrenNames, commonOverrideConds);
             CritTextChildren = ChildFontData.Create(critTextChildrenNames, commonOverrideConds);
 
-            MethodInfo isCharSupported = typeof(DynamicSpriteFont).GetMethod("IsCharacterSupported");
-            MethodInfo getCharData = typeof(DynamicSpriteFont).GetMethod("GetCharacterData", BindingFlags.Instance | BindingFlags.NonPublic);
+            Type dsf = typeof(DynamicSpriteFont);
+
+            isCharSupported = dsf.GetMethod("IsCharacterSupported");
+            getCharData = dsf.GetMethod("GetCharacterData", BindingFlags.Instance | BindingFlags.NonPublic);
+            internalDraw = dsf.GetMethod("InternalDraw", BindingFlags.Instance | BindingFlags.NonPublic);
 
             MonoModHooks.Add(isCharSupported, OnIsCharacterSupported);
             MonoModHooks.Add(getCharData, OnGetCharacterData);
+            MonoModHooks.Modify(internalDraw, EditInternalDraw);
         }
 
         private static bool OnIsCharacterSupported(IsCharacterSupported_orig orig, DynamicSpriteFont self, char character)
@@ -206,6 +215,18 @@ namespace MoreLocales.Core
             }
 
             return GetDefaultCharacterData(self);
+        }
+        private static void EditInternalDraw(ILContext il)
+        {
+            Main.NewText("asf3d");
+
+            var c = new ILCursor(il);
+
+            if (!c.TryFindNext(out _, i => i.MatchCall(getCharData)))
+            {
+                System.Windows.Forms.MessageBox.Show("Method was inlined on this compilation", "Yep");
+                return;
+            }
         }
     }
 }
