@@ -27,6 +27,7 @@ global using Terraria.ModLoader;
 using System;
 using System.IO;
 using System.Reflection;
+using System.Windows.Forms;
 using Terraria.Localization;
 
 namespace MoreLocales
@@ -38,6 +39,9 @@ namespace MoreLocales
         {
             ExtraLocalesSupport.cachedVanillaCulture = LanguageManager.Instance.ActiveCulture.LegacyId;
             ExtraLocalesSupport.LoadCustomCultureData();
+
+            if (FontHelperV2.CharDataInlined)
+                MessageBox.Show(Language.GetTextValue("Mods.MoreLocales.Misc.Error.FontPatchingError"), "Error");
         }
         public override void Load()
         {
@@ -56,7 +60,6 @@ namespace MoreLocales
 
             ExtraLocalesSupport.DoLoad();
         }
-
         private static void FixPeskyLegacyMarking(ILContext il)
         {
             Mod mod = ModContent.GetInstance<MoreLocales>();

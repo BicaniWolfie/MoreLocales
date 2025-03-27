@@ -6,7 +6,11 @@ Configs: {
 
 		ForcedFont: {
 			// Label: Force Localized Font Type
-			// Tooltip: Forces the game to use this type of localized font, disregarding the current language settings. This is {$Configs.LocalizedFont.None.Label} by default, which means the font will dynamically change with the chosen language.
+			/* Tooltip:
+				'''
+				Forces the game to use this type of localized font, disregarding the current language settings.
+				This is {$Configs.LocalizedFont.None.Label} by default, which means the font will dynamically change with the chosen language.
+				''' */
 		}
 	}
 
@@ -161,3 +165,12 @@ Cultures: {
 		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 }
+
+/* Misc.Error.FontPatchingError:
+	'''
+	There was an error during font patching.
+	Localized fonts will not show up correctly.
+	Please report this bug to the Localization Plus devs immediately.
+	In the meantime, you can try relaunching the game.
+	Click OK to continue anyway.
+	''' */

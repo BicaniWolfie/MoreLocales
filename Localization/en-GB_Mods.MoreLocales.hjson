@@ -161,3 +161,12 @@ Cultures: {
 		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 }
+
+/* Misc.Error.FontPatchingError:
+	'''
+	There was an error during font patching.
+	Localized fonts will not show up correctly.
+	Please report this bug to the Localization Plus devs immediately.
+	In the meantime, you can try relaunching the game.
+	Click OK to continue anyway.
+	''' */

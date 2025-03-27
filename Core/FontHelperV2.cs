@@ -5,9 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using Terraria;
 using Terraria.GameContent;
-using Terraria.GameContent.UI.Elements;
 using static ReLogic.Graphics.DynamicSpriteFont;
 
 namespace MoreLocales.Core
@@ -102,6 +100,8 @@ namespace MoreLocales.Core
         public static MethodInfo isCharSupported;
         public static MethodInfo getCharData;
         public static MethodInfo internalDraw;
+
+        public static bool CharDataInlined { get; set; } = false;
 
         public static void DoLoad()
         {
@@ -218,13 +218,11 @@ namespace MoreLocales.Core
         }
         private static void EditInternalDraw(ILContext il)
         {
-            Main.NewText("asf3d");
-
             var c = new ILCursor(il);
 
             if (!c.TryFindNext(out _, i => i.MatchCall(getCharData)))
             {
-                System.Windows.Forms.MessageBox.Show("Method was inlined on this compilation", "Yep");
+                CharDataInlined = true;
                 return;
             }
         }
