@@ -41,7 +41,7 @@ namespace MoreLocales
             ExtraLocalesSupport.LoadCustomCultureData();
 
             if (FontHelperV2.CharDataInlined)
-                MessageBox.Show(Language.GetTextValue("Mods.MoreLocales.Misc.Error.FontPatchingError"), "Error");
+                MessageBox.Show(Language.GetTextValue("Mods.MoreLocales.Misc.Error.FontPatchingError"), Language.GetTextValue("Error.Error"));
         }
         public override void Load()
         {
