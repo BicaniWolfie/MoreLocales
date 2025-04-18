@@ -19,7 +19,6 @@ global using Microsoft.Xna.Framework;
 global using Microsoft.Xna.Framework.Graphics;
 global using Mono.Cecil.Cil;
 global using MonoMod.Cil;
-global using MonoMod.RuntimeDetour;
 global using MoreLocales.Core;
 global using MoreLocales.Utilities;
 global using ReLogic.Graphics;
@@ -34,7 +33,6 @@ namespace MoreLocales
 {
 	public class MoreLocales : Mod
 	{
-        private static ILHook hook;
         public override void PostSetupContent()
         {
             ExtraLocalesSupport.cachedVanillaCulture = LanguageManager.Instance.ActiveCulture.LegacyId;
@@ -46,7 +44,9 @@ namespace MoreLocales
         public override void Load()
         {
             FontHelperV2.DoLoad();
-
+        }
+        static MoreLocales()
+        {
             Type[] mParams =
             [
                 typeof(Mod),
@@ -54,9 +54,7 @@ namespace MoreLocales
                 typeof(GameCulture)
             ];
             MethodInfo peskyLegacyMarker = typeof(LocalizationLoader).GetMethod("UpdateLocalizationFilesForMod", BindingFlags.Static | BindingFlags.NonPublic, mParams);
-            ILHook newHook = new(peskyLegacyMarker, FixPeskyLegacyMarking);
-            hook = newHook;
-            hook.Apply();
+            MonoModHooks.Modify(peskyLegacyMarker, FixPeskyLegacyMarking);
 
             ExtraLocalesSupport.DoLoad();
         }
@@ -104,7 +102,6 @@ namespace MoreLocales
         public override void Unload()
         {
             ExtraLocalesSupport.DoUnload();
-            hook?.Dispose();
         }
     }
 }

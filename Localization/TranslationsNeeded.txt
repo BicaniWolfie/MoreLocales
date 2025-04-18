@@ -1,6 +1,7 @@
 en-US, 50/373, 13%, missing 323
 fr-FR, 0/373, 0%, missing 373
 es-ES, 49/373, 13%, missing 324
+ru-RU, 50/373, 13%, missing 323
 zh-Hans, 64/373, 17%, missing 309
 en-GB, 287/373, 77%, missing 86
 ja-JP, 1/373, 0%, missing 372

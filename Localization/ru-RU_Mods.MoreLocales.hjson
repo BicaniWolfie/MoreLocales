@@ -1,0 +1,176 @@
+Configs: {
+	Headers.Fonts: Настройки Шрифта
+
+	ClientSideConfig: {
+		DisplayName: Клиентская Конфигурация
+
+		ForcedFont: {
+			Label: Принудительное использование шрифта текущей локализации
+			Tooltip:
+				'''
+				Заставляет игру использовать данный тип шрифта, не обращая внимания на текущие языковые настройки.
+				По умолчанию это {$Configs.LocalizedFont.None.Label}, что означает, что шрифт будет динамически меняться в зависимости от выбранного языка.
+				'''
+		}
+	}
+
+	LocalizedFont: {
+		Tooltip: Тип шрифта, используемого в игре. Небольшие изменения шрифта для разных языков необходимы из-за ограничений Unicode
+		None.Label: Нет
+		Default.Label: Обычный
+		Japanese.Label: Японский
+		Korean.Label: Корейский
+	}
+}
+
+Cultures: {
+	Common: {
+		StandardSubtitle: Стандарт
+		LocalizedFontUnavailable:
+			'''
+			Этот язык не может быть использован, потому что для него требуется шрифт, которого сейчас нет в моде.
+			Подождите следующего обновления!
+			'''
+	}
+
+	English: {
+		Title: English (Английский)
+		Subtitle: Соединенные Штаты
+	}
+
+	German: {
+		Title: Deutsch (Еемецкий)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Italian: {
+		Title: Italiano (Итальянский)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	French: {
+		Title: Français (Французский)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Spanish: {
+		Title: Español (Испанский)
+		Subtitle: Испания
+	}
+
+	Russian: {
+		Title: Русский (Русский)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Chinese: {
+		Title: 中文 (Китайский)
+		Subtitle: Упрощенный
+	}
+
+	Portuguese: {
+		Title: Português (Португальский)
+		Subtitle: Бразилия
+	}
+
+	Polish: {
+		Title: Polski (Польский)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	BritishEnglish: {
+		Title: English (Английский)
+		Subtitle: Великобритания
+	}
+
+	Japanese: {
+		Title: 日本語 (Японский)
+		Subtitle: Хедзюнго
+	}
+
+	Korean: {
+		Title: 한국어 (Корейский)
+		Subtitle: Южная Корея
+	}
+
+	TraditionalChinese: {
+		Title: 中文 (Китайский)
+		Subtitle: Традиционный
+	}
+
+	Turkish: {
+		Title: Türkçe (Турецкий)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Thai: {
+		Title: ภาษาไทย (Тайский)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Ukrainian: {
+		Title: Українська (Украинский)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	LatinAmericanSpanish: {
+		Title: Español (Испанский)
+		Subtitle: Стандартный Латиноамериканский
+	}
+
+	Czech: {
+		Title: Čeština (Чешский)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Hungarian: {
+		Title: Magyar (Венгерский)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	PortugalPortuguese: {
+		Title: Português (Португальский)
+		Subtitle: Португалия
+	}
+
+	Swedish: {
+		Title: Svenska (Шведский)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Dutch: {
+		Title: Nederlands (Голландский)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Danish: {
+		Title: Dansk (Датский)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Vietnamese.Title: Tiếng Việt (Вьетнамский)
+
+	Finnish: {
+		Title: Suomi (Финский)
+		Subtitle: Кирьякиели
+	}
+
+	Romanian: {
+		Title: Română (Румынский)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Indonesian: {
+		Title: Bahasa Indonesia (Индонезийский)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+}
+
+Misc.Error.FontPatchingError:
+	'''
+	Во время обновления шрифтов произошла ошибка.
+	Локализованные шрифты будут отображаться некорректно.
+	Пожалуйста, немедленно сообщите об этой ошибке разработчикам Localization Plus.
+	Вы можете попробовать перезапустить игру.
+	Нажмите OK, чтобы продолжить в любом случае.
+	'''

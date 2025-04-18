@@ -1,15 +1,10 @@
-﻿using MonoMod.RuntimeDetour;
-using MoreLocales.Utilities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using Terraria;
 using Terraria.Localization;
-using Terraria.ModLoader;
-using MonoMod.Cil;
-using Mono.Cecil.Cil;
 using System.Threading;
 
 namespace MoreLocales.Core
