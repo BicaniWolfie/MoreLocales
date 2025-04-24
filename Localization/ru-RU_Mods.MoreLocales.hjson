@@ -39,7 +39,7 @@ Cultures: {
 	}
 
 	German: {
-		Title: Deutsch (Еемецкий)
+		Title: Deutsch (Немецкий)
 		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
@@ -115,7 +115,7 @@ Cultures: {
 
 	LatinAmericanSpanish: {
 		Title: Español (Испанский)
-		Subtitle: Стандартный Латиноамериканский
+		Subtitle: Стандартный латиноамериканский
 	}
 
 	Czech: {
