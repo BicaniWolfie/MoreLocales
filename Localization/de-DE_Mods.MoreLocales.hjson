@@ -1,1 +1,176 @@
+Configs: {
+	Headers.Fonts: Schrifteinstellungen
 
+	ClientSideConfig: {
+		DisplayName: Clienteinstellungen
+
+		ForcedFont: {
+			Label: Force Localized Font Type
+			Tooltip:
+				'''
+				Forces the game to use this type of localized font, disregarding the current language settings.
+				This is {$Configs.LocalizedFont.None.Label} by default, which means the font will dynamically change with the chosen language.
+				'''
+		}
+	}
+
+	LocalizedFont: {
+		Tooltip: The type of font the game uses. Small changes to the font for different languages are necessary due to Unicode restrictions
+		None.Label: None
+		Default.Label: Default
+		Japanese.Label: Japanese
+		Korean.Label: Korean
+	}
+}
+
+Cultures: {
+	Common: {
+		StandardSubtitle: Standard
+		LocalizedFontUnavailable:
+			'''
+			This language cannot be used because it requires a font that is currently not in the mod.
+			Please wait for the next update!
+			'''
+	}
+
+	English: {
+		Title: English (English)
+		Subtitle: United States
+	}
+
+	German: {
+		Title: Deutsch (German)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Italian: {
+		Title: Italiano (Italian)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	French: {
+		Title: Français (French)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Spanish: {
+		Title: Español (Spanish)
+		Subtitle: Spain
+	}
+
+	Russian: {
+		Title: Русский (Russian)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Chinese: {
+		Title: 中文 (Chinese)
+		Subtitle: Simplified
+	}
+
+	Portuguese: {
+		Title: Português (Portuguese)
+		Subtitle: Brazil
+	}
+
+	Polish: {
+		Title: Polski (Polish)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	BritishEnglish: {
+		Title: English (English)
+		Subtitle: United Kingdom
+	}
+
+	Japanese: {
+		Title: 日本語 (Japanese)
+		Subtitle: Hyoujungo
+	}
+
+	Korean: {
+		Title: 한국어 (Korean)
+		Subtitle: South Korea
+	}
+
+	TraditionalChinese: {
+		Title: 中文 (Chinese)
+		Subtitle: Traditional
+	}
+
+	Turkish: {
+		Title: Türkçe (Turkish)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Thai: {
+		Title: ภาษาไทย (Thai)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Ukrainian: {
+		Title: Українська (Ukrainian)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	LatinAmericanSpanish: {
+		Title: Español (Spanish)
+		Subtitle: Standard Latin American
+	}
+
+	Czech: {
+		Title: Čeština (Czech)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Hungarian: {
+		Title: Magyar (Hungarian)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	PortugalPortuguese: {
+		Title: Português (Portuguese)
+		Subtitle: Portugal
+	}
+
+	Swedish: {
+		Title: Svenska (Swedish)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Dutch: {
+		Title: Nederlands (Dutch)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Danish: {
+		Title: Dansk (Danish)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Vietnamese.Title: Tiếng Việt (Vietnamese)
+
+	Finnish: {
+		Title: Suomi (Finnish)
+		Subtitle: Kirjakieli
+	}
+
+	Romanian: {
+		Title: Română (Romanian)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Indonesian: {
+		Title: Bahasa Indonesia (Indonesian)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+}
+
+Misc.Error.FontPatchingError:
+	'''
+	There was an error during font patching.
+	Localized fonts will not show up correctly.
+	Please report this bug to the Localization Plus devs immediately.
+	In the meantime, you can try relaunching the game.
+	Click OK to continue anyway.
+	'''
