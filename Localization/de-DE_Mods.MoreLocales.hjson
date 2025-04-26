@@ -1,0 +1,176 @@
+Configs: {
+	Headers.Fonts: Schrifteinstellungen
+
+	ClientSideConfig: {
+		DisplayName: Clienteinstellungen
+
+		ForcedFont: {
+			Label: Erzwinge Lokalisierstes Schriftsystem
+			Tooltip:
+				'''
+				Zwingt das Spiel, dieses Schriftsystem zu nutzen, unabhängig von den Spracheinstellungen.
+				Die Standardoption ist {$Configs.LocalizedFont.None.Label} , das heißt, das Schriftsystem passt sich an die Sprache an.
+				'''
+		}
+	}
+
+	LocalizedFont: {
+		Tooltip: The type of font the game uses. Small changes to the font for different languages are necessary due to Unicode restrictions
+		None.Label: Keine
+		Default.Label: Standard
+		Japanese.Label: Japanisch
+		Korean.Label: Koreanisch
+	}
+}
+
+Cultures: {
+	Common: {
+		StandardSubtitle: Standard
+		LocalizedFontUnavailable:
+			'''
+			Diese Sprache ist nicht verfügbar, da sie ein Schriftsystem benötigt, das nicht unterstützt wird.
+			Bitte warte auf das nächste Update!
+			'''
+	}
+
+	English: {
+		Title: English (Englisch)
+		Subtitle: United States
+	}
+
+	German: {
+		Title: Deutsch (Deutsch)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Italian: {
+		Title: Italiano (Italienisch)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	French: {
+		Title: Français (Französisch)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Spanish: {
+		Title: Español (Spanisch)
+		Subtitle: Spain
+	}
+
+	Russian: {
+		Title: Русский (Russisch)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Chinese: {
+		Title: 中文 (Chinesisch)
+		Subtitle: Simplified
+	}
+
+	Portuguese: {
+		Title: Português (Portugiesisch)
+		Subtitle: Brazil
+	}
+
+	Polish: {
+		Title: Polski (Polnisch)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	BritishEnglish: {
+		Title: English (Englisch)
+		Subtitle: United Kingdom
+	}
+
+	Japanese: {
+		Title: 日本語 (Japanisch)
+		Subtitle: Hyoujungo
+	}
+
+	Korean: {
+		Title: 한국어 (Koreanisch)
+		Subtitle: South Korea
+	}
+
+	TraditionalChinese: {
+		Title: 中文 (Chinesisch)
+		Subtitle: Traditional
+	}
+
+	Turkish: {
+		Title: Türkçe (Türkisch)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Thai: {
+		Title: ภาษาไทย (Thai)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Ukrainian: {
+		Title: Українська (Ukrainisch)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	LatinAmericanSpanish: {
+		Title: Español (Spanisch)
+		Subtitle: Standard Latin American
+	}
+
+	Czech: {
+		Title: Čeština (Tschechisch)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Hungarian: {
+		Title: Magyar (Ungarisch)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	PortugalPortuguese: {
+		Title: Português (Portugiesisch)
+		Subtitle: Portugal
+	}
+
+	Swedish: {
+		Title: Svenska (Schwedisch)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Dutch: {
+		Title: Nederlands (Niederländisch)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Danish: {
+		Title: Dansk (Dänisch)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Vietnamese.Title: Tiếng Việt (Vietnamesisch)
+
+	Finnish: {
+		Title: Suomi (Finnisch)
+		Subtitle: Kirjakieli
+	}
+
+	Romanian: {
+		Title: Română (Rumänisch)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+
+	Indonesian: {
+		Title: Bahasa Indonesia (Indonesisch)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
+	}
+}
+
+Misc.Error.FontPatchingError:
+	'''
+	Es gab einen Fehler beim Schriftarten-Patching.
+	Lokalisierte Schriftarten werden möglicherweise nicht korrekt angezeigt.
+	Bitte melde diesen Fehler sofort den Entwicklern von Localization Plus.
+	In der Zwischenzeit kannst du versuchen, das Spiel neu zu starten.
+	Klicke auf OK, um trotzdem fortzufahren.
+	'''
