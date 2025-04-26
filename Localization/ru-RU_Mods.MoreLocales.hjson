@@ -1,25 +1,25 @@
 Configs: {
-	Headers.Fonts: Настройки Шрифта
+	Headers.Fonts: Настройки шрифта
 
 	ClientSideConfig: {
-		DisplayName: Клиентская Конфигурация
+		DisplayName: Клиентская конфигурация
 
 		ForcedFont: {
 			Label: Принудительное использование шрифта текущей локализации
 			Tooltip:
 				'''
 				Заставляет игру использовать данный тип шрифта, не обращая внимания на текущие языковые настройки.
-				По умолчанию это {$Configs.LocalizedFont.None.Label}, что означает, что шрифт будет динамически меняться в зависимости от выбранного языка.
+				По умолчанию отключено, что означает, что шрифт будет динамически меняться в зависимости от выбранного языка.
 				'''
 		}
 	}
 
 	LocalizedFont: {
-		Tooltip: Тип шрифта, используемого в игре. Небольшие изменения шрифта для разных языков необходимы из-за ограничений Unicode
-		None.Label: Нет
-		Default.Label: Обычный
-		Japanese.Label: Японский
-		Korean.Label: Корейский
+		Tooltip: Тип шрифта, используемого в игре. Небольшие изменения шрифта для разных языков необходимы из-за ограничений Unicode.
+		None.Label: нет
+		Default.Label: обычный
+		Japanese.Label: японский
+		Korean.Label: корейский
 	}
 }
 
@@ -39,7 +39,7 @@ Cultures: {
 	}
 
 	German: {
-		Title: Deutsch (Еемецкий)
+		Title: Deutsch (Немецкий)
 		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
@@ -115,7 +115,7 @@ Cultures: {
 
 	LatinAmericanSpanish: {
 		Title: Español (Испанский)
-		Subtitle: Стандартный Латиноамериканский
+		Subtitle: Стандартный латиноамериканский
 	}
 
 	Czech: {
