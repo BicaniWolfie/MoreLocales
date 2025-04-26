@@ -5,21 +5,21 @@ Configs: {
 		DisplayName: Clienteinstellungen
 
 		ForcedFont: {
-			Label: Force Localized Font Type
+			Label: Erzwinge Lokalisierstes Schriftsystem
 			Tooltip:
 				'''
-				Forces the game to use this type of localized font, disregarding the current language settings.
-				This is {$Configs.LocalizedFont.None.Label} by default, which means the font will dynamically change with the chosen language.
+				Zwingt das Spiel, dieses Schriftsystem zu nutzen, unabhängig von den Spracheinstellungen.
+				Die Standardoption ist {$Configs.LocalizedFont.None.Label} , das heißt, das Schriftsystem passt sich an die Sprache an.
 				'''
 		}
 	}
 
 	LocalizedFont: {
 		Tooltip: The type of font the game uses. Small changes to the font for different languages are necessary due to Unicode restrictions
-		None.Label: None
-		Default.Label: Default
-		Japanese.Label: Japanese
-		Korean.Label: Korean
+		None.Label: Keine
+		Default.Label: Standard
+		Japanese.Label: Japanisch
+		Korean.Label: Koreanisch
 	}
 }
 
@@ -28,78 +28,78 @@ Cultures: {
 		StandardSubtitle: Standard
 		LocalizedFontUnavailable:
 			'''
-			This language cannot be used because it requires a font that is currently not in the mod.
-			Please wait for the next update!
+			Diese Sprache ist nicht verfügbar, da sie ein Schriftsystem benötigt, das nicht unterstützt wird.
+			Bitte warte auf das nächste Update!
 			'''
 	}
 
 	English: {
-		Title: English (English)
+		Title: English (Englisch)
 		Subtitle: United States
 	}
 
 	German: {
-		Title: Deutsch (German)
+		Title: Deutsch (Deutsch)
 		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Italian: {
-		Title: Italiano (Italian)
+		Title: Italiano (Italienisch)
 		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	French: {
-		Title: Français (French)
+		Title: Français (Französisch)
 		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Spanish: {
-		Title: Español (Spanish)
+		Title: Español (Spanisch)
 		Subtitle: Spain
 	}
 
 	Russian: {
-		Title: Русский (Russian)
+		Title: Русский (Russisch)
 		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Chinese: {
-		Title: 中文 (Chinese)
+		Title: 中文 (Chinesisch)
 		Subtitle: Simplified
 	}
 
 	Portuguese: {
-		Title: Português (Portuguese)
+		Title: Português (Portugiesisch)
 		Subtitle: Brazil
 	}
 
 	Polish: {
-		Title: Polski (Polish)
+		Title: Polski (Polnisch)
 		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	BritishEnglish: {
-		Title: English (English)
+		Title: English (Englisch)
 		Subtitle: United Kingdom
 	}
 
 	Japanese: {
-		Title: 日本語 (Japanese)
+		Title: 日本語 (Japanisch)
 		Subtitle: Hyoujungo
 	}
 
 	Korean: {
-		Title: 한국어 (Korean)
+		Title: 한국어 (Koreanisch)
 		Subtitle: South Korea
 	}
 
 	TraditionalChinese: {
-		Title: 中文 (Chinese)
+		Title: 中文 (Chinesisch)
 		Subtitle: Traditional
 	}
 
 	Turkish: {
-		Title: Türkçe (Turkish)
+		Title: Türkçe (Türkisch)
 		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
@@ -109,68 +109,68 @@ Cultures: {
 	}
 
 	Ukrainian: {
-		Title: Українська (Ukrainian)
+		Title: Українська (Ukrainisch)
 		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	LatinAmericanSpanish: {
-		Title: Español (Spanish)
+		Title: Español (Spanisch)
 		Subtitle: Standard Latin American
 	}
 
 	Czech: {
-		Title: Čeština (Czech)
+		Title: Čeština (Tschechisch)
 		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Hungarian: {
-		Title: Magyar (Hungarian)
+		Title: Magyar (Ungarisch)
 		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	PortugalPortuguese: {
-		Title: Português (Portuguese)
+		Title: Português (Portugiesisch)
 		Subtitle: Portugal
 	}
 
 	Swedish: {
-		Title: Svenska (Swedish)
+		Title: Svenska (Schwedisch)
 		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Dutch: {
-		Title: Nederlands (Dutch)
+		Title: Nederlands (Niederländisch)
 		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Danish: {
-		Title: Dansk (Danish)
+		Title: Dansk (Dänisch)
 		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
-	Vietnamese.Title: Tiếng Việt (Vietnamese)
+	Vietnamese.Title: Tiếng Việt (Vietnamesisch)
 
 	Finnish: {
-		Title: Suomi (Finnish)
+		Title: Suomi (Finnisch)
 		Subtitle: Kirjakieli
 	}
 
 	Romanian: {
-		Title: Română (Romanian)
+		Title: Română (Rumänisch)
 		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Indonesian: {
-		Title: Bahasa Indonesia (Indonesian)
+		Title: Bahasa Indonesia (Indonesisch)
 		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 }
 
 Misc.Error.FontPatchingError:
 	'''
-	There was an error during font patching.
-	Localized fonts will not show up correctly.
-	Please report this bug to the Localization Plus devs immediately.
-	In the meantime, you can try relaunching the game.
-	Click OK to continue anyway.
+	Es gab einen Fehler beim Schriftarten-Patching.
+	Lokalisierte Schriftarten werden möglicherweise nicht korrekt angezeigt.
+	Bitte melde diesen Fehler sofort den Entwicklern von Localization Plus.
+	In der Zwischenzeit kannst du versuchen, das Spiel neu zu starten.
+	Klicke auf OK, um trotzdem fortzufahren.
 	'''
