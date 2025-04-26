@@ -57,78 +57,12 @@
 		-->
 		<CharacterRegions>
 
-			<!-- English before numbers -->
-			<CharacterRegion>
-				<Start>&#x20;</Start>
-				<End>&#x2F;</End>
-			</CharacterRegion>
-
-			<!-- Numbers -->
-			<CharacterRegion>
-				<FontName>PericlesW01-Regular</FontName>
-				<Size>16.5</Size>
-				<Style>Regular</Style>
-				<Start>&#x30;</Start>
-				<End>&#x39;</End>
-			</CharacterRegion>
-
-			<!-- English after numbers -->
-			<CharacterRegion>
-				<Start>&#x3A;</Start>
-				<End>&#xA9;</End>
-			</CharacterRegion>
-
-			<!-- Latin Characters -->
-			<CharacterRegion>
-				<FontName>Comic Sans MS</FontName>
-				<Size>14</Size>
-				<Style>Regular</Style>
-				<Start>&#xAA;</Start>
-				<End>&#x385;</End>
-			</CharacterRegion>
-
-			<!-- Extra Symbols -->
-			<CharacterRegion>
-				<FontName>Comic Sans MS</FontName>
-				<Size>15</Size>
-				<Style>Regular</Style>
-				<Start>&#x2013;</Start>
-				<End>&#x303F;</End>
-			</CharacterRegion>
-
 			<!-- Thai -->
 			<CharacterRegion>
 				<FontName>Printable4U</FontName>
 				<Size>18</Size>
-				<Style>Bold</Style>
 				<Start>&#x0E00;</Start>
 				<End>&#x0E7F;</End>
-			</CharacterRegion>
-
-			<!-- Cyrillic (Russian) -->
-			<CharacterRegion>
-				<Size>16</Size>
-				<Style>Regular</Style>
-				<Start>&#x0400;</Start>
-				<End>&#x04FF;</End>
-			</CharacterRegion>
-
-			<!-- Simplified Chinese -->
-			<CharacterRegion>
-				<FontName>Source Han Sans SC</FontName>
-				<Size>15</Size>
-				<Style>Regular</Style>
-				<Start>&#x4E00;</Start>
-				<End>&#x9FFF;</End>
-			</CharacterRegion>
-
-			<!-- Full Width English (For Simplified Chinese) -->
-			<CharacterRegion>
-				<FontName>Source Han Sans SC</FontName>
-				<Size>15</Size>
-				<Style>Regular</Style>
-				<Start>&#xFF01;</Start>
-				<End>&#xFF60;</End>
 			</CharacterRegion>
 
 		</CharacterRegions>

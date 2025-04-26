@@ -42,7 +42,8 @@ Thai Localization Team - Thai
 Yu Bell - Chinese (Simplified)  
 Yu Bell, jjyao88 - Chinese (Traditional)  
 Mirrorman - Vietnamese  
-This is Many - Russian
+This is Many, alinahvoshch - Russian  
+Foxolotl713 - German  
 
 ## LICENSE
 This mod is open source under the [GPL v.3.0 License](https://www.gnu.org/licenses/gpl-3.0.html).

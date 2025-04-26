@@ -8,6 +8,7 @@ using Terraria.UI.Chat;
 using Terraria.GameContent;
 using Terraria.Audio;
 using Terraria.ID;
+using Terraria.UI.Gamepad;
 
 namespace MoreLocales.Common
 {
@@ -111,6 +112,7 @@ namespace MoreLocales.Common
             Rectangle frameBounds = new((int)start.X - padding, (int)start.Y - padding, ((SingleButtonWidth + buttonPadding) * Columns) + (padding + padding), ((SingleButtonHeight + buttonPadding) * WrapVertical) + (padding + padding));
             UIHelper.DrawAdjustableBox(spriteBatch, _panelTexture.Value, frameBounds, Color.White);
             base.Draw(spriteBatch);
+            UILinkPointNavigator.Shortcuts.BackButtonCommand = 7;
         }
         void IHaveBackButtonCommand.HandleBackButtonUsage()
         {

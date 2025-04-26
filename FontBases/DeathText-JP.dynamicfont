@@ -57,38 +57,6 @@
 		-->
 		<CharacterRegions>
 
-			<!-- English -->
-			<CharacterRegion>
-				<Start>&#x20;</Start>
-				<End>&#xA9;</End>
-			</CharacterRegion>
-
-			<!-- Latin Characters -->
-			<CharacterRegion>
-				<FontName>Comic Sans MS</FontName>
-				<Size>36</Size>
-				<Style>Regular</Style>
-				<Start>&#xAA;</Start>
-				<End>&#x385;</End>
-			</CharacterRegion>
-
-			<!-- Extra Symbols -->
-			<CharacterRegion>
-				<FontName>Comic Sans MS</FontName>
-				<Size>36</Size>
-				<Style>Regular</Style>
-				<Start>&#x2013;</Start>
-				<End>&#x303F;</End>
-			</CharacterRegion>
-
-			<!-- Cyrillic (Russian) -->
-			<CharacterRegion>
-				<Size>36</Size>
-				<Style>Regular</Style>
-				<Start>&#x0400;</Start>
-				<End>&#x04FF;</End>
-			</CharacterRegion>
-
 			<!-- Japanese Kanji (CJK Unified Ideographs) -->
 			<CharacterRegion>
 				<FontName>Source Han Sans</FontName>
@@ -105,15 +73,6 @@
 				<Style>Regular</Style>
 				<Start>&#x3040;</Start>
 				<End>&#x30FF;</End>
-			</CharacterRegion>
-
-			<!-- Full Width English (For Simplified Chinese) -->
-			<CharacterRegion>
-				<FontName>Source Han Sans SC</FontName>
-				<Size>36</Size>
-				<Style>Regular</Style>
-				<Start>&#xFF01;</Start>
-				<End>&#xFF60;</End>
 			</CharacterRegion>
 
 		</CharacterRegions>
