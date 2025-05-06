@@ -17,7 +17,7 @@ hu-HU, 0/373, 0%, missing 373
 pt-PT, 0/373, 0%, missing 373
 sv-SE, 0/373, 0%, missing 373
 nl-NL, 0/373, 0%, missing 373
-da-DK, 0/373, 0%, missing 373
+da-DK, 50/373, 13%, missing 343
 vi-VN, 49/373, 13%, missing 324
 fi-FI, 0/373, 0%, missing 373
 ro-RO, 0/373, 0%, missing 373

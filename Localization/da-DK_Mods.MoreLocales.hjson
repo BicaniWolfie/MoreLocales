@@ -1,176 +1,176 @@
 Configs: {
-	// Headers.Fonts: Font Settings
+	Headers.Fonts: Skrifttype-indstillinger
 
 	ClientSideConfig: {
-		// DisplayName: Client Side Config
+		DisplayName: Indstillinger Til Klient-siden
 
 		ForcedFont: {
-			// Label: Force Localized Font Type
-			/* Tooltip:
+			Label: Påtving Skrifttype
+			Tooltip:
 				'''
-				Forces the game to use this type of localized font, disregarding the current language settings.
-				This is {$Configs.LocalizedFont.None.Label} by default, which means the font will dynamically change with the chosen language.
-				''' */
+				Tvinger spillet til at bruge den valgte lokaliserings-skrifttype, fuldkommen uafhængigt af de nuværende sprogindstillinger.
+				Den er sat til {$Configs.LocalizedFont.None.Label} som standard, hvilket betyder, at skrifttypen automatisk ændres baseret på sproget.
+				'''
 		}
 	}
 
 	LocalizedFont: {
-		// Tooltip: The type of font the game uses. Small changes to the font for different languages are necessary due to Unicode restrictions
-		// None.Label: None
-		// Default.Label: Default
-		// Japanese.Label: Japanese
-		// Korean.Label: Korean
+		Tooltip: Skrifttypen, som spillet bruger. Småændringer til skrifttypen for de forskellige sprog er nødvendige på grund af Unicode-restriktioner
+		None.Label: Ingen
+		Default.Label: Almindelig
+		Japanese.Label: Japansk
+		Korean.Label: Koreansk
 	}
 }
 
 Cultures: {
 	Common: {
-		// StandardSubtitle: Standard
-		/* LocalizedFontUnavailable:
+		StandardSubtitle: Standard
+		LocalizedFontUnavailable:
 			'''
-			This language cannot be used because it requires a font that is currently not in the mod.
-			Please wait for the next update!
-			''' */
+			Dette sprog kan ikke bruges endnu, da det kræver en skrifttype, som i øjeblikket ikke er med i modden.
+			Venligst vent til næste opdatering!
+			'''
 	}
 
 	English: {
-		// Title: English (English)
-		// Subtitle: United States
+		Title: English (Engelsk)
+		Subtitle: USA
 	}
 
 	German: {
-		// Title: Deutsch (German)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Deutsch (Tysk)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Italian: {
-		// Title: Italiano (Italian)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Italiano (Italiensk)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	French: {
-		// Title: Français (French)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Français (Fransk)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Spanish: {
-		// Title: Español (Spanish)
-		// Subtitle: Spain
+		Title: Español (Spansk)
+		Subtitle: Spanien
 	}
 
 	Russian: {
-		// Title: Русский (Russian)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Русский (Russisk)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Chinese: {
-		// Title: 中文 (Chinese)
-		// Subtitle: Simplified
+		Title: 中文 (Kinesisk)
+		Subtitle: Simplificeret
 	}
 
 	Portuguese: {
-		// Title: Português (Portuguese)
-		// Subtitle: Brazil
+		Title: Português (Portugesisk)
+		Subtitle: Brasilien
 	}
 
 	Polish: {
-		// Title: Polski (Polish)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Polski (Polsk)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	BritishEnglish: {
-		// Title: English (English)
-		// Subtitle: United Kingdom
+		Title: English (Engelsk)
+		Subtitle: Storbritannien
 	}
 
 	Japanese: {
-		// Title: 日本語 (Japanese)
-		// Subtitle: Hyoujungo
+		Title: 日本語 (Japansk)
+		Subtitle: Hyoujungo
 	}
 
 	Korean: {
-		// Title: 한국어 (Korean)
-		// Subtitle: South Korea
+		Title: 한국어 (Koreansk)
+		Subtitle: Sydkorea
 	}
 
 	TraditionalChinese: {
-		// Title: 中文 (Chinese)
-		// Subtitle: Traditional
+		Title: 中文 (Kinesisk)
+		Subtitle: Traditionel
 	}
 
 	Turkish: {
-		// Title: Türkçe (Turkish)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Türkçe (Tyrkisk)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Thai: {
-		// Title: ภาษาไทย (Thai)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: ภาษาไทย (Thailandsk)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Ukrainian: {
-		// Title: Українська (Ukrainian)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Українська (Ukrainsk)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	LatinAmericanSpanish: {
-		// Title: Español (Spanish)
-		// Subtitle: Standard Latin American
+		Title: Español (Spansk)
+		Subtitle: Latinamerika
 	}
 
 	Czech: {
-		// Title: Čeština (Czech)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Čeština (Tjekkisk)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Hungarian: {
-		// Title: Magyar (Hungarian)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Magyar (Ungarisk)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	PortugalPortuguese: {
-		// Title: Português (Portuguese)
-		// Subtitle: Portugal
+		Title: Português (Portugesisk)
+		Subtitle: Portugal
 	}
 
 	Swedish: {
-		// Title: Svenska (Swedish)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Svenska (Svensk)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Dutch: {
-		// Title: Nederlands (Dutch)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Nederlands (Hollandsk)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Danish: {
-		// Title: Dansk (Danish)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Dansk (Dansk)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
-	// Vietnamese.Title: Tiếng Việt (Vietnamese)
+	Vietnamese.Title: Tiếng Việt (Vietnamesisk)
 
 	Finnish: {
-		// Title: Suomi (Finnish)
-		// Subtitle: Kirjakieli
+		Title: Suomi (Finsk)
+		Subtitle: Kirjakieli
 	}
 
 	Romanian: {
-		// Title: Română (Romanian)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Română (Rumænsk)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 
 	Indonesian: {
-		// Title: Bahasa Indonesia (Indonesian)
-		// Subtitle: "{$Cultures.Common.StandardSubtitle}"
+		Title: Bahasa Indonesia (Indonesisk)
+		Subtitle: "{$Cultures.Common.StandardSubtitle}"
 	}
 }
 
-/* Misc.Error.FontPatchingError:
+Misc.Error.FontPatchingError:
 	'''
-	There was an error during font patching.
-	Localized fonts will not show up correctly.
-	Please report this bug to the Localization Plus devs immediately.
-	In the meantime, you can try relaunching the game.
-	Click OK to continue anyway.
-	''' */
+	Der skete en fejl under sammenlapningen af skrifttyperne.
+	Lokaliserede skrifttyper vil derfor ikke blive vist korrekt.
+	Venligst rapportér fejlen til Localization Plus-udviklerne med det samme.
+	I mellemtiden kan du prøve at genåbne spillet.
+	Tryk OK for at fortsætte alligevel.
+	'''
