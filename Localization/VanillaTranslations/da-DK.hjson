@@ -1,282 +1,283 @@
 tModLoader: {
-	// PatreonSupport: "Please show your support: "
-	// MenuModBrowser: Mod Browser
-	// MenuDownloadMods: Download Mods
-	// MenuDownloadModsDescription: The in-game Mod Browser to find, download, and update your Mods.
-	// MenuMods: Mods
-	// MenuManageMods: Manage Mods
-	// MenuManageModsDescription: Manage which Mods are active, delete Mods, and configure your Modpacks.
-	// MenuModSources: Mod Sources
-	// MenuDevelopMods: Develop Mods
-	// MenuDevelopModsDescription: Develop and publish Mods for others to use, using your Mod Source code
-	// ModsModPacks: Mod Packs
-	// MenuModPackDescription: Manage Mod Packs, for features like saving your current list of mods & config, and Import & Export Mod Packs. Experimental.
-	// MenuEnableDeveloperMode: Enable Developer Mode
-	/* WelcomeMessagePreview:
+	PatreonSupport: "Venlist vis din støtte:"
+	MenuModBrowser: Mod-Finderen
+	MenuDownloadMods: Download Mods
+	MenuDownloadModsDescription: Den indbyggede Mod-finder til at finde, hente, og opdatere dine mods.
+	MenuMods: Mods
+	MenuManageMods: Håndtér Mods
+	MenuManageModsDescription: Håndtér hvilke Mods er aktive, slet Mods, og konfigurér dine Modpakker.
+	MenuModSources: Modkilder
+	MenuDevelopMods: Udvikl Mods
+	MenuDevelopModsDescription: Udvikl og udgiv Mods som andre kan bruge ud fra din Mods Kildekode
+	ModsModPacks: Modpakker
+	MenuModPackDescription: Håndtér Modpakker ved at gemme din nuværende Mod-liste og konfigurering, samt at importere og eksportere dine modpakker. Eksperimentiel.
+	MenuEnableDeveloperMode: Slå udvikler-tilstand til
+	WelcomeMessagePreview:
 		'''
-		WARNING: Player Beware!!
-		This is a monthly preview build with breaking changes, and thus mods will be broken.
-		[c/ff1919:DO NOT ask modders to fix their mods for this preview build.]
-		This Preview branch provides opportunity for modders to update their mods on THEIR own schedule.
+		ADVARSEL: Giv agt, Spiller!!
+		Det her er en månedlig preview-build, som har ustabile ændringer, hvilket dermed kan ødelægge mods. 
+		[c/ff1919:SPØRG IKKE modudviklere om at fikse deres mods til dette preview-build.]
+		Denne Preview-græn giver mulighed for modudviklere at opdare deres mods ud fra DERES eget skema.
 
-		Click "More Info" to learn more about the continuous release cycle.
+		Tryk på "Mere Info" for at lære mere om den kontinuerlige udgivelses-cyklus.
 
-		Join the tModLoader Discord to learn more about the changes from this month and view migration notes.
-		''' */
-	/* FirstLaunchWelcomeMessage:
+		Hop ind på tModloaders DIscord for at vide mere om denne måneds ændringer og migreringsnotater.
 		'''
-		Welcome to tModLoader.
-
-		You have successfully installed tModLoader. Use the Workshop menu to access tModLoader Mod related functions.
-
-		If you were playing through 1.3 prior to today you can revert back by switching to the 1.3-legacy beta branch in Steam. If you can't find the mods you were planning to play with, they might only exist on 1.3 for now.
-		''' */
-	/* WhatsNewMessage:
+	FirstLaunchWelcomeMessage:
 		'''
-		The following are basic change notes from the last time you launched Preview. You may find that mods that relate to these changes need to be rebuilt by the author. Visit GitHub to see more details:
+		Velkommen til tModLoader.
 
-		''' */
-	/* ShowNewUpdatedModsInfoMessage:
+		Du har succesfuldt installeret tModLoader. Brug Workshop-menuen for at tilgå tModloaders Mod-relaterede funktionalitet.
+
+		Hvis du spillede gennem 1.3 før i dag kan du skifte tilbage ved at skifte over til 1.3-legacy i beta-grenen på Steam. Hvis du ikke kan finde de mods, som du gerne ville spille med, kan de muligvis kun være på 1.3 for nu.
 		'''
-		The following mods were added or updated from the workshop since last launch (you can disable this message in the settings):
-
-		''' */
-	/* ShowNewUpdatedModsInfoMessageNewMods:
+	WhatsNewMessage:
 		'''
+		Det følgende er notatet for de basale ændringer siden sidst du åbnede Preview. Du vil nok se at mods, som relatere til de ændringer, først skal ombygges af forfatteren. Besøg GitHub for at vide mere:
 
-		New Mods:
-		''' */
-	/* ShowNewUpdatedModsInfoMessageUpdatedMods:
+		'''
+	ShowNewUpdatedModsInfoMessage:
+		'''
+		De følgende mods er blevet tilføjet eller opdateret fra Workshop siden sidste gang (du kan slå denne besked fra i indstillingerne):
+
+		'''
+	ShowNewUpdatedModsInfoMessageNewMods:
 		'''
 
-		Updated Mods:
-		''' */
-	/* DependenciesNeededForOtherMods:
+		Nye Mods:
+		'''
+	ShowNewUpdatedModsInfoMessageUpdatedMods:
 		'''
 
-		Some dependencies are missing:
-		''' */
-	// InstallDependencies: Install Dependencies
-	// ContinueAnyway: Continue Anyway
-	/* ModUpdatedSinceLastLaunchMessage:
+		Opdaterede Mods:
 		'''
-		This mod has been automatically updated
-		since last launch from version {0}
-		''' */
-	// ModAddedSinceLastLaunchMessage: This mod has been added since last launch
-	// ViewOnGitHub: View on GitHub
-	// tModLoaderSettings: tModLoader Settings
-	// ModMenuSwap: Switch Menu Theme
-	// MenuModsEnabled: "{0} {^0:Mod;Mods} Enabled"
-	// MenuModUpdatesAvailable: ({0} {^0:Update;Updates} Available!)
-	// AudioNotSupported: No audio hardware found. Disabling all audio.
-	// SwitchVersionInfoButton: Switch to a different tModLoader version
-	// LatestNews: Latest News: {0}
-	// LatestNewsOffline: Offline
-	// LatestNewsChecking: Checking...
-	/* SteamFamilyShareWarning:
+	DependenciesNeededForOtherMods:
 		'''
-		It has been detected you are using Family Share copy of Terraria.
-		Steam does not support family-shared tModLoader.
-		Experimental Family-Shared tModLoader workaround has been loaded.
-		The following features are not available:
+
+		Nogle dependencies mangler:
+		'''
+	InstallDependencies: Installér Dependencies
+	ContinueAnyway: Fortsæt Alligevel
+	ModUpdatedSinceLastLaunchMessage:
+		'''
+		Denne mod er blevet automatisk opdateret
+		fra version {0} siden sidste gang
+		'''
+	ModAddedSinceLastLaunchMessage: Denne mod er blevet tilføjet siden sidste gang
+	ViewOnGitHub: Se på GitHub
+	tModLoaderSettings: tModLoader-Indstillinger
+	ModMenuSwap: Ændr Menutema
+	MenuModsEnabled: "{0} {^0:Mod;Mods} Slået til"
+	MenuModUpdatesAvailable: ({0} {^0:Opdatering Tilgængelig!;Opdateringer Tilgængelige!})
+	AudioNotSupported: Intet lyd-hardware fundet. Slår alt lyd fra.
+	SwitchVersionInfoButton: Skift til en anden version af tModLoader
+	LatestNews: Sidste nyt: {0}
+	LatestNewsOffline: Offline
+	LatestNewsChecking: Checker...
+	SteamFamilyShareWarning:
+		'''
+		Det er blevet opfanget at du bruger en Family Share-kopi af Terraria.
+		Steam understøtter ikke family-shared tModLoader.
+		Eksperimentiel Family-Shared tModloader-løsning er blevet brugt.
+		Følgende funktionalitet er ikke tilgængeligt:
 		 - Steam Overlay
 		 - Steam Multiplayer
-		''' */
-	// WaitXSeconds: Wait {0} {^0:second;seconds}...
-	// ViewInstructions: View Instructions
-	// ModReadyFor144: This mod has been updated to 1.4.4
-	// ModsModsList: Mods List
-	// ModsEnableAll: Enable All
-	// ModsEnableAllConfirm: Are you sure you want to enable all mods?
-	// ModsDisableAll: Disable All
-	// ModsDisableAllConfirm: Are you sure you want to disable all mods?
-	// YesDontAskAgain: Yes, don't ask again
-	// ModsReloadMods: Reload Mods
-	// ModsForceReload: Force Reload
-	// ModsOpenModsFolders: Open Mods Folders
-	/* ModsOpenModsFoldersTooltip:
 		'''
-		The mods folder in My Games is for manually installed mods.
-		The workshop folder is managed by Steam.
-		''' */
-	// OpenModPackFolder: Open Mod Pack Folder
-	// DeactivateModPack: Unload Mod Pack
-	// ActivateModPack: Load Mod Pack
-	// DownloadMissingMods: Download Missing Mods
-	// ModsDisable: Click to disable
-	// ModsEnable: Click to enable
-	// ModsDisableAndDependents: Click to disable {0} and {1} {^1:dependent;dependents}
-	// ModsEnableAndDependencies: Click to enable {0} and {1} {^1:dependency;dependencies}
-	// ModConfiguration: Mod Configuration
-	// ModsOpenConfig: Click to open config
-	// ModOldWarning: Old mod, enable at own risk
-	// ModStableOnPreviewWarning: No Preview Build. Enable At Own Risk
-	/* ModDependencyTooltip:
+	WaitXSeconds: Wait {0} {^0:sekund;sekunder}...
+	ViewInstructions: Se Instruktioner View Instructions
+	ModReadyFor144: Denne mod er blevet opdateret til 1.4.4
+	ModsModsList: Modliste
+	ModsEnableAll: Slå Alle Til 
+	ModsEnableAllConfirm: Er du sikker på, at du vil slå alle mods til?
+	ModsDisableAll: Slå Alle Fra
+	ModsDisableAllConfirm: Er du sikker på, at du vil slå alle mods fra?
+	YesDontAskAgain: Ja, spørg ikke igen.
+	ModsReloadMods: Genindlæs Mods
+	ModsForceReload: Tving Genindlæsning
+	ModsOpenModsFolders: Åbn Mod-mapperne
+	ModsOpenModsFoldersTooltip:
 		'''
-		Requires:
+		Mods-mappen fundet i My Games er til mods, der installeres manuelt.
+		Workshop-mappen bliver håndteret af Steam.
+		'''
+	OpenModPackFolder: Åbn Modpakke-Mappen
+	DeactivateModPack: Slå Modpakke Fra
+	ActivateModPack: Indlæs Modpakke
+	DownloadMissingMods: Hent Manglende Mods
+	ModsDisable: Tryk for at slå fra
+	ModsEnable: Tryk for at slå til
+	ModsDisableAndDependents: Tryk for at slå {0} og {1} {^1:afhængig;afhængige} mods fra
+	ModsEnableAndDependencies: Tryk for at slå {0} og {1} {^1:afhængig;afhængige} mods til
+	ModConfiguration: Mod-Konfigurering
+	ModsOpenConfig: Tryk for at åbne konfigureringen
+	ModOldWarning: Gammel mod. Slå til ved eget ansvar
+	ModStableOnPreviewWarning: Intet Preview-Build. Slå til ved eget ansvar
+	ModDependencyTooltip:
+		'''
+		Kræver:
 		{0}
-		''' */
-	/* ModDependentsTooltip:
 		'''
-		Required by:
+	ModDependentsTooltip:
+		'''
+		Krævet af:
 		{0}
-		''' */
-	// TranslationModTooltip: This mod provides translations for: {0}
-	/* ModDependencyClickTooltip:
 		'''
-		This mod depends on: {0}
-		 (click to enable)
-		''' */
-	// ModDependencyModsNotFound: The following mods were not found: {0}
-	/* ModDidNotFullyUnloadWarning:
+	TranslationModTooltip: Denne mod tilføjer oversættelser til: {0}
+	ModDependencyClickTooltip:
 		'''
-		This mod did not fully unload during last unload.
-		(This is a message for the mod creator)
-		''' */
-	// BetaModCantPublishError: You cannot publish a Mod built on a beta version of tModLoader
-	// ModDescriptionMissing: The file {0} doesn't exist. Please create a valid description for your mod.
-	// ModDescriptionLengthTooShort: Mod description is too short, please create a valid description for your mod by modifying {0}.
-	// ModWorkshopIconResizeWarning: Will be resized from {0} to {1}.
-	// ModUsesDefaultIcon: Please create a custom icon for your mod by modifying {0}.
-	// OutdatedModCantPublishError: You cannot publish a Mod built on an old version of tModLoader
-	// WrongVersionCantPublishError: You cannot publish a Mod built on a different version of tModLoader than what it was built with
-	// ModReloadRequired: Reload Required
-	// ModReloadRequiredMemberTooltip: Changing this will necessitate a reload
-	// ModReloadForced: Reload Forced
-	// ModIsServerSide: This is a server side mod
-	// ModFromWorkshop: Loading from workshop
-	// ModFromModpack: Loading from active mod pack
-	// ModFromLocal: Loading from local mods folder
-	// ModsByline: By: {0}
-	// ModsMoreInfo: More Info
-	// ModsOriginatedFromModBrowser: This mod originated from the Mod Browser
-	// ModsTypeToSearch: Type to search
-	// ModsSearchByModName: Search by Mod name
-	// ModsSearchByAuthor: Search by Author name
-	// ModsSortRecently: Sort by recently changed
-	// ModsSortNamesAlph: Sort mod names alphabetically
-	// ModsSortNamesReverseAlph: Sort mod names reverse-alphabetically
-	// ModsShowAllMods: Show all mods
-	// ModsShowEnabledMods: Show only enabled mods
-	// ModsShowDisabledMods: Show only disabled mods
-	// ModsXModsFilteredByEnabled: "{0} {^0:mod;mods} filtered by enabled filter."
-	// ModsXModsFilteredByModSide: "{0} {^0:mod;mods} filtered by enabled mod side filter."
-	// ModsXModsFilteredBySearch: "{0} {^0:mod;mods} filtered by enabled search filter."
-	// ModsXItems: "{0} {^0:item;items}"
-	// ModsXNPCs: "{0} {^0:NPC;NPCs}"
-	// ModsXTiles: "{0} {^0:tile;tiles}"
-	// ModsXWalls: "{0} {^0:wall;walls}"
-	// ModsXBuffs: "{0} {^0:buff;buffs}"
-	// ModsXMounts: "{0} {^0:mount;mounts}"
-	// ModsReloadAndReturn: Reload and return to world menu
-	/* ModsNotFoundServer:
+		Denne mod afhænger af: {0}
+		 (Tryk for at slå til)
 		'''
-		No mods were found in: "{0}"
-		If you are running a dedicated server, you may wish to use the 'modpath' command line switch or server config setting to specify a custom mods directory.
+	ModDependencyModsNotFound: De følgende mods kunne ikke blive fundet: {0}
+	ModDidNotFullyUnloadWarning:
+		'''
+		Denne mod blev ikke aflæst fuldkommen ved sidste aflæsning.
+		(Dette er en besked til modudvikleren)
+		'''
+	BetaModCantPublishError: Du kan ikke udgive en Mod bygget ud fra en beta-version af tModLoader
+	ModDescriptionMissing: Filen {0} eksisterer ikke. Venlist opret en gyldig beskrivelse til din mod.
+	ModDescriptionLengthTooShort: Mod-beskrivelsen er for kort. Venligst lav en gyldig beskrivelse ved at ændre på {0}.
+	ModWorkshopIconResizeWarning: Vil blive omskaleret fra {0} til {1}.
+	ModUsesDefaultIcon: Venlist brug et unikt ikon til din mod ved at ændre på {0}.
+	OutdatedModCantPublishError: Du kan ikke udgive en Mod bygget ud fra en gammel version af tModLoader
+	WrongVersionCantPublishError: Du kan ikke udgive en Mod bygget ud fra en anden version af tModloader end den var bygget ud fra
+	ModReloadRequired: Genindlæsning Påkrævet
+	ModReloadRequiredMemberTooltip: Det ville kræve en genindlæsning for at ændre på det her
+	ModReloadForced: Genindlæsning Påtvunget
+	ModIsServerSide: Dette er en server-sidet mod
+	ModFromWorkshop: Indlæser fra Workshop
+	ModFromModpack: Indlæser fra aktive modpakker
+	ModFromLocal: Indlæser fra den lokale mods-mappe
+	ModsByline: Af: {0}
+	ModsMoreInfo: Mere Info
+	ModsOriginatedFromModBrowser: Denne mod var oprindeligt fra Mod-finderen.
+	ModsTypeToSearch: Skriv for at søge
+	ModsSearchByModName: Søg efter moddens navn
+	ModsSearchByAuthor: Søg efter forfatterens navn
+	ModsSortRecently: Sortér efter nyligt opdaterede
+	ModsSortNamesAlph: Sortér efter alfabetisk rækkefølge
+	ModsSortNamesReverseAlph: Sortér modsat efter alfabetisk rækkefølge
+	ModsShowAllMods: Vis alle mods
+	ModsShowEnabledMods: Vis kun mods, der er slået til
+	ModsShowDisabledMods: Vis kun mods, der er slået fra
+	ModsXModsFilteredByEnabled: "{0} {^0:mod;mods} filtreret efter givent filter."
+	ModsXModsFilteredByModSide: "{0} {^0:mod;mods} filtreret efter givent mod-side filter."
+	ModsXModsFilteredBySearch: "{0} {^0:mod;mods} filtreret efter givent søge-filter."
+	ModsXItems: "{0} {^0:genstand;genstande}"
+	ModsXNPCs: "{0} {^0:NPC;NPCer}"
+	ModsXTiles: "{0} {^0:blok;blokke}"
+	ModsXWalls: "{0} {^0:væg;vægge}"
+	ModsXBuffs: "{0} {^0:buff;buffs}"
+	ModsXMounts: "{0} {^0:mount;mounts}"
+	ModsReloadAndReturn: Genindlæs og vend tilbage til verdensmenuen.
+	ModsNotFoundServer:
+		'''
+		Der blev ikke fundet nogen mods i: "{0}"
+		Hvis du kører en dedikeret server kunne du måske bruge 'modpath'-konsolprogrammet eller ændre på serverens konfiguration for at specifiere en bestemt mods sti.
 
-		''' */
-	// AskForModIndex: Type a number to switch between enabled/disabled
-	// AskForCommand: "Type a command: "
-	// DedErrorNoConfig: This mod does not have any config
-	// DedErrorNotEnabled: Mod not enabled, please enable it and reload to edit its configs
-	// DedErrorModOOB: Mod index out of bounds
-	// DedConfigEditServerConfigsForMod: Edit Server Configs for Mod
-	// DedConfigConfigIndexOOB: The config index {0} is out of bounds
-	// DedConfigRangeCantBeValidated: Warning, "{0}" uses ranges that are unable to be validated, you might run into issues.
-	// DedConfigReadOnly: '''"{0}" is read only, it cannot be changed directly.'''
-	// DedConfigArrayLengthCantChange: '''"{0}" is an array, the length of arrays in configs can't be changed.'''
-	// DedConfigEditConfig: Modify configuration value
-	// DedConfigEditConfigNote: Note that data validation, such as min and max values, is not enforced. Try to use values only allowed in the client.
-	// DedConfigRestoreConfig: Restore configurations to default
-	// DedConfigErrorOutOfOptionStrings: The only possible values are: {0}
-	// DedConfigErrorOutOfRange: The value must be between {0} and {1}
-	// DedConfigErrorNotParsable: Invalid input
-	// ModConfigs: Configs
-	// ModConfigFilterOptions: Filter Options
-	// ModConfigFilterByName: Filter by Name
-	// ModConfigFilterByMod: Filter by Mod
-	// ModConfigNotification: "Notification: "
-	// ModConfigModConfig: Mod Config
-	// ModConfigSaveConfig: Save Config
-	// ModConfigBack: Back
-	// ModConfigRevertChanges: Revert Changes
-	// ModConfigRestoreDefaults: Restore Defaults
-	// ModConfigAskingServerToAcceptChanges: Asking server to accept changes...
-	// ModConfigCantSaveBecauseChangesWouldRequireAReload: Can't save because changes would require a reload
-	// ModConfigServerSide: Server Side Config
-	// ModConfigClientSide: Client Side Config
-	// ModConfigAdd: Add
-	// ModConfigRemove: Remove
-	// ModConfigInitialize: Initialize
-	// ModConfigClear: Clear
-	// ModConfigExpand: Expand
-	// ModConfigCollapse: Collapse
-	// ModConfigScaleUp: Scale Up
-	// ModConfigScaleDown: Scale Down
-	// ModConfigTypeHere: Type Here
-	// ModConfigUnknownEnum: Unknown value
-	// ModConfigServerResponse: Server response: {0}
-	// ModConfigServerRejectedChanges: Server rejected changes: {0}
-	// ModConfigSharedConfigChanged: Shared config changed: Message: {0}, Mod: {1}, Config: {2}
-	// ModConfigAccepted: Accepted
-	// ModConfigRejectChangesNotHost: Only the host can change this config
-	// ModConfigModLoaderButNoConfigs: This mod is loaded but has no config options
-	// BossBarStyle: Boss Bar Style: {0}
-	// BossBarStyleNoOptions: No Options
-	// WorkshopDisclaimer: By submitting this item, you agree to the tModLoader Terms of Service
-	// NonModOwnerPublishWarning: A mod with the name "{0}" has already been published to the workshop by another modder. If you are not a contributor to that mod then attempting to publish will fail. If this is your mod, double check that you are logged into the correct Steam account. Every mod must have a unique internal name.
-	// SteamPublishingLimit: Error: Only Steam tModLoader owners can publish to Workshop in-game.
-	/* NoWorkshopAccess:
 		'''
-		Error: Unable to access Steam Workshop.
-
-		You must have a valid Steam install on your system in order to use the in-game Mod Browser.
-
-		NOTE: GoG users - once Steam is installed, you can use the ingame mod browser to download mods
-		''' */
-	// ModAlreadyUploaded: Error: Mod already exists on Workshop!
-	/* ModVersionTooSmall:
+	AskForModIndex: Skriv et tal for at skifte mellem til og fra
+	AskForCommand: "Indtast en kommando: "
+	DedErrorNoConfig: Denne mod har ikke nogen konfiguration
+	DedErrorNotEnabled: Modden er slået fra. Venligst slå den til og genindlæs for at ændre på dens konfiguration.
+	DedErrorModOOB: Mod-indeks er ude for grænsen
+	DedConfigEditServerConfigsForMod: Ændr Server-Konfiguration for Modden
+	DedConfigConfigIndexOOB: Konfigurations-indekset {0} er ude for grænsen
+	DedConfigRangeCantBeValidated: Advarsel, "{0}" bruger grænser, som ikke kan valideres. Du kan muligvis støde på problemer.
+	DedConfigReadOnly: '''"{0}" er skrivebeskyttet. Den kan ikke ændres direkte.'''
+	DedConfigArrayLengthCantChange: '''"{0}" er et array. Længden af arrays i konfigurationerne kan ikke ændres.'''
+	DedConfigEditConfig: Modificér konfigurations-værdien
+	DedConfigEditConfigNote: Bemærk at data-validering, såsom maximal og minimal-værdier, ikke er håndholdt. Prøv at bruge værdier, som kun er tilladt i klienten.
+	DedConfigRestoreConfig: Nulstil konfigurationer
+	DedConfigErrorOutOfOptionStrings: De mulige værdier er: {0}
+	DedConfigErrorOutOfRange: Værdien skal være mellem {0} og {1}
+	DedConfigErrorNotParsable: Ugyldigt input
+	ModConfigs: Konfigurationer
+	ModConfigFilterOptions: Filtrerings-muligheder
+	ModConfigFilterByName: Filtrer efter Navn
+	ModConfigFilterByMod: Filtrer efter Mod
+	ModConfigNotification: "Nodifikation: "
+	ModConfigModConfig: Mod-Konfiguration
+	ModConfigSaveConfig: Gem Konfiguration
+	ModConfigBack: Tilbage
+	ModConfigRevertChanges: Ryd ændringerne
+	ModConfigRestoreDefaults: Gendan standard
+	ModConfigAskingServerToAcceptChanges: Spørger serveren om at acceptere ændringerne...
+	ModConfigCantSaveBecauseChangesWouldRequireAReload: Kan ikke gemme da det ville kræve en genstart.
+	ModConfigServerSide: Server-Side Konfiguration
+	ModConfigClientSide: KLient-Side Konfiguration
+	ModConfigAdd: Tilføj
+	ModConfigRemove: Fjern
+	ModConfigInitialize: Initialisér
+	ModConfigClear: Ryd
+	ModConfigExpand: Udvid
+	ModConfigCollapse: Kollaps
+	ModConfigScaleUp: Skalér Op
+	ModConfigScaleDown: Skalér Ned
+	ModConfigTypeHere: Skriv Her
+	ModConfigUnknownEnum: Ukendt værdi
+	ModConfigServerResponse: Server-respons: {0}
+	ModConfigServerRejectedChanges: Serveren afslog ændringerne: {0}
+	ModConfigSharedConfigChanged: Delt konfiguration ændret: Besked: {0}, Mod: {1}, Konfiguration: {2}
+	ModConfigAccepted: Accepteret
+	ModConfigRejectChangesNotHost: Kun værten kan ændre på konfigurationen
+	ModConfigModLoaderButNoConfigs: Modden er blevet indlæst men har ingen konfigurations-muligheder
+	BossBarStyle: Boss-Bar-Stil: {0}
+	BossBarStyleNoOptions: Ingen valgmuligheder
+	WorkshopDisclaimer: Ved at indsende denne accepterer du tModLoaders Betingelser og Viklår
+	NonModOwnerPublishWarning: En mod med navnet "{0}" er allerede blevet udgivet på Workshoppen af en anden mod-udvikler. Hvis du ikke bidrager til den mod ville forsøget på at udgive modden fejle. Hvis det er din mod, så dobbel-check om hvor vidt du er logget ind med den rette konto. Hver mod skal have et unikt, internt navn.
+	SteamPublishingLimit: Fejl: Kun Steam tModLoader-ejere kan udgive til Workshoppen inden i spillet.
+	NoWorkshopAccess:
 		'''
-		Error: Mod Version information must be incremented prior to updating.
+		Fejl: Kunne ikke tilgå Steam Workshop.
 
-		The current version (v{0}) needs to be larger than the version already on the Workshop (v{1}).
-		''' */
-	/* ModVersionLargerThanFutureVersions:
+		Du skal have en gyldig Steam-installation på dit system for at kuinne bruge den indbyggede Mod-finder.
+
+		BEMÆRK: GoG-brugere - så snart Steam er installeret kan I bruge den indbyggede mod-finder til at hente mods.
+		''' 
+	ModAlreadyUploaded: Fejl: Modden eksisterer allerede på Workshop!
+	ModVersionTooSmall:
 		'''
-		Error: Mod Version can't exceed the version of this mod published on newer releases of tModLoader.
+		Fejl: Informationen om mod-versionen skal tælles op før den kan opdateres.
 
-		The current version (v{0}) needs to be smaller than or equal to existing versions already on the Workshop made for newer releases of tModLoader (v{1} was published on tModLoader v{2}).
-
-		If the current version number is desired for this release, a workaround is to publish an even larger version on tModLoader v{2} and then publish v{0} on this tModLoader release.
-		''' */
-	// ConsultSteamLogs: Consult Steam workshop_log.txt (Default Location: {0}) for more information.
-	/* SteamRejectUpdate:
+		Den nuværende version (v{0}) skal være større end den version, der allerede er på Workshop (v{1}).
 		'''
-		Item is/was already installed: {0}. 
-		If attempting to re-install, restart your game first because Steam is weird
-		If restarting your game does not work, apply the following steps:
-		1) Open Steam Client
-		2) Find the Mod on tModLoader Workshop
-		3) Unsubscribe and Resubscribe on the actual Workshop.
-		These steps are required if Steam fails to handle unsubscribing you properly.
-		''' */
-	// BrowserRejectWarning: Can't Download. Click For Info
-	// BeginDownload: Attempting Download Item: {0}
-	// EndDownload: Item Download Completed
-	// CreateItem: Creating Item {0}
-	// UpdateItem: Updating Item {0}
-	// PublishItem: Attempting Publishing Item {0}
-	// SteamDownloader: Queuing download with Steam download manager...
-	// PublishUpdateButton: Update Existing
-	// PublishNewButton: Publish New
-	// DownloadProgress: Download {0}% Complete
-	// DescriptionLengthExceedLimit: The (Workshop) Description of this mod exceeds the Steam Limit of {0} characters
-	// LoadError: An error occurred while loading {0}
-	// LoadErrorDisabled: The mod(s) and any dependencies have been automatically disabled.
-	// LoadErrorCulpritUnknown: The mod responsible is unknown and tModLoader must be restarted.
-	// LoadErrorContentType: This error was caused by the "{0}" class.
-	// LoadErrorMissingModQualifier: The asset path "{0}" is missing the mod qualifier. Asset paths should start with the mod name or "Terraria" followed by a slash ("/").
+	ModVersionLargerThanFutureVersions:
+		'''
+		Fejl: Mod-versionen kan ikke være højere end en version udgivet på en nyere version af tModLoader.
+
+		Den nuværende version (v{0}) skal være mindre eller lig med eksisterende versioner allerede ude på Workshop, som blev udgivet på nyere versioner af tModLoader (v{1} blev udgivet på tModLoader v{2}).
+
+		Hvis den nuværende version er den ønskede for udgivelsen kunne en løsning være at udgive en større version af modden på tModLoader v{2} og derefter udgive v{0} på denne tModLoader-version.
+		'''
+	ConsultSteamLogs: Hendvis til Steam workshop_log.txt (Standardlokation: {0}) for mere information.
+	SteamRejectUpdate:
+		'''
+		Genstand er/var allerede installeret: {0}.
+		Ved forsøg på geninstallation, så genstart dit spil først fordi Steam er mærkelig.
+		Hvis det ikke virker at genstarte spillet, så prøv følgende:
+		1) Åbn Steam-Klienten
+		2) Find modden på Workshop til tModLoader
+		3) Afmeld og genabonnér til modden på Workshoppen.
+
+		Disse trin er påkrævet hvis Steam fejler i at afmelde dig ordentlig.
+		'''
+	BrowserRejectWarning: Kunne ikke downloade. Tryk for info
+	BeginDownload: Forsøger at Downloade Genstand: {0}
+	EndDownload: Download af Genstand Fuldendt
+	CreateItem: Skaber Genstand {0}
+	UpdateItem: Opdaterer Genstand {0}
+	PublishItem: Forsøger at Udgive Genstand {0}
+	SteamDownloader: Sætter download i kø med Steam Download Manager...
+	PublishUpdateButton: Opdater Eksisterende
+	PublishNewButton: Udgiv Ny
+	DownloadProgress: Download er {0}% Fuldendt
+	DescriptionLengthExceedLimit: (Workshop-)Beskrivelsen af denne mod overskrider Steam-grænsen på {0} tegn.
+	LoadError: En fejl opstod under indlæsningen af {0}
+	LoadErrorDisabled: Mod/modsene og alle afhængige pakker er automatisk blevet slået fra.
+	LoadErrorCulpritUnknown: Den ansvarlige mod er ukendt og tModLoader må derfor genstartes.
+	LoadErrorContentType: Denne fejl blev forudsaget af "{0}"-klassen.
+	LoadErrorMissingModQualifier: Asset-stien "{0}" mangler en mod-kvalifikator. Asset-stier bør starte med enten modnavnet eller "Terraria", efterfuldt af en skråstreg ("/").
 	// LoadErrorModNotFoundDuringAsset: A mod named "{0}" was not found while attempting to load the asset with the path of "{1}". Check that this path starts with the correct mod name.
 	/* LoadErrorVersionMessage:
 		'''
