@@ -225,7 +225,7 @@ tModLoader: {
 	BossBarStyle: Boss-Bar-Stil: {0}
 	BossBarStyleNoOptions: Ingen valgmuligheder
 	WorkshopDisclaimer: Ved at indsende denne accepterer du tModLoaders Betingelser og Viklår
-	NonModOwnerPublishWarning: En mod med navnet "{0}" er allerede blevet udgivet på Workshoppen af en anden mod-udvikler. Hvis du ikke bidrager til den mod ville forsøget på at udgive modden fejle. Hvis det er din mod, så dobbel-check om hvor vidt du er logget ind med den rette konto. Hver mod skal have et unikt, internt navn.
+	NonModOwnerPublishWarning: En mod med navnet "{0}" er allerede blevet udgivet på Workshoppen af en anden mod-udvikler. Hvis du ikke bidrager til den mod ville forsøget på at udgive modden fejle. Hvis det er din mod, så dobbeltjek om hvor vidt du er logget ind med den rette konto. Hver mod skal have et unikt, internt navn.
 	SteamPublishingLimit: Fejl: Kun Steam tModLoader-ejere kan udgive til Workshoppen inden i spillet.
 	NoWorkshopAccess:
 		'''
@@ -274,658 +274,657 @@ tModLoader: {
 	DownloadProgress: Download er {0}% Fuldendt
 	DescriptionLengthExceedLimit: (Workshop-)Beskrivelsen af denne mod overskrider Steam-grænsen på {0} tegn.
 	LoadError: En fejl opstod under indlæsningen af {0}
-	LoadErrorDisabled: Mod/modsene og alle afhængige pakker er automatisk blevet slået fra.
+	LoadErrorDisabled: Mod/modsene og alle afhængigheder er automatisk blevet slået fra.
 	LoadErrorCulpritUnknown: Den ansvarlige mod er ukendt og tModLoader må derfor genstartes.
 	LoadErrorContentType: Denne fejl blev forudsaget af "{0}"-klassen.
 	LoadErrorMissingModQualifier: Asset-stien "{0}" mangler en mod-kvalifikator. Asset-stier bør starte med enten modnavnet eller "Terraria", efterfuldt af en skråstreg ("/").
-	// LoadErrorModNotFoundDuringAsset: A mod named "{0}" was not found while attempting to load the asset with the path of "{1}". Check that this path starts with the correct mod name.
-	/* LoadErrorVersionMessage:
+	LoadErrorModNotFoundDuringAsset: En mod med navnet "{0}" blev ikke fundet under forsøget på at indlæse asset med stien "{1}". Tjek om stien starter med det rigtige mod navn.
+	LoadErrorVersionMessage:
 		'''
-		It has been detected that this mod was built for tModLoader v{0}
-		However, you are using {1}
-		''' */
-	// LoadErrorDotNet45Required: .NET Framework 4.5 or newer is required to use mods. Please download the latest .NET Framework
-	// LoadErrorDependencyMissing: Missing mod: {0} required by {1}
-	// LoadErrorErrorReadingModFile: Error reading mod file {0}
-	// LoadErrorHashMismatchCorrupted: Hash mismatch, data blob has been modified or corrupted
-	// LoadErrorHashMismatchCorruptedWithModName: Unable to verify integrity of {0}: hash mismatch; data blob has been modified or corrupted
-	// LoadErrorDependencyVersionTooLow: "{0} requires {2} version {1} or greater but version {3} is installed"
-	// LoadErrorMajorVersionMismatch: "{0} targets {2} version {1} but you have a newer major version ({3}) which may not be compatible. {0} must be updated."
-	/* LoadErrorRecentlyBuiltLocalModWithLowerVersionWorkshop:
+		Det er blevet opfanget at denne mod blev bygget ud fra tModLoader v{0}
+		Men, du bruger {1}
 		'''
-		{0} v{1} was recently built, but was not selected to load because the subscribed workshop copy (v{2}) is newer.
-		Either update build.txt and rebuild the mod or temporarily unsubscribe from the mod.
-		''' */
-	/* LoadErrorRecentlyBuiltLocalModWithLowerVersionModpack:
+	LoadErrorDotNet45Required: .NET Framework 4.5 eller nyere er krævet for at bruge mods. Venligst download den nyeste .NET-Framework
+	LoadErrorDependencyMissing: Manglende mod: {0} kræves af {1}
+	LoadErrorErrorReadingModFile: Fejl under læsning af mod-fil {0}
+	LoadErrorHashMismatchCorrupted: Hash stemte ikke overens - data-blob er blevet modificeret eller korrupt.
+	LoadErrorHashMismatchCorruptedWithModName: Kunne ikke verificere integriteten af {0}: Hash stemte ikke overens; data-blob er blevet modificeret eller korrupt
+	LoadErrorDependencyVersionTooLow: "{0} kræver version {1} af {2} eller højere, men version {3} er installeret"
+	LoadErrorMajorVersionMismatch: "{0} sigter mod version {1} af {2}, men du har en nyere, større version ({3}), der muligvis ikke er kompatibel. {0} skal opdateres."
+	LoadErrorRecentlyBuiltLocalModWithLowerVersionWorkshop:
 		'''
-		{0} v{1} was recently built, but was not selected to load because a frozen copy (v{2}) is present in the active modpack.
-		The mod pack will need to be disabled to test this mod.
-		''' */
-	// LoadWarningBannerOrBannerItemNotSet: "{0}: {1}. You have set ModNPC.Banner or ModNPC.BannerItem, but not the other. Or, the BannerItem value conflicts with other ModNPC sharing the same banner. Make sure you set both for the representative ModNPC, check your spelling, and that the item exists if you are using Mod.Find<ModItem>().Type. Report this to the {0} developers."
-	// UnloadError: One or more errors occurred while unloading and tModLoader must be restarted to prevent further issues.
-	// DefensiveUnload: "{0} was unable to unload properly. Modders must use defensive programming to ensure unloading completes regardless of any errors during loading."
-	// BuildError: An error occurred while building {0}
-	// CompileError: Compiling {0} failed with {1} errors and {2} warnings
-	// BuildErrorModNameEmpty: Mods must actually have stuff in their names
-	// BuildErrorModNamedTerraria: Mods names cannot be named Terraria
-	// BuildErrorModNameHasPeriod: A mod's internal name cannot contain a period
-	// BuildErrorTwoModsSameName: Two mods share the internal name {0}
-	// BuildErrorModReference: Failed to read mod reference {0}
-	/* BuildErrorMissingNoCompile:
+		{0} v{1} blev for nyligt bygget, men er ikke blevet valgt til at blive indlæst fordi den abonnerede Workshop-kopi (v{2}) er nyere.
+		Enten opdatér build.txt og genbyg modden eller midlertidigt afmeld modden.
 		'''
-		Missing dll files for noCompile: {0} or {1}
+	LoadErrorRecentlyBuiltLocalModWithLowerVersionModpack:
+		'''
+		{0} v{1} blev for nyligt bygget, men er ikke blevet valgt til at blive indlæst fordi en frossen kopi (v{2}) er i den aktive modpakke.
+		Modpakken skal slåes fra for at teste denne mod.
+		'''
+	LoadWarningBannerOrBannerItemNotSet: "{0}: {1}. Du har sat ModNPC.Banner eller ModNPC.BannerItem, men ikke den anden. Eller BannerItem-værdien er i konflikt med andre ModNPC'er, der dele det samme banner. Vær sikker på at du sætter begge af de representerende ModNPC, læser for korrektur, og at genstanden eksistere hvis du bruger Mod.Find<ModItem>().Type. Rapportér dette til {0}-udviklerene."
+	UnloadError: En eller flere fejl forekom under aflæsningen og tModLoader må derfor genstartes for at forhindre yderligere fejl.
+	DefensiveUnload: "{0} var ude af stand til at aflæse ordentligt. Moddere bør bruge defensiv programmering for at forsikre at aflæsningen udføres fuldkomment uanset om der forekommer fejl under læsningen."
+	BuildError: En fejl forekom under bygningen af {0}
+	CompileError: Kompileringen af {0} fejlede med {1} fejl og {2} advarsler
+	BuildErrorModNameEmpty: Mods skal rent faktisk have noget i deres navne
+	BuildErrorModNamedTerraria: Mods må ikke hede Terraria
+	BuildErrorModNameHasPeriod: En mods interne navn må ikke indeholde et punktum
+	BuildErrorTwoModsSameName: To mods deler det samme, interne navn {0}
+	BuildErrorModReference: Fejlede under læsningen af mod-reference {0}
+	BuildErrorMissingNoCompile:
+		'''
+		Mangler dll-filer til noCompile. {0} eller {1}
 
-		All.dll must not have any references to Microsoft.Xna.Framework or FNA
-		XNA.dll must reference the appropriate tModLoader.exe and framework
-		''' */
-	// BuildErrorModNameDoesntMatchAssemblyName: Mod name {0} does not match assembly name {1}
-	// BuildErrorNamespaceFolderDontMatch: Namespace and Folder name do not match. The top level namespace must match the folder name.
-	// BuildErrorNoModClass: Make sure you have exactly one class extending Mod.
-	// BuildErrorLoadingPrecompiled: Failed to load precompiled: {0}
-	// BuildErrorFailedLoadBuildTxt: Failed to load {0}
-	// BuildWarningEACWindowsOnly: Edit and continue is only supported on windows.
-	// LoadErrorTextureFailedToLoad: The texture file at {0} failed to load
-	// LoadErrorWavSoundFailedToLoad: The wav sound file at {0} failed to load
-	// LoadErrorMP3SoundFailedToLoad: The mp3 sound file at {0} failed to load
-	// LoadErrorSoundFailedToLoadAudioDeviceHint: (Try making sure your computer has speakers attached and audio devices enabled)
-	// LoadErrorFontFailedToLoad: The font file at {0} failed to load
-	// LoadErrorEffectFailedToLoad: The effect file at {0} failed to load
-	// LoadErrorUnknownXNBFileHint: Unknown xnb file {0}. Perhaps it should be in Fonts/ or Effects/
-	// LoadErrorCannotLoadCompressedEffects: Cannot load compressed effects.
-	// LoadErrorNotLoading: Mod.AddContent can only be called during loading
-	// LoadErrorDuplicateName: Cannot add two {0} with the same name: {1}. Maybe 2 classes share a classname but in different namespaces while autoloading or you manually called AddContent with 2 {0} of the same name, or maybe there is a duplicate/already in use legacyname
-	/* LoadErrorResourceNotFoundPathHint:
+		All.dll må ikke have nogen referencer til Microsoft.Xna.Framework eller FNA
+		XNA.dll skal referere til den passende tModloader.exe og framework
 		'''
-		Expected resource not found:
-		    {0}
-		Closest guess: (Is there a spelling or folder placement error?)
-		    {1}
-		''' */
-	// LoadErrorResourceNotFoundEquipTextureHint: Equipment items require an additional texture that is drawn on the player. This is separate from the item texture shown in the inventory. This is the texture that can't be found.
-	// RuntimeErrorSilentlyCaughtException: "Silently Caught Exception: "
-	// RuntimeErrorSeeLogsForFullTrace: (see {0} for full trace)
-	// ShopOverflow: Not all items could fit in the shop!
-	// PlayerSaveFail: An error occurred while saving the player
-	// BackingUpPlayerFile: Backing up player file
-	// OpenLogs: Open Logs
-	// OpenWebHelp: Open Web Help
-	// SkipToMainMenu: Skip Loading Mods
-	// Retry: Retry
-	// Exit: Exit
-	// ExitAndDisableAll: Exit and Disable All
-	// ModInfoHeader: "Mod Info: "
-	// ModInfoVisitHomepage: Homepage
-	// ModInfoExtract: Extract
-	// ModInfoNoDescriptionAvailable: No description available
-	// ModInfoProblemTryAgain: There was a problem, try again
-	// ModInfoDisableModToDelete: Disable Mod to Delete
-	// ModInfoVisitSteampage: Steam Workshop Page
-	// ModInfoExtractLocalization: Extract Localization
-	// ModInfoExtracted: Extracted
-	// ModInfoEnableModToExtractLocalizationFiles: Enable Mod to Extract Localization Files
-	// ModPacksHeader: Mod Packs
-	// ModPacksSaveEnabledAsNewPack: Save Enabled as New Mod Pack
-	// ModPacksEnterModPackName: Enter Mod Pack name
-	// ModPackViewList: View List
-	// ModPackEnableThisList: Enable this List
-	/* ModPackEnableThisListDesc:
+	BuildErrorModNameDoesntMatchAssemblyName: Mod-navnet {0} matcher ikke assembly-navnet {1}
+	BuildErrorNamespaceFolderDontMatch: Namespace og Mappe-navn stemte ikke overens. Top-level-namespacet skal være det samme som mappenavnet.
+	BuildErrorNoModClass: Vær sikker på at du har nøjagtigt én mod, som udvider Mod.
+	BuildErrorLoadingPrecompiled: Fejlede i at indlæse pre-kompileret: {0}
+	BuildErrorFailedLoadBuildTxt: Fejlede i at indlæse {0}
+	BuildWarningEACWindowsOnly: \"Ændr og forsæt\" er kun understøttet på Windows.
+	LoadErrorTextureFailedToLoad: Teksturfilen ved {0} fejlede i at blive indlæst
+	LoadErrorWavSoundFailedToLoad: wav-lydfilen ved {0} fejlede i at blive indlæst
+	LoadErrorMP3SoundFailedToLoad: mp3-lydfilen ved {0} fejlede i at blive indlæst
+	LoadErrorSoundFailedToLoadAudioDeviceHint: (Prøv at være sikker på at din computer har højtalere forbundet og at lydenheder er slået til)
+	LoadErrorFontFailedToLoad: Skrifttype-filen ved {0} fejlede i at blive indlæst
+	LoadErrorEffectFailedToLoad: Effekt-filen ved {0} fejlede i at blive indlæst
+	LoadErrorUnknownXNBFileHint: Ukendt xnb-fil {0}. Måske bør den være i Fonts/ eller Effects/
+	LoadErrorCannotLoadCompressedEffects: Kan ikke indlæse kompressede effekter.
+	LoadErrorNotLoading: Mod.AddContent kan kun blive kaldt under indlæsningen.
+	LoadErrorDuplicateName: Kunne ikke tilføje to {0} med det samme navn: {1}. Måske deler 2 klasser samme klassenavn, men i forskellige namespaces under auto-indlæsning eller du kaldte AddContent med 2 {0} af det samme navn; eller måske er der et legacyname, som er duplikeret eller allerede i brug
+	LoadErrorResourceNotFoundPathHint:
 		'''
-		Enables all mods included in modpack using
-		latest mod versions found on Steam Workshop
-		''' */
-	// ModPackEnableOnlyThisList: Enable only this List
-	/* ModPackEnableOnlyThisListDesc:
+		Forventet resource blev ikke fundet:
+			{0}
+		Tætteste gæt: (Er der stavefejl eller er mappen lagt forkert?)
+			{1}
 		'''
-		Disables all mods & enables the modpack using
-		latest mod versions found on Steam Workshop
-		''' */
-	// ModPackUpdateListWithEnabled: Update List with Enabled
-	/* ModPackUpdateListWithEnabledDesc:
+	LoadErrorResourceNotFoundEquipTextureHint: Udstyrs-genstande kræver en yderligere tekstur end der bliver vist på spilleren. Denne er anderledes fra teksturen vist i inventaret. Denne tekstur kan ikke blive fundet.
+	RuntimeErrorSilentlyCaughtException: "Fangede Undtagelse i Stilhed: "
+	RuntimeErrorSeeLogsForFullTrace: (se {0} for den fulde tråd)
+	ShopOverflow: Ikke alle genstande kunne passe i butikken!
+	PlayerSaveFail: En fejl opstod under gemmelsen af spilleren
+	BackingUpPlayerFile: Laver back-up af spiller-filen
+	OpenLogs: Åbn Logs Open Logs
+	OpenWebHelp: Åbn Web-hjælp
+	SkipToMainMenu: Spring Over Indlæsningen af Mods
+	Retry: Forsøg Igen
+	Exit: Gå Ud
+	ExitAndDisableAll: Gå Ud og Slå Alle Fra
+	ModInfoHeader: "Mod-Info: "
+	ModInfoVisitHomepage: Hjemmeside
+	ModInfoExtract: Udpak
+	ModInfoNoDescriptionAvailable: Ingen beskrivelse tilgængelig
+	ModInfoProblemTryAgain: Der var en fejl, prøv igen
+	ModInfoDisableModToDelete: Slå Modden Fra for at Slette
+	ModInfoVisitSteampage: Steam Workshop-Side
+	ModInfoExtractLocalization: Udpak Lokalisering
+	ModInfoExtracted: Udpakket
+	ModInfoEnableModToExtractLocalizationFiles: Slå Modden Til for at Udpakke Lokaliserings-filerne
+	ModPacksHeader: Mod-Pakker
+	ModPacksSaveEnabledAsNewPack: Gem Aktiverede som Ny Modpakke
+	ModPacksEnterModPackName: Indtast Modpakke-navn
+	ModPackViewList: Se Liste
+	ModPackEnableThisList: Slå Denne Liste til
+	ModPackEnableThisListDesc:
 		'''
-		Updates the mod pack or collection with the
-		currently enabled set of mods
-		''' */
-	// ModPackViewModsInModBrowser: View Mods in Mod Browser
-	// ModPackViewModsInModBrowserDesc: View the mods included in pack on Mod Browser
-	// ModPackModsAvailableStatus: "{0} Total, {1} Enabled, {2} Disabled, {3} Missing"
-	/* ModPackModsMissing:
+		Slår alle de nyeste versioner af de 
+		inkluderede mods på Steam Workshop til.
 		'''
-		The following mods were not found:
+	ModPackEnableOnlyThisList: Slå kun denne liste til
+	ModPackEnableOnlyThisListDesc:
+		'''
+		Slår alle mods fra og slår modpakken til med
+		de nyeste versioner fundet på Steam Workshop
+		'''
+	ModPackUpdateListWithEnabled: Opdatér Listen med de Aktiverede
+	ModPackUpdateListWithEnabledDesc:
+		'''
+		Opdaterer modpakken eller samlingen med det
+		nuværende sæt af aktiverede mods
+		'''
+	ModPackViewModsInModBrowser: Se Mods i Mod-Finderen
+	ModPackViewModsInModBrowserDesc: Se modsene inkluderede i pakken i Mod-Finderen
+	ModPackModsAvailableStatus: "{0} I alt, {1} Slået til, {2} Slået fra, {3} Mangler"
+	ModPackModsMissing:
+		'''
+		De følgende mods blev ikke fundet:
 		{0}
-		''' */
-	/* ModPackModsContained:
 		'''
-		This list contains the following mods:
+	ModPackModsContained:
+		'''
+		Listen indeholder følgende mods:
 		{0}
-		''' */
-	// ModPackMissing: " - Missing"
-	// ModPackDisabled: " - Disabled"
-	// ModPackLoadingSpecifiedModPack: Loading specified modpack: {0}
-	// ModPackDoesNotExist: Modpack {0} does not exist.
-	// ModPackMalformed: The {0} modpack failed to be read properly, it might be malformed.
-	// CurrentModPack: Current Mod Pack: {0}
-	// ExportPackInstance: Export Pack Instance
-	/* ExportPackInstanceDesc:
 		'''
-		Exports a copy of mods to InstallDirectory so
-		can setup second instance of tModLoader
-		OR quickly setup a server with the pack
-		''' */
-	// DeletePackInstance: Delete Instance
-	// DeletePackInstanceDesc: Deletes all files in InstallDirectory/<ModPackName>
-	// RemovePackLocal: Remove Pack (Local)
-	/* RemovePackLocalDesc:
+	ModPackMissing: " - Mangler"
+	ModPackDisabled: " - Er slået fra"
+	ModPackLoadingSpecifiedModPack: Indlæser specificerede modpakke: {0}
+	ModPackDoesNotExist: Modpakken {0} eksisterer ikke.
+	ModPackMalformed: Modpakken {0} kunne ikke blive læst ordentlig - Den kunne være malformeret.
+	CurrentModPack: Nuværende Modpakke: {0}
+	ExportPackInstance: Eksportér Pakkeinstans
+	ExportPackInstanceDesc:
 		'''
-		Disables all mods & removes the frozen mods
-		from tModLoader mod loading path
-		''' */
-	// InstallPackLocal: Import Pack (Local)
-	/* InstallPackLocalDesc:
+		Eksporterer en kopi af mods til InstallDirectory
+		således en server eller ny version af tModLoader
+		kan sættes op med pakken
 		'''
-		Disables all mods & enables the modpack using
-		frozen mod versions found in Mod Pack
-		''' */
-	// ModPackMismatch: Last Mod Pack: {0}
-	// ModPackDelete: Delete Mod Pack
-	// ModPackDisableToDelete: Remove Mod Pack to Delete
-	// MPSyncingMods: Syncing Mods
-	// MPServerModsCantDownload: The following mods are installed on the server but cannot be downloaded
-	// MPServerModsCantDownloadReasonSigned: because you only accept mods signed by the mod browser
-	// MPServerModsCantDownloadReasonAutomaticDownloadDisabled: because you have disabled automatic mod downloading
-	// MPServerModsCantDownloadChangeSettingsHint: You will need to change your settings or acquire the mods from the server owner.
-	// MPShowServerConsoleYes: Show Server Console: On
-	// MPShowServerConsoleNo: Show Server Console: Off
-	// MPErrorModHashMismatch: Hash mismatch
-	// MPErrorModNotSigned: Mod was not signed by the Mod Browser
-	// MPErrorModDownloadError: An error occurred while downloading {0}
-	// MPPacketTooLarge: Packet too large {0} > {1}
-	// ReloadRequiredDownloadAndContinue: Download and Continue
-	// ReloadRequiredReloadAndContinue: Reload and Continue
-	// ReloadRequiredServerJoinMessage: The following changes to your enabled mods will be automatically applied if you join this server. Press "{0}" to reload mods and join this server.
-	// ReloadRequiredSinglePlayerMessage: The following changes to your enabled mods will be automatically applied if you enter single player. Press "{0}" to reload mods and enter single player.
-	// ReloadRequiredExplanationDownload: "[c/{0}:Download] v{1} from server"
-	/* ReloadRequiredExplanationDownloadDowngradeTemporary:
+	DeletePackInstance: Slet Instans
+	DeletePackInstanceDesc: Sletter alle filer i InstallDirectory/<ModPackName>
+	RemovePackLocal: Fjern Pakke (Lokal)
+	RemovePackLocalDesc:
 		'''
-		[c/{0}:Download] v{1} from server
-		(Temporarily downgrade from v{2})
-		''' */
-	/* ReloadRequiredExplanationDownloadDowngrade:
+		Slår alle mods fra & fjerner frosne mods
+		fra tModLoader indlæsnings-stien
 		'''
-		[c/{0}:Download] v{1} from server
-		(Downgrade from v{2})
-		''' */
-	/* ReloadRequiredExplanationDownloadUpgrade:
+	InstallPackLocal: Importér Pakke (Lokal)
+	InstallPackLocalDesc:
 		'''
-		[c/{0}:Download] v{1} from server
-		(Upgrade from v{2})
-		''' */
-	/* ReloadRequiredExplanationDownloadHashDiffers:
+		Slår alle mods fra & slår modpakken med de
+		frosne mod versioner fundet i Modpakken til
 		'''
-		[c/{0}:Download] v{1} ({2}) from server
-		(Mod file differs from local copy)
-		''' */
-	/* ReloadRequiredExplanationSwitchVersion:
+	ModPackMismatch: Sidste Modpakke: {0}
+	ModPackDelete: Slet Modpakke
+	ModPackDisableToDelete: Fjern Modpakke for at Fjerne
+	MPSyncingMods: Synkroniserer Mods
+	MPServerModsCantDownload: De følgende mods er installeret på serveren, men kan ikke downloades
+	MPServerModsCantDownloadReasonSigned: fordi du kun accepterer mods signeret af mod-finderen
+	MPServerModsCantDownloadReasonAutomaticDownloadDisabled: fordi du har slået automatisk mod-downloading fra
+	MPServerModsCantDownloadChangeSettingsHint: Du bliver nødt til at ændre dine indstillinger eller få modsene fra server-ejeren.
+	MPShowServerConsoleYes: Vis Server-Konsol: Til
+	MPShowServerConsoleNo: Vis Server-Konsol: Fra
+	MPErrorModHashMismatch: Hash stemte ikke overens
+	MPErrorModNotSigned: Mod var ikke signeret af Mod-Finderen
+	MPErrorModDownloadError: En fejl skete under download af {0}
+	MPPacketTooLarge: Pakke for stor {0} > {1}
+	ReloadRequiredDownloadAndContinue: Download og Fortsæt
+	ReloadRequiredReloadAndContinue: Genindlæs og Fortsæt
+	ReloadRequiredServerJoinMessage: De følgende ændringer til dine aktive mods vil blive udført automatisk hvis du tilslutter denne server. Tryk "{0}" for at genindlæse modsene og tilslutte denne server.
+	ReloadRequiredSinglePlayerMessage: De følgende ændringer til dine aktive mods vil blive udført automatisk hvis du går ind i single-player. Tryk "{0}" for at genindlæse modsene og gå ind i single-player.
+	ReloadRequiredExplanationDownload: "[c/{0}:Download] v{1} fra server"
+	ReloadRequiredExplanationDownloadDowngradeTemporary:
 		'''
-		[c/{0}:Switch] to v{1}
-		(Currently loaded v{2})
-		''' */
-	/* ReloadRequiredExplanationSwitchVersionDowngrade:
+		[c/{0}:Download] v{1} fra server
+		(Midlertidig nedgradering fra v{2})
 		'''
-		[c/{0}:Switch] to v{1}
-		(Temporarily downgrade from v{2})
-		''' */
-	/* ReloadRequiredExplanationSwitchVersionUpgrade:
+	ReloadRequiredExplanationDownloadDowngrade:
 		'''
-		[c/{0}:Switch] to v{1}
-		(Upgrade from v{2})
-		''' */
-	// ReloadRequiredExplanationEnable: "[c/{0}:Enable]"
-	// ReloadRequiredExplanationDisable: "[c/{0}:Disable]"
-	// ReloadRequiredExplanationConfigChanged: "[c/{0}:Change config] temporarily"
-	// ReloadRequiredExplanationConfigChangedRestore: "[c/{0}:Restore config]"
-	// ReloadRequiredHostAndPlayModWasDisabledHint: It is possible that a mod you had previously enabled has errors when run on the server and has been automatically disabled. Check server.log to investigate these issues. Click here to open the FAQ for this issue.
-	// ALLoading: Loading...
-	// ALNoEntries: No matching entries
-	// ALCancel: Loading cancelled, refresh to see all entries
-	// ALError: An error occurred, try refreshing
-	// MBDownload: Download
-	// MBDownloadAll: Download All
-	// MBDownloadingMod: Downloading: {0}
-	// MBInstallingMod: Installing: {0}
-	// MBDownloadFileProblem: Failed to handle {0}
-	// MBReleaseFileHandle: Releasing file handle for {0}
-	// MBDownloadFinished: Downloading mods finished, returning to browser
-	// MBUploadingMod: Uploading: {0}
-	// MBDowngrade: Downgrade
-	// MBUpdate: Update
-	// MBRequiresTMLUpdate: Requires {0}
-	// MBClickToUpdate: Click to update
-	// MBDowngradeWithDependencies: Downgrade with dependencies
-	// MBUpdateWithDependencies: Update with dependencies
-	// MBDownloadWithDependencies: Download with dependencies
-	// MBUpdateAll: Update All
-	// MBReloadBrowser: Reload browser
-	// MBGettingData: Getting data...
-	// MBCancelLoading: Cancel loading
-	// MBPopulatingBrowser: Populating browser...
-	// MBSortByRecentlyUpdated: Sort by recently updated
-	// MBSortByRecentlyPublished: Sort by recently published
-	// MBSortByPopularity: Sort by popularity
-	// MBSortDownloadDesc: Sort by downloads descending
-	// MBSortDownloadAsc: Sort by downloads ascending
-	// MBTimePeriodToggleDisabled: "[c/{0}:{1} (Disabled in this sort mode)]"
-	// MBSortByRelevance: Sort by text relevance
-	// MBShowAllMods: Show all mods
-	// MBShowNotInstalledUpdates: Show mods not installed and updates
-	// MBShowUpdates: Show only updates
-	// MBShowInstalled: Show installed mods
-	// MBShowMSAll: Show all mods
-	// MBShowMSBoth: Show normal side only mods
-	// MBShowMSClient: Show client side only mods
-	// MBShowMSServer: Show server side only mods
-	// MBShowMSNoSync: Show no sync only mods
-	// MBTagsSelected: Tags:
-	// MBTagsCategories: Categories: {0}
-	// MBTagsLanguage: Language: {0}
-	// MBTagsClear: Clear all tag selections
-	// MBClearSpecialFilter: Clear Special Filter: {0}
-	// MBOfflineWithReason: Offline ({0})
-	// MBBusy: Busy
-	// MBUnknown: Unknown
-	/* MBOfflineTroubleshooting:
+		[c/{0}:Download] v{1} fra server
+		(Nedgradering fra v{2})
 		'''
-		The Mod Browser can't be reached, this can be due to many reasons.
-		 1. Check your Internet connection.
-		 2. The Mod Browser might just be offline. If it worked before, just wait a few hours.
-		 3. Double-click this message to open the Mod Browser website. You can use this to manually download mods. If this works, you should check your firewall to allow Terraria.exe through or try disabling your VPN if you are using one.
-		 4. If that website does not work, the Mod Browser server might be blocked by your Government, Internet Service Provider, Router, or Web Filter. If that is the case, you'll need to figure it out on your own.
-		''' */
-	/* MBClickToViewDependencyMods:
+	ReloadRequiredExplanationDownloadUpgrade:
 		'''
-		Click to view dependency mods:
+		[c/{0}:Download] v{1} fra server
+		(Opgradering fra v{2})
+		'''
+	ReloadRequiredExplanationDownloadHashDiffers:
+		'''
+		[c/{0}:Download] v{1} ({2}) fra server
+		(Modfilen er forskellig fra lokal kopi)
+		'''
+	ReloadRequiredExplanationSwitchVersion:
+		'''
+		[c/{0}:Skift] til v{1}
+		(Nuværende indlæst v{2})
+		'''
+	ReloadRequiredExplanationSwitchVersionDowngrade:
+		'''
+		[c/{0}:Skift] til v{1}
+		(Midlertidig nedgradering from v{2})
+		'''
+	ReloadRequiredExplanationSwitchVersionUpgrade:
+		'''
+		[c/{0}:Skift] til v{1}
+		(Opgradering fra v{2})
+		'''
+	ReloadRequiredExplanationEnable: "[c/{0}:Slå til]"
+	ReloadRequiredExplanationDisable: "[c/{0}:Slå fra]"
+	ReloadRequiredExplanationConfigChanged: "[c/{0}:Ændr konfiguration] midlertidig"
+	ReloadRequiredExplanationConfigChangedRestore: "[c/{0}:Gendan konfiguration]"
+	ReloadRequiredHostAndPlayModWasDisabledHint: Det er muligt at en mod du tidligere havde slået til har fejl når den køres på serveren og er derfor blevet automatisk slået fra. Tjek server.log for at investigere disse problemer. Klik her for at åbne FAQ'en for denne problem
+	ALLoading: Indlæser...
+	ALNoEntries: Ingen matchende opslag
+	ALCancel: Indlæsning blev annuleret - Opdater for at se alle opslag
+	ALError: Der forekom en fejl - Prøv at opdater
+	MBDownload: Download
+	MBDownloadAll: Download Alle
+	MBDownloadingMod: Downloader: {0}
+	MBInstallingMod: Installerer: {0}
+	MBDownloadFileProblem: Fejlede i at håndtere {0}
+	MBReleaseFileHandle: Udgiver filhåndteringen for {0}
+	MBDownloadFinished: Download af mods blev færdiggjort, returnerer til finderen
+	MBUploadingMod: Uploader: {0}
+	MBDowngrade: Nedgrader
+	MBUpdate: Opgrader
+	MBRequiresTMLUpdate: Kræver {0}
+	MBClickToUpdate: Tryk for at opdatere
+	MBDowngradeWithDependencies: Nedgrader med afhængigheder
+	MBUpdateWithDependencies: Opgrader med afhængigheder
+	MBDownloadWithDependencies: Download med afhængigheder
+	MBUpdateAll: Opdater Alle
+	MBReloadBrowser: Genindlæs finderen
+	MBGettingData: Henter data...
+	MBCancelLoading: Annulér indlæsning
+	MBPopulatingBrowser: Udfylder finderen...
+	MBSortByRecentlyUpdated: Sortér efter senest opdateret
+	MBSortByRecentlyPublished: Sortér efter senest udgivet
+	MBSortByPopularity: Sortér efter popularitet
+	MBSortDownloadDesc: Sortér efter antal downloads
+	MBSortDownloadAsc: Sortér modsat efter antal downloads
+	MBTimePeriodToggleDisabled: "[c/{0}:{1} (Slået fra med denne metode)]"
+	MBSortByRelevance: Sortér efter tekst-relevans
+	MBShowAllMods: Vis alle mods
+	MBShowNotInstalledUpdates: Vis mods ikke installeret eller opdateringer
+	MBShowUpdates: Vis kun opdateringer
+	MBShowInstalled: Vis installerede mods
+	MBShowMSAll: Vis alle mods
+	MBShowMSBoth: Vis normal-side mods
+	MBShowMSClient: Vis klient-side mods
+	MBShowMSServer: Vis server-side mods
+	MBShowMSNoSync: Vis no-sync mods
+	MBTagsSelected: Mærker:
+	MBTagsCategories: Kategorier: {0}
+	MBTagsLanguage: SProg: {0}
+	MBTagsClear: Fjern alle, valgte mærkater
+	MBClearSpecialFilter: Fjern Specialfiltret: {0}
+	MBOfflineWithReason: Offline ({0})
+	MBBusy: Travl
+	MBUnknown: Ukendt
+	MBOfflineTroubleshooting:
+		'''
+		Mod-Finderen kan ikke tilgås. Dette kan ske af mange årsager.
+		 1. Check din Internetforbindelse.
+		 2. Mod-Finderen kunne bare være nede. Hvis den virkede før, så bare vent nogle timer.
+		 3. Dobbelklik denne besked for at åbne Mod-Finderens hjemmeside. Her kan du downloade mods manuelt. Hvis dette virker, så burde du tjekke din firewall for at lukke Terraria.exe igennem, eller slå din VPN fra hvis du bruger en.
+		 4. Hvis den hjemmeside ikke fungerer, kan Mod-Finderens server være blokeret af din regering, internetudbyder, router, eller web-filter. Hvis det er tilfældet så bliver du selv nødt til at finde en løsning.
+		'''
+	MBClickToViewDependencyMods:
+		'''
+		Klik for at se afhængende mods:
 		{0}
-		''' */
-	// MBModsNotFoundOnline: The following mods were not found on the Mod Browser: {0}
-	// MBFilterDependencies: Dependencies
-	// MBFilterModlist: Modlist
-	// MBExceededBandwidth: The Mod Browser server has exceeded its daily bandwidth allotment. Please consult this mod's homepage for an alternate download or try again later.
-	// MBUnknownMBError: Unknown Mod Browser Error. Try again later.
-	// MBNoModsFound: No mods found
-	// MBBrowserError: The mod browser encountered an error.
-	// XSecondsAgo: "{0} {^0:second;seconds} ago"
-	// XMinutesAgo: "{0} {^0:minute;minutes} ago"
-	// XHoursAgo: "{0} {^0:hour;hours} ago"
-	// XDaysAgo: "{0} {^0:day;days} ago"
-	// XMonthsAgo: "{0} {^0:month;months} ago"
-	// XYearsAgo: "{0} {^0:year;years} ago"
-	// Today: Today
-	// OneWeek: One Week
-	// ThreeMonths: Three Months
-	// SixMonths: Six Months
-	// OneYear: One Year
-	// AllTime: All Time
-	// MBServerReturnToMenu: Return to world menu
-	// MBServerAskForModName: "Type an exact ModName to download: "
-	// MBPublishEnterPassphrase: Please Enter Your Passcode
-	// MBPublishVisitWebsiteForPassphrase: Visit Website to Generate Passphrase
-	// MBPublishPastePassphrase: Paste Passphrase (ctrl-v)
-	// MBMyPublishedMods: My Published Mods
-	// MBUnpublish: Unpublish
-	// MBMyPublishedModsStats: "{0} {^0:download;downloads} ({1} - of the latest version)"
-	// EnterSteamID: Please Enter Your SteamID
-	// PasteSteamID: Paste SteamID (ctrl-v)
-	/* MBServerResponse:
 		'''
-		The Mod Browser server response:
+	MBModsNotFoundOnline: De følgende mods blev ikke fundet i Mod-Finderen: {0}
+	MBFilterDependencies: Afhængigheder
+	MBFilterModlist: Modliste
+	MBExceededBandwidth: Mod-Finderens server har overskrædet sin dagligt tildelte bandwidth. Venlist henvis dig til denne mods hjemmeside for en alternativ download-metode eller prøv igen senere.
+	MBUnknownMBError: Ukendt Mod-Finder-Fejl. Prøv igen senere.
+	MBNoModsFound: Ingen mods fundet
+	MBBrowserError: Mod-finderen stødte på en fejl.
+	XSecondsAgo: "{0} {^0:sekund;sekunder} siden"
+	XMinutesAgo: "{0} {^0:minut;minutter} siden"
+	XHoursAgo: "{0} {^0:time;timer} siden"
+	XDaysAgo: "{0} {^0:dag;dage} siden"
+	XMonthsAgo: "{0} {^0:måned;måneder} siden"
+	XYearsAgo: "{0} {^0:måned;måneder} siden"
+	Today: I Dag
+	OneWeek: En Uge
+	ThreeMonths: Tre Måneder
+	SixMonths: Seks Måneder
+	OneYear: Et År
+	AllTime: Altid
+	MBServerReturnToMenu: Tilbage til verdensmenuen
+	MBServerAskForModName: "Striv et nøjagtigt ModName at downloade: "
+	MBPublishEnterPassphrase: Venligst Indtast Dit Kodeord
+	MBPublishVisitWebsiteForPassphrase: Besøg Hjemmeside for at Generere Kodeord
+	MBPublishPastePassphrase: Indsæt Kodeord (ctrl-v)
+	MBMyPublishedMods: Mine Udgivede Mods
+	MBUnpublish: Afpublicer
+	MBMyPublishedModsStats: "{0} {^0:download;downloads} ({1} - af den seneste version)"
+	EnterSteamID: Venligst Indtast Dit SteamID
+	PasteSteamID: Indsæt SteamID (ctrl-v)
+	MBServerResponse:
+		'''
+		Respons fra Mod-Finder-serveren:
 
 		{0}
-		''' */
-	// SettingsPublicityUnlisted: Unlisted
-	/* SettingsPublicityUnlistedDescription:
 		'''
-		Item does not show up in general searches unless subscribed to it.
-		You can adjust the visibility setting on the Workshop page at any time.
-		''' */
-	// DownloadFromServersYes: Download Mods From Servers: On
-	// DownloadFromServersNo: Download Mods From Servers: Off
-	// DownloadSignedYes: Only Download Signed Mods From Servers: On
-	// DownloadSignedNo: Only Download Signed Mods From Servers: Off
-	// MusicStreamModeConvert: Music Stream Mode: Convert On Demand
-	// MusicStreamModeStream: Music Stream Mode: Stream From Cache
-	// AlwaysLogExceptionsYes: Always Log Exceptions: On
-	// AlwaysLogExceptionsNo: Always Log Exceptions: Off
-	// ExperimentalFeaturesYes: Experimental Features: On
-	// ExperimentalFeaturesNo: Experimental Features: Off
-	// RemoveForcedMinimumZoomYes: Remove Forced Minimum Zoom: On
-	// RemoveForcedMinimumZoomNo: Remove Forced Minimum Zoom: Off
-	// AttackSpeedScalingTooltipVisibility0: Attack Speed Effect Tooltips: Show All
-	// AttackSpeedScalingTooltipVisibility1: Attack Speed Effect Tooltips: Show Adjusted Effectiveness
-	// AttackSpeedScalingTooltipVisibility2: Attack Speed Effect Tooltips: Hidden
-	// AllowGreaterResolutionsYes: Allow Greater Resolutions: On
-	// AllowGreaterResolutionsNo: Allow Greater Resolutions: Off
-	// ShowMemoryEstimatesYes: Show Mod Memory Estimates: On
-	// ShowMemoryEstimatesNo: Show Mod Memory Estimates: Off
-	// ShowModMenuNotificationsYes: Notify When a New Main Menu Theme Is Unlocked: On
-	// ShowModMenuNotificationsNo: Notify When a New Main Menu Theme Is Unlocked: Off
-	// ShowNewUpdatedModsInfoYes: Show Which Workshop Mods Updated Since Last Launch: On
-	// ShowNewUpdatedModsInfoNo: Show Which Workshop Mods Updated Since Last Launch: Off
-	// ClearMBCredentials: Clear Mod Browser Credentials
-	// AutomaticallyEnableNewlyDownloadedModsYes: Automatically enabled newly downloaded mods: On
-	// AutomaticallyEnableNewlyDownloadedModsNo: Automatically enabled newly downloaded mods: Off
-	// AutomaticallyReloadAndEnableModsLeavingModBrowserYes: Automatically Enable and Reload Mods When Leaving Mod Browser: On
-	// AutomaticallyReloadAndEnableModsLeavingModBrowserNo: Automatically Enable and Reload Mods When Leaving Mod Browser: Off
-	// AutomaticallyReloadRequiredModsLeavingModsScreenYes: Automatically Reload Required Mods When Leaving Mods Screen: On
-	// AutomaticallyReloadRequiredModsLeavingModsScreenNo: Automatically Reload Required Mods When Leaving Mods Screen: Off
-	// ShowConfirmationWindowWhenEnableDisableAllModsYes: Show Confirmation Window For Enable/Disable All Mods: On
-	// ShowConfirmationWindowWhenEnableDisableAllModsNo: Show Confirmation Window For Enable/Disable All Mods: Off
-	// DontShowAgain: Don't show again
-	// ModControls: Mod Controls
-	/* MigratePlayersMessage:
+	SettingsPublicityUnlisted: Unoteret
+	SettingsPublicityUnlistedDescription:
 		'''
-		You have no players.
-		If you'd like to manually migrate your players from vanilla to tModLoader,
-		please copy them from
+		Genstand dukker ikke normalt op i søgninger med mindre den er abonneret til.
+		Du kan justere synlighedsindstillingen på Workshop-siden når som helst.
+		'''
+	DownloadFromServersYes: Download Mods Fra Servere: Til
+	DownloadFromServersNo: Download Mods Fra Servere: Fra
+	DownloadSignedYes: Kun Download Signerede Mods Fra Servere: On
+	DownloadSignedNo: Kun Download Signerede Mods Fra Servere: Off
+	MusicStreamModeConvert: Musik-Stream-Mode: Konverter On-Demand
+	MusicStreamModeStream: Musik-Stream-Mode: Stream fra Cache
+	AlwaysLogExceptionsYes: Altid Noter Undtagelser: Til
+	AlwaysLogExceptionsNo: Altid Noter Undtagelser: Fra
+	ExperimentalFeaturesYes: Eksperimentielle Funktioner: Til
+	ExperimentalFeaturesNo: Eksperimentielle Funktioner: Fra
+	RemoveForcedMinimumZoomYes: Fjern Påtvunget Minimum-Zoom: Til
+	RemoveForcedMinimumZoomNo: Fjern Påtvunget Minimum-Zoom: Fra
+	AttackSpeedScalingTooltipVisibility0: Angrebshastigheds-Effekt-Tooltips: Vis Alle
+	AttackSpeedScalingTooltipVisibility1: Angrebshastigheds-Effekt-Tooltips: Vis Justerede Effektivitet
+	AttackSpeedScalingTooltipVisibility2: Angrebshastigheds-Effekt-Tooltips: Skjult
+	AllowGreaterResolutionsYes: Tillad Større Opløsninger: Til
+	AllowGreaterResolutionsNo: Tillad Større Opløsninger: Fra
+	ShowMemoryEstimatesYes: Vis Mod-Memory-Estimater: Til
+	ShowMemoryEstimatesNo: Vis Mod-Memory-Estimater: Fra
+	ShowModMenuNotificationsYes: Påmind Når en Ny Titelmenus-Tema Bliver Tilgængelig: Til
+	ShowModMenuNotificationsNo: Påmind Når en Ny Titelmenus-Tema Bliver Tilgængelig: Fra
+	ShowNewUpdatedModsInfoYes: Vis Hvilke Workshop-Mods Blev Opdateret Siden Sidste Åbning: Til
+	ShowNewUpdatedModsInfoNo: Vis Hvilke Workshop-Mods Blev Opdateret Siden Sidste Åbning: Fra
+	ClearMBCredentials: Ryd Mod-Finder-Legitimation
+	AutomaticallyEnableNewlyDownloadedModsYes: Automatisk slå mods til, når de downloades: Til
+	AutomaticallyEnableNewlyDownloadedModsNo: Automatisk slå mods til, når de downloades: Fra
+	AutomaticallyReloadAndEnableModsLeavingModBrowserYes: Automatisk Genindlæs og Slå Mods Til Når Du Forlader Mod-Finderen: Til
+	AutomaticallyReloadAndEnableModsLeavingModBrowserNo: Automatisk Genindlæs og Slå Mods Til Når Du Forlader Mod-Finderen: Fra
+	AutomaticallyReloadRequiredModsLeavingModsScreenYes: Automatisk Genindlæs Påkrævede Mods Når Mods-Skærmen Forlades: Til
+	AutomaticallyReloadRequiredModsLeavingModsScreenNo: Automatisk Genindlæs Påkrævede Mods Når Mods-Skærmen Forlades: Fra
+	ShowConfirmationWindowWhenEnableDisableAllModsYes: Vis Bekræftelsesvindue For At Slå Alle Mods Til/Fra: Til
+	ShowConfirmationWindowWhenEnableDisableAllModsNo: Vis Bekræftelsesvindue For At Slå Alle Mods Til/Fra: Fra
+	DontShowAgain: Vis ikke igen
+	ModControls: Mod-Kontrol
+	MigratePlayersMessage:
+		'''
+		Du har ingen spillere.
+		Hvis du gerne manuelt vil migrere dine spillere fra vanilla til tModLoader,
+		så venligst kopier dem fra
 		/Terraria/Players
-		to
+		til
 		/Terraria/{0}/Players.
-		Copy the .plr file and the similarly named folder over.
-		Click me to open those folders.
-		After copying over the players you want, press back.
-		''' */
-	// MigratePlayersText: Click here to automatically migrate players from Terraria...
-	// MigratePlayersException: There was a problem while trying to migrate Player files
-	/* MigrateWorldsMessage:
+		Kopier .plr-filen og mappen med tilsvarende navn over.
+		Tryk på mig for at åbne disse mapper.
+		Efter at have kopieret de ønskede spillere over, så tryk tilbage.
 		'''
-		You have no worlds.
-		If you'd like to manually migrate your worlds from vanilla to tModLoader,
-		you can press the migrate button below to do so automatically.
-		Alternatively, you can copy them from
+	MigratePlayersText: Tryk her for automatisk at migrere spillere over fra Terraria...
+	MigratePlayersException: Der opstod et problem under forsøg på at migrere Spiller-filer
+	MigrateWorldsMessage:
+		'''
+		Du har ingen verdener.
+		Hvis du gerne manuelt vil migrere dine verdener fra vanilla til tModLoader,
+		så kan du trykke på migreringsknappen nedenunder for at gøre det automatisk.
+		Alternativt kan du kopierer dem fra
 		/Terraria/Worlds
-		to
+		til
 		/Terraria/{0}/Worlds manually.
-		Copy the .wld files over.
-		Click this text to open those folders.
-		After copying over the worlds you want, press back.
-		''' */
-	// MigrateWorldsText: Click here to automatically migrate worlds from Terraria...
-	// MigrateWorldsException: There was a problem while trying to migrate World files
-	// MigrateIndividualPlayersHeader: Migrate individual players...
-	// MigrateIndividualWorldsHeader: Migrate individual worlds...
-	// MigratingWorldsText: Migrating...
-	// ModsDifferentSinceLastPlay: "The following mods are different since last time you played: "
-	// Missing1Mod: Missing 1 mod
-	// MissingXMods: Missing {0} mods
-	/* MissingModsListing:
+		Kopier .wld-filerne over
+		Tryk på denne tekst for at åbne disse mapper.
+		Efter at have kopieret de ønskede verdener over, så tryk tilbage.
 		'''
-		Missing mods:
+	MigrateWorldsText: Tryk her for automatisk at migrere verdener fra Terraria...
+	MigrateWorldsException: Der opstod et problem under forsøg på at migrere Verden-filer
+	MigrateIndividualPlayersHeader: Migrer individuelle spillere...
+	MigrateIndividualWorldsHeader: Migrer individuelle verdener...
+	MigratingWorldsText: Migrerer...
+	ModsDifferentSinceLastPlay: "De følgende mods er anderledes fra sidst du spillede: "
+	Missing1Mod: Mangler 1 mod
+	MissingXMods: Mangler {0} mods
+	MissingModsListing:
+		'''
+		Manglende mods:
 		{0}
-		''' */
-	// New1Mod: 1 new mod
-	// NewXMods: "{0} new mods"
-	/* NewModsListing:
 		'''
-		New mods:
+	New1Mod: 1 ny mod
+	NewXMods: "{0} nye mods"
+	NewModsListing:
+		'''
+		Nye mods:
 		{0}
-		''' */
-	// PlayerCustomDataFail: A problem was encountered when loading custom data for a player
-	// PlayerCustomDataSaveFail: The following errors were reported when this player was last saved. There might be lost data from the associated mods: {0}
-	// WorldCustomDataSaveFail: The following errors were reported when this world was last saved. There might be lost data from the associated mods: {0}
-	// PlayerLoadWorldFail: A problem was encountered when trying to load a world
-	// SaveWorldHeaderExceptionWarning: Encountered an error while saving custom world header data because of an error in "{0}.SaveWorldHeader" from the "{1}" mod. The data related to this class will not be saved.
-	// SaveWorldDataExceptionWarning: Encountered an error while saving custom world data because of an error in "{0}.SaveWorldData" from the "{1}" mod. The data related to this class will not be saved: {2}
-	// SavePlayerDataExceptionWarning: Encountered an error while saving custom player data because of an error in "{0}.SaveData" from the "{1}" mod. The data related to this class will not be saved: {2}
-	// ViewSaveErrorMessage: View Save Error Message
-	// CloudWarning: Cloud storage limit reached, unable to move to cloud
-	// PlayerFromNewerTModMightNotWork: This player is from a newer tModLoader, it might not work
-	// WorldFromNewerTModMightNotWork: This world is from a newer tModLoader, it might not work
-	// PlayerWithThisNameExistsWillBeOverwritten: A player with this name exists, it will be overwritten
-	// WorldWithThisNameExistsWillBeOverwritten: A world with this name exists, it will be overwritten
-	// ExistingPlayerPlayedMoreRecently: The existing player was last played more recently
-	// ExistingWorldPlayedMoreRecently: The existing world was last played more recently
-	// SavingModdedWorldData: Saving modded world data
-	// MSBuild: Build
-	// MSBuildReload: Build + Reload
-	// MSBuildAll: Build All
-	// MSBuildReloadAll: Build + Reload All
-	// MSUpgradeCSProj: Upgrade .csproj file
-	// MSOpenCSProj: Open .csproj
-	// MSUpgradeLangFiles: Upgrade .lang files to .hjson (non-destructive)
-	// MSRebuildRequired: Rebuild Required
-	/* MSLocalizationFilesChangedCantPublish:
 		'''
-		Changes have been made to localization files,
-		a rebuild is required prior to publishing
-		''' */
-	// MSOpenSources: Open Sources
-	// MSManagePublished: Manage Published
-	// MSPublish: Publish
-	// MSModSourcesCantHaveSpaces: (ModSources folders can't have spaces)
-	// MSLastBuilt: Last built: {0}
-	// MSCreateMod: Create Mod
-	// VersionUpgrade: Learn about Mod Migration
-	// WikiLink: Explore the Wiki
-	// ExampleModLink: Check Out the Example Mod
-	// DocumentationLink: Read the Documentation
-	// DiscordLink: Find Help on the Discord Server
-	// MSPortToLatest: Run tModPorter
-	/* MSFirstLaunchModderWelcomeMessage:
+	PlayerCustomDataFail: Et problem opstod under indlæsningen af brugerdefineret data til en spiller
+	PlayerCustomDataSaveFail: De følgende fejl blev rapporteret da denne spiller sidst blev gemt. Der kan muligvis været mistet data fra de associerede mods: {0}
+	WorldCustomDataSaveFail: De følgende fejl blev rapporteret da denne verden sidst blev gemt. Der kan muligvis været mistet data fra de associerede mods: {0}
+	PlayerLoadWorldFail: Et problem opstod under forsøg på at indlæse en verden
+	SaveWorldHeaderExceptionWarning: Stødte på en fejl under gemmelse af brugerdefineret verdens-header-data på grund af en fejl i "{0}.SaveWorldHeader" fra "{1}" modden. Dataen relateret til denne klasse vil ikke blive gemt.
+	SaveWorldDataExceptionWarning: Stødte på en fejl under gemmelse af brugerdefineret verdens-data på grund af en fejl i "{0}.SaveWorldData" fra "{1}" modden. Dataen relateret til denne klasse vil ikke blive gemt: {2}
+	SavePlayerDataExceptionWarning: Stødte på en fejl under gemmelse af brugerdefineret spiller-data på grund af en fejl i "{0}.SaveData" fra "{1}" modden. Dataen relateret til denne klasse vil ikke blive gemt: {2}
+	ViewSaveErrorMessage: View Save-Fejlbesked
+	CloudWarning: Grænse på skylager er nået, kunne ikke flytte til skyen
+	PlayerFromNewerTModMightNotWork: Denne spiller er fra en nyere tModLoader og kan muligvis ikke virke
+	WorldFromNewerTModMightNotWork: Denne verden er fra en nyere tModLoader og kan muligvis ikke virke
+	PlayerWithThisNameExistsWillBeOverwritten: En spiller med denne navn eksisterer allerede - den vil derfor blive overskrevet
+	WorldWithThisNameExistsWillBeOverwritten: En verden med denne navn eksisterer allerede - den vil derfor blive overskrevet
+	ExistingPlayerPlayedMoreRecently: Den eksisterende spiller blev sidst spillet på for nyligt
+	ExistingWorldPlayedMoreRecently: Den eksisterende verden blev sidst spillet på for nyligt
+	MSBuild: Byg
+	MSBuildReload: Byg + Genindlæs
+	MSBuildAll: Byg Alle
+	MSBuildReloadAll: Byg + Genindlæs Alle
+	MSUpgradeCSProj: Opgrader .csproj-fil
+	MSOpenCSProj: Åbn .csproj
+	MSUpgradeLangFiles: Opgrader .lang-files til .hjson (ikke-destruktiv)
+	MSRebuildRequired: Ombygning Påkrævet
+	MSLocalizationFilesChangedCantPublish:
 		'''
-		Welcome to the Develop Mods menu. This menu is for those making mods. Here you'll be able to build your mod.
+		Ændringer er blevet lavet til lokaliseringsfilerne,
+		en ombygning er påkrævet før der udgives
+		'''
+	MSOpenSources: Åbn Kilder
+	MSManagePublished: Handtér Udgivede
+	MSPublish: Udgiv
+	MSModSourcesCantHaveSpaces: (ModSources-mapper må ikke have mellemrum)
+	MSLastBuilt: Sidst bygget: {0}
+	MSCreateMod: Lav Mod
+	VersionUpgrade: Lær Mere Omkring Mod-Migrering
+	WikiLink: Udforsk Wikien
+	ExampleModLink: Udforsk Eksempel-Modden
+	DocumentationLink: Læs Dokumentationen
+	DiscordLink: Find Hjælp på Discord-Serveren
+	MSPortToLatest: Kør tModPorter
+	MSFirstLaunchModderWelcomeMessage:
+		'''
+		Velkommen til Udvikl Mods-menuen. Dette er menuen for dem, der laver mods. Her ville du kunne bygge din mod.
 
-		If you are new to making mods, please click the "View on GitHub" button below to visit our wiki and look for the "I am new to modding" section.
-		''' */
-	/* MSNoModSourcesLinkToBasicModdingGuide:
+		Hvis du er ny til at udvikle mods, så venligst klik på "View on GitHub"-knappen nedenunder fpr at besøge vores wiki og kig efter "I am new to modding"-sektionen.
+		'''
+	MSNoModSourcesLinkToBasicModdingGuide:
 		'''
 		There are no mod sources yet.
 
 		If you are new to modding, please click here to view the "Basic tModLoader Modding Guide" which will guide you through your first mod.
-		''' */
-	// MSNetSDKNotFound: Making mods for tModLoader requires the .NET {0} SDK to be installed, but it has not been detected. Click the "Download .NET {0} SDK" button below for installation instructions. After installing, you may need to restart tModLoader.
-	// DownloadNetSDK: Download .NET SDK
-	// DevModsInSandbox: tModLoader cannot develop mods while running in a sandbox (such as Flatpak). Please make sure to install Steam directly on your system.
-	// CreateModName: ModName (no spaces)
-	// CreateModDisplayName: Mod DisplayName
-	// CreateModAuthor: Mod Author
-	// CreateModBasicSword: BasicSword (no spaces)
-	// CreateModBasicSwordHint: Leave Blank to Skip
-	// CreateModFolderAlreadyExists: Folder already exists
-	// CreateModNameInvalid: ModName is invalid C# identifier. Remove spaces.
-	// CreateModNameReserved: ModName is a reserved mod name. Choose a different name.
-	// CreateModBasicSwordInvalid: BasicSword is invalid C# identifier. Remove spaces.
-	// CreateModDisplayNameEmpty: DisplayName can't be empty
-	// CreateModAuthorEmpty: Author can't be empty
-	// DMModCompileMissing: Extra libraries are required to build mods. (ModCompile folder missing)
-	// DMModCompileUpdate: ModCompile folder version mismatch. Terraria: {0}, ModCompile: {1}
-	/* DMModCompileDev:
 		'''
-		Use the tModLoader development setup tool to generate/update the ModCompile folder (SetupDebugging).
-		Otherwise rebuild {0}
-		''' */
-	// DMModCompileSatisfied: ModCompile folder up to date.
-	// DMDotNetSatisfied: "{0} is installed"
-	// DMDotNetUpdateRequired: .NET Framework {0} or newer is required to build mods. Please download the latest .NET Framework.
-	// DMMonoUpdateRequired: Mono {0} or newer is required to build mods. Please install the latest Mono.
-	// DMMonoRuntimeRequired: Terraria must be launched with Mono {0} or newer to build mods. Please update your start scripts.
-	// DMReferenceAssembliesMissing: .NET 4.5 Reference Assemblies not found. Please install Visual Studio with the .NET 4.5 Targetting pack.
-	// DMReferenceAssembliesMissingMono: .NET 4.5 Reference Assemblies not found. Please ensure your installation of mono contains {0}
-	// DMReferenceAssembliesSatisfied: Ready to compile targetting .NET 4.5
-	// DMReferenceAssembliesDownload: Click to download just the targetting pack (not recommended)
-	// DMVisualStudio: Visual Studio
-	// DMTutorialWelcome: Welcome to modding with tModLoader. Check out the Wiki for more information and tutorials.
-	// DMTutorial: Tutorial
-	// DMUpdateScripts: Update Scripts
-	// DMScriptsRequireRestart: Start scripts have been updated and require tModLoader to be restarted.
-	// DMUpdateMonoToDownloadModCompile: Extra libraries can be downloaded from github when running on an up-to-date version of Mono.
-	// ExtractErrorWhileExtractingMod: An error occurred while extracting {0}
-	// ExtractHideCodeMessage: The modder has chosen to hide the code from tModReader.
-	// ExtractNoSourceCodeMessage: The modder has not chosen to include their source code.
-	// ExtractHideResourcesMessage: The modder has chosen to hide resources (ie. images) from tModReader.
-	// ExtractFileListing: Files:
-	// CommandModListDescription: Displays a list of loaded mods.
-	// CommandModListServerMods: Server Mods:
-	// CommandModListSyncedMods: Synced Mods:
-	// CommandModListClientMods: Client Mods:
-	// CommandModListModlist: Modlist:
-	// Building: Building: {0}
-	// ReadingProperties: Reading properties: {0}
-	// Compiling: Compiling {0}
-	// CompilationResult: Compilation finished with {0} errors and {1} warnings
-	// LoadingPrecompiled: Loading pre-compiled {0} from {1}
-	// EnabledEAC: Edit and continue path: {0}
-	// Packaging: Packaging: {0}
-	// MSFinding: Finding Mods...
-	// MSInstantiating: Constructing Mods...
-	// MSSandboxing: Sandboxing: {0}
-	// MSLoading: Adding Content: {0}
-	// MSResizing: Resizing...
-	// MSSetupContent: Configuring Content: {0}
-	// MSPostSetupContent: Finalizing Content: {0}
-	// MSUnloading: Unloading: {0}
-	// MSFinishingResourceLoading: Finishing Resource Loading
-	// MSAddingRecipes: Adding Recipes...
-	// CancellingLoading: Cancelling loading...
-	// LoadingCancelled: Loading Cancelled
-	// DefaultTownNPCName: No-Name
-	// DefaultTownNPCChat: My modder forgot to give me a chat message.
-	// DefaultNurseCantHealChat: I don't know why I can't heal you, the modder forgot to give me a chat message.
-	// NoAttackSpeedScaling: Does not scale with attack speed
-	// SpecialAttackSpeedScaling: "{0}% benefit from attack speed boosts"
-	// ModifiedByModsHoldSHIFT: Is modified (hold SHIFT for more info)
-	// ModifiedByMods: "Is modified by "
-	// MagicSummonHybridDamageClass: " magic or summon damage"
-	// LastLoadRamUsage: Estimated last load RAM usage: {0}
-	// AvailableMemory: Available Memory: {0}
-	// InstalledMemory: Installed Memory: {0}
-	// TerrariaMemory: Terraria + misc: {0}
-	// ManagedMemory: Managed: {0}
-	// CodeMemory: Code: {0}
-	// SoundMemory: Sounds: {0}
-	// TextureMemory: Textures: {0}
-	// TotalMemory: Total: {0}
-	// MouseMiddle: Middle Mouse
-	// MouseXButton1: Mouse 4
-	// MouseXButton2: Mouse 5
-	// slotStack: Stack
-	// slotScroll: Scroll
-	// PressXToClose: Press {0} to close
-	// OK: OK
-	// Continue: Continue
-	// DeleteModConfirm: Are you sure you want to delete this mod permanently?
-	// PatreonSetTooltip: Thank you for your support!
-	// WorldGenError: A problem was encountered during world generation
-	// WorldIODataException: The game encountered a mod data problem for a world.
-	/* ServerCrash:
+	MSNetSDKNotFound: Udvikling af mods til tModLoader kræver at SDK'et til .NET {0} er installeret, men denne er ikke blevet fundet. Tryk på "Download .NET {0} SDK"-knappen nedenunder for anvisninger til installationen. Efter installationen kræver det muligvis et genstart af tModLoader.
+	DownloadNetSDK: Download .NET SDK
+	DevModsInSandbox: tModLoader kan ikke udvikle mods mens det kører i en sandkasse (så som Flatpak). Venlist være sikker på at installere Steam direkte på dit system.
+	CreateModName: ModName (ingen mellemrum)
+	CreateModDisplayName: Mod DisplayName
+	CreateModAuthor: Mod Author
+	CreateModBasicSword: BasicSword (ingen mellemrum)
+	CreateModBasicSwordHint: Efterlad Blank for at Springe Over
+	CreateModFolderAlreadyExists: Mappe ekisterer allerede
+	CreateModNameInvalid: ModName er en ugyldig C#-identifikator. Fjern mellemrum.
+	CreateModNameReserved: ModName er et reserveret modnavn. Vælg et andet navn.
+	CreateModBasicSwordInvalid: BasicSword er en ugyldig C#-identifikator. Fjern mellemrum.
+	CreateModDisplayNameEmpty: DisplayName kan ikke være tom
+	CreateModAuthorEmpty: Author kan ikke være tom
+	DMModCompileMissing: Ekstra biblioteker er påkrævet for at bygge mods. (ModCompile-mappen mangler)
+	DMModCompileUpdate: ModCompile-mappeversion stemte ikke overens. Terraria: {0}, ModCompile: {1}
+	DMModCompileDev:
 		'''
-		Server crash: {0}
+		Brug tModLoader-udviklings-setupredskabet for at generere/opdatere ModCompile-mappen (SetupDebugging).
+		Ellers ombyg {0}
+		'''
+	DMModCompileSatisfied: ModCompile folder er op til dato.
+	DMDotNetSatisfied: "{0} er installeret"
+	DMDotNetUpdateRequired: .NET Framework {0} eller nyere er påkrævet for at bygge mods. Venligst download det nyeste .NET Framework.
+	DMMonoUpdateRequired: Mono {0} eller nyere er påkrævet for at bygge mods. Venligst installér den seneste Mono.
+	DMMonoRuntimeRequired: Terraria skal åbnes med Mono {0} eller nyere for at bygge mods. Venligst opdater dine start-scripts.
+	DMReferenceAssembliesMissing: .NET 4.5 Reference Assemblies blev ikke fundet. Venligst installér Visual Studio med .NET 4.5 Targetting-pakken.
+	DMReferenceAssembliesMissingMono: .NET 4.5 Reference Assemblies blev ikke fundet. Venligst være sikker på at din installation af Mono indeholder {0}
+	DMReferenceAssembliesSatisfied: Klar til at kompilere målrettet på .NET 4.5
+	DMReferenceAssembliesDownload: Tryk for blot at downloade targetting-pakken (ikke anbefalet)
+	DMVisualStudio: Visual Studio
+	DMTutorialWelcome: Velkommen til modding med tModLoader. Giv et kig på Wikien for yderligere information og tutorials.
+	DMTutorial: Tutorial
+	DMUpdateScripts: Opdatér Scripts
+	DMScriptsRequireRestart: Start-scripts er blevet opdateret og kræver at tModLoader genstarter.
+	DMUpdateMonoToDownloadModCompile: Ekstra biblioteker kan downloades fra GitHub når der køres en op-til-dato version af Mono.
+	ExtractErrorWhileExtractingMod: En fejl opstod under udpakning af {0}
+	ExtractHideCodeMessage: Modderen har valgt at skjule koden fra tModLoader.
+	ExtractNoSourceCodeMessage: Modderen har valgt ikke at inkludere deres kildekode.
+	ExtractHideResourcesMessage: Modderen har valgt at skjule resourcer (b.la. billeder) fra tModLoader.
+	ExtractFileListing: Filer:
+	CommandModListDescription: Viser en liste af indlæste mods.
+	CommandModListServerMods: Server-Mods:
+	CommandModListSyncedMods: Synkroniserede Mods:
+	CommandModListClientMods: Klient-Mods:
+	CommandModListModlist: Modlist:
+	Building: Bygger: {0}
+	ReadingProperties: Læser egenskaber: {0}
+	Compiling: Kompilerer {0}
+	CompilationResult: Kompilering færdiggjort med {0} fejl and {1} advarsler
+	LoadingPrecompiled: Indlæser prækompileret {0} fra {1}
+	EnabledEAC: Ændr og fortsæt sti: {0}
+	Packaging: Pakker: {0}
+	MSFinding: Færdiggøre Mods...
+	MSInstantiating: Konstruerer Mods...
+	MSSandboxing: Sandboxing: {0}
+	MSLoading: Tilføjer Indhold: {0}
+	MSResizing: Omskalerer...
+	MSSetupContent: Konfigurerer Indhold: {0}
+	MSPostSetupContent: Færdiggøre Indhold: {0}
+	MSUnloading: Aflæser: {0}
+	MSFinishingResourceLoading: Færdiggøre Resource-Indlæsning
+	MSAddingRecipes: Tilføjer opskrifter...
+	CancellingLoading: Annulerer indlæsning...
+	LoadingCancelled: Indlæsning Annuleret
+	DefaultTownNPCName: Navnløs
+	DefaultTownNPCChat: Min moduvikler glemte at give mig en chatbesked.
+	DefaultNurseCantHealChat: Jeg aner ikke hvorfor jeg ikke kan helbrede dig; modudvikleren glemte at give mig en chatbesked.
+	NoAttackSpeedScaling: Skalererer ikke med angrebshastighed
+	SpecialAttackSpeedScaling: "{0}% bidrag fra angrebshastigheds-boosts"
+	ModifiedByModsHoldSHIFT: Er modificeret (hold SHIFT nede for mere info)
+	ModifiedByMods: "ER midificeret af "
+	MagicSummonHybridDamageClass: " magi- eller hidkalds-skade"
+	LastLoadRamUsage: Estimeret RAM-forbrug for sidste indlæsning: {0}
+	AvailableMemory: Tilgængelig Hukommelse: {0}
+	InstalledMemory: Installeret Hukommelse: {0}
+	TerrariaMemory: Terraria + div: {0}
+	ManagedMemory: Styret: {0}
+	CodeMemory: Kode: {0}
+	SoundMemory: Lyd: {0}
+	TextureMemory: Tekstur: {0}
+	TotalMemory: Total: {0}
+	MouseMiddle: Middle Mouse
+	MouseXButton1: Mouse 4
+	MouseXButton2: Mouse 5
+	slotStack: Stak
+	slotScroll: Scroll
+	PressXToClose: Tryk {0} for at lukke
+	OK: OK
+	Continue: Fortsæt
+	DeleteModConfirm: Er du sikker på at du vil slette denne mod permanent?
+	PatreonSetTooltip: Tak for din støtte!!
+	WorldGenError: En fejl opstod under verdens-generering
+	WorldIODataException: Spillet stødte på et mod-data-problem for en verden.
+	ServerCrash:
+		'''
+		Server-crash: {0}
 		{1}
 
-		Please check server.log to determine if a mod is responsible, otherwise head to #support in the tModLoader Discord
-		''' */
-	// WatchLocalizationFileMessage: The following localization files have changed and will be reloaded: {0}
-	// ContentFolderNotFound: Terraria Content folder not found. If you installed tModLoader through Steam, make sure that Terraria is installed. If not, make sure to install tModLoader in a folder nested within the Terraria install directory or a folder next to the Terraria install directory.
-	// GraphicsEngineFailure: Graphics Engine Failure
-	// GraphicsEngineReportUnknown: Unknown
-	// GraphicsEngineReportFailure: Failure
-	/* GraphicsEngineFailureMessage:
+		Venligst check server.log for at afgøre om en mod er til ansvar, ellers henvis til #support på tModLoader-Discorden
 		'''
-		tML encountered a crash when testing some experimental graphics features. If this issue persists consistently, you may have to edit config.json and set the Support4K setting to false. 
-		Please restart your game.
-		Report Status: {0}
-		''' */
-	// OutOfMemory: Game ran out of memory. You'll have to find which mod is consuming lots of memory, and contact the devs or remove it.
-	/* VanillaSteamInstallationNotFound:
+	WatchLocalizationFileMessage: Følgende lokaliseringsfiler er blevet ændret og vil blive genindlæst: {0}
+	ContentFolderNotFound: Terraria-Indholdsmappen blev ikke fundet. Hvis du installerede tModLoader gennem Steam, så vær' sikker på, at du også har Terraria installeret. Hvis ikke, så vær' sikker på at installere tModLoader i en undermappe til Terraria-installationen eller i en mappe ved siden af Terraria-installationen.
+	GraphicsEngineFailure: Grafik-Motor-Fejl
+	GraphicsEngineReportUnknown: Ukendt
+	GraphicsEngineReportFailure: Fejl
+	GraphicsEngineFailureMessage:
 		'''
-		Terraria Steam installation or Terraria Content directory not found.
-
-		Please ensure Terraria 1.4 is installed through Steam.
-		''' */
-	/* SteamAPIHashMismatch:
+		tMl stødte på en crash under test af eksperimentielle grafik-funktioner. Hvis fejlen forekommer regelmæssigt, så skal du måske ændre config.json og sætte Support4K-indstillingen til false
+		Venligst genstart dit spil
+		Report-Status: {0}
 		'''
-		Steam API hash mismatch, assumed pirated.
-
-		tModLoader requires a legitimate Terraria install to work.
-		''' */
-	/* SteamInitFailed:
+	OutOfMemory: Spillet løb tør for hukommelse. Du bliver nødt til at finde ud af hvilken mod, som bruger for meget hukommelse, og enten komme i kontakt med udviklerne eller fjerne den.
+	VanillaSteamInstallationNotFound:
 		'''
-		SteamAPI.Init failed. Try logging out of Steam and restarting it.
+		Terraria Steam-installationen eller Terraria Indholdsmappen blev ikke fundet.
 
-		Check terrariasteamclient.log and Natives.Log for details
-		''' */
-	/* TerrariaNotInstalled:
+		Venligst forsikre at Terraria 1.4 er installeret igennem Steam.
 		'''
-		Terraria must be installed on steam for tModLoader to run.
-
-		You will need to re-start your steam client for the install button to appear in the Terraria app.
-
-		Start Terraria at least once to ensure dependencies get installed before launching tModLoader again.
-		''' */
-	/* GOGHashMismatch:
+	SteamAPIHashMismatch:
 		'''
-		{0} is not the unmodified Terraria {1} executable.
+		Steam API hash stemte ikke overens, formodes piratkopieret.
 
-		This release of tModLoader expects to be installed alongside Terraria {1}. If Terraria recently updated, you may have to downgrade to this earlier release in GOG Galaxy.
-
-		If you patched the .exe, you can create a copy of the original exe and name it "{2}"
-		''' */
-	// DefaultExtraMessage: Please restore your Terraria install, then install tModLoader on Steam or by following the README.txt instructions for manual installation.
-	/* LogPathHint:
+		tModLoader kræver en legitim Terraria-installation for at virke.
 		'''
-		A {0} file containing error information has been generated in
+	SteamInitFailed:
+		'''
+		SteamAPI.Init fejlede. Prøv at logge ud af Steam og genstarte den.
+
+		Check terrariasteamclient.log og Natives.Log for detaljer
+		'''
+	TerrariaNotInstalled:
+		'''
+		Terraria skal være installeret på Steam for at tModLoader kan køre.
+
+		Du bliver nødt til at genstarte din Steam-klient for installationsknappen at dukke i Terraria-appen.
+
+		Start Terraria mindst en gang for at forsikre at afgængighederne bliver installeret før du åbner tModLoader igen.
+		'''
+	GOGHashMismatch:
+		'''
+		{0} er ikke den umodificerede Terraria {1} executable.
+
+		Denne udgivelse af tModLoader forventer at bliver installeret sammen med Terraria {1}. Hvis Terraria for nyligt blev opdaterert, bliver du måske nødt til at nedgradere til en nyere udgivelse i GOG Galaxy.
+
+		Hvis du patchede .exe-filen, kan du lave en kopi af den originale .exe og navngive den "{2}"
+		'''
+	DefaultExtraMessage: Venligst gendan din Terraria-installation og derefter installere tModLoader på Steam eller ved at følge README.txt-filen for instrukser til manuel installation.
+	LogPathHint:
+		'''
+		En {0}-fil med fejl-relateret information er blevet genereret i
 		{1}
-		(You will need to share this file if asking for help)
-		''' */
-	// OutOfMemoryHint: Tip: Try running less mods at once, or determine if a mod is taking up too much memory.
-	// ModExceptionHint: Tip: This is likely a mod's fault. Disable mods one by one and check if the issue persists
-	// OneDriveHint: Tip: Try installing/enabling OneDrive. Right click your Documents folder and enable "Always save on this device"
-	// AntivirusHint: Tip: If you have an antivirus, try adding Terraria to its whitelist/exclusion list
-	// TypeInitializationHint: Tip: Restart the game. If this issue persists, try uninstalling Terraria completely, then reinstalling through Steam, and then reinstalling tModLoader
-	// TerrariaOutOfDateMessage: Terraria is out of date, you need to update Terraria in Steam.
-	// TerrariaLegacyBranchMessage: Terraria is on a legacy version, you need to switch back to the normal Terraria version in Steam for tModLoader to load.
-	// TagsCategoryModFeatures: Mod Features
-	// TagsCategoryModSide: Mod Side
-	// TagsCategoryTModLoaderVersion: tModLoader Version
-	// TagsCategoryLanguage: "{$LegacyMenu.103}"
-	// TagsContent: New Content
-	// TagsContentDescription: Adds new content (i.e. items, weapons, npcs, etc.) to the game
-	// TagsUtility: Utilities
-	// TagsUtilityDescription: Adds utility-oriented content or features
-	// TagsLibrary: Library
-	// TagsLibraryDescription: Provides additional API & features useful to modders
-	// TagsQoL: Quality Of Life
-	// TagsQoLDescription: Features or changes that reduce time spent on typically less fun tasks.
-	// TagsGameplay: Gameplay Tweaks
-	// TagsGameplayDescription: Tweaks that change or improve vanilla gameplay
-	// TagsAudio: Audio Tweaks
-	// TagsAudioDescription: Tweaks that change existing audio (i.e. new boss themes, etc.)
-	// TagsVisual: Visual Tweaks
-	// TagsVisualDescription: Tweaks that change existing visualization (i.e. particle effects, etc.)
-	// TagsLang: Localization Support
-	// TagsLangDescription: This mod supports multiple languages
-	// TagsGen: World Gen
-	// TagsGenDescription: Changes the way the world is generated (i.e. ores, new structures, etc.)
-	// TagsLanguage_English: English
-	// TagsLanguage_German: German
-	// TagsLanguage_Italian: Italian
-	// TagsLanguage_French: French
-	// TagsLanguage_Spanish: Spanish
-	// TagsLanguage_Russian: Russian
-	// TagsLanguage_Chinese: Simplified Chinese
-	// TagsLanguage_Portuguese: Brazilian Portuguese
-	// TagsLanguage_Polish: Polish
-	// TagsLanguage_Description: This mod is localized for this language.
-	// TagsLanguage_EnglishDescription: "{$TagsLanguage_Description}"
-	// TagsLanguage_SpanishDescription: "{$TagsLanguage_Description}"
-	// TagsLanguage_FrenchDescription: "{$TagsLanguage_Description}"
-	// TagsLanguage_ItalianDescription: "{$TagsLanguage_Description}"
-	// TagsLanguage_RussianDescription: "{$TagsLanguage_Description}"
-	// TagsLanguage_ChineseDescription: "{$TagsLanguage_Description}"
-	// TagsLanguage_PortugueseDescription: "{$TagsLanguage_Description}"
-	// TagsLanguage_GermanDescription: "{$TagsLanguage_Description}"
-	// TagsLanguage_PolishDescription: "{$TagsLanguage_Description}"
-	// NextInfoAccPage: Next Page
-	// PreviousInfoAccPage: Previous Page
-	// FirstInfoAccPage: Go To First Page
-	// LastInfoAccPage: Go To Last Page
+		(Du vil skulle dele denne fil hvis du spørger om hjælp)
+		'''
+	OutOfMemoryHint: Tip: Prøv at køre mindre mods af gangen, eller vurdere hvor vidt en mod kræver for meget hukommelse.
+	ModExceptionHint: Tip: Dette er sandsynligvist en mods fejl. Slå mods fra en efter en og tjek om fejlen forbliver
+	OneDriveHint: Tip: Prøv at installere/slå OneDrive til. Højreklik på din Documents-mappe og tillad "Always save on this device"
+	AntivirusHint: Tip: Hvis du har en antivirus så prøv at tilføje Terraria til dens whitelist/udelukkelses-liste
+	TypeInitializationHint: Tip: Genstart spillet. Hvis fejlen firbliver, så prøv at afinstallere Terraria fuldkommen og derefter geninstallere det, og geninstallere tModLoader efter det
+	TerrariaOutOfDateMessage: Terraria er forældet - du bliver nødt til at opdatere Terraria på Steam.
+	TerrariaLegacyBranchMessage: Terraria er på en legacy-version - du bliver nødt til at skifte tilbage til den normale version af Terraria for at tModLoader kan indlæses.
+	TagsCategoryModFeatures: Mod-Funktioner
+	TagsCategoryModSide: Mod-Side
+	TagsCategoryTModLoaderVersion: tModLoader-Version
+	TagsCategoryLanguage: "{$LegacyMenu.103}"
+	TagsContent: Nyt Indhold
+	TagsContentDescription: Tilføjer nyt indhold (så som genstande, våben, NPC'er, osv.) til spillet
+	TagsUtility: Værktøjer
+	TagsUtilityDescription: Tilføjer Værktøjs-orienteret indhold og funktionalitet
+	TagsLibrary: Bibliotek
+	TagsLibraryDescription: Tilbyder yderligere API'er og funktionalitet, som er nyttigt for moddere
+	TagsQoL: Quality Of Life
+	TagsQoLDescription: Funktionalitet eller ændringer, som kan reducere tidsforbrug på opgaver, der oftest er midre sjovt.
+	TagsGameplay: Gameplay-Tilpasninger
+	TagsGameplayDescription: Tilpasninger, der ændre eller forbedre vanilla gameplay
+	TagsAudio: Lydtilpasninger
+	TagsAudioDescription: Tilpasninger, der ændre på det eksisterende lyd (så som nyt boss-musik, osv.)
+	TagsVisual: Visuelle Tilpasninger
+	TagsVisualDescription: Tilpasninger, som ændre på den nuværende visualisering (så som partikkeleffekter, osv.)
+	TagsLang: Lokaliserings-Understøttelse
+	TagsLangDescription: Denne mod understøtter flere sprog
+	TagsGen: World Gen
+	TagsGenDescription: Ændre på måden at verdenen bliver genereret (så som malm, nye strukturer, osv.)
+	TagsLanguage_English: Engelsk
+	TagsLanguage_German: Tysk
+	TagsLanguage_Italian: Italiensk
+	TagsLanguage_French: Fransk
+	TagsLanguage_Spanish: Spansk
+	TagsLanguage_Russian: Russisk
+	TagsLanguage_Chinese: Simplificeret Kinesisk
+	TagsLanguage_Portuguese: Brasiliansk Portugisisk
+	TagsLanguage_Polish: Polsk
+	TagsLanguage_Description: Denne mod er lokaliseret for dette sprog.
+	TagsLanguage_EnglishDescription: "{$TagsLanguage_Description}"
+	TagsLanguage_SpanishDescription: "{$TagsLanguage_Description}"
+	TagsLanguage_FrenchDescription: "{$TagsLanguage_Description}"
+	TagsLanguage_ItalianDescription: "{$TagsLanguage_Description}"
+	TagsLanguage_RussianDescription: "{$TagsLanguage_Description}"
+	TagsLanguage_ChineseDescription: "{$TagsLanguage_Description}"
+	TagsLanguage_PortugueseDescription: "{$TagsLanguage_Description}"
+	TagsLanguage_GermanDescription: "{$TagsLanguage_Description}"
+	TagsLanguage_PolishDescription: "{$TagsLanguage_Description}"
+	NextInfoAccPage: Næste Side
+	PreviousInfoAccPage: Forrige Side
+	FirstInfoAccPage: Gå Til Første Side
+	LastInfoAccPage: Gå Til Sidste Side
 }
 
 Conditions: {
