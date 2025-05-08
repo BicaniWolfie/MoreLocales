@@ -1,6 +1,7 @@
 ﻿using System;
 using Terraria.Localization;
 using static Terraria.Localization.GameCulture;
+using static MoreLocales.Core.CultureNamePlus;
 
 namespace MoreLocales.Utilities
 {
@@ -44,24 +45,24 @@ namespace MoreLocales.Utilities
         {
             return culture switch
             {
-                CultureNamePlus.BritishEnglish => "en-GB",
-                CultureNamePlus.Japanese => "ja-JP",
-                CultureNamePlus.Korean => "ko-KR",
-                CultureNamePlus.TraditionalChinese => "zh-Hant",
-                CultureNamePlus.Turkish => "tr-TR",
-                CultureNamePlus.Thai => "th-TH",
-                CultureNamePlus.Ukrainian => "uk-UA",
-                CultureNamePlus.LatinAmericanSpanish => "es-LA",
-                CultureNamePlus.Czech => "cs-CZ",
-                CultureNamePlus.Hungarian => "hu-HU",
-                CultureNamePlus.PortugalPortuguese => "pt-PT",
-                CultureNamePlus.Swedish => "sv-SE",
-                CultureNamePlus.Dutch => "nl-NL",
-                CultureNamePlus.Danish => "da-DK",
-                CultureNamePlus.Vietnamese => "vi-VN",
-                CultureNamePlus.Finnish => "fi-FI",
-                CultureNamePlus.Romanian => "ro-RO",
-                CultureNamePlus.Indonesian => "id-ID",
+                BritishEnglish => "en-GB",
+                Japanese => "ja-JP",
+                Korean => "ko-KR",
+                TraditionalChinese => "zh-Hant",
+                Turkish => "tr-TR",
+                Thai => "th-TH",
+                Ukrainian => "uk-UA",
+                LatinAmericanSpanish => "es-LA",
+                Czech => "cs-CZ",
+                Hungarian => "hu-HU",
+                PortugalPortuguese => "pt-PT",
+                Swedish => "sv-SE",
+                Dutch => "nl-NL",
+                Danish => "da-DK",
+                Vietnamese => "vi-VN",
+                Finnish => "fi-FI",
+                Romanian => "ro-RO",
+                Indonesian => "id-ID",
                 _ => null
             };
         }
@@ -69,13 +70,33 @@ namespace MoreLocales.Utilities
         {
             return culture switch
             {
-                CultureNamePlus.TraditionalChinese => CultureName.Chinese,
-                CultureNamePlus.Ukrainian => CultureName.Russian,
-                CultureNamePlus.LatinAmericanSpanish => CultureName.Spanish,
-                CultureNamePlus.PortugalPortuguese => CultureName.Portuguese,
+                TraditionalChinese => CultureName.Chinese,
+                Ukrainian => CultureName.Russian,
+                LatinAmericanSpanish => CultureName.Spanish,
+                PortugalPortuguese => CultureName.Portuguese,
                 _ => CultureName.English
             };
         }
-        public static bool IsValid(this CultureNamePlus culture) => culture != CultureNamePlus.Unknown && Enum.IsDefined(culture);
+        public static bool IsValid(this CultureNamePlus culture) => Enum.IsDefined(culture) && culture != Unknown;
+        public static PluralizationType Pluralization(this CultureNamePlus culture)
+        {
+            return culture switch
+            {
+                BritishEnglish or LatinAmericanSpanish or PortugalPortuguese
+                or Hungarian or Swedish or Dutch or Danish or Finnish => PluralizationType.Simple,
+
+                Japanese or Korean or TraditionalChinese or Thai or Vietnamese or Indonesian => PluralizationType.None, // for completion's sake
+
+                Ukrainian => PluralizationType.RussianThreeway,
+
+                Czech or Turkish or Romanian => PluralizationType.Custom,
+
+                _ => PluralizationType.None,
+            };
+        }
+        public static int CustomPluralization(this CultureNamePlus culture, int mod10, int mod100, int count)
+        {
+            return 0;
+        }
     }
 }

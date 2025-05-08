@@ -38,4 +38,31 @@
         Japanese,
         Korean,
     }
+    public enum PluralizationType
+    {
+        /// <summary>
+        /// Like zh-Hans.
+        /// </summary>
+        None,
+        /// <summary>
+        /// Like en-US, de-DE, it-IT, es-ES, pt-BR.
+        /// </summary>
+        Simple,
+        /// <summary>
+        /// Like fr-FR.
+        /// </summary>
+        SimpleWithSingularZero,
+        /// <summary>
+        /// Like ru-RU.
+        /// </summary>
+        RussianThreeway,
+        /// <summary>
+        /// Like pl-PL.
+        /// </summary>
+        PolishThreeway,
+        /// <summary>
+        /// Needs special pluralization rule.
+        /// </summary>
+        Custom
+    }
 }
