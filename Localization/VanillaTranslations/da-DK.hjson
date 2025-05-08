@@ -3,12 +3,12 @@ tModLoader: {
 	MenuModBrowser: Mod-Finderen
 	MenuDownloadMods: Mod-Finderen
 	MenuDownloadModsDescription: Den indbyggede Mod-finder til at finde, downloade, og opdatere dine mods.
-	MenuMods: Mods
+	// MenuMods: Mods
 	MenuManageMods: Håndter Mods
 	MenuManageModsDescription: Håndter hvilke Mods er aktive, slet Mods, og konfigurer dine Modpakker.
 	MenuModSources: Modkilder
-	MenuDevelopMods: Udvikl Mods
-	MenuDevelopModsDescription: Udvikl og udgiv Mods som andre kan bruge ud fra din Mods Kildekode
+	MenuDevelopMods: Udvikle Mods
+	MenuDevelopModsDescription: Udvikle og udgiv Mods som andre kan bruge ud fra din Mods Kildekode
 	ModsModPacks: Modpakker
 	MenuModPackDescription: Håndter Modpakker ved at gemme din nuværende Modliste og konfigurering, samt at importere og eksportere dine modpakker. (Eksperimentiel).
 	MenuEnableDeveloperMode: Slå udvikler-tilstand til
@@ -65,14 +65,14 @@ tModLoader: {
 		'''
 	ModAddedSinceLastLaunchMessage: Denne mod er blevet tilføjet siden sidste gang
 	ViewOnGitHub: Se på GitHub
-	tModLoaderSettings: tModLoader-Indstillinger
+	tModLoaderSettings: Indstillinger for tModLoader
 	ModMenuSwap: Skift Menu-tema
 	MenuModsEnabled: "{0} {^0:Mod;Mods} Slået til"
 	MenuModUpdatesAvailable: ({0} {^0:Opdatering Tilgængelig!;Opdateringer Tilgængelige!})
-	AudioNotSupported: Intet lyd-hardware fundet. Slår alt lyd fra.
+	AudioNotSupported: Intet lydudstyr fundet. Slår alt lyd fra.
 	SwitchVersionInfoButton: Skift til en anden version af tModLoader
 	LatestNews: Sidste nyt: {0}
-	LatestNewsOffline: Offline
+	// LatestNewsOffline: Offline
 	LatestNewsChecking: Tjekker...
 	SteamFamilyShareWarning:
 		'''
@@ -84,7 +84,7 @@ tModLoader: {
 		 - Steam Multiplayer
 		'''
 	WaitXSeconds: Vent {0} {^0:sekund;sekunder}...
-	ViewInstructions: Se Instruktioner View Instructions
+	ViewInstructions: Se Instruktioner
 	ModReadyFor144: Denne mod er blevet opdateret til 1.4.4
 	ModsModsList: Modliste
 	ModsEnableAll: Slå Alle Til
@@ -162,13 +162,13 @@ tModLoader: {
 	ModsShowDisabledMods: Vis kun mods, der er slået fra
 	ModsXModsFilteredByEnabled: "{0} {^0:mod;mods} filtreret efter givent filter."
 	ModsXModsFilteredByModSide: "{0} {^0:mod;mods} filtreret efter givent mod-side filter."
-	ModsXModsFilteredBySearch: "{0} {^0:mod;mods} filtreret efter givent søge-filter."
+	ModsXModsFilteredBySearch: "{0} {^0:mod;mods} filtreret efter givent søgefilter."
 	ModsXItems: "{0} {^0:genstand;genstande}"
-	ModsXNPCs: "{0} {^0:NPC;NPCer}"
+	ModsXNPCs: "{0} {^0:NPC;NPC'er}"
 	ModsXTiles: "{0} {^0:blok;blokke}"
 	ModsXWalls: "{0} {^0:væg;vægge}"
-	ModsXBuffs: "{0} {^0:buff;buffs}"
-	ModsXMounts: "{0} {^0:mount;mounts}"
+	// ModsXBuffs: "{0} {^0:buff;buffs}"
+	// ModsXMounts: "{0} {^0:mount;mounts}"
 	ModsReloadAndReturn: Genindlæs og vend tilbage til verdensmenuen.
 	ModsNotFoundServer:
 		'''
@@ -265,7 +265,7 @@ tModLoader: {
 	BrowserRejectWarning: Kunne ikke downloade. Tryk for info
 	BeginDownload: Forsøger at Downloade Genstand: {0}
 	EndDownload: Download af Genstand Fuldendt
-	CreateItem: Skaber Genstand {0}
+	CreateItem: Laver Genstand {0}
 	UpdateItem: Opdaterer Genstand {0}
 	PublishItem: Forsøger at Udgive Genstand {0}
 	SteamDownloader: Sætter download i kø med Steam Download Manager...
@@ -323,13 +323,13 @@ tModLoader: {
 	BuildErrorNoModClass: Vær sikker på at du har nøjagtigt én mod, som nedarver Mod.
 	BuildErrorLoadingPrecompiled: Fejlede i at indlæse prækompileret: {0}
 	BuildErrorFailedLoadBuildTxt: Fejlede i at indlæse {0}
-	BuildWarningEACWindowsOnly: \"Ændr og forsæt\" er kun understøttet på Windows.
+	BuildWarningEACWindowsOnly: \"Ændre og forsæt\" er kun understøttet på Windows.
 	LoadErrorTextureFailedToLoad: Teksturfilen ved {0} fejlede i at blive indlæst
 	LoadErrorWavSoundFailedToLoad: wav-lydfilen ved {0} fejlede i at blive indlæst
 	LoadErrorMP3SoundFailedToLoad: mp3-lydfilen ved {0} fejlede i at blive indlæst
 	LoadErrorSoundFailedToLoadAudioDeviceHint: (Prøv at være sikker på at din computer har højtalere forbundet og at lydenheder er slået til)
-	LoadErrorFontFailedToLoad: Skrifttype-filen ved {0} fejlede i at blive indlæst
-	LoadErrorEffectFailedToLoad: Effekt-filen ved {0} fejlede i at blive indlæst
+	LoadErrorFontFailedToLoad: Skrifttypefilen ved {0} fejlede i at blive indlæst
+	LoadErrorEffectFailedToLoad: Effektfilen ved {0} fejlede i at blive indlæst
 	LoadErrorUnknownXNBFileHint: Ukendt xnb-fil {0}. Måske bør den være i Fonts/ eller Effects/
 	LoadErrorCannotLoadCompressedEffects: Kan ikke indlæse kompressede effekter.
 	LoadErrorNotLoading: Mod.AddContent kan kun blive kaldt under indlæsningen.
@@ -346,9 +346,9 @@ tModLoader: {
 	RuntimeErrorSeeLogsForFullTrace: (se {0} for den fulde tråd)
 	ShopOverflow: Ikke alle genstande kunne passe i butikken!
 	PlayerSaveFail: En fejl opstod under gemmelsen af spilleren
-	BackingUpPlayerFile: Laver back-up af spiller-filen
-	OpenLogs: Åbn Logs Open Logs
-	OpenWebHelp: Åbn Web-hjælp
+	BackingUpPlayerFile: Laver back-up af spillerfilen
+	OpenLogs: Åbn Logs
+	OpenWebHelp: Åbn Webhjælp
 	SkipToMainMenu: Spring Over Indlæsningen af Mods
 	Retry: Forsøg Igen
 	Exit: Gå Ud
@@ -535,10 +535,10 @@ tModLoader: {
 	MBOfflineTroubleshooting:
 		'''
 		Mod-Finderen kan ikke tilgås. Dette kan ske af mange årsager.
-		 1. Check din Internetforbindelse.
+		 1. Tjek din Internetforbindelse.
 		 2. Mod-Finderen kunne bare være nede. Hvis den virkede før, så bare vent nogle timer.
 		 3. Dobbelklik denne besked for at åbne Mod-Finderens hjemmeside. Her kan du downloade mods manuelt. Hvis dette virker, så burde du tjekke din firewall for at lukke Terraria.exe igennem, eller slå din VPN fra hvis du bruger en.
-		 4. Hvis den hjemmeside ikke fungerer, kan Mod-Finderens server være blokeret af din regering, internetudbyder, router, eller web-filter. Hvis dette er tilfældet, bliver du selv nødt til at finde en løsning.
+		 4. Hvis den hjemmeside ikke fungerer, kan Mod-Finderens server være blokeret af din regering, internetudbyder, router, eller webfilter. Hvis dette er tilfældet, bliver du selv nødt til at finde en løsning.
 		'''
 	MBClickToViewDependencyMods:
 		'''
@@ -551,13 +551,13 @@ tModLoader: {
 	MBExceededBandwidth: Mod-Finderens server har overskrædet sin dagligt tildelte bandwidth. Venlist henvis dig til denne mods hjemmeside for en alternativ download-metode eller prøv igen senere.
 	MBUnknownMBError: Ukendt Mod-Finder-Fejl. Prøv igen senere.
 	MBNoModsFound: Ingen mods fundet
-	MBBrowserError: Mod-finderen stødte på en fejl.
+	MBBrowserError: Mod-Finderen stødte på en fejl.
 	XSecondsAgo: "{0} {^0:sekund;sekunder} siden"
 	XMinutesAgo: "{0} {^0:minut;minutter} siden"
 	XHoursAgo: "{0} {^0:time;timer} siden"
 	XDaysAgo: "{0} {^0:dag;dage} siden"
 	XMonthsAgo: "{0} {^0:måned;måneder} siden"
-	XYearsAgo: "{0} {^0:måned;måneder} siden"
+	XYearsAgo: "{0} år siden"
 	Today: I Dag
 	OneWeek: En Uge
 	ThreeMonths: Tre Måneder
@@ -605,8 +605,8 @@ tModLoader: {
 	AllowGreaterResolutionsNo: Tillad Større Opløsninger: Fra
 	ShowMemoryEstimatesYes: Vis Mod-Memory-Estimater: Til
 	ShowMemoryEstimatesNo: Vis Mod-Memory-Estimater: Fra
-	ShowModMenuNotificationsYes: Påmind Når en Ny Titelmenus-Tema Bliver Tilgængelig: Til
-	ShowModMenuNotificationsNo: Påmind Når en Ny Titelmenus-Tema Bliver Tilgængelig: Fra
+	ShowModMenuNotificationsYes: Påmind Når et Nyt Menu-Tema Bliver Tilgængelig: Til
+	ShowModMenuNotificationsNo: Påmind Når et Nyt Menu-Tema Bliver Tilgængelig: Fra
 	ShowNewUpdatedModsInfoYes: Vis Hvilke Workshop-Mods Blev Opdateret Siden Sidste Åbning: Til
 	ShowNewUpdatedModsInfoNo: Vis Hvilke Workshop-Mods Blev Opdateret Siden Sidste Åbning: Fra
 	ClearMBCredentials: Ryd Mod-Finder-Legitimation
@@ -633,7 +633,7 @@ tModLoader: {
 		Efter at have kopieret de ønskede spillere over, så tryk tilbage.
 		'''
 	MigratePlayersText: Tryk her for automatisk at migrere spillere over fra Terraria...
-	MigratePlayersException: Der opstod et problem under forsøg på at migrere Spiller-filer
+	MigratePlayersException: Der opstod et problem under forsøg på at migrere Spillerfiler
 	MigrateWorldsMessage:
 		'''
 		Du har ingen verdener.
@@ -648,7 +648,7 @@ tModLoader: {
 		Efter at have kopieret de ønskede verdener over, så tryk tilbage.
 		'''
 	MigrateWorldsText: Tryk her for automatisk at migrere verdener fra Terraria...
-	MigrateWorldsException: Der opstod et problem under forsøg på at migrere Verden-filer
+	MigrateWorldsException: Der opstod et problem under forsøg på at migrere Verdenfiler
 	MigrateIndividualPlayersHeader: Migrer individuelle spillere...
 	MigrateIndividualWorldsHeader: Migrer individuelle verdener...
 	MigratingWorldsText: Migrerer...
@@ -688,7 +688,7 @@ tModLoader: {
 	MSBuildReloadAll: Byg + Genindlæs Alle
 	MSUpgradeCSProj: Opgrader .csproj-fil
 	MSOpenCSProj: Åbn .csproj
-	MSUpgradeLangFiles: Opgrader .lang-files til .hjson (ikke-destruktiv)
+	MSUpgradeLangFiles: Opgrader .lang-filer til .hjson (ikke-destruktiv)
 	MSRebuildRequired: Ombygning Påkrævet
 	MSLocalizationFilesChangedCantPublish:
 		'''
@@ -709,7 +709,7 @@ tModLoader: {
 	MSPortToLatest: Kør tModPorter
 	MSFirstLaunchModderWelcomeMessage:
 		'''
-		Velkommen til Udvikl Mods-menuen. Dette er menuen for dem, der laver mods. Her ville du kunne bygge din mod.
+		Velkommen til Udvikle Mods-menuen. Dette er menuen for dem, der laver mods. Her ville du kunne bygge din mod.
 
 		Hvis du er ny til at udvikle mods, så venligst klik på "Vis på GitHub"-knappen nedenunder fpr at besøge vores wiki og kig efter "I am new to modding"-sektionen.
 		'''
@@ -749,9 +749,9 @@ tModLoader: {
 	DMReferenceAssembliesMissingMono: .NET 4.5 Reference Assemblies blev ikke fundet. Venligst være sikker på at din installation af Mono indeholder {0}
 	DMReferenceAssembliesSatisfied: Klar til at kompilere målrettet på .NET 4.5
 	DMReferenceAssembliesDownload: Tryk for blot at downloade targetting-pakken (ikke anbefalet)
-	DMVisualStudio: Visual Studio
+	// DMVisualStudio: Visual Studio
 	DMTutorialWelcome: Velkommen til modding med tModLoader. Giv et kig på Wikien for yderligere information og tutorials.
-	DMTutorial: Tutorial
+	// DMTutorial: Tutorial
 	DMUpdateScripts: Opdater Scripts
 	DMScriptsRequireRestart: Start-scripts er blevet opdateret og kræver at tModLoader genstarter.
 	DMUpdateMonoToDownloadModCompile: Ekstra biblioteker kan downloades fra GitHub når der køres en op-til-dato version af Mono.
@@ -793,7 +793,7 @@ tModLoader: {
 	ModifiedByMods: "Er modificeret af "
 	MagicSummonHybridDamageClass: " magi- eller hidkalds-skade"
 	LastLoadRamUsage: Estimeret RAM-forbrug for sidste indlæsning: {0}
-	AvailableMemory: Tilgængelig Hukommelse: {0}
+	AvailableMemory: Tilgængeligt Hukommelse: {0}
 	InstalledMemory: Installeret Hukommelse: {0}
 	TerrariaMemory: Terraria + div: {0}
 	ManagedMemory: Styret: {0}
@@ -801,13 +801,13 @@ tModLoader: {
 	SoundMemory: Lyd: {0}
 	TextureMemory: Tekstur: {0}
 	TotalMemory: Total: {0}
-	MouseMiddle: Middle Mouse
-	MouseXButton1: Mouse 4
-	MouseXButton2: Mouse 5
+	// MouseMiddle: Middle Mouse
+	// MouseXButton1: Mouse 4
+	// MouseXButton2: Mouse 5
 	slotStack: Stak
-	slotScroll: Scroll
+	// slotScroll: Scroll
 	PressXToClose: Tryk {0} for at lukke
-	OK: OK
+	// OK: OK
 	Continue: Fortsæt
 	DeleteModConfirm: Er du sikker på at du vil slette denne mod permanent?
 	PatreonSetTooltip: Tak for din støtte!!
@@ -818,7 +818,7 @@ tModLoader: {
 		Server-crash: {0}
 		{1}
 
-		Venligst check server.log for at afgøre om en mod er til ansvar, ellers henvis til #support på tModLoader-Discorden
+		Venligst tjek server.log for at afgøre om en mod er til ansvar, ellers henvis til #support på tModLoader-Discorden
 		'''
 	WatchLocalizationFileMessage: Følgende lokaliseringsfiler er blevet ændret og vil blive genindlæst: {0}
 	ContentFolderNotFound: Terraria-Indholdsmappen blev ikke fundet. Hvis du installerede tModLoader gennem Steam, så vær' sikker på, at du også har Terraria installeret. Hvis ikke, så vær' sikker på at installere tModLoader i en undermappe til Terraria-installationen eller i en mappe ved siden af Terraria-installationen.
@@ -836,11 +836,11 @@ tModLoader: {
 		'''
 		Terraria Steam-installationen eller Terraria Indholdsmappen blev ikke fundet.
 
-		Venligst forsikre at Terraria 1.4 er installeret igennem Steam.
+		Venligst vær' sikker på at Terraria 1.4 er installeret gennem Steam.
 		'''
 	SteamAPIHashMismatch:
 		'''
-		Steam API hash stemte ikke overens, formodes piratkopieret.
+		Steam API-hash stemte ikke overens, formodes piratkopieret.
 
 		tModLoader kræver en legitim Terraria-installation for at virke.
 		'''
@@ -848,7 +848,7 @@ tModLoader: {
 		'''
 		SteamAPI.Init fejlede. Prøv at logge ud af Steam og genstarte den.
 
-		Check terrariasteamclient.log og Natives.Log for detaljer
+		Tjek terrariasteamclient.log og Natives.Log for detaljer
 		'''
 	TerrariaNotInstalled:
 		'''
@@ -879,7 +879,7 @@ tModLoader: {
 	AntivirusHint: Tip: Hvis du har en antivirus så prøv at tilføje Terraria til dens whitelist/udelukkelses-liste
 	TypeInitializationHint: Tip: Genstart spillet. Hvis fejlen firbliver, så prøv at afinstallere Terraria fuldkommen og derefter geninstallere det, og geninstallere tModLoader efter det
 	TerrariaOutOfDateMessage: Terraria er forældet - du bliver nødt til at opdatere Terraria på Steam.
-	TerrariaLegacyBranchMessage: Terraria er på en legacy-version - du bliver nødt til at skifte tilbage til den normale version af Terraria for at tModLoader kan indlæses.
+	TerrariaLegacyBranchMessage: Terraria kører på en legacy-version - du bliver nødt til at skifte tilbage til den normale version af Terraria for at tModLoader kan indlæses.
 	TagsCategoryModFeatures: Mod-Funktioner
 	TagsCategoryModSide: Mod-Side
 	TagsCategoryTModLoaderVersion: tModLoader-Version
@@ -890,7 +890,7 @@ tModLoader: {
 	TagsUtilityDescription: Tilføjer Værktøjs-orienteret indhold og funktionalitet
 	TagsLibrary: Biblioteker
 	TagsLibraryDescription: Tilbyder yderligere API'er og funktionalitet, som er nyttigt for moddere
-	TagsQoL: Quality Of Life
+	// TagsQoL: Quality Of Life
 	TagsQoLDescription: Funktionalitet eller ændringer, som kan reducere tidsforbrug på opgaver, der oftest er midre sjovt.
 	TagsGameplay: Gameplay-Tilpasninger
 	TagsGameplayDescription: Tilpasninger, der ændre eller forbedre vanilla gameplay
