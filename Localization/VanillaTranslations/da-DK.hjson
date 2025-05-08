@@ -1,35 +1,35 @@
 tModLoader: {
-	PatreonSupport: "Venlist vis din støtte:"
+	PatreonSupport: "Vær' sød og vise din støtte:"
 	MenuModBrowser: Mod-Finderen
-	MenuDownloadMods: Download Mods
-	MenuDownloadModsDescription: Den indbyggede Mod-finder til at finde, hente, og opdatere dine mods.
+	MenuDownloadMods: Mod-Finderen
+	MenuDownloadModsDescription: Den indbyggede Mod-finder til at finde, downloade, og opdatere dine mods.
 	MenuMods: Mods
-	MenuManageMods: Håndtér Mods
-	MenuManageModsDescription: Håndtér hvilke Mods er aktive, slet Mods, og konfigurér dine Modpakker.
+	MenuManageMods: Håndter Mods
+	MenuManageModsDescription: Håndter hvilke Mods er aktive, slet Mods, og konfigurer dine Modpakker.
 	MenuModSources: Modkilder
 	MenuDevelopMods: Udvikl Mods
 	MenuDevelopModsDescription: Udvikl og udgiv Mods som andre kan bruge ud fra din Mods Kildekode
 	ModsModPacks: Modpakker
-	MenuModPackDescription: Håndtér Modpakker ved at gemme din nuværende Mod-liste og konfigurering, samt at importere og eksportere dine modpakker. Eksperimentiel.
+	MenuModPackDescription: Håndter Modpakker ved at gemme din nuværende Modliste og konfigurering, samt at importere og eksportere dine modpakker. (Eksperimentiel).
 	MenuEnableDeveloperMode: Slå udvikler-tilstand til
 	WelcomeMessagePreview:
 		'''
 		ADVARSEL: Giv agt, Spiller!!
 		Det her er en månedlig preview-build, som har ustabile ændringer, hvilket dermed kan ødelægge mods. 
 		[c/ff1919:SPØRG IKKE modudviklere om at fikse deres mods til dette preview-build.]
-		Denne Preview-græn giver mulighed for modudviklere at opdare deres mods ud fra DERES eget skema.
+		Denne Preview-græn giver mulighed for modudviklere at opdatere deres mods i DERES eget tempo.
 
 		Tryk på "Mere Info" for at lære mere om den kontinuerlige udgivelses-cyklus.
 
-		Hop ind på tModloaders DIscord for at vide mere om denne måneds ændringer og migreringsnotater.
+		Hop ind på tModloaders DIscord for at vide mere om denne måneds ændringer og migrerings-notater.
 		'''
 	FirstLaunchWelcomeMessage:
 		'''
 		Velkommen til tModLoader.
 
-		Du har succesfuldt installeret tModLoader. Brug Workshop-menuen for at tilgå tModloaders Mod-relaterede funktionalitet.
+		Du har installeret tModLoader rigtigt. Brug Workshop-menuen for at tilgå tModloaders Mod-relaterede funktionalitet.
 
-		Hvis du spillede gennem 1.3 før i dag kan du skifte tilbage ved at skifte over til 1.3-legacy i beta-grenen på Steam. Hvis du ikke kan finde de mods, som du gerne ville spille med, kan de muligvis kun være på 1.3 for nu.
+		Hvis du spillede på v1.3 før i dag, kan du skifte tilbage ved at skifte over til 1.3-legacy i beta-grenen på Steam. Hvis du ikke kan finde de mods, som du gerne ville spille med, kan de muligvis kun være på 1.3 for nu.
 		'''
 	WhatsNewMessage:
 		'''
@@ -54,9 +54,9 @@ tModLoader: {
 	DependenciesNeededForOtherMods:
 		'''
 
-		Nogle dependencies mangler:
+		Nogle afhængigheder mangler:
 		'''
-	InstallDependencies: Installér Dependencies
+	InstallDependencies: Installer Afhængigheder
 	ContinueAnyway: Fortsæt Alligevel
 	ModUpdatedSinceLastLaunchMessage:
 		'''
@@ -66,14 +66,14 @@ tModLoader: {
 	ModAddedSinceLastLaunchMessage: Denne mod er blevet tilføjet siden sidste gang
 	ViewOnGitHub: Se på GitHub
 	tModLoaderSettings: tModLoader-Indstillinger
-	ModMenuSwap: Ændr Menutema
+	ModMenuSwap: Skift Menu-tema
 	MenuModsEnabled: "{0} {^0:Mod;Mods} Slået til"
 	MenuModUpdatesAvailable: ({0} {^0:Opdatering Tilgængelig!;Opdateringer Tilgængelige!})
 	AudioNotSupported: Intet lyd-hardware fundet. Slår alt lyd fra.
 	SwitchVersionInfoButton: Skift til en anden version af tModLoader
 	LatestNews: Sidste nyt: {0}
 	LatestNewsOffline: Offline
-	LatestNewsChecking: Checker...
+	LatestNewsChecking: Tjekker...
 	SteamFamilyShareWarning:
 		'''
 		Det er blevet opfanget at du bruger en Family Share-kopi af Terraria.
@@ -83,11 +83,11 @@ tModLoader: {
 		 - Steam Overlay
 		 - Steam Multiplayer
 		'''
-	WaitXSeconds: Wait {0} {^0:sekund;sekunder}...
+	WaitXSeconds: Vent {0} {^0:sekund;sekunder}...
 	ViewInstructions: Se Instruktioner View Instructions
 	ModReadyFor144: Denne mod er blevet opdateret til 1.4.4
 	ModsModsList: Modliste
-	ModsEnableAll: Slå Alle Til 
+	ModsEnableAll: Slå Alle Til
 	ModsEnableAllConfirm: Er du sikker på, at du vil slå alle mods til?
 	ModsDisableAll: Slå Alle Fra
 	ModsDisableAllConfirm: Er du sikker på, at du vil slå alle mods fra?
@@ -108,7 +108,7 @@ tModLoader: {
 	ModsEnable: Tryk for at slå til
 	ModsDisableAndDependents: Tryk for at slå {0} og {1} {^1:afhængig;afhængige} mods fra
 	ModsEnableAndDependencies: Tryk for at slå {0} og {1} {^1:afhængig;afhængige} mods til
-	ModConfiguration: Mod-Konfigurering
+	ModConfiguration: Modkonfigurering
 	ModsOpenConfig: Tryk for at åbne konfigureringen
 	ModOldWarning: Gammel mod. Slå til ved eget ansvar
 	ModStableOnPreviewWarning: Intet Preview-Build. Slå til ved eget ansvar
@@ -137,7 +137,7 @@ tModLoader: {
 	BetaModCantPublishError: Du kan ikke udgive en Mod bygget ud fra en beta-version af tModLoader
 	ModDescriptionMissing: Filen {0} eksisterer ikke. Venlist opret en gyldig beskrivelse til din mod.
 	ModDescriptionLengthTooShort: Mod-beskrivelsen er for kort. Venligst lav en gyldig beskrivelse ved at ændre på {0}.
-	ModWorkshopIconResizeWarning: Vil blive omskaleret fra {0} til {1}.
+	ModWorkshopIconResizeWarning: Vil blive opskaleret/nedskaleret fra {0} til {1}.
 	ModUsesDefaultIcon: Venlist brug et unikt ikon til din mod ved at ændre på {0}.
 	OutdatedModCantPublishError: Du kan ikke udgive en Mod bygget ud fra en gammel version af tModLoader
 	WrongVersionCantPublishError: Du kan ikke udgive en Mod bygget ud fra en anden version af tModloader end den var bygget ud fra
@@ -148,15 +148,15 @@ tModLoader: {
 	ModFromWorkshop: Indlæser fra Workshop
 	ModFromModpack: Indlæser fra aktive modpakker
 	ModFromLocal: Indlæser fra den lokale mods-mappe
-	ModsByline: Af: {0}
+	ModsByline: Lavet Af: {0}
 	ModsMoreInfo: Mere Info
 	ModsOriginatedFromModBrowser: Denne mod var oprindeligt fra Mod-finderen.
 	ModsTypeToSearch: Skriv for at søge
 	ModsSearchByModName: Søg efter moddens navn
 	ModsSearchByAuthor: Søg efter forfatterens navn
-	ModsSortRecently: Sortér efter nyligt opdaterede
-	ModsSortNamesAlph: Sortér efter alfabetisk rækkefølge
-	ModsSortNamesReverseAlph: Sortér modsat efter alfabetisk rækkefølge
+	ModsSortRecently: Sorter efter nyligt opdaterede
+	ModsSortNamesAlph: Sorter efter alfabetisk rækkefølge
+	ModsSortNamesReverseAlph: Sorter modsat efter alfabetisk rækkefølge
 	ModsShowAllMods: Vis alle mods
 	ModsShowEnabledMods: Vis kun mods, der er slået til
 	ModsShowDisabledMods: Vis kun mods, der er slået fra
@@ -186,14 +186,14 @@ tModLoader: {
 	DedConfigRangeCantBeValidated: Advarsel, "{0}" bruger grænser, som ikke kan valideres. Du kan muligvis støde på problemer.
 	DedConfigReadOnly: '''"{0}" er skrivebeskyttet. Den kan ikke ændres direkte.'''
 	DedConfigArrayLengthCantChange: '''"{0}" er et array. Længden af arrays i konfigurationerne kan ikke ændres.'''
-	DedConfigEditConfig: Modificér konfigurations-værdien
+	DedConfigEditConfig: Modificer konfigurations-værdien
 	DedConfigEditConfigNote: Bemærk at data-validering, såsom maximal og minimal-værdier, ikke er håndholdt. Prøv at bruge værdier, som kun er tilladt i klienten.
 	DedConfigRestoreConfig: Nulstil konfigurationer
 	DedConfigErrorOutOfOptionStrings: De mulige værdier er: {0}
 	DedConfigErrorOutOfRange: Værdien skal være mellem {0} og {1}
 	DedConfigErrorNotParsable: Ugyldigt input
 	ModConfigs: Konfigurationer
-	ModConfigFilterOptions: Filtrerings-muligheder
+	ModConfigFilterOptions: Filtreringsmuligheder
 	ModConfigFilterByName: Filtrer efter Navn
 	ModConfigFilterByMod: Filtrer efter Mod
 	ModConfigNotification: "Nodifikation: "
@@ -204,16 +204,16 @@ tModLoader: {
 	ModConfigRestoreDefaults: Gendan standard
 	ModConfigAskingServerToAcceptChanges: Spørger serveren om at acceptere ændringerne...
 	ModConfigCantSaveBecauseChangesWouldRequireAReload: Kan ikke gemme da det ville kræve en genstart.
-	ModConfigServerSide: Server-Side Konfiguration
-	ModConfigClientSide: KLient-Side Konfiguration
+	ModConfigServerSide: Server-Side-Konfiguration
+	ModConfigClientSide: Klient-Side-Konfiguration
 	ModConfigAdd: Tilføj
 	ModConfigRemove: Fjern
-	ModConfigInitialize: Initialisér
+	ModConfigInitialize: Initialiser
 	ModConfigClear: Ryd
 	ModConfigExpand: Udvid
 	ModConfigCollapse: Kollaps
-	ModConfigScaleUp: Skalér Op
-	ModConfigScaleDown: Skalér Ned
+	ModConfigScaleUp: Skaler Op
+	ModConfigScaleDown: Skaler Ned
 	ModConfigTypeHere: Skriv Her
 	ModConfigUnknownEnum: Ukendt værdi
 	ModConfigServerResponse: Server-respons: {0}
@@ -225,7 +225,7 @@ tModLoader: {
 	BossBarStyle: Boss-Bar-Stil: {0}
 	BossBarStyleNoOptions: Ingen valgmuligheder
 	WorkshopDisclaimer: Ved at indsende denne accepterer du tModLoaders Betingelser og Viklår
-	NonModOwnerPublishWarning: En mod med navnet "{0}" er allerede blevet udgivet på Workshoppen af en anden mod-udvikler. Hvis du ikke bidrager til den mod ville forsøget på at udgive modden fejle. Hvis det er din mod, så dobbeltjek om hvor vidt du er logget ind med den rette konto. Hver mod skal have et unikt, internt navn.
+	NonModOwnerPublishWarning: En mod med navnet "{0}" er allerede blevet udgivet på Workshoppen af en anden modudvikler. Hvis du ikke bidrager til den mod ville forsøget på at udgive modden fejle. Hvis det er din mod, så dobbeltjek om hvor vidt du er logget ind med den rette konto. Hver mod skal have et unikt, internt navn.
 	SteamPublishingLimit: Fejl: Kun Steam tModLoader-ejere kan udgive til Workshoppen inden i spillet.
 	NoWorkshopAccess:
 		'''
@@ -258,7 +258,7 @@ tModLoader: {
 		Hvis det ikke virker at genstarte spillet, så prøv følgende:
 		1) Åbn Steam-Klienten
 		2) Find modden på Workshop til tModLoader
-		3) Afmeld og genabonnér til modden på Workshoppen.
+		3) Afmeld og genabonner til modden på Workshoppen.
 
 		Disse trin er påkrævet hvis Steam fejler i at afmelde dig ordentlig.
 		'''
@@ -287,21 +287,21 @@ tModLoader: {
 	LoadErrorDotNet45Required: .NET Framework 4.5 eller nyere er krævet for at bruge mods. Venligst download den nyeste .NET-Framework
 	LoadErrorDependencyMissing: Manglende mod: {0} kræves af {1}
 	LoadErrorErrorReadingModFile: Fejl under læsning af mod-fil {0}
-	LoadErrorHashMismatchCorrupted: Hash stemte ikke overens - data-blob er blevet modificeret eller korrupt.
-	LoadErrorHashMismatchCorruptedWithModName: Kunne ikke verificere integriteten af {0}: Hash stemte ikke overens; data-blob er blevet modificeret eller korrupt
+	LoadErrorHashMismatchCorrupted: Hash stemte ikke overens - data-blob er blevet modificeret eller er korrupt.
+	LoadErrorHashMismatchCorruptedWithModName: Kunne ikke verificere integriteten af {0}: Hash stemte ikke overens; data-blob er blevet modificeret eller er korrupt
 	LoadErrorDependencyVersionTooLow: "{0} kræver version {1} af {2} eller højere, men version {3} er installeret"
 	LoadErrorMajorVersionMismatch: "{0} sigter mod version {1} af {2}, men du har en nyere, større version ({3}), der muligvis ikke er kompatibel. {0} skal opdateres."
 	LoadErrorRecentlyBuiltLocalModWithLowerVersionWorkshop:
 		'''
 		{0} v{1} blev for nyligt bygget, men er ikke blevet valgt til at blive indlæst fordi den abonnerede Workshop-kopi (v{2}) er nyere.
-		Enten opdatér build.txt og genbyg modden eller midlertidigt afmeld modden.
+		Enten opdater build.txt og genbyg modden eller midlertidigt afmeld modden.
 		'''
 	LoadErrorRecentlyBuiltLocalModWithLowerVersionModpack:
 		'''
 		{0} v{1} blev for nyligt bygget, men er ikke blevet valgt til at blive indlæst fordi en frossen kopi (v{2}) er i den aktive modpakke.
-		Modpakken skal slåes fra for at teste denne mod.
+		Modpakken skal være slået fra for at teste denne mod.
 		'''
-	LoadWarningBannerOrBannerItemNotSet: "{0}: {1}. Du har sat ModNPC.Banner eller ModNPC.BannerItem, men ikke den anden. Eller BannerItem-værdien er i konflikt med andre ModNPC'er, der dele det samme banner. Vær sikker på at du sætter begge af de representerende ModNPC, læser for korrektur, og at genstanden eksistere hvis du bruger Mod.Find<ModItem>().Type. Rapportér dette til {0}-udviklerene."
+	LoadWarningBannerOrBannerItemNotSet: "{0}: {1}. Du har sat ModNPC.Banner eller ModNPC.BannerItem, men ikke den anden. Eller BannerItem-værdien er i konflikt med andre ModNPC'er, der dele det samme banner. Vær sikker på at du sætter begge af de representerende ModNPC, læser for korrektur, og at genstanden eksistere hvis du bruger Mod.Find<ModItem>().Type. Rapporter dette til {0}-udviklerene."
 	UnloadError: En eller flere fejl forekom under aflæsningen og tModLoader må derfor genstartes for at forhindre yderligere fejl.
 	DefensiveUnload: "{0} var ude af stand til at aflæse ordentligt. Moddere bør bruge defensiv programmering for at forsikre at aflæsningen udføres fuldkomment uanset om der forekommer fejl under læsningen."
 	BuildError: En fejl forekom under bygningen af {0}
@@ -320,8 +320,8 @@ tModLoader: {
 		'''
 	BuildErrorModNameDoesntMatchAssemblyName: Mod-navnet {0} matcher ikke assembly-navnet {1}
 	BuildErrorNamespaceFolderDontMatch: Namespace og Mappe-navn stemte ikke overens. Top-level-namespacet skal være det samme som mappenavnet.
-	BuildErrorNoModClass: Vær sikker på at du har nøjagtigt én mod, som udvider Mod.
-	BuildErrorLoadingPrecompiled: Fejlede i at indlæse pre-kompileret: {0}
+	BuildErrorNoModClass: Vær sikker på at du har nøjagtigt én mod, som nedarver Mod.
+	BuildErrorLoadingPrecompiled: Fejlede i at indlæse prækompileret: {0}
 	BuildErrorFailedLoadBuildTxt: Fejlede i at indlæse {0}
 	BuildWarningEACWindowsOnly: \"Ændr og forsæt\" er kun understøttet på Windows.
 	LoadErrorTextureFailedToLoad: Teksturfilen ved {0} fejlede i at blive indlæst
@@ -342,7 +342,7 @@ tModLoader: {
 			{1}
 		'''
 	LoadErrorResourceNotFoundEquipTextureHint: Udstyrs-genstande kræver en yderligere tekstur end der bliver vist på spilleren. Denne er anderledes fra teksturen vist i inventaret. Denne tekstur kan ikke blive fundet.
-	RuntimeErrorSilentlyCaughtException: "Fangede Undtagelse i Stilhed: "
+	RuntimeErrorSilentlyCaughtException: "Stille Fangede Undtagelse: "
 	RuntimeErrorSeeLogsForFullTrace: (se {0} for den fulde tråd)
 	ShopOverflow: Ikke alle genstande kunne passe i butikken!
 	PlayerSaveFail: En fejl opstod under gemmelsen af spilleren
@@ -362,8 +362,8 @@ tModLoader: {
 	ModInfoVisitSteampage: Steam Workshop-Side
 	ModInfoExtractLocalization: Udpak Lokalisering
 	ModInfoExtracted: Udpakket
-	ModInfoEnableModToExtractLocalizationFiles: Slå Modden Til for at Udpakke Lokaliserings-filerne
-	ModPacksHeader: Mod-Pakker
+	ModInfoEnableModToExtractLocalizationFiles: Slå Modden Til for at Udpakke Lokaliseringsfilerne
+	ModPacksHeader: Modpakker
 	ModPacksSaveEnabledAsNewPack: Gem Aktiverede som Ny Modpakke
 	ModPacksEnterModPackName: Indtast Modpakke-navn
 	ModPackViewList: Se Liste
@@ -379,7 +379,7 @@ tModLoader: {
 		Slår alle mods fra og slår modpakken til med
 		de nyeste versioner fundet på Steam Workshop
 		'''
-	ModPackUpdateListWithEnabled: Opdatér Listen med de Aktiverede
+	ModPackUpdateListWithEnabled: Opdater Listen med de Aktiverede
 	ModPackUpdateListWithEnabledDesc:
 		'''
 		Opdaterer modpakken eller samlingen med det
@@ -402,9 +402,9 @@ tModLoader: {
 	ModPackDisabled: " - Er slået fra"
 	ModPackLoadingSpecifiedModPack: Indlæser specificerede modpakke: {0}
 	ModPackDoesNotExist: Modpakken {0} eksisterer ikke.
-	ModPackMalformed: Modpakken {0} kunne ikke blive læst ordentlig - Den kunne være malformeret.
+	ModPackMalformed: Modpakken {0} kunne ikke blive læst ordentlig - den kunne være malformeret.
 	CurrentModPack: Nuværende Modpakke: {0}
-	ExportPackInstance: Eksportér Pakkeinstans
+	ExportPackInstance: Eksporter Pakkeinstans
 	ExportPackInstanceDesc:
 		'''
 		Eksporterer en kopi af mods til InstallDirectory
@@ -419,7 +419,7 @@ tModLoader: {
 		Slår alle mods fra & fjerner frosne mods
 		fra tModLoader indlæsnings-stien
 		'''
-	InstallPackLocal: Importér Pakke (Lokal)
+	InstallPackLocal: Importer Pakke (Lokal)
 	InstallPackLocalDesc:
 		'''
 		Slår alle mods fra & slår modpakken med de
@@ -427,10 +427,10 @@ tModLoader: {
 		'''
 	ModPackMismatch: Sidste Modpakke: {0}
 	ModPackDelete: Slet Modpakke
-	ModPackDisableToDelete: Fjern Modpakke for at Fjerne
+	ModPackDisableToDelete: Fjern Modpakke for at Slette
 	MPSyncingMods: Synkroniserer Mods
-	MPServerModsCantDownload: De følgende mods er installeret på serveren, men kan ikke downloades
-	MPServerModsCantDownloadReasonSigned: fordi du kun accepterer mods signeret af mod-finderen
+	MPServerModsCantDownload: De følgende mods er installeret på serveren, men kunne ikke downloades
+	MPServerModsCantDownloadReasonSigned: fordi du kun accepterer mods signeret af Mod-Finderen
 	MPServerModsCantDownloadReasonAutomaticDownloadDisabled: fordi du har slået automatisk mod-downloading fra
 	MPServerModsCantDownloadChangeSettingsHint: Du bliver nødt til at ændre dine indstillinger eller få modsene fra server-ejeren.
 	MPShowServerConsoleYes: Vis Server-Konsol: Til
@@ -442,7 +442,7 @@ tModLoader: {
 	ReloadRequiredDownloadAndContinue: Download og Fortsæt
 	ReloadRequiredReloadAndContinue: Genindlæs og Fortsæt
 	ReloadRequiredServerJoinMessage: De følgende ændringer til dine aktive mods vil blive udført automatisk hvis du tilslutter denne server. Tryk "{0}" for at genindlæse modsene og tilslutte denne server.
-	ReloadRequiredSinglePlayerMessage: De følgende ændringer til dine aktive mods vil blive udført automatisk hvis du går ind i single-player. Tryk "{0}" for at genindlæse modsene og gå ind i single-player.
+	ReloadRequiredSinglePlayerMessage: De følgende ændringer til dine aktive mods vil blive udført automatisk hvis du går ind i singleplayer. Tryk "{0}" for at genindlæse modsene og gå ind i singleplayer.
 	ReloadRequiredExplanationDownload: "[c/{0}:Download] v{1} fra server"
 	ReloadRequiredExplanationDownloadDowngradeTemporary:
 		'''
@@ -483,11 +483,11 @@ tModLoader: {
 	ReloadRequiredExplanationDisable: "[c/{0}:Slå fra]"
 	ReloadRequiredExplanationConfigChanged: "[c/{0}:Ændr konfiguration] midlertidig"
 	ReloadRequiredExplanationConfigChangedRestore: "[c/{0}:Gendan konfiguration]"
-	ReloadRequiredHostAndPlayModWasDisabledHint: Det er muligt at en mod du tidligere havde slået til har fejl når den køres på serveren og er derfor blevet automatisk slået fra. Tjek server.log for at investigere disse problemer. Klik her for at åbne FAQ'en for denne problem
+	ReloadRequiredHostAndPlayModWasDisabledHint: Det er muligt at en mod du tidligere havde slået til har fejl når den køres på serveren og er derfor blevet automatisk slået fra. Tjek server.log for at investigere disse problemer. Klik her for at åbne FAQ'en for dette problem
 	ALLoading: Indlæser...
 	ALNoEntries: Ingen matchende opslag
-	ALCancel: Indlæsning blev annuleret - Opdater for at se alle opslag
-	ALError: Der forekom en fejl - Prøv at opdater
+	ALCancel: Indlæsning blev annuleret - opdater for at se alle opslag
+	ALError: Der forekom en fejl - prøv at opdater
 	MBDownload: Download
 	MBDownloadAll: Download Alle
 	MBDownloadingMod: Downloader: {0}
@@ -506,25 +506,25 @@ tModLoader: {
 	MBUpdateAll: Opdater Alle
 	MBReloadBrowser: Genindlæs finderen
 	MBGettingData: Henter data...
-	MBCancelLoading: Annulér indlæsning
+	MBCancelLoading: Annuler indlæsning
 	MBPopulatingBrowser: Udfylder finderen...
-	MBSortByRecentlyUpdated: Sortér efter senest opdateret
-	MBSortByRecentlyPublished: Sortér efter senest udgivet
-	MBSortByPopularity: Sortér efter popularitet
-	MBSortDownloadDesc: Sortér efter antal downloads
-	MBSortDownloadAsc: Sortér modsat efter antal downloads
+	MBSortByRecentlyUpdated: Sorter efter senest opdateret
+	MBSortByRecentlyPublished: Sorter efter senest udgivet
+	MBSortByPopularity: Sorter efter popularitet
+	MBSortDownloadDesc: Sorter efter antal downloads
+	MBSortDownloadAsc: Sorter modsat efter antal downloads
 	MBTimePeriodToggleDisabled: "[c/{0}:{1} (Slået fra med denne metode)]"
-	MBSortByRelevance: Sortér efter tekst-relevans
+	MBSortByRelevance: Sorter efter tekst-relevans
 	MBShowAllMods: Vis alle mods
 	MBShowNotInstalledUpdates: Vis mods ikke installeret eller opdateringer
 	MBShowUpdates: Vis kun opdateringer
 	MBShowInstalled: Vis installerede mods
 	MBShowMSAll: Vis alle mods
-	MBShowMSBoth: Vis normal-side mods
+	MBShowMSBoth: Vis begge-side mods
 	MBShowMSClient: Vis klient-side mods
 	MBShowMSServer: Vis server-side mods
 	MBShowMSNoSync: Vis no-sync mods
-	MBTagsSelected: Mærker:
+	MBTagsSelected: "Mærker:"
 	MBTagsCategories: Kategorier: {0}
 	MBTagsLanguage: SProg: {0}
 	MBTagsClear: Fjern alle, valgte mærkater
@@ -538,7 +538,7 @@ tModLoader: {
 		 1. Check din Internetforbindelse.
 		 2. Mod-Finderen kunne bare være nede. Hvis den virkede før, så bare vent nogle timer.
 		 3. Dobbelklik denne besked for at åbne Mod-Finderens hjemmeside. Her kan du downloade mods manuelt. Hvis dette virker, så burde du tjekke din firewall for at lukke Terraria.exe igennem, eller slå din VPN fra hvis du bruger en.
-		 4. Hvis den hjemmeside ikke fungerer, kan Mod-Finderens server være blokeret af din regering, internetudbyder, router, eller web-filter. Hvis det er tilfældet så bliver du selv nødt til at finde en løsning.
+		 4. Hvis den hjemmeside ikke fungerer, kan Mod-Finderens server være blokeret af din regering, internetudbyder, router, eller web-filter. Hvis dette er tilfældet, bliver du selv nødt til at finde en løsning.
 		'''
 	MBClickToViewDependencyMods:
 		'''
@@ -642,7 +642,7 @@ tModLoader: {
 		Alternativt kan du kopierer dem fra
 		/Terraria/Worlds
 		til
-		/Terraria/{0}/Worlds manually.
+		/Terraria/{0}/Worlds manuelt.
 		Kopier .wld-filerne over
 		Tryk på denne tekst for at åbne disse mapper.
 		Efter at have kopieret de ønskede verdener over, så tryk tilbage.
@@ -674,7 +674,7 @@ tModLoader: {
 	SaveWorldHeaderExceptionWarning: Stødte på en fejl under gemmelse af brugerdefineret verdens-header-data på grund af en fejl i "{0}.SaveWorldHeader" fra "{1}" modden. Dataen relateret til denne klasse vil ikke blive gemt.
 	SaveWorldDataExceptionWarning: Stødte på en fejl under gemmelse af brugerdefineret verdens-data på grund af en fejl i "{0}.SaveWorldData" fra "{1}" modden. Dataen relateret til denne klasse vil ikke blive gemt: {2}
 	SavePlayerDataExceptionWarning: Stødte på en fejl under gemmelse af brugerdefineret spiller-data på grund af en fejl i "{0}.SaveData" fra "{1}" modden. Dataen relateret til denne klasse vil ikke blive gemt: {2}
-	ViewSaveErrorMessage: View Save-Fejlbesked
+	ViewSaveErrorMessage: Se Save-Fejlbesked
 	CloudWarning: Grænse på skylager er nået, kunne ikke flytte til skyen
 	PlayerFromNewerTModMightNotWork: Denne spiller er fra en nyere tModLoader og kan muligvis ikke virke
 	WorldFromNewerTModMightNotWork: Denne verden er fra en nyere tModLoader og kan muligvis ikke virke
@@ -696,7 +696,7 @@ tModLoader: {
 		en ombygning er påkrævet før der udgives
 		'''
 	MSOpenSources: Åbn Kilder
-	MSManagePublished: Handtér Udgivede
+	MSManagePublished: Handter Udgivede
 	MSPublish: Udgiv
 	MSModSourcesCantHaveSpaces: (ModSources-mapper må ikke have mellemrum)
 	MSLastBuilt: Sidst bygget: {0}
@@ -711,28 +711,28 @@ tModLoader: {
 		'''
 		Velkommen til Udvikl Mods-menuen. Dette er menuen for dem, der laver mods. Her ville du kunne bygge din mod.
 
-		Hvis du er ny til at udvikle mods, så venligst klik på "View on GitHub"-knappen nedenunder fpr at besøge vores wiki og kig efter "I am new to modding"-sektionen.
+		Hvis du er ny til at udvikle mods, så venligst klik på "Vis på GitHub"-knappen nedenunder fpr at besøge vores wiki og kig efter "I am new to modding"-sektionen.
 		'''
 	MSNoModSourcesLinkToBasicModdingGuide:
 		'''
-		There are no mod sources yet.
+		Der er ingen modkilder endnu.
 
-		If you are new to modding, please click here to view the "Basic tModLoader Modding Guide" which will guide you through your first mod.
+		Hvis du er ny til modding, så venligst klik her for at se "Basic tModLoader Modding Guide", hvilket vil vejlede dig i at lave din første mod.
 		'''
 	MSNetSDKNotFound: Udvikling af mods til tModLoader kræver at SDK'et til .NET {0} er installeret, men denne er ikke blevet fundet. Tryk på "Download .NET {0} SDK"-knappen nedenunder for anvisninger til installationen. Efter installationen kræver det muligvis et genstart af tModLoader.
 	DownloadNetSDK: Download .NET SDK
-	DevModsInSandbox: tModLoader kan ikke udvikle mods mens det kører i en sandkasse (så som Flatpak). Venlist være sikker på at installere Steam direkte på dit system.
+	DevModsInSandbox: tModLoader kan ikke udvikle mods mens det kører i et sandbox-miljø (så som Flatpak). Venlist forsikre at Steam er installeret direkte på dit system.
 	CreateModName: ModName (ingen mellemrum)
 	CreateModDisplayName: Mod DisplayName
-	CreateModAuthor: Mod Author
+	CreateModAuthor: Mod-Forfatter
 	CreateModBasicSword: BasicSword (ingen mellemrum)
 	CreateModBasicSwordHint: Efterlad Blank for at Springe Over
 	CreateModFolderAlreadyExists: Mappe ekisterer allerede
 	CreateModNameInvalid: ModName er en ugyldig C#-identifikator. Fjern mellemrum.
 	CreateModNameReserved: ModName er et reserveret modnavn. Vælg et andet navn.
 	CreateModBasicSwordInvalid: BasicSword er en ugyldig C#-identifikator. Fjern mellemrum.
-	CreateModDisplayNameEmpty: DisplayName kan ikke være tom
-	CreateModAuthorEmpty: Author kan ikke være tom
+	CreateModDisplayNameEmpty: DisplayName må ikke være tom
+	CreateModAuthorEmpty: Author må ikke være tom
 	DMModCompileMissing: Ekstra biblioteker er påkrævet for at bygge mods. (ModCompile-mappen mangler)
 	DMModCompileUpdate: ModCompile-mappeversion stemte ikke overens. Terraria: {0}, ModCompile: {1}
 	DMModCompileDev:
@@ -740,31 +740,31 @@ tModLoader: {
 		Brug tModLoader-udviklings-setupredskabet for at generere/opdatere ModCompile-mappen (SetupDebugging).
 		Ellers ombyg {0}
 		'''
-	DMModCompileSatisfied: ModCompile folder er op til dato.
+	DMModCompileSatisfied: ModCompile-mappen er op til dato.
 	DMDotNetSatisfied: "{0} er installeret"
 	DMDotNetUpdateRequired: .NET Framework {0} eller nyere er påkrævet for at bygge mods. Venligst download det nyeste .NET Framework.
-	DMMonoUpdateRequired: Mono {0} eller nyere er påkrævet for at bygge mods. Venligst installér den seneste Mono.
+	DMMonoUpdateRequired: Mono {0} eller nyere er påkrævet for at bygge mods. Venligst installer den seneste Mono.
 	DMMonoRuntimeRequired: Terraria skal åbnes med Mono {0} eller nyere for at bygge mods. Venligst opdater dine start-scripts.
-	DMReferenceAssembliesMissing: .NET 4.5 Reference Assemblies blev ikke fundet. Venligst installér Visual Studio med .NET 4.5 Targetting-pakken.
+	DMReferenceAssembliesMissing: .NET 4.5 Reference Assemblies blev ikke fundet. Venligst installer Visual Studio med .NET 4.5 Targetting-pakken.
 	DMReferenceAssembliesMissingMono: .NET 4.5 Reference Assemblies blev ikke fundet. Venligst være sikker på at din installation af Mono indeholder {0}
 	DMReferenceAssembliesSatisfied: Klar til at kompilere målrettet på .NET 4.5
 	DMReferenceAssembliesDownload: Tryk for blot at downloade targetting-pakken (ikke anbefalet)
 	DMVisualStudio: Visual Studio
 	DMTutorialWelcome: Velkommen til modding med tModLoader. Giv et kig på Wikien for yderligere information og tutorials.
 	DMTutorial: Tutorial
-	DMUpdateScripts: Opdatér Scripts
+	DMUpdateScripts: Opdater Scripts
 	DMScriptsRequireRestart: Start-scripts er blevet opdateret og kræver at tModLoader genstarter.
 	DMUpdateMonoToDownloadModCompile: Ekstra biblioteker kan downloades fra GitHub når der køres en op-til-dato version af Mono.
-	ExtractErrorWhileExtractingMod: En fejl opstod under udpakning af {0}
+	ExtractErrorWhileExtractingMod: En fejl opstod under udpakningen af {0}
 	ExtractHideCodeMessage: Modderen har valgt at skjule koden fra tModLoader.
 	ExtractNoSourceCodeMessage: Modderen har valgt ikke at inkludere deres kildekode.
 	ExtractHideResourcesMessage: Modderen har valgt at skjule resourcer (b.la. billeder) fra tModLoader.
-	ExtractFileListing: Filer:
+	ExtractFileListing: "Filer:"
 	CommandModListDescription: Viser en liste af indlæste mods.
-	CommandModListServerMods: Server-Mods:
-	CommandModListSyncedMods: Synkroniserede Mods:
-	CommandModListClientMods: Klient-Mods:
-	CommandModListModlist: Modlist:
+	CommandModListServerMods: "Server-Mods:"
+	CommandModListSyncedMods: "Synkroniserede Mods:"
+	CommandModListClientMods: "Klient-Mods:"
+	CommandModListModlist: "Modliste:"
 	Building: Bygger: {0}
 	ReadingProperties: Læser egenskaber: {0}
 	Compiling: Kompilerer {0}
@@ -776,7 +776,7 @@ tModLoader: {
 	MSInstantiating: Konstruerer Mods...
 	MSSandboxing: Sandboxing: {0}
 	MSLoading: Tilføjer Indhold: {0}
-	MSResizing: Omskalerer...
+	MSResizing: Opskalerer/Nedskalerer...
 	MSSetupContent: Konfigurerer Indhold: {0}
 	MSPostSetupContent: Færdiggøre Indhold: {0}
 	MSUnloading: Aflæser: {0}
@@ -787,10 +787,10 @@ tModLoader: {
 	DefaultTownNPCName: Navnløs
 	DefaultTownNPCChat: Min moduvikler glemte at give mig en chatbesked.
 	DefaultNurseCantHealChat: Jeg aner ikke hvorfor jeg ikke kan helbrede dig; modudvikleren glemte at give mig en chatbesked.
-	NoAttackSpeedScaling: Skalererer ikke med angrebshastighed
+	NoAttackSpeedScaling: Skalerer ikke med angrebshastighed
 	SpecialAttackSpeedScaling: "{0}% bidrag fra angrebshastigheds-boosts"
 	ModifiedByModsHoldSHIFT: Er modificeret (hold SHIFT nede for mere info)
-	ModifiedByMods: "ER midificeret af "
+	ModifiedByMods: "Er modificeret af "
 	MagicSummonHybridDamageClass: " magi- eller hidkalds-skade"
 	LastLoadRamUsage: Estimeret RAM-forbrug for sidste indlæsning: {0}
 	AvailableMemory: Tilgængelig Hukommelse: {0}
@@ -811,8 +811,8 @@ tModLoader: {
 	Continue: Fortsæt
 	DeleteModConfirm: Er du sikker på at du vil slette denne mod permanent?
 	PatreonSetTooltip: Tak for din støtte!!
-	WorldGenError: En fejl opstod under verdens-generering
-	WorldIODataException: Spillet stødte på et mod-data-problem for en verden.
+	WorldGenError: En fejl opstod under verdensgenerering
+	WorldIODataException: Spillet stødte på et moddata-problem for en verden.
 	ServerCrash:
 		'''
 		Server-crash: {0}
@@ -829,7 +829,7 @@ tModLoader: {
 		'''
 		tMl stødte på en crash under test af eksperimentielle grafik-funktioner. Hvis fejlen forekommer regelmæssigt, så skal du måske ændre config.json og sætte Support4K-indstillingen til false
 		Venligst genstart dit spil
-		Report-Status: {0}
+		Rapport-Status: {0}
 		'''
 	OutOfMemory: Spillet løb tør for hukommelse. Du bliver nødt til at finde ud af hvilken mod, som bruger for meget hukommelse, og enten komme i kontakt med udviklerne eller fjerne den.
 	VanillaSteamInstallationNotFound:
@@ -869,7 +869,7 @@ tModLoader: {
 	DefaultExtraMessage: Venligst gendan din Terraria-installation og derefter installere tModLoader på Steam eller ved at følge README.txt-filen for instrukser til manuel installation.
 	LogPathHint:
 		'''
-		En {0}-fil med fejl-relateret information er blevet genereret i
+		En {0}-fil med fejlrelateret information er blevet genereret i
 		{1}
 		(Du vil skulle dele denne fil hvis du spørger om hjælp)
 		'''
@@ -888,7 +888,7 @@ tModLoader: {
 	TagsContentDescription: Tilføjer nyt indhold (så som genstande, våben, NPC'er, osv.) til spillet
 	TagsUtility: Værktøjer
 	TagsUtilityDescription: Tilføjer Værktøjs-orienteret indhold og funktionalitet
-	TagsLibrary: Bibliotek
+	TagsLibrary: Biblioteker
 	TagsLibraryDescription: Tilbyder yderligere API'er og funktionalitet, som er nyttigt for moddere
 	TagsQoL: Quality Of Life
 	TagsQoLDescription: Funktionalitet eller ændringer, som kan reducere tidsforbrug på opgaver, der oftest er midre sjovt.
@@ -900,8 +900,8 @@ tModLoader: {
 	TagsVisualDescription: Tilpasninger, som ændre på den nuværende visualisering (så som partikkeleffekter, osv.)
 	TagsLang: Lokaliserings-Understøttelse
 	TagsLangDescription: Denne mod understøtter flere sprog
-	TagsGen: World Gen
-	TagsGenDescription: Ændre på måden at verdenen bliver genereret (så som malm, nye strukturer, osv.)
+	TagsGen: Verdensgenerering
+	TagsGenDescription: Ændre på måden at verdenen bliver genereret (så som biomes, nye strukturer, osv.)
 	TagsLanguage_English: Engelsk
 	TagsLanguage_German: Tysk
 	TagsLanguage_Italian: Italiensk
@@ -911,7 +911,7 @@ tModLoader: {
 	TagsLanguage_Chinese: Simplificeret Kinesisk
 	TagsLanguage_Portuguese: Brasiliansk Portugisisk
 	TagsLanguage_Polish: Polsk
-	TagsLanguage_Description: Denne mod er lokaliseret for dette sprog.
+	TagsLanguage_Description: Denne mod er blevet oversat til dette sprog.
 	TagsLanguage_EnglishDescription: "{$TagsLanguage_Description}"
 	TagsLanguage_SpanishDescription: "{$TagsLanguage_Description}"
 	TagsLanguage_FrenchDescription: "{$TagsLanguage_Description}"
