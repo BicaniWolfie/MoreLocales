@@ -100,11 +100,21 @@ namespace MoreLocales.Utilities
             switch (culture)
             {
                 case Czech:
-                    if (count == 9)
-                        return 2;
-                    if (count < 3)
+                    if (count == 1)
+                        return 0;
+                    else if (count >= 2 && count <= 4)
+                        return 1;
+                    return 2;
+                case Turkish:
+                    if (count > 1)
                         return 1;
                     return 0;
+                case Romanian:
+                    if (count == 1)
+                        return 0;
+                    else if (count == 0 || (mod100 > 0 && mod100 < 20))
+                        return 1;
+                    return 2;
             }
             return 0;
         }
