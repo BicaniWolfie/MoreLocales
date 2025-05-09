@@ -20,10 +20,9 @@ namespace MoreLocales.Core
             IL_Main.DrawMenu += GoToBetterLangMenuInstead;
             //On_Main.DrawInterface += On_Main_DrawInterface;
         }
-
         private static void GoToBetterLangMenuInstead(ILContext il)
         {
-            Mod mod = ModContent.GetInstance<MoreLocales>();
+            Mod mod = MoreLocales.Instance;
             try
             {
                 var c = new ILCursor(il);

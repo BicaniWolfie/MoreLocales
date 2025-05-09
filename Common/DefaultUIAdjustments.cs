@@ -19,7 +19,7 @@ namespace MoreLocales.Common
             IL_UIWorkshopHub.OnInitialize += InitializeWorkshopHub;
             IL_UICharacterCreation.BuildPage += InitializeCharCreationUI;
         }
-        private static readonly HashSet<CultureNamePlus> bigWorkshopHub = [CultureNamePlus.Indonesian, CultureNamePlus.Thai];
+        private static readonly HashSet<CultureNamePlus> bigWorkshopHub = [CultureNamePlus.Indonesian, CultureNamePlus.Thai, CultureNamePlus.Danish];
         private static readonly HashSet<CultureNamePlus> bigCharCreationUI = [CultureNamePlus.Indonesian];
         public static bool NeedsBigWorkshopHub
         { 
@@ -39,7 +39,7 @@ namespace MoreLocales.Common
         }
         private static void InitializeCharCreationUI(ILContext il)
         {
-            Mod mod = ModContent.GetInstance<MoreLocales>();
+            Mod mod = MoreLocales.Instance;
             try
             {
                 var c = new ILCursor(il);
@@ -64,7 +64,7 @@ namespace MoreLocales.Common
 
         private static void InitializeWorkshopHub(ILContext il)
         {
-            Mod mod = ModContent.GetInstance<MoreLocales>();
+            Mod mod = MoreLocales.Instance;
             try
             {
                 var c = new ILCursor(il);

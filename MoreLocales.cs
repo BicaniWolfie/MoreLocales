@@ -33,6 +33,7 @@ namespace MoreLocales
 {
 	public class MoreLocales : Mod
 	{
+        public static MoreLocales Instance { get; private set; }
         public override void PostSetupContent()
         {
             ExtraLocalesSupport.cachedVanillaCulture = LanguageManager.Instance.ActiveCulture.LegacyId;
@@ -43,6 +44,7 @@ namespace MoreLocales
         }
         public override void Load()
         {
+            Instance = this;
             FontHelperV2.DoLoad();
             ExtraLocalesSupport.DoSafeLoad();
         }
@@ -61,7 +63,7 @@ namespace MoreLocales
         }
         private static void FixPeskyLegacyMarking(ILContext il)
         {
-            Mod mod = ModContent.GetInstance<MoreLocales>();
+            Mod mod = Instance;
             try
             {
                 var c = new ILCursor(il);
