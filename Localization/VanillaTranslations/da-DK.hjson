@@ -928,230 +928,240 @@ tModLoader: {
 }
 
 Conditions: {
-	// NearWater: Near water
-	// NearLava: Near lava
-	// NearHoney: Near honey
-	// NearShimmer: Near shimmer
-	// TimeDay: During daytime
-	// TimeNight: At night
-	// InDungeon: In a Dungeon biome
-	// InCorrupt: In a Corruption biome
-	// InHallow: In a Hallow biome
-	// InMeteor: In a Meteorite biome
-	// InJungle: In a Jungle biome
-	// InSnow: In a Snow biome
-	// InCrimson: In a Crimson biome
-	// InWaterCandle: Near a Water Candle
-	// InPeaceCandle: Near a Peace Candle
-	// InTowerSolar: Near the Solar Tower
-	// InTowerVortex: Near the Vortex Tower
-	// InTowerNebula: Near the Nebula Tower
-	// InTowerStardust: Near the Stardust Tower
-	// InDesert: In a Desert biome
-	// InGlowshroom: In a Mushroom biome
-	// InUndergroundDesert: In an Underground Desert biome
-	// InSkyHeight: In the Sky
-	// InOverworldHeight: On the Surface
-	// InDirtLayerHeight: In the Underground, above the Caverns
-	// InRockLayerHeight: In the Caverns
-	// InUnderworldHeight: In the Underworld
-	// InBeach: In a Ocean biome
-	// InRain: When it is raining
-	// InSandstorm: During a Sandstorm
-	// InOldOneArmy: During the Old One's Army event
-	// InGranite: In a Granite biome
-	// InMarble: In a Marble biome
-	// InHive: In a Hive
-	// InGemCave: In a Gem Cave
-	// InLihzardTemple: In the Lihzard Temple
-	// InGraveyard: In a Graveyard biome
-	// InAether: In an Aether biome
-	// InShoppingForest: When above the surface and not in another major biome
-	// InBelowSurface: When in the Underground, Caverns, or Underworld
-	// InEvilBiome: In a Corruption or Crimson biome
-	// NotInEvilBiome: Not in an evil biome
-	// NotInHallow: Not in The Hallow biome
-	// NotInGraveyard: Not in a Graveyard biome
-	// NotInUnderworld: Not in the Underworld
-	// InClassicMode: In Classic mode
-	// InExpertMode: In Expert mode
-	// InMasterMode: In Master mode
-	// InJourneyMode: In Journey mode
-	// InHardmode: In hardmode
-	// PreHardmode: Before hardmode
-	// SmashedShadowOrb: After smashing a Shadow Orb or Crimson Heart
-	// WorldCrimson: In a world with The Crimson
-	// WorldCorrupt: In a world with The Corruption
-	// WorldDrunk: In an Drunk world
-	// WorldRemix: In a Remix world
-	// WorldNotTheBees: In a Not the Bees world
-	// WorldForTheWorthy: In a For the Worthy world
-	// WorldAnniversary: In a Celebration Mk 10 world
-	// WorldDontStarve: In a Don't Starve world
-	// WorldNoTraps: In a No Traps world
-	// WorldZenith: In a Zenith world
-	// WorldNotDrunk: Not in an Drunk world
-	// WorldNotRemix: Not in a Remix world
-	// WorldNotNotTheBees: Not in a Not the Bees world
-	// WorldNotAnniversary: Not in a Celebration Mk 10 world
-	// WorldNotForTheWorthy: Not in a For The Worthy world
-	// WorldNotDontStarve: Not in a Don't Starve world
-	// WorldNotNoTraps: Not in a No Traps world
-	// WorldNotZenith: Not in a Zenith world
-	// Christmas: During Christmas
-	// Halloween: During Halloween
-	// Thunderstorm: During a thunderstorm
-	// BirthdayParty: During an NPC birthday party
-	// NightLanterns: During a Lantern Night
-	// HappyWindyDay: During a happy windy day
-	// SolarEclipse: During a Solar Eclipse
-	// BloodMoon: During a Blood Moon
-	// NotSolarEclipse: Not during a Solar Eclipse
-	// NotBloodMoon: Not during a Blood Moon
-	// HappyEnough: When the vendor is happy enough
-	// DownedKingSlime: After defeating King Slime
-	// DownedEyeOfCthulhu: After defeating the Eye of Cthulhu
-	// DownedBoss2: After defeating Eater of Worlds or Brain of Cthulhu
-	// DownedEaterOfWorlds: After defeating Eater of Worlds
-	// DownedBrainOfCthulhu: After defeating Brain of Cthulhu
-	// DownedQueenBee: After defeating Queen Bee
-	// DownedSkeletron: After defeating Skeletron
-	// DownedDeerclops: After defeating Deerclops
-	// DownedQueenSlime: After defeating Queen Slime
-	// DownedEarlygameBoss: After defeating the Eye of Cthulhu, Eater of Worlds, Brain of Cthulhu, Queen Bee or Skeletron
-	// DownedMechBossAny: After defeating any mechanical boss
-	// DownedTwins: After defeating The Twins
-	// DownedDestroyer: After defeating The Destroyer
-	// DownedSkeletronPrime: After defeating Skeletron Prime
-	// DownedMechBossAll: After defeating all mechanical bosses
-	// DownedPlantera: After defeating Plantera
-	// DownedEmpressOfLight: After defeating Empress of Light
-	// DownedDukeFishron: After defeating Duke Fishron
-	// DownedGolem: After defeating Golem
-	// DownedMourningWood: After defeating Mourning Wood
-	// DownedPumpking: After defeating Pumpking
-	// DownedEverscream: After defeating Everscream
-	// DownedSantaNK1: After defeating Santa-NK1
-	// DownedIceQueen: After defeating Ice Queen
-	// DownedLunaticCultist: After defeating the Lunatic Cultist
-	// DownedMoonLord: After defeating Moon Lord
-	// DownedClown: After defeating a Clown
-	// DownedGoblinArmy: After defeating the Goblin Army
-	// DownedPirates: After defeating the Pirates
-	// DownedMartians: After defeating the Martians
-	// DownedFrostLegion: After defeating the Frost Legion
-	// DownedSolarPillar: After defeating the Solar Pillar
-	// DownedVortexPillar: After defeating the Vortex Pillar
-	// DownedNebulaPillar: After defeating the Nebula Pillar
-	// DownedStardustPillar: After defeating the Stardust Pillar
-	// DownedOldOnesArmyAny: After defeating any tier Old One's Army
-	// DownedOldOnesArmyT1: After defeating tier 1 Old One's Army
-	// DownedOldOnesArmyT2: After defeating tier 2 Old One's Army
-	// DownedOldOnesArmyT3: After defeating tier 3 Old One's Army
-	// NotDownedKingSlime: Before defeating King Slime
-	// NotDownedEyeOfCthulhu: Before defeating the Eye of Cthulhu
-	// NotDownedBoss2: Before defeating Eater of Worlds or Brain of Cthulhu
-	// NotDownedEaterOfWorlds: Before defeating Eater of Worlds
-	// NotDownedBrainOfCthulhu: Before defeating Brain of Cthulhu
-	// NotDownedQueenBee: Before defeating Queen Bee
-	// NotDownedSkeletron: Before defeating Skeletron
-	// NotDownedDeerclops: Before defeating Deerclops
-	// NotDownedQueenSlime: Before defeating Queen Slime
-	// NotDownedMechBossAny: Before defeating any mechanical boss
-	// NotDownedTwins: Before defeating The Twins
-	// NotDownedDestroyer: Before defeating The Destroyer
-	// NotDownedSkeletronPrime: Before defeating Skeletron Prime
-	// NotDownedPlantera: Before defeating Plantera
-	// NotDownedEmpressOfLight: Before defeating Empress of Light
-	// NotDownedDukeFishron: Before defeating Duke Fishron
-	// NotDownedGolem: Before defeating Golem
-	// NotDownedMourningWood: Before defeating Mourning Wood
-	// NotDownedPumpking: Before defeating Pumpking
-	// NotDownedEverscream: Before defeating Everscream
-	// NotDownedSantaNK1: Before defeating Santa-NK1
-	// NotDownedIceQueen: Before defeating Ice Queen
-	// NotDownedLunaticCultist: Before defeating the Lunatic Cultist
-	// NotDownedMoonLord: Before defeating Moon Lord
-	// NotDownedClown: Before defeating a Clown
-	// NotDownedGoblinArmy: Before defeating the Goblin Army
-	// NotDownedPirates: Before defeating the Pirates
-	// NotDownedMartians: Before defeating the Martians
-	// NotDownedFrostLegion: Before defeating the Frost Legion
-	// NotDownedSolarPillar: Before defeating the Solar Pillar
-	// NotDownedVortexPillar: Before defeating the Vortex Pillar
-	// NotDownedNebulaPillar: Before defeating the Nebula Pillar
-	// NotDownedStardustPillar: Before defeating the Stardust Pillar
-	// NotDownedOldOnesArmyAny: Before defeating any tier Old One's Army
-	// NotDownedOldOnesArmyT1: Before defeating tier 1 Old One's Army
-	// NotDownedOldOnesArmyT2: Before defeating tier 2 Old One's Army
-	// NotDownedOldOnesArmyT3: Before defeating tier 3 Old One's Army
-	// PlayerCarriesItem: When the player has a {0} in their inventory
-	// PlayerCarriesItem2: When the player has a {0} or {1} in the inventory
-	// NpcIsPresent: When the {0} is present
-	// IsNpcShimmered: When the vendor is a shimmer variant
-	// AtleastXHealth: When the player has at least {0} maximum life
-	// AtleastXMana: When the player has at least {0} maximum mana
-	// PlatinumCoin: When the player has at least 1 platinum coin in their inventory.
-	// GolfScoreOver: When the player has a golf score of {0} or more
-	// BestiaryPercentage: When the Bestiary has been filled to at least {0}%
-	// BestiaryFull: When the Bestiary has been filled completely
-	// BestiaryWinx: When the Bestiary contains entries for all three fairies
-	// InMultiplayer: In multiplayer
-	// Periodically: Periodically
-	// OnTeam: When the player is on a team in multiplayer
-	// StyleMoon: During the night and following day of moon phases Waning Gibbous, Waning Crescent, Waxing Crescent and Waxing Gibbous
-	// DownedB2B3HM: After defeating Eater of Worlds, Brain of Cthulhu, Skeletron, or Wall of Flesh
-	// DaytimeNotFullMoon: During daytime, during any moon phase except full
-	// NightDayFullMoon: At night, or all day during a full moon
-	// NoAteLoaf: When the player has not consumed an Artisan Loaf before
-	// BloodOrSun: During a Blood Moon or Solar Eclipse
-	// NotBloodOrSun: Not during a Blood Moon or Solar Eclipse
-	// HardmodeFTW: In Hardmode when in a For the Worthy world, otherwise anytime
-	// NightOrEclipse: At night or during Solar Eclipse
-	// BloodMoonOrHardmode: During a Blood Moon, or anytime in Hardmode
-	// WorldGenSilver: In a world with Silver Ore
-	// WorldGenTungsten: In a world with Tungsten Ore
-	// NightAfterEvilOrHardmode: During the night after defeating the Eater of Worlds or Brain of Cthulhu, or anytime in Hardmode
-	// AnglerQuestsFinishedOver: When the player has finished {0} Angler Quests or more
-	// HappyEnoughForPylons: When the vendor is happy enough to sell pylons
-	// AnotherTownNPCNearby: When the vendor has another Town NPC nearby
-	// ForestPylon: On the surface and not in another pylon biome
-	// UndergroundPylon: Below the surface and not in another pylon biome
-	// MoonPhasesHalf0OrPreHardmode: Anytime before hardmode, or during a full, waning gibbous, third quarter or waning crescent moon
-	// FullMoon: During a full moon
-	// WaningGibbousMoon: During a waning gibbous moon
-	// ThirdQuarterMoon: During a third quarter moon
-	// WaningCrescentMoon: During a waning crescent moon
-	// NewMoon: During a new moon
-	// WaxingCrescentMoon: During a waxing crescent moon
-	// FirstQuarterMoon: During a first quarter moon
-	// WaxingGibbousMoon: During a waxing gibbous moon
-	// MoonPhasesQuarter0: During a full or waning gibbous moon
-	// MoonPhasesQuarter1: During a third quarter or waning crescent moon
-	// MoonPhasesQuarter2: During a new or waxing crescent moon
-	// MoonPhasesQuarter3: During a first quarter or waxing gibbous moon
-	// MoonPhasesHalf0: During a full, waning gibbous, third quarter or waning crescent moon
-	// MoonPhasesHalf1: During a new, waxing crescent, first quarter or waxing gibbous moon
-	// MoonPhasesEven: During a full, third quarter, new or first quarter moon
-	// MoonPhasesOdd: During a gibbous or crescent moon
-	// MoonPhasesNearNew: During a third quarter, waning crescent or new moon
-	// MoonPhasesEvenQuarters: During a full, waning gibbous, new or waxing crescent moon
-	// MoonPhasesOddQuarters: During a third quarter, waning crescent, first quarter or waxing gibbous moon
-	// MoonPhases04: During a full or new moon
-	// MoonPhases15: During a waning gibbous or waxing crescent moon
-	// MoonPhases26: During a third quarter or first quarter moon
-	// MoonPhases37: During a waning crescent or waxing gibbous moon
+	NearWater: Nær vand
+	NearLava: Nær lava
+	NearHoney: Nær honning
+	NearShimmer: Nær shimmer
+	TimeDay: Om dagen
+	TimeNight: Om natten
+	InDungeon: I en Fangekælder
+	InCorrupt: I en Corruption-biome
+	InHallow: I en Hallow-biome
+	InMeteor: I en Meteorit-biome
+	InJungle: I en Jungelbiome
+	InSnow: I en Snebiome
+	InCrimson: I en Crimson-biome
+	InWaterCandle: Nær et Vand-Stearinlys
+	InPeaceCandle: Nær et Freds-Stearinlys
+	InTowerSolar: Nær Solar-Tårnet
+	InTowerVortex: Nær Vortex-Tårnet
+	InTowerNebula: Nær Nebula-Tårnet
+	InTowerStardust: Nær Stjernestøvs-Tårnet
+	InDesert: I en Ørkenbiome
+	InGlowshroom: I en Svampe-biome
+	InUndergroundDesert: I en Underjordisk Ørkenbiome
+	InSkyHeight: I Himlen
+	InOverworldHeight: På Overfladen
+	InDirtLayerHeight: I Undergrunden, over Hulerne
+	InRockLayerHeight: I Hulerne
+	InUnderworldHeight: I Underverdenen
+	InBeach: I en Ocean-biome
+	InRain: Når det regner
+	InSandstorm: Under en Sandstorm
+	InOldOneArmy: Under Old One's Army-begivenheden
+	InGranite: I en Granit-biome
+	InMarble: I en Marmors-biome
+	InHive: I en Kube
+	InGemCave: I en Ædelstens-Hule
+	InLihzardTemple: I Lihzard-Templet
+	InGraveyard: I en Kirkegård
+	InAether: I en Æter-biome
+	InShoppingForest: Når over overfladen og ikke i en anden, større biome
+	InBelowSurface: Når i Undergrunden, Hulerne, eller Underverdenen
+	InEvilBiome: I en Corruption- eller Crimson-biome
+	NotInEvilBiome: Ikke i en ond biome
+	NotInHallow: Ikke i Hallow-biomen
+	NotInGraveyard: Ikke i en Kirkegård
+	NotInUnderworld: Ikke i Underverdenen
+	InClassicMode: I Klassisk-tilstand
+	InExpertMode: I Ekspert-tilstand
+	InMasterMode: I Mester-tilstand
+	InJourneyMode: I Rejse-tilstand
+	InHardmode: I Hardmode
+	PreHardmode: Før Hardmode
+	SmashedShadowOrb: Efter at have knust en Skygge-Kugle eller Crimson-Hjerte
+	WorldCrimson: I en verden med The Crimson
+	WorldCorrupt: I en verden med The Corruption
+	WorldDrunk: I en Drunk-verden
+	WorldRemix: I en Remix-verden
+	WorldNotTheBees: I en "Not the Bees"-verden
+	WorldForTheWorthy: I en "For the Worthy"-verden
+	WorldAnniversary: I en "Celebration Mk 10"-verden
+	WorldDontStarve: I en "Don't Starve"-verden
+	WorldNoTraps: I en No Traps-verden
+	WorldZenith: I en Zenith-verden
+	WorldNotDrunk: Ikke i en Drunk-verden
+	WorldNotRemix: Ikke i en Remix-verden
+	WorldNotNotTheBees: Ikke i en "Not the Bees"-verden
+	WorldNotAnniversary: Ikke i en "For the Worthy"-verden
+	WorldNotForTheWorthy: Ikke i en "Celebration Mk 10"-verden
+	WorldNotDontStarve: Ikke i en "Don't Starve"-verden
+	WorldNotNoTraps: Ikke i en No Traps-verden
+	WorldNotZenith: Ikke i en Zenith-verden
+	Christmas: Under Julen
+	Halloween: Under Halloween
+	Thunderstorm: Under et tordenvejr
+	BirthdayParty: Under en NPCs fødselsdag
+	NightLanterns: Under en Lanterne-Nat
+	HappyWindyDay: Under en "happy windy"-dag
+	SolarEclipse: Under en Solformørmørkelse
+	BloodMoon: Under en Blodmåne
+	NotSolarEclipse: Ikke under en Solformørmørkelse
+	NotBloodMoon: Ikke under en Blodmåne
+	HappyEnough: Når sælgeren er glad nok
+	DownedKingSlime: Efter at have besejret Slim-Kongen
+	DownedEyeOfCthulhu: Efter at have besejret Cthulhus Øje
+	DownedBoss2: Efter at have besejret Verdens-Æderen eller Cthulhus Hjerne
+	DownedEaterOfWorlds: Efter at have besejret Verdens-Æderen
+	DownedBrainOfCthulhu: Efter at have besejret Cthulhus Hjerne
+	DownedQueenBee: Efter at have besejret Bidronningen
+	DownedSkeletron: Efter at have besejret Skeletron
+	DownedDeerclops: Efter at have besejret Deerclops
+	DownedQueenSlime: Efter at have besejret Slim-Dronningen
+	DownedEarlygameBoss: Efter at have besejret Cthulhus Øje, Verdens-Æderen, Cthulhus Hjerne, Bidronningen, eller Skeletron
+	DownedMechBossAny: Efter at have besejret hvilken som helst mekanisk boss
+	DownedTwins: Efter at have besejret Tvillingene
+	DownedDestroyer: Efter at have besejret Ødelæggeren
+	DownedSkeletronPrime: Efter at have besejret Skeletron Prime
+	DownedMechBossAll: Efter at have besejret alle mekaniske bosser
+	DownedPlantera: Efter at have besejret Plantera
+	DownedEmpressOfLight: Efter at have besejret Lys-Kejserinden
+	DownedDukeFishron: Efter at have besejret Grev Fishron
+	DownedGolem: Efter at have besejret Golem
+	/* 
+		Also considered "Sorgen-Tømmer":
+		"Morning Wood" = "Morgentømmer", "Sorg" = "Sorrow"
+	*/
+	DownedMourningWood: Efter at have besejret Træ-Skræmme
+	DownedPumpking: Efter at have besejret Græs-Konge
+	DownedEverscream: Efter at have besejret Evigskrål
+	DownedSantaNK1: Efter at have besejret JulM1-Abrams
+	DownedIceQueen: Efter at have besejret Isdronningen
+	DownedLunaticCultist: Efter at have besejret den Vanvittige Kultist
+	DownedMoonLord: Efter at have besejret Måne-Herren
+	DownedClown: Efter at have besejret a Klovn
+	DownedGoblinArmy: Efter at have besejret Goblinhærren
+	DownedPirates: Efter at have besejret Piraterne
+	DownedMartians: Efter at have besejret Marsianerne
+	DownedFrostLegion: Efter at have besejret Frostlegionen
+	DownedSolarPillar: Efter at have besejret Solar-Søjlen
+	DownedVortexPillar: Efter at have besejret Vortex-Søjlen
+	DownedNebulaPillar: Efter at have besejret Nebula-Søjlen
+	DownedStardustPillar: Efter at have besejret Stjernestøvs-Søjlen
+	DownedOldOnesArmyAny: Efter at have besejret hvilket som helst niveau af Old One's Army
+	DownedOldOnesArmyT1: Efter at have besejret niveau 1 af Old One's Army
+	DownedOldOnesArmyT2: Efter at have besejret niveau 2 af Old One's Army
+	DownedOldOnesArmyT3: Efter at have besejret niveau 3 af Old One's Army
+	NotDownedKingSlime: Før at have besejret Slim-Kongen
+	NotDownedEyeOfCthulhu: Før at have besejret Cthulhus Øje
+	NotDownedBoss2: Før at have besejret Verdens-Æderen eller Cthulhus Hjerne
+	NotDownedEaterOfWorlds: Før at have besejret Verdens-Æderen
+	NotDownedBrainOfCthulhu: Før at have besejret Cthulhus Hjerne
+	NotDownedQueenBee: Før at have besejret Bidronningen
+	NotDownedSkeletron: Før at have besejret Skeletron
+	NotDownedDeerclops: Før at have besejret Deerclops
+	NotDownedQueenSlime: Før at have besejret Slim-Dronningen
+	NotDownedEarlygameBoss: Før at have besejret Cthulhus Øje, Verdens-Æderen, Cthulhus Hjerne, Bidronningen, eller Skeletron
+	NotDownedMechBossAny: Før at have besejret hvilken som helst mekanisk boss
+	NotDownedTwins: Før at have besejret Tvillingene
+	NotDownedDestroyer: Før at have besejret Ødelæggeren
+	NotDownedSkeletronPrime: Før at have besejret Skeletron Prime
+	NotDownedMechBossAll: Før at have besejret alle mekaniske bosser
+	NotDownedPlantera: Før at have besejret Plantera
+	NotDownedEmpressOfLight: Før at have besejret Lys-Kejserinden
+	NotDownedDukeFishron: Før at have besejret Grev Fishron
+	NotDownedGolem: Før at have besejret Golem
+	/* 
+		Also considered "Sorgen-Tømmer":
+		"Morning Wood" = "Morgentømmer", "Sorg" = "Sorrow"
+	*/
+	NotDownedMourningWood: Før at have besejret Træ-Skræmme
+	NotDownedPumpking: Før at have besejret Græs-Konge
+	NotDownedEverscream: Før at have besejret Evigskrål
+	NotDownedSantaNK1: Før at have besejret JulM1-Abrams
+	NotDownedIceQueen: Før at have besejret Isdronningen
+	NotDownedLunaticCultist: Før at have besejret den Vanvittige Kultist
+	NotDownedMoonLord: Før at have besejret Måne-Herren
+	NotDownedClown: Før at have besejret a Klovn
+	NotDownedGoblinArmy: Før at have besejret Goblinhærren
+	NotDownedPirates: Før at have besejret Piraterne
+	NotDownedMartians: Før at have besejret Marsianerne
+	NotDownedFrostLegion: Før at have besejret Frostlegionen
+	NotDownedSolarPillar: Før at have besejret Solar-Søjlen
+	NotDownedVortexPillar: Før at have besejret Vortex-Søjlen
+	NotDownedNebulaPillar: Før at have besejret Nebula-Søjlen
+	NotDownedStardustPillar: Før at have besejret Stjernestøvs-Søjlen
+	NotDownedOldOnesArmyAny: Før at have besejret hvilket som helst niveau af Old One's Army
+	NotDownedOldOnesArmyT1: Før at have besejret niveau 1 af Old One's Army
+	NotDownedOldOnesArmyT2: Før at have besejret niveau 2 af Old One's Army
+	NotDownedOldOnesArmyT3: Før at have besejret niveau 3 af Old One's Army
+	PlayerCarriesItem: Når spilleren har en/et {0} i deres inventar
+	PlayerCarriesItem2: Når spilleren har en/et {0} eller {1} i deres inventar
+	NpcIsPresent: Når {0} er til stede
+	IsNpcShimmered: Når sælgeren er en shimmer-variant
+	AtleastXHealth: Når spilleren har mindst {0} maksimal liv
+	AtleastXMana: Når spilleren har mindst {0} maksimal mana
+	PlatinumCoin: Når spilleren har mindst 1 platinmønt i deres inventar.
+	GolfScoreOver: Når spilleren har en golf-score på {0} eller mere
+	BestiaryPercentage: Når Bestiariet er blevet mindst {0}% udfyldt
+	BestiaryFull: Når Bestiariet er blevet fuldstændigt udfyldt
+	BestiaryWinx: Når Bestiariet indeholder opslag for alle tre feer
+	InMultiplayer: I multiplayer
+	Periodically: Periodisk
+	OnTeam: Når spilleren er på et hold i multiplayer
+	StyleMoon: Om natten og på en dag med Aftagende Halvmåne, Aftagende Nymåne, Tiltagende Halvmåne, eller Tiltagende Nymåne
+	DownedB2B3HM: Efter at have besejret Verdens-Æderen, Cthulhus Hjerne, Skeletron, eller Flæskmuren
+	DaytimeNotFullMoon: Om dagen på en dag med en given månefase udover fuldmåne
+	NightDayFullMoon: Om natten eller hele dagen under en fuldmåne
+	NoAteLoaf: Når spilleren ikke har spist et Håndværker-Brød endnu.
+	BloodOrSun: Under en Blodmåne eller Solformørkelse
+	NotBloodOrSun: Ikke under en Blodmåne eller Solformørkelse
+	HardmodeFTW: I Hardmode i en "For the Worthy"-verden, eller når som helst
+	NightOrEclipse: Om natten eller under en Solformørkelse
+	BloodMoonOrHardmode: Under en Blodmåne eller når som helst i Hardmode
+	WorldGenSilver: I en verden med Sølvmalm
+	WorldGenTungsten: I en verden med Wolfram-malm
+	NightAfterEvilOrHardmode: Om natten efter at have besejret Verdens-Æderen eller Cthulhus Hjerne, eller når som helst i Hardmode
+	AnglerQuestsFinishedOver: Når spilleren har færdiggjort {0} Lystfisker-Opgaver eller mere
+	HappyEnoughForPylons: Når sælgeren er glad nok til at sælge pyloner
+	AnotherTownNPCNearby: Når sælgeren har en anden By-NPC i nærheden
+	ForestPylon: På overfladen og ikke i en anden pylon-biome
+	UndergroundPylon: Under overfladen og ikke i en anden pylon-biome
+	MoonPhasesHalf0OrPreHardmode: Når som helst før Hardmode, eller under en fuld-, aftagende halv-, trekvart-, eller aftagende nymåne
+	FullMoon: Under en fuldmåne
+	WaningGibbousMoon: Under en aftagende halvmåne
+	ThirdQuarterMoon: Under en trekvart-måne
+	WaningCrescentMoon: Under en aftagende nymåne
+	NewMoon: Under en nymåne
+	WaxingCrescentMoon: Under en tiltagende nymåne
+	FirstQuarterMoon: Under en kvart-måne
+	WaxingGibbousMoon: Under en tiltagende halvmåne
+	MoonPhasesQuarter0: Under en fuld- eller aftagende halvmåne
+	MoonPhasesQuarter1: Under en trekvart- eller aftagende nymåne
+	MoonPhasesQuarter2: Under en ny- eller tiltagende nymåne
+	MoonPhasesQuarter3: Under en kvart- eller tiltagende halvmåne
+	MoonPhasesHalf0: Under en fuld-, aftagende ny-, trekvart- eller aftagende halvmåne
+	MoonPhasesHalf1: Under en ny-, tiltagende ny-, kvart- eller tiltagende halvmåne
+	MoonPhasesEven: Under en fuld-, trekvart-, ny- eller hvart-måne
+	MoonPhasesOdd: Under en halvmåne
+	MoonPhasesNearNew: Under en trekvart-, aftagende ny-, eller nymåne
+	MoonPhasesEvenQuarters: Under en fuld-, aftagende halv-, ny-, eller tiltagende halv-måne
+	MoonPhasesOddQuarters: Under en trekvart-, aftagende ny-, kvart-, eller tiltagende halvmåne
+	MoonPhases04: Under en fuld- eller nymåne
+	MoonPhases15: Under en aftagende halv- eller tiltagende nymåne
+	MoonPhases26: Under en trekvart- eller kvart-måne
+	MoonPhases37: Under en aftagende ny- eller tiltagende halv-måne
 }
 
 Config: {
 	Color: {
-		// Hue.Label: Hue
-		// Saturation.Label: Saturation
-		// Lightness.Label: Lightness
-		// Red.Label: Red
-		// Green.Label: Green
-		// Blue.Label: Blue
-		// Alpha.Label: Alpha
+		Hue.Label: Farvetone
+		Saturation.Label: Mætning
+		Lightness.Label: Lysstyrke
+		Red.Label: Rød
+		Green.Label: Grøn
+		Blue.Label: Blå
+		Alpha.Label: Alfakanal
 	}
 
 	Vector2: {
