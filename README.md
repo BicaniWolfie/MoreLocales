@@ -44,6 +44,7 @@ Yu Bell, jjyao88 - Chinese (Traditional)
 Mirrorman - Vietnamese  
 This is Many, alinahvoshch - Russian  
 Foxolotl713 - German  
+BicaniWolfie - Danish  
 
 ## LICENSE
 This mod is open source under the [GPL v.3.0 License](https://www.gnu.org/licenses/gpl-3.0.html).
