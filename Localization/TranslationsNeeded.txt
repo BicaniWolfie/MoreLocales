@@ -12,7 +12,7 @@ tr-TR, 0/652, 0%, missing 652
 th-TH, 185/652, 28%, missing 467
 uk-UA, 0/652, 0%, missing 652
 es-LA, 0/652, 0%, missing 652
-cs-CZ, 0/652, 0%, missing 652
+cs-CZ, 2/652, 0%, missing 650
 hu-HU, 0/652, 0%, missing 652
 pt-PT, 0/652, 0%, missing 652
 sv-SE, 0/652, 0%, missing 652

@@ -44,6 +44,7 @@ namespace MoreLocales
         public override void Load()
         {
             FontHelperV2.DoLoad();
+            ExtraLocalesSupport.DoSafeLoad();
         }
         static MoreLocales()
         {

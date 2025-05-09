@@ -94,8 +94,18 @@ namespace MoreLocales.Utilities
                 _ => PluralizationType.None,
             };
         }
-        public static int CustomPluralization(this CultureNamePlus culture, int mod10, int mod100, int count)
+        public static int CustomPluralization(int c, int mod10, int mod100, int count)
         {
+            CultureNamePlus culture = (CultureNamePlus)c;
+            switch (culture)
+            {
+                case Czech:
+                    if (count == 9)
+                        return 2;
+                    if (count < 3)
+                        return 1;
+                    return 0;
+            }
             return 0;
         }
     }

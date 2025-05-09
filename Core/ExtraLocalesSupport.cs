@@ -31,7 +31,6 @@ namespace MoreLocales.Core
 
         internal static void DoLoad()
         {
-            IL_LocalizedText.CardinalPluralRule += SupportForNewPluralization;
             IL_LanguageManager.ReloadLanguage += AddFallbacks;
             On_Main.SaveSettings += Save;
 
@@ -51,8 +50,11 @@ namespace MoreLocales.Core
                 vanillaNamedCultures.Add((CultureName)newCulture, generatedCulture);
             }
         }
-
-        private static void SupportForNewPluralization(ILContext il)
+        internal static void DoSafeLoad()
+        {
+            IL_LocalizedText.CardinalPluralRule += SupportForNewPluralization;
+        }
+        public static void SupportForNewPluralization(ILContext il)
         {
             Mod mod = ModContent.GetInstance<MoreLocales>();
             try
@@ -78,53 +80,53 @@ namespace MoreLocales.Core
                 ILLabel polishThreewayPlural = targets[(int)CultureName.Polish - 1];
                 ILLabel customPlural = il.DefineLabel();
 
+                // we resize the array to include our new cultures
                 var newTargets = new ILLabel[(int)newCultures[^1]];
-                targets.CopyTo(newTargets, 0);
+                targets.CopyTo(newTargets, 0); // and make sure the old cultures are in it too
 
+                // now we can populate the array with vanilla labels and the custom one!
                 for (int i = 0; i < newCultures.Length; i++)
                 {
                     CultureNamePlus culture = newCultures[i];
                     int arrayIndex = (int)culture - 1;
 
-                    switch (culture.Pluralization())
+                    newTargets[arrayIndex] = culture.Pluralization() switch
                     {
-                        case PluralizationType.None:
-                            newTargets[arrayIndex] = noPlural;
-                            break;
-                        case PluralizationType.Simple:
-                            newTargets[arrayIndex] = simplePlural;
-                            break;
-                        case PluralizationType.SimpleWithSingularZero:
-                            newTargets[arrayIndex] = simplePluralWithSingularZero;
-                            break;
-                        case PluralizationType.RussianThreeway:
-                            newTargets[arrayIndex] = russianThreewayPlural;
-                            break;
-                        case PluralizationType.PolishThreeway:
-                            newTargets[arrayIndex] = polishThreewayPlural;
-                            break;
-                        case PluralizationType.Custom:
-                            newTargets[arrayIndex] = noPlural;
-                            break;
-                    }
+                        PluralizationType.None => noPlural,
+                        PluralizationType.Simple => simplePlural,
+                        PluralizationType.SimpleWithSingularZero => simplePluralWithSingularZero,
+                        PluralizationType.RussianThreeway => russianThreewayPlural,
+                        PluralizationType.PolishThreeway => polishThreewayPlural,
+                        _ => customPlural,
+                    };
                 }
 
+                // finally, we assign the new switch table to the switch instruction
                 c.Next.Operand = newTargets;
 
-                c.Index = c.Instrs.Count - 1;
+                // now we inject our code for custom rules somewhere it won't interfere with other stuff. an easy way to do that is by adding it at the end!
+                
+                c.Index = il.Instrs.Count; // common mistake: don't subtract one, because the cursor will end up before the last ret, not after it. remember how cursor indices work!
+                int labelIndex = c.Index;
 
-                // there's nothing here so we can inject the delegate for custom rules:
-
-                /*
-                c.MarkLabel(customPlural);
+                // normally you would mark the label here. however, we'll get a nullref exception if we do this.
+                // this is because the label's target wants to be c.Next but it's null since we're on the end of the method.
 
                 c.EmitLdloc2(); // legacy id
                 c.EmitLdloc0(); // mod10
                 c.EmitLdloc1(); // mod100
-                c.EmitLdarg0(); // count
-                c.EmitDelegate(CultureHelper.CustomPluralization);
+                c.EmitLdarg1(); // count
+                c.EmitCall(typeof(CultureHelper).GetMethod("CustomPluralization"));
                 c.EmitRet();
-                */
+
+                c.Index = labelIndex;
+                c.MarkLabel(customPlural); // finally we mark the label!
+                
+                // the IL edit would normally be done here, but we actually have one more thing left to do!
+                // the issue with editing switch statements and adding your own cases is that every instruction emitted by monomod has the IL_0000 offset. this is REALLY bad for labels, so switch will die!
+                // to solve this, we can recalculate all of the offsets so that the labels won't be all messed up. thank you absoluteAquarian aka the MonoSound guy
+
+                ILHelper.UpdateInstructionOffsets(c);
             }
             catch
             {
