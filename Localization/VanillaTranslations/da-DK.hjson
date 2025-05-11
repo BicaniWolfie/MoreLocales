@@ -1095,13 +1095,13 @@ Conditions: {
 	NotDownedOldOnesArmyT1: Før at have besejret niveau 1 af Old One's Army
 	NotDownedOldOnesArmyT2: Før at have besejret niveau 2 af Old One's Army
 	NotDownedOldOnesArmyT3: Før at have besejret niveau 3 af Old One's Army
-	PlayerCarriesItem: Når spilleren har en/et {0} i deres inventar
-	PlayerCarriesItem2: Når spilleren har en/et {0} eller {1} i deres inventar
+	PlayerCarriesItem: Når spilleren har en/et {0} i deres rygsæk
+	PlayerCarriesItem2: Når spilleren har en/et {0} eller {1} i deres rygsæk
 	NpcIsPresent: Når {0} er til stede
 	IsNpcShimmered: Når sælgeren er en shimmer-variant
 	AtleastXHealth: Når spilleren har mindst {0} maksimal liv
 	AtleastXMana: Når spilleren har mindst {0} maksimal mana
-	PlatinumCoin: Når spilleren har mindst 1 platinmønt i deres inventar.
+	PlatinumCoin: Når spilleren har mindst 1 platinmønt i deres pung.
 	GolfScoreOver: Når spilleren har en golf-score på {0} eller mere
 	BestiaryPercentage: Når Bestiariet er blevet mindst {0}% udfyldt
 	BestiaryFull: Når Bestiariet er blevet fuldstændigt udfyldt
@@ -1172,233 +1172,237 @@ Config: {
 
 Mods: {
 	ModLoader: {
-		// Unloaded: Unloaded
-		// Prefixes.UnloadedPrefix.Tooltip: Prefix from unloaded mod: {0}
+		Unloaded: Aflæst
+		Prefixes.UnloadedPrefix.Tooltip: Præfiks fra aflæste mod: {0}
 
 		Items: {
-			// AprilFools.DisplayName: April Fools Joke
+			AprilFools.DisplayName: Aprilsnar
 
 			StartBag: {
-				// DisplayName: Starting Bag
-				/* Tooltip:
+				DisplayName: Startsæk
+				Tooltip:
 					'''
-					Some starting items couldn't fit in your inventory
+					Noget grej kunne ikke være i din rygsæk
 					{$CommonItemTooltip.RightClickToOpen}
-					''' */
+					'''
 			}
 
 			UnloadedItem: {
-				// DisplayName: Unloaded Item
+				DisplayName: Aflæst Genstand
 				/* Tooltip: "\n" */
 				// UnloadedItemModTooltip: Mod: {0}
-				// UnloadedItemItemNameTooltip: Item: {0}
+				UnloadedItemItemNameTooltip: Genstand: {0}
 			}
 
 			Jofairden_Body: {
-				// DisplayName: Andromedon Body
-				// Tooltip: The power of the Andromedon flows within you
+				DisplayName: Andromedon-Krop
+				Tooltip: Andomedonens styrke strømmer igennem dig
 			}
 
 			Jofairden_Head: {
-				// DisplayName: Andromedon Head
-				// Tooltip: The power of the Andromedon flows within you
+				DisplayName: Andromedon-Hoved
+				Tooltip: Andomedonens styrke strømmer igennem dig
 			}
 
 			Jofairden_Legs: {
-				// DisplayName: Andromedon Legs
-				// Tooltip: The power of the Andromedon flows within you
+				DisplayName: Andromedon-Ben
+				Tooltip: Andomedonens styrke strømmer igennem dig
 			}
 
-			// AetherBreaker_Body.DisplayName: AetherBreaker's Body
-			// AetherBreaker_Head.DisplayName: AetherBreaker's Head
-			// WitchDaggah_Head.DisplayName: WitchDaggah's Head
-			// AetherBreaker_Legs.DisplayName: AetherBreaker's Legs
-			// AetherBreaker_Wings.DisplayName: AetherBreaker's Wings
-			// AlejandroAkbal_Body.DisplayName: AlejandroAkbal's Body
-			// AlejandroAkbal_Head.DisplayName: AlejandroAkbal's Head
-			// AlejandroAkbal_Legs.DisplayName: AlejandroAkbal's Legs
-			// AlejandroAkbal_Back.DisplayName: AlejandroAkbal's Back
-			// Coolmike5000_Body.DisplayName: Coolmike5000's Body
-			// Coolmike5000_Head.DisplayName: Coolmike5000's Head
-			// Coolmike5000_Legs.DisplayName: Coolmike5000's Legs
-			// Coolmike5000_Wings.DisplayName: Coolmike5000's Wings
-			// dinidini_Body.DisplayName: dinidini's Body
-			// dinidini_Head.DisplayName: dinidini's Head
-			// dinidini_Legs.DisplayName: dinidini's Legs
-			// dinidini_Wings.DisplayName: dinidini's Wings
-			// dschosen_Body.DisplayName: dschosen's Body
-			// dschosen_Head.DisplayName: dschosen's Head
-			// dschosen_Legs.DisplayName: dschosen's Legs
-			// dschosen_Wings.DisplayName: dschosen's Wings
-			// Elfinlocks_Body.DisplayName: Elfinlocks' Body
-			// Elfinlocks_Head.DisplayName: Elfinlocks' Head
-			// Elfinlocks_Legs.DisplayName: Elfinlocks' Legs
-			// Frosty_Hat.DisplayName: Frosty's Hat
-			// Frosty_Hoodie.DisplayName: Frosty's Hoodie
-			// Frosty_Pants.DisplayName: Frosty's Pants
-			// Glory_Body.DisplayName: Glory's Body
-			// Glory_Head.DisplayName: Glory's Head
-			// Glory_Legs.DisplayName: Glory's Legs
-			// Guildpack_Body.DisplayName: Guildpack's Body
-			// Guildpack_Head.DisplayName: Guildpack's Head
-			// Guildpack_Legs.DisplayName: Guildpack's Legs
-			// HER0zero_Body.DisplayName: HER0zero's Body
-			// HER0zero_Head.DisplayName: HER0zero's Head
-			// HER0zero_Legs.DisplayName: HER0zero's Legs
-			// KittyKitCatCat_Body.DisplayName: KittyKitCatCat's Body
-			// KittyKitCatCat_Head.DisplayName: KittyKitCatCat's Head
-			// KittyKitCatCat_Legs.DisplayName: KittyKitCatCat's Legs
+			AetherBreaker_Body.DisplayName: AetherBreakers Krop
+			AetherBreaker_Head.DisplayName: AetherBreakers Hoved
+			WitchDaggah_Head.DisplayName: WitchDaggahs Hoved
+			AetherBreaker_Legs.DisplayName: AetherBreakers Ben
+			AetherBreaker_Wings.DisplayName: AetherBreakers Vinger
+			AlejandroAkbal_Body.DisplayName: AlejandroAkbals Krop
+			AlejandroAkbal_Head.DisplayName: AlejandroAkbals Hoved
+			AlejandroAkbal_Legs.DisplayName: AlejandroAkbals Ben
+			AlejandroAkbal_Back.DisplayName: AlejandroAkbals Ryg
+			Coolmike5000_Body.DisplayName: Coolmike5000s Krop
+			Coolmike5000_Head.DisplayName: Coolmike5000s Hoved
+			Coolmike5000_Legs.DisplayName: Coolmike5000s Ben
+			Coolmike5000_Wings.DisplayName: Coolmike5000s Vinger
+			dinidini_Body.DisplayName: dinidinis Krop
+			dinidini_Head.DisplayName: dinidinis Hoved
+			dinidini_Legs.DisplayName: dinidinis Ben
+			dinidini_Wings.DisplayName: dinidinis Vinger
+			dschosen_Body.DisplayName: dschosens Krop
+			dschosen_Head.DisplayName: dschosens Hoved
+			dschosen_Legs.DisplayName: dschosens Ben
+			dschosen_Wings.DisplayName: dschosens Vinger
+			Elfinlocks_Body.DisplayName: Elfinlocks Krop
+			Elfinlocks_Head.DisplayName: Elfinlocks Hoved
+			Elfinlocks_Legs.DisplayName: Elfinlocks Ben
+			Frosty_Hat.DisplayName: Frostys Hat
+			Frosty_Hoodie.DisplayName: Frostys Hættetrøje
+			Frosty_Pants.DisplayName: Frostys Bukser
+			Glory_Body.DisplayName: Glorys Krop
+			Glory_Head.DisplayName: Glorys Hoved
+			Glory_Legs.DisplayName: Glorys Ben
+			Guildpack_Body.DisplayName: Guildpacks Krop
+			Guildpack_Head.DisplayName: Guildpacks Hoved
+			Guildpack_Legs.DisplayName: Guildpacks Ben
+			HER0zero_Body.DisplayName: HER0zeros Krop
+			HER0zero_Head.DisplayName: HER0zeros Hoved
+			HER0zero_Legs.DisplayName: HER0zeros Ben
+			KittyKitCatCat_Body.DisplayName: KittyKitCatCats Krop
+			KittyKitCatCat_Head.DisplayName: KittyKitCatCats Hoved
+			KittyKitCatCat_Legs.DisplayName: KittyKitCatCats Ben
 
 			Linus_Body: {
-				// DisplayName: Hunter Garb
-				/* Tooltip:
+				DisplayName: Jæger-Klæder
+				Tooltip:
 					'''
-					'One of the standard articles of hunter attire fashioned at the workshop,
-					accompanied with a short cape that wipes away blood.
-					Allows one to stalk beasts unannounced, by cover of night.'
-					''' */
+					'En essentiel del af en jægers påklædning - direkte fra værkstedet,
+					brugt i kombination med en kort kappe, der ment kan tørre blodet væk.
+					Gør en i stand til lydløst at jæge efter bæster i nattens mørke stund.'
+					'''
 			}
 
 			Linus_Head: {
-				// DisplayName: Hunter Hat
-				/* Tooltip:
+				DisplayName: Jægerhat
+				Tooltip:
 					'''
-					'One of the standard articles of hunter attire fashioned at the workshop.
-					Recognizable by its withered feathers, this cap is fashioned after one of the old hunters.'
-					''' */
+					'En essentiel del af en jægers påklædning - direkte fra værkstedet.
+					Genkendelig på sine visne fjer er denne hat formet efter en af de gamle jægere.'
+					'''
 			}
 
 			Linus_Legs: {
-				// DisplayName: Hunter Trousers
-				/* Tooltip:
+				DisplayName: Jæger-Bukser
+				Tooltip:
 					'''
-					'One of the standard articles of hunter attire, fashioned at the workshop.
-					Allows one to stalk beasts unannounced, by cover of night.'
-					''' */
+					'En essentiel del af en jægers påklædning - direkte fra værkstedet.
+					Gør en i stand til lydløst at jæge efter bæster i nattens mørke stund.'
+					'''
 			}
 
 			Linus_Wings: {
-				// DisplayName: A Call Beyond
-				/* Tooltip:
+				DisplayName: Et Kald fra Hindsides
+				Tooltip:
 					'''
-					'One of the secret rites of the Choir.
-					But it seems to have been repurposed by Linus.'
-					''' */
+					'Et af de hemmelige ritualet af Koret.
+					Den virker dog til at være blevet genanvendt af Linus,'
+					'''
 			}
 
-			// Mayne_Body.DisplayName: Mayne's Body
-			// Mayne_Head.DisplayName: Mayne's Head
-			// Mayne_Legs.DisplayName: Mayne's Legs
-			// Mayne_Wings.DisplayName: Mayne's Wings
-			// Orian_Body.DisplayName: Orian's Body
-			// Orian_Head.DisplayName: Orian's Head
-			// Orian_Legs.DisplayName: Orian's Legs
-			// POCKETS_Body.DisplayName: POCKETS' Body
-			// POCKETS_Head.DisplayName: POCKETS' Head
-			// POCKETS_Legs.DisplayName: POCKETS' Legs
-			// POCKETS_Wings.DisplayName: POCKETS' Wings
-			// Polyblank_Body.DisplayName: Polyblank's Body
-			// Polyblank_Head.DisplayName: Polyblank's Head
-			// Polyblank_Legs.DisplayName: Polyblank's Legs
-			// Remeus_Body.DisplayName: Remeus' Body
-			// Remeus_Head.DisplayName: Remeus' Head
-			// Remeus_Legs.DisplayName: Remeus' Legs
-			// Saethar_Body.DisplayName: Saethar's Body
-			// Saethar_Head.DisplayName: Saethar's Head
-			// Saethar_Legs.DisplayName: Saethar's Legs
-			// Saethar_Wings.DisplayName: Saethar's Wings
-			// Sailing_Squid_Body.DisplayName: Sailing_Squid's Body
-			// Sailing_Squid_Head.DisplayName: Sailing_Squid's Head
-			// Sailing_Squid_Legs.DisplayName: Sailing_Squid's Legs
-			// Sailing_Squid_Wings.DisplayName: Sailing_Squid's Wings
-			// Squid_Body.DisplayName: Squid's Body
-			// Squid_Head.DisplayName: Squid's Head
-			// Squid_Legs.DisplayName: Squid's Legs
-			// Tantamount_Body.DisplayName: Tantamount's Body
-			// Tantamount_Head.DisplayName: Tantamount's Head
-			// Tantamount_Legs.DisplayName: Tantamount's Legs
-			// Tantamount_Wings.DisplayName: Tantamount's Wings
-			// toplayz_Body.DisplayName: toplayz's Body
-			// toplayz_Head.DisplayName: toplayz's Head
-			// toplayz_Legs.DisplayName: toplayz's Legs
+			Mayne_Body.DisplayName: Maynes Krop
+			Mayne_Head.DisplayName: Maynes Hoved
+			Mayne_Legs.DisplayName: Maynes Ben
+			Mayne_Wings.DisplayName: Maynes Vinger
+			Orian_Body.DisplayName: Orian Krop
+			Orian_Head.DisplayName: Orian Hoved
+			Orian_Legs.DisplayName: Orian Ben
+			POCKETS_Body.DisplayName: POCKETS' Krop
+			POCKETS_Head.DisplayName: POCKETS' Hoved
+			POCKETS_Legs.DisplayName: POCKETS' Ben
+			POCKETS_Wings.DisplayName: POCKETS' Vinger
+			Polyblank_Body.DisplayName: Polyblanks Krop
+			Polyblank_Head.DisplayName: Polyblanks Hoved
+			Polyblank_Legs.DisplayName: Polyblanks Ben
+			Remeus_Body.DisplayName: Remeus' Krop
+			Remeus_Head.DisplayName: Remeus' Hoved
+			Remeus_Legs.DisplayName: Remeus' Ben
+			Saethar_Body.DisplayName: Saethars Krop
+			Saethar_Head.DisplayName: Saethars Hoved
+			Saethar_Legs.DisplayName: Saethars Ben
+			Saethar_Wings.DisplayName: Saethars Vinger
+			Sailing_Squid_Body.DisplayName: Sailing_Squids Krop
+			Sailing_Squid_Head.DisplayName: Sailing_Squids Hoved
+			Sailing_Squid_Legs.DisplayName: Sailing_Squids Ben
+			Sailing_Squid_Wings.DisplayName: Sailing_Squids Vinger
+			Squid_Body.DisplayName: Squids Krop
+			Squid_Head.DisplayName: Squids Hoved
+			Squid_Legs.DisplayName: Squids Ben
+			Tantamount_Body.DisplayName: Tantamounts Krop
+			Tantamount_Head.DisplayName: Tantamounts Hoved
+			Tantamount_Legs.DisplayName: Tantamounts Ben
+			Tantamount_Wings.DisplayName: Tantamounts Vinger
+			toplayz_Body.DisplayName: toplayz's Krop
+			toplayz_Head.DisplayName: toplayz's Hoved
+			toplayz_Legs.DisplayName: toplayz's Ben
 
 			xAqult_Body: {
-				// DisplayName: Catalyst's Soul
-				/* Tooltip:
+				DisplayName: Catalysts Sjæl
+				Tooltip:
 					'''
+					'Lav fred - specielt med din egen sjæl.'
+					(xAqults 
 					'Make peace, especially with your own soul.'
-					(xAqult's Vanity Set)
-					''' */
+					(xAqult's Påklædningssæt)
+					'''
 			}
 
 			xAqult_Head: {
-				// DisplayName: Catalyst's Honorable Tiara
-				/* Tooltip:
+				DisplayName: Catalysts Æres-Tiara
+				Tooltip:
 					'''
-					'Invaluable Tiara from Earthia.'
-					(xAqult's Vanity Set)
-					''' */
+					'Uundværlig Tiara fra Earthia.'
+					(xAqults Påklædningssæt)
+					'''
 			}
 
 			xAqult_Legs: {
-				// DisplayName: Catalyst's Stand
-				/* Tooltip:
+				DisplayName: Catalysts Stander
+				Tooltip:
 					'''
-					'Stand calmly and remember to focus.'
-					(xAqult's Vanity Set)
-					''' */
+					'Stå afslappet og husk på fokus.'
+					(xAqults Påklædningssæt)
+					'''
 			}
 
 			xAqult_Lens: {
-				// DisplayName: Catalyst's Sight
-				/* Tooltip:
+				DisplayName: Catalysts Syn
+				Tooltip:
 					'''
-					'Heterochromia!'
-					(xAqult's Vanity Set)
-					''' */
+					'Heterokromi!'
+					(xAqults Påklædningssæt)
+					'''
 			}
 
 			xAqult_Mask: {
-				// DisplayName: Catalyst Mask
-				/* Tooltip:
+				DisplayName: Catalyst-Maske
+				Tooltip:
 					'''
+					'Der kan kun være en.'
 					'There can be only one.'
-					(xAqult's Vanity Set)
-					''' */
+					(xAqults Påklædningssæt)
+					'''
 			}
 
 			xAqult_Wings: {
-				// DisplayName: Catalyst's Prismic Sabers
-				/* Tooltip:
+				DisplayName: Catalysts Prismiske Sabler
+				Tooltip:
 					'''
-					'Light and Dark. Perfectly balanced, as all things should be.'
-					(xAqult's Vanity Set)
-					''' */
+					'Lys og Mørke. I perfect afbalance, som alle ting bør være.'
+					(xAqults Påklædningssæt)
+					'''
 			}
 
-			// Zeph_Body.DisplayName: Zeph's Body
-			// Zeph_Head.DisplayName: Zeph's Head
-			// Zeph_Legs.DisplayName: Zeph's Legs
-			// Zeph_Wings.DisplayName: Zeph's Wings
+			Zeph_Body.DisplayName: Zephs Krop
+			Zeph_Head.DisplayName: Zephs Hoved
+			Zeph_Legs.DisplayName: Zephs Ben
+			Zeph_Wings.DisplayName: Zephs Vinger
 		}
 
 		Tiles: {
 			UnloadedChest: {
-				// MapEntry0: Unloaded Chest
-				// MapEntry1: Locked Unloaded Chest
+				MapEntry0: Aflæst Kiste
+				MapEntry1: Låst Aflæst Kiste
 			}
 		}
 	}
 }
 
 TownNPCHousingFailureReasons: {
-	// TooCloseToWorldEdge: We need better text for this!!!
-	// RoomIsTooBig: This room is too big
-	// RoomIsTooSmall: This room is too small
-	// HoleInWallIsTooBig: This room is missing a wall
-	// RoomCheckStartedInASolidTile: This is a solid block!
-	// RoomHasAStinkbug: This room is infested by a stinkbug!
-	// RoomHasAnEchoStinkbug: This room is infested by a ghostly stinkbug!
+	// Going off of interpretation "The room is too close to the world's edge"
+	TooCloseToWorldEdge: Rummet er for tæt på verdens kant
+	RoomIsTooBig: Rummet er for stort
+	RoomIsTooSmall: Rummet er for lille
+	HoleInWallIsTooBig: Rummet mangler en væg
+	RoomCheckStartedInASolidTile: Dette er en solid blok!
+	RoomHasAStinkbug: Rummet er infesteret af en tæge!
+	RoomHasAnEchoStinkbug: Rummet er infesteret af en spøgelig tæge!
 }
 
 MerchantNames: {
@@ -2566,17 +2570,17 @@ SlimeNames_Copper: {
 }
 
 AnglerQuestChatter: {
-	// Chatter_1: Wooow! You've bothered me, like, {AnglerCompletedQuestsCount} times! If I didn't have a cool fish for each time, I would be really mad!
-	// Chatter_2: Did you know I have {AnglerCompletedQuestsCount} amazingly awesome fish now!? That's because as far as errand monkeys go, you're actually a bit useful!
+	Chatter_1: Wooow! Du har forstyrret mig, sådan set {AnglerCompletedQuestsCount} gange! Hvis jeg ikke havde en sej fisk for hver af gangene ville jeg være meget sur!
+	Chatter_2: Vidste du at jeg har {AnglerCompletedQuestsCount} vidunderligt fantastiske fisk nu!? Det er fordi at når det kommer til tjenestefolk, kan du rent faktisk bruges til noget!
 }
 
 BartenderChatter: {
-	// Chatter_1: I've got the cure for what ails ya! Get it? Ale? No?
+	Chatter_1:  I've got the cure for what ails ya! Get it? Ale? No?
 	// Chatter_2: They say you're strong, well, I know strong. Let's see if you measure up.
 	// Chatter_3: Back where I'm from, we only serve Root Beer...
 	// Chatter_4: This is a big upgrade from wiping that table all day.
 	// Chatter_5: Life's a challenge when you're just naturally better than everyone else.
-	// Chatter_6: What am I doing here...
+	Chatter_6: Hvad laver jeg her...
 	// Chatter_7: A lot of tenacity and a little bit of luck can go a long way...
 	// Chatter_8: Have you seen any Meburs around here?
 	// Chatter_9: "{Dryad} seems nice. I should bring her back with me."
