@@ -94,8 +94,28 @@ namespace MoreLocales.Utilities
                 _ => PluralizationType.None,
             };
         }
-        public static int CustomPluralization(this CultureNamePlus culture, int mod10, int mod100, int count)
+        public static int CustomPluralization(int c, int mod10, int mod100, int count)
         {
+            CultureNamePlus culture = (CultureNamePlus)c;
+            switch (culture)
+            {
+                case Czech:
+                    if (count == 1)
+                        return 0;
+                    else if (count >= 2 && count <= 4)
+                        return 1;
+                    return 2;
+                case Turkish:
+                    if (count > 1)
+                        return 1;
+                    return 0;
+                case Romanian:
+                    if (count == 1)
+                        return 0;
+                    else if (count == 0 || (mod100 > 0 && mod100 < 20))
+                        return 1;
+                    return 2;
+            }
             return 0;
         }
     }

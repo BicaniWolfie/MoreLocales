@@ -2,9 +2,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using Terraria;
 using Terraria.GameContent;
 using static ReLogic.Graphics.DynamicSpriteFont;
 
@@ -94,14 +96,27 @@ namespace MoreLocales.Core
         [UnsafeAccessor(UnsafeAccessorKind.Field, Name = "_defaultCharacterData")]
         public static extern ref SpriteCharacterData GetDefaultCharacterData(DynamicSpriteFont instance);
 
+        [UnsafeAccessor(UnsafeAccessorKind.Field, Name = "_characterSpacing")]
+        public static extern ref float GetCharacterSpacing(DynamicSpriteFont instance);
+
         public delegate bool IsCharacterSupported_orig(DynamicSpriteFont self, char character);
         public delegate SpriteCharacterData GetCharacterData_orig(DynamicSpriteFont self, char character);
+        public delegate float get_CharacterSpacing_orig(DynamicSpriteFont self);
 
-        public static MethodInfo isCharSupported;
-        public static MethodInfo getCharData;
-        public static MethodInfo internalDraw;
+        private static MethodInfo isCharSupported;
+        private static MethodInfo getCharData;
+        private static MethodInfo internalDraw;
+        private static MethodInfo measureString;
+        private static MethodInfo getCharSpacing;
+
+        private static FieldInfo charSpacing;
 
         public static bool CharDataInlined { get; set; } = false;
+
+        /// <summary>
+        /// I'm sorry.
+        /// </summary>
+        private static DynamicSpriteFont _currentlyDrawnFont = null;
 
         public static void DoLoad()
         {
@@ -160,15 +175,20 @@ namespace MoreLocales.Core
 
             Type dsf = typeof(DynamicSpriteFont);
 
+            charSpacing = dsf.GetField("_characterSpacing", BindingFlags.Instance | BindingFlags.NonPublic);
+
             isCharSupported = dsf.GetMethod("IsCharacterSupported");
             getCharData = dsf.GetMethod("GetCharacterData", BindingFlags.Instance | BindingFlags.NonPublic);
             internalDraw = dsf.GetMethod("InternalDraw", BindingFlags.Instance | BindingFlags.NonPublic);
+            measureString = dsf.GetMethod("MeasureString");
+            getCharSpacing = dsf.GetMethod("get_CharacterSpacing");
 
             MonoModHooks.Add(isCharSupported, OnIsCharacterSupported);
             MonoModHooks.Add(getCharData, OnGetCharacterData);
             MonoModHooks.Modify(internalDraw, EditInternalDraw);
+            MonoModHooks.Modify(measureString, EditMeasureString);
+            MonoModHooks.Add(getCharSpacing, OnGetCharacterSpacing);
         }
-
         private static bool OnIsCharacterSupported(IsCharacterSupported_orig orig, DynamicSpriteFont self, char character)
         {
             if (character != '\n' && character != '\r')
@@ -194,8 +214,12 @@ namespace MoreLocales.Core
                         font.Wait();
 
                     if (GetSpriteCharacters(font.Value).TryGetValue(character, out var overriddenValue))
+                    {
+                        _currentlyDrawnFont = font.Value;
                         return overriddenValue;
+                    }
                 }
+                _currentlyDrawnFont = self;
                 return value;
             }
             else
@@ -210,10 +234,14 @@ namespace MoreLocales.Core
                         font.Wait();
 
                     if (GetSpriteCharacters(font.Value).TryGetValue(character, out var extendedValue))
+                    {
+                        _currentlyDrawnFont = font.Value;
                         return extendedValue;
+                    }
                 }
             }
 
+            _currentlyDrawnFont = self;
             return GetDefaultCharacterData(self);
         }
         private static void EditInternalDraw(ILContext il)
@@ -226,5 +254,25 @@ namespace MoreLocales.Core
                 return;
             }
         }
+        private static void EditMeasureString(ILContext il)
+        {
+            Mod mod = MoreLocales.Instance;
+            var c = new ILCursor(il);
+
+            if (c.TryFindNext(out _, i => i.MatchCall(getCharSpacing)))
+                return;
+
+            mod.Logger.Info("EditMeasureString: get_CharacterSpacing was inlined. Appropriate edits will take place.");
+
+            if (!c.TryGotoNext(i => i.MatchLdfld(charSpacing)))
+            {
+                mod.Logger.Warn("EditMeasureString: Couldn't find access to _characterSpacing");
+                return;
+            }
+
+            c.EmitPop();
+            c.EmitLdsfld(typeof(FontHelperV2).GetField("_currentlyDrawnFont"));
+        }
+        private static float OnGetCharacterSpacing(get_CharacterSpacing_orig orig, DynamicSpriteFont self) => GetCharacterSpacing(_currentlyDrawnFont);
     }
 }
