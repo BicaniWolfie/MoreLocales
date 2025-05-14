@@ -1826,13 +1826,13 @@ PirateNames: {
 	// "Red Beard": Red Beard
 	// Jack: Jack
 	// "Black Beard": Black Beard
-	// "Captain Morgan": Captain Morgan
+	"Captain Morgan": Kaptajn Morgan
 	// "Wet Beard": Wet Beard
 	// "James T. Beard": James T. Beard
-	// "Gunpowder Garry": Gunpowder Garry
-	// "Captain Stoney Dirt": Captain Stoney Dirt
+	"Gunpowder Garry": Krudt-Kurt
+	"Captain Stoney Dirt": Kaptajn Stenjord
 	// Jake: Jake
-	// "Captain Bullywort": Captain Bullywort
+	"Captain Bullywort": Kaptajn Bullywort
 }
 
 StylistNames: {
@@ -2122,7 +2122,7 @@ CatNames_White: {
 	// Storm: Storm
 	// Angel: Angel
 	// Vincent: Vincent
-	// MrCat: Mr. Cat
+	MrCat: Hr. Cat
 	// Holly: Holly
 	// Sam: Sam
 	// Rory: Rory
@@ -2575,101 +2575,101 @@ AnglerQuestChatter: {
 }
 
 BartenderChatter: {
-	Chatter_1:  I've got the cure for what ails ya! Get it? Ale? No?
-	// Chatter_2: They say you're strong, well, I know strong. Let's see if you measure up.
-	// Chatter_3: Back where I'm from, we only serve Root Beer...
-	// Chatter_4: This is a big upgrade from wiping that table all day.
-	// Chatter_5: Life's a challenge when you're just naturally better than everyone else.
+	Chatter_1: Jeg har en kur til enhver fork-øl-else! Fik du den? Øl? Nej?
+	Chatter_2: De siger 'du er stærk. Tjov, det kender jeg til. Lad os se hvordan du hamler op.
+	Chatter_3: Tilbage hvor jeg er fra serverer vi kun Rootbeer...
+	Chatter_4: Det her er en kæmpe opgradering fra at tørre borde af hele dagen.
+	Chatter_5: Livet er en udfordring når du ba'r er naturligt bedre end alle andre.
 	Chatter_6: Hvad laver jeg her...
-	// Chatter_7: A lot of tenacity and a little bit of luck can go a long way...
-	// Chatter_8: Have you seen any Meburs around here?
-	// Chatter_9: "{Dryad} seems nice. I should bring her back with me."
-	// Chatter_10: Do you think {Steampunker} has an extra of that gun? I know a witch that may want one.
-	// Chatter_11: No wonder {Demolitionist} has so many accidents. You can't imagine how much ale he buys from me.
-	// Chatter_12: Normally, I'm not much of a fan of Goblins, but {GoblinTinkerer} seems to be an alright sort.
-	// Chatter_13: "{?Day}Anyone see where the Dryad went?"
-	// Chatter_14: "{?!Day}Really quiet out there. A little too quiet..."
-	// Chatter_15: "{?!Day}Check in with me, and do your job."
-	// Chatter_16: "{?BloodMoon}You know, where I'm from, a Blood Moon is actually just an excuse to get some fresh air."
-	// Chatter_17: "{?MoonLordDefeated}Moon Lord, don't you mean Abyss Lord?"
-	// Chatter_18: "{?HardMode}I know a Lavamancer that would really like that hellstone down in the underworld."
-	// Chatter_19: "{?Homeless}Know any good places to set up shop? Would love to open up a bar here."
+	Chatter_7: Med en masse udholdenhed og en smule held kan man komme langt...
+	Chatter_8: Har du set nogen Meburer heromkring?
+	Chatter_9: "{Dryad} virker fin. Jeg bør invitere hende med mig."
+	Chatter_10: Tror du at {Steampunker} har en mere af de skydevåben? Jeg kender en heks der sagtens kunne bruge en.
+	Chatter_11: Ingen tvivl om at {Demolitionist} har så mange ulykker. Du ville aldrig kunne tro hvor meget øl han køber fra mig.
+	Chatter_12: Normalt er jeg ikke særligt glad for Gobliner, men {GoblinTinkerer} virker til at være en ganske fornuftig en.
+	Chatter_13: "{?Day}Nogen, der har set Dryaden?"
+	Chatter_14: "{?!Day}Meget stille udenfor. En smule for stille..."
+	Chatter_15: "{?!Day}Tjek ind hos mig og gør dit arbejde."
+	Chatter_16: "{?BloodMoon}Ved du hvad. Hvor jeg er fra er en Blodmåne bare en undskyldning for at få en smule frisk luft."
+	Chatter_17: "{?MoonLordDefeated}Måne-Herskeren? Mener du ikke Abyss-Herskeren?"
+	Chatter_18: "{?HardMode}Jeg kender en Lavamantiker der virkelig ville kunne lide det der helvedssten nede i Underverdenen."
+	Chatter_19: "{?Homeless}Kender du gode steder at slå biksen op? Ville elske at åbne en bar i området."
 }
 
 GolferChatter: {
-	// Chatter_1: I'm not the type to scream and thrash around just because my ball lands in the water. I stay calm, and collected, and focus on the next shot.
-	// Chatter_2: Huh? You eat WHAT for breakfast?
-	// Chatter_3: An early bird catches the worm, but an early hole catches the birdie.
-	// Chatter_4: Lick your finger and hold it to the wind. Golf balls are lightweight and easily influenced by a breeze.
-	// Chatter_5: If sand is causing you nightmares, your wedge is your dreamcatcher.
-	// Chatter_6: Should I take up fishing? Bribing {Angler} to fetch my balls out of the water is emptying my wallet!
-	// Chatter_7: To strike high, strike far, or to get unstuck? It's all about the club you use. Choose wisely!
-	// Chatter_8: When I offer you to go clubbing, I don't mean downtown. I mean like, with a five iron?
-	// Chatter_9: In this game, only losers go for that high score.
-	// Chatter_10: Landscapers must make a lot of green off us golfers. Heh!
-	// Chatter_11: "{Armsdealer} has mistaken my golf balls as ammo for his musket on several occasions."
-	// Chatter_12: According to {Dryad}, I'm murdering a lot of her friends when I mow the lawn. I gotta have a fairway for my course!
-	// Chatter_13: If you land on the green, use a putter! Don't let your balls go flying away when you're THAT close.
-	// Chatter_14: Don't go chasing water hazards, please stick to the fairways and greens that you're used to.
-	// Chatter_15: "{?BloodMoon}The blood stains on my club? Have you seen the zombies outside?!"
-	// Chatter_16: "{?BloodMoon}I don't know what's scarier, a Blood Moon or my sister during a Blood Moon!"
-	// Chatter_17: "{?Rain}Golfing in THIS weather?! Only if you like swinging around a giant lightning rod!"
+	Chatter_1: Jeg er ikke typen som skriger og brokker mig bare fordi min kugle ender i vandet. I forholder mig rolig, afslappet, og fokuseret på mit næste skud.
+	Chatter_2: A' hva'? HVAD spiser du til morgenmad!?
+	Chatter_3: Først til møllen får først malet, men først til køllen får første-slaget.
+	Chatter_4: Slik din finger og hold den op i vinden. Golfbolde er meget lette og påvirkes nemt af en brise.
+	Chatter_5: Hvis sand giver dig marreridt, så lad din wedge være din drømmefanger.
+	Chatter_6: Bør jeg begynde med at fiske? Det at bestikke {Angler} til at hente mine bolde ud af vandet koster mig alt for dyrt!
+	Chatter_7: At slå højt, slå langt, eller at få dig selv revet ud? Det handler kun om den kølle du bruger. Vælg den med omhu!
+	Chatter_8: Når jeg tilbyder dig at komme ud på putten mener jeg ikke den i Skive midtby. Jeg tænker med, du ved, et 5-jern?
+	Chatter_9: I det her spil er det kun taberner, som går efter high-scoren.
+	Chatter_10: Anlægsgartnere må da kun være i det grønne med os golfspillere. Heh!
+	Chatter_11: "{Armsdealer} har i flere tilfælde forvekslet mine golfbolde med musket-ammumition."
+	Chatter_12: I følge {Dryad} dræber jeg samtlige af hendes venner, når jeg slår græsset. Jeg skal da have en freeway til banen!
+	Chatter_13: Lander du på green, så brug putteren! DU må ikke lade boldene flyve væk når du er SÅ TÆT på.
+	Chatter_14: Gå ikke på jagt efter vandet; venligst forbliv på de fairways og greens som du er vant til.
+	Chatter_15: "{?BloodMoon}Blodpletterne på min kølle? Har du set zombierne udenfor?!"
+	Chatter_16: "{?BloodMoon}Jeg ved ikke hvad der er mere skræmmende. En Blodmåne eller min søser under en Blodmåne!"
+	Chatter_17: "{?Rain}Golfing i DET HER vejr?! Kun hvis du kan lide at svinge rundt med en kæmpe lynafleder!"
 }
 
 BestiaryGirlChatter: {
-	// Chatter_1: I collected critters like you once, then I took a cursed fox bite to the knee!
-	// Chatter_2: "{?Eclipse}Like wow, I feel like I belong with the creepy killer things running around right now. So glad I'm not that mindless."
-	// Chatter_3: I may not know, like, a whole lot...but I can talk your head off about nature and critters and animals and wildlife and...
-	// Chatter_4: My older bro calls me a lycanthrope. It means I'm like, part animal or something. He'd know, though, because he spends all his time outside!
-	// Chatter_5: I love animals, like, a lot! I tried to pet this weird looking fox one time, he sooo bit me, and now I became like one! Rad!
-	// Chatter_6: Staahp pulling on my tail, bro, it's totally real, and like...totally hurts when you pull on it!
-	// Chatter_7: Huh?! No, {Stylist} didn't dye my hair. It's naturally this color! It was like, dark brown before I was bitten, though!
-	// Chatter_8: Oh, THESE ears? Haha, totes better to hear you with, my dear!
-	// Chatter_9: This one time, at critter camp, I woke up one morning and everything was torn apart! Like, wow, how did I sleep through THAT?!
-	// Chatter_10: Wow, like, I've never seen a full moon. For some reason, it's like I pass out every time one's around!
-	// Chatter_11: I have noooo idea how I got here, but it's mega rad.
+	Chatter_1: Jeg samlede på dyr som dig en gang, men så tog jeg et forhekset ræve-bid til knæet!
+	Chatter_2: "{?Eclipse}Altså wow, jeg føler at jeg passer ind med de skræmmende dræber-tingester, som er på færd lige mu. Jeg er så glad for, at jeg ikke er så hjernedød."
+	Chatter_3: Jeg ved måske ikke, sådan, en hel del...men jeg vil snakke ørerne af dig om natur og vilddyr og dyr og vilddyr og...
+	Chatter_4: Storebror kalder mig for en lyaktrop. Betyder at jeg ligesom er halv dyr eller noget. Det burde han vide, da han er udenfor hele tiden!
+	Chatter_5: Jeg elsker dyr, som i, en hel del! Jeg prøvede en gang at age denne her mærkelige ræv en gang - han bed mig så meget, og nu blev jeg som en! Fedt, mand!
+	Chatter_6: Gutten, stooop med at hive i min hale! Den er hel ægte og det går, sådan, meget ondt når du hiver i den!
+	Chatter_7: A' hva'?! Nej, {Stylist} farvede ikke mit hår. Farven er hel naturlig! Dog var den, ligesom, fuldkommen mørkebrun før jeg blev bidt!
+	Chatter_8: Øh, DE HER ører? Haha, klart til bere at kunne høre dig, min kære!
+	Chatter_9: Der var denne her ene gang i krybdyrslejren hvor jeg vågnede op en morgen og alting var rævet fra hinanden! Altså, waw, hvordan sov jeg igennem DET?!
+	Chatter_10: Waw, jeg har sådan aldrig nmogensinde set en fuldmåne. Af en eller anden årsag er det som om at jeg besvimer hver gang der er en!
+	Chatter_11: Jeg har iiingen ide om, hvordan jeg er endt her, men det er mega-fedt.
 }
 
 BestiaryGirlLycantropeChatter: {
-	// Chatter_1: Grrr!! Away. Stay. NOW!
-	// Chatter_2: Rawgh! Roo! Danger. Me. Wraaaath!
+	Chatter_1: Grrr!! Væk. Bliv. NU!
+	Chatter_2: Rawgh! Roo! Fare. Mig. Vreede!
 }
 
 PrincessChatter: {
-	// Chatter_1: I really appreciate all the good you've done for this land! Thank you!
-	// Chatter_2: Goblins are so cute! They are short, and have those little pointy ears, and they come in different colors!
-	// Chatter_3: "{?GolemDefeated}I tried to pet a lihzahrd once. Um... they didn't mind at all!"
-	// Chatter_4: "{?MartiansDefeated}I wish the martians were a little nicer. Our world doesn't normally get visitors!"
-	// Chatter_5: Like my dress? Gee, thanks! Just sewed it.
-	// Chatter_6: I am so fabulously grateful for my subjects!
-	// Chatter_7: "{?FrostLegionDefeated}Worry not, concerned citizen! I am well aware of the organized crime problem among snowfolk."
-	// Chatter_8: Hmm... do you think {Pirate} will be able to redeem some of his old seafaring friends, as well?
-	// Chatter_9: "{?IceQueenDefeated}Diplomacy did not work so well with the Ice Queen, I'm afraid. She's rather cold-hearted! He he!"
-	// Chatter_10: "{?PumpkingDefeated}The Pumpking can be rather two-faced, it seems. I shall not give up on peace with his spooky people!"
-	// Chatter_11: "Pink is the best color anyone could ask for! "
-	// Chatter_12: "{?DukeFishronDefeated}I once met with a Duke on the beach. He looked kinda fishy, and lacked good manners!"
-	// Chatter_13: "Um... being a princess can be so uneventful sometimes, so I took up many hobbies! "
-	// Chatter_14: I'm so happy to finally travel the world, and meet new people!
-	// Chatter_15: As much as I love people, I am rather shy. It takes me awhile to break the ice...
-	// Chatter_16: "{?BloodMoon}The rivers are running red, everyone seem awfully on edge, hmm... it's a trying night, indeed!"
-	// Chatter_17: "{?!Day}The stars at night remind me of glitter on a beautiful, black dress. I shall soon have one made!"
+	Chatter_1: Jeg sætter virkelig meget pris på alt det godt, du har gjort for dette land! Mange tak for det!
+	Chatter_2: Gobliner er så nuttede! De er korte og har de der spidsede ører, og de findes i alle mulige farver!
+	Chatter_3: "{?GolemDefeated}Jeg prøvede en gang at age en lihzahrd. Øh... det havde de slet ikke noget imod!"
+	Chatter_4: "{?MartiansDefeated}Jeg ønsker at marsianerne var en smule sødere. Vores verden får ikke så ofte besøgende!"
+	Chatter_5: Kan du lide min kjole? Gud, ta! Har lige syet den.
+	Chatter_6: Jeg er så vidunderligt taknemmelig for alle mine undersåtter!
+	Chatter_7: "{?FrostLegionDefeated}Bekymre jer ej, borgere! Jeg er ganske klar over organiseret kriminalitet blandt snefolket."
+	Chatter_8: Hmm... tror du at {Pirate} også ville kunne forløse nogen af hans gamle venner?
+	Chatter_9: "{?IceQueenDefeated}Forhandlingerne med Isdronningen gik desværre ikke så godt, som jeg havde håbet. Hun var hel is-kold. He he!"
+	Chatter_10: "{?PumpkingDefeated}Græs-Kongen ser ud til at være ret dobbelmoralsk. Jeg vil dog ikke give op i forsøget på fred med hans skræmmende folk!"
+	Chatter_11: "Lyserød er den bedste farve som man nogensinde kunne spørge efter! "
+	Chatter_12: "{?DukeFishronDefeated}Jeg mødte en gang en Grev på stranden. Han virkede en smule skummel ud og havde ingen manerer!"
+	Chatter_13: "Øh... at være en prinsesse kan være ret kedeligt til tider, så jeg besluttede at få en masse hobbier! "
+	Chatter_14: Jeg er så glad for endelig at kunne rejse Verden rundt og møde nye mennesker!
+	Chatter_15: På trods af at jeg elsker folk er jeg ret genert. Det ta'r mig lidt tid for at bryde isen...
+	Chatter_16: "{?BloodMoon}Floderne løber rødt, alle er forfærdeligt anspændt, hmm... The rivers are running red, everyone seem awfully on edge, hmm... natten er uden tvivl krævende!"
+	Chatter_17: "{?!Day}Stjernerne på nattehimlen minder mig om glitter på en vidunderlig, sort kjole. Jeg skal snart få sådan en lavet!"
 }
 
 CatChatter: {
-	// Chatter_1: Meow!
-	// Chatter_2: Purr...
-	// Chatter_3: Merrooow!
+	Chatter_1: Mjav!
+	Chatter_2: Purr...
+	Chatter_3: Mejaauv!
 }
 
 DogChatter: {
-	// Chatter_1: Woof!
-	// Chatter_2: Bark!
-	// Chatter_3: Woof woof!
+	Chatter_1: Vov!
+	Chatter_2: Gø!
+	Chatter_3: Vov vov!
 }
 
 BunnyChatter: {
-	// Chatter_1: *Rabbit noises*
-	// Chatter_2: *Bunny noises*
+	Chatter_1: *Kaninlyde*
+	Chatter_2: *Kaninlyde*
 }
 
 SlimeBlueChatter: {
@@ -2679,9 +2679,9 @@ SlimeBlueChatter: {
 }
 
 SlimeGreenChatter: {
-	// Chatter_1: Drip!
+	Chatter_1: Dryp!
 	// Chatter_2: Sizzle fo shizzle!
-	// Chatter_3: Yo, slurp glurp!
+	Chatter_3: Hva' så, slurp glurp!
 }
 
 SlimeOldChatter: {
@@ -2698,7 +2698,7 @@ SlimeRainbowChatter: {
 
 SlimePurpleChatter: {
 	// Chatter_1: Berp.
-	// Chatter_2: *Awkward Silence*
+	Chatter_2: *Akavet Stilhed*
 	// Chatter_3: Plop. Pop... splat.
 }
 
@@ -2721,7 +2721,7 @@ SlimeCopperChatter: {
 }
 
 BestiaryGirlSpecialText: {
-	// Party: So, uh, I can't wear the hat. Sorry. I'm still here for the party, no worries!
+	Party: Så øh... jeg kan ikke passe hatten - beklager. Jeg bliver dog stadig til festen, bare rolig!
 	// Graveyard1: My instincts are totally going wild. I really need to get out of here!
 	// Graveyard2: Ok, like, this place is totally freaky. It makes my fur stand on end!
 	// Windy1: Running in the wind makes me feel so free and wild. Totes try it sometime!
