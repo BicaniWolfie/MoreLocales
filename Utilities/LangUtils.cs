@@ -9,7 +9,9 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using Terraria;
+using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader.Core;
 using static Terraria.ModLoader.LocalizationLoader;
@@ -34,7 +36,6 @@ namespace MoreLocales.Utilities
     /// </summary>
     public static class LangUtils
     {
-        public static bool FilesWillBeReloadedDueToCommentsChange { get; internal set; }
         public record struct QueuedComment(Mod Mod, string Key, string Comment, HjsonCommentType CommentType, bool OverwriteComment);
         private static readonly HashSet<Mod> _probablyValidMods = [];
         private static readonly ConcurrentQueue<QueuedComment> _commentsQueue = [];
@@ -54,6 +55,7 @@ namespace MoreLocales.Utilities
                 return _vanillaCultures;
             }
         }
+        internal static void ClearCommentsQueue() => _commentsQueue.Clear();
         internal static void ConsumeCommentsQueue()
         {
             // if anyone's reading this pls tell me if i'm stupid
@@ -61,9 +63,7 @@ namespace MoreLocales.Utilities
 
             // this errored once. it is a dotnet-provided class. i am so incredibly paranoid right now that this will randomly error for no reason
             // cosmic ray bit flip???
-            if (!_commentsQueue.IsEmpty)
-                FilesWillBeReloadedDueToCommentsChange = true;
-            else
+            if (_commentsQueue.IsEmpty)
                 return;
 
             Dictionary<Mod, List<(string key, string comment, HjsonCommentType commentType, bool overwriteComment)>> batches = [];
@@ -144,8 +144,11 @@ namespace MoreLocales.Utilities
                 }
 
                 foreach (var file in CollectionsMarshal.AsSpan(write))
-                    // write to disk
+                {
+                    // make protected and write to disk
+                    LangFeaturesPlus.noFileWatcherTimer = 32;
                     file.WriteToDisk(filesList, mod.SourceFolder, GameCulture.DefaultCulture);
+                }
             }
         }
         /// <summary>

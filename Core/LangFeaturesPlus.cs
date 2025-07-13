@@ -16,24 +16,36 @@ namespace MoreLocales.Core
         private const string StringToReplace = "{Prefix}";
         private static readonly string[] GenderNames = Enum.GetNames<GrammaticalGender>();
         private delegate void VoidsOrig();
+        private delegate void HandleFileChangedOrRenamed_orig(string modName, string fileName);
+        internal static int noFileWatcherTimer = 0;
         internal static void DoLoad()
         {
             // prefix stuff
             MonoModHooks.Modify(typeof(Item).GetMethod("get_Name"), RemovePrefixLiteralFromName);
             IL_Item.AffixName += LocalizedPrefixPosition;
             // comment stuff
-            MonoModHooks.Add(typeof(SystemLoader).GetMethod("OnLocalizationsLoaded", BindingFlags.Static | BindingFlags.NonPublic), ResetLangUtilsBool);
             MonoModHooks.Add(typeof(LocalizationLoader).GetMethod("Update", BindingFlags.Static | BindingFlags.NonPublic), UpdateLocalizationHook);
+            MonoModHooks.Add(typeof(LocalizationLoader).GetMethod("HandleFileChangedOrRenamed", BindingFlags.Static | BindingFlags.NonPublic), FileWatcherHandlingHook);
         }
-        private static void ResetLangUtilsBool(VoidsOrig orig)
+        private static void FileWatcherHandlingHook(HandleFileChangedOrRenamed_orig orig, string modName, string fileName)
         {
-            orig();
-            LangUtils.FilesWillBeReloadedDueToCommentsChange = false;
+            if (noFileWatcherTimer > 0)
+                return;
+            
+            orig(modName, fileName);
         }
+        internal static string UniqueFileID(string modName, GameCulture culture, string filePrefix) => $"{modName}/{culture.Name}/{filePrefix}";
         private static void UpdateLocalizationHook(VoidsOrig orig)
         {
             if (!Main.dedServ)
                 LangUtils.ConsumeCommentsQueue();
+
+            if (noFileWatcherTimer > 0)
+            {
+                noFileWatcherTimer--;
+                return;
+            }
+
             orig();
         }
         internal static string RemovePrefixLiteral(string input)
@@ -265,7 +277,7 @@ namespace MoreLocales.Core
             retur
             */
         }
-        public static InflectionData GetItemInflection(int type)
+        public static InflectionData GetItemInflection(int type, bool addComments = false)
         {
             if (!ItemIsGenderPluralizable(type))
                 return InflectionData.Default;
@@ -288,11 +300,15 @@ namespace MoreLocales.Core
 
             string key = $"{preprefix}InflectionData.Items.{itemName}";
             data = target.GetLocalization(key, () => "/");
-            string commentBody = 
-                vanilla
-                ? string.Join(" | ", LangUtils.GetVanillaLocalizationValues($"ItemName.{itemName}"))
-                : Lang.GetItemName(type).Value;
-            target.AddComment(key,  $"DisplayName: {commentBody}", HjsonCommentType.Hash);
+
+            if (addComments)
+            {
+                string commentBody =
+                    vanilla
+                    ? string.Join(" | ", LangUtils.GetVanillaLocalizationValues($"ItemName.{itemName}"))
+                    : Lang.GetItemName(type).Value;
+                target.AddComment(key, $"DisplayName: {commentBody}", HjsonCommentType.Hash);
+            }
 
             if (TryParse(data.Value, out InflectionData inflectionData))
                 return inflectionData;

@@ -62,9 +62,10 @@ namespace MoreLocales.Common
         private static ButtonDrawInfo[] _drawInfoCache;
         internal static LangMenuV2 FinalRender => ModContent.GetInstance<LangMenuV2>();
         internal static Asset<Texture2D> _panelTexture;
-        private static Asset<Texture2D> _panelHighlight;
+        //private static Asset<Texture2D> _panelHighlight;
         internal static Asset<Texture2D> _flagAtlas;
         private static Asset<Texture2D> _buttonPanel;
+        internal static Asset<Texture2D> _arrowButtons;
         internal const int PaddingX = 16;
         internal const int PaddingY = 16;
         internal const int PaddingXTotal = PaddingX * 2;
@@ -83,9 +84,10 @@ namespace MoreLocales.Common
         internal static void InitAssetsSafe()
         {
             _panelTexture = ModContent.Request<Texture2D>("MoreLocales/Assets/BetterLangPanel");
-            _panelHighlight = ModContent.Request<Texture2D>("MoreLocales/Assets/BetterLangPanel_Highlight");
+            //_panelHighlight = ModContent.Request<Texture2D>("MoreLocales/Assets/BetterLangPanel_Highlight");
             _flagAtlas = ModContent.Request<Texture2D>("MoreLocales/Assets/Flags");
             _buttonPanel = ModContent.Request<Texture2D>("MoreLocales/Assets/LangButton", AssetRequestMode.ImmediateLoad);
+            _arrowButtons = ModContent.Request<Texture2D>("MoreLocales/Assets/LangArrow");
 
             // also finalize button size variables to avoid the one frame of nothingness :)
             Texture2D buttonDrawTex = _buttonPanel.Value;
@@ -152,6 +154,13 @@ namespace MoreLocales.Common
 
             if (currentPage >= maxPage)
                 currentPage = maxPage - 1;
+
+            BetterLangMenuUI.leftArrowAvailable = true;
+            BetterLangMenuUI.rightArrowAvailable = true;
+            if (currentPage == 0)
+                BetterLangMenuUI.leftArrowAvailable = false;
+            if (currentPage == maxPage - 1)
+                BetterLangMenuUI.rightArrowAvailable = false;
 
             // i'm not entirely clear on what the better way to do this is
             // caches visible buttons for later drawing
@@ -425,18 +434,20 @@ namespace MoreLocales.Common
 
             direction = 0;
 
-            bool goRight = JustPressed(Keys.E);
-            bool goLeft = JustPressed(Keys.Q);
-
-            if (goRight || goLeft)
+            if (BetterLangMenuUI.hoveredArrowWasPressed)
             {
-                if (goRight)
-                    direction++;
-                if (goLeft)
-                    direction--;
-                return true;
+                BetterLangMenuUI.hoveredArrowWasPressed = false;
+                direction = (int)BetterLangMenuUI.hoveredArrow;
             }
-            return false;
+            else
+            {
+                if (JustPressed(Keys.E))
+                    direction++;
+                if (JustPressed(Keys.Q))
+                    direction--;
+            }
+
+            return direction != 0;
         }
     }
     internal readonly struct ShaderThing(Asset<Effect> asset)

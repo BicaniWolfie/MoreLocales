@@ -18,6 +18,14 @@ namespace MoreLocales.Common
         public UIState PreviousUIState { get; set; }
         public BackButton backButton;
         private Vector2 _previousResolution;
+        internal enum Arrow
+        {
+            Left = -1,
+            None = 0,
+            Right = 1
+        }
+        internal static Arrow hoveredArrow;
+        internal static bool hoveredArrowWasPressed;
         public override void OnInitialize()
         {
             backButton = new(70f, 50f);
@@ -72,12 +80,81 @@ namespace MoreLocales.Common
                 spriteBatch.Begin(spriteBatchData);
 
                 BetterLangMenuV2.HandleInteractions(in centered);
+
+                HandleArrows(in spriteBatch, in centeredBig);
             }
 
             RecalculateButtonPosition(newRes);
             base.Draw(spriteBatch);
 
             UILinkPointNavigator.Shortcuts.BackButtonCommand = 7;
+        }
+        internal static bool leftArrowAvailable = true;
+        internal static bool rightArrowAvailable = true;
+        internal static float leftArrowProg = 1f;
+        internal static float rightArrowProg = 1f;
+        internal static void HandleArrows(in SpriteBatch sb, in Rectangle baseUI)
+        {
+            var arrowAsset = BetterLangMenuV2._arrowButtons;
+            if (!arrowAsset.IsLoaded)
+                return;
+
+            Texture2D arrowTexture = arrowAsset.Value;
+
+            int singleArrowHeight = arrowTexture.Height / 2;
+
+            float changeProgSpeed = 0.2f;
+            float targetOpac = 0.4f;
+
+            Vector2 origin = new(arrowTexture.Width, singleArrowHeight * 0.5f);
+            Rectangle frame = new(0, 0, arrowTexture.Width, singleArrowHeight - 1);
+            Vector2 drawPos = new(baseUI.X, baseUI.Y + baseUI.Height / 2);
+            int mouseX = Main.mouseX;
+            int mouseY = Main.mouseY;
+
+            Color c = Color.White;
+
+            if (HandleSingleArrow(drawPos.X - frame.Width, drawPos.X, Arrow.Left) && leftArrowAvailable)
+            {
+                frame.Y += singleArrowHeight;
+            }
+
+            leftArrowProg = MathHelper.Lerp(leftArrowProg, leftArrowAvailable ? 1f : 0f, changeProgSpeed);
+            float finalFactor = MathHelper.Lerp(targetOpac, 1f, leftArrowProg);
+            float scale = 1f - (1f - finalFactor) * 0.3f;
+
+            sb.Draw(arrowTexture, drawPos, frame, c * finalFactor, 0f, origin, scale, SpriteEffects.FlipHorizontally, 0f);
+
+            frame.Y = 0;
+            drawPos.X += baseUI.Width;
+            origin.X = 0;
+
+            if (HandleSingleArrow(drawPos.X, drawPos.X + frame.Width, Arrow.Right) && rightArrowAvailable)
+            {
+                frame.Y += singleArrowHeight;
+            }
+
+            rightArrowProg = MathHelper.Lerp(rightArrowProg, rightArrowAvailable ? 1f : 0f, changeProgSpeed);
+            finalFactor = MathHelper.Lerp(targetOpac, 1f, rightArrowProg);
+            scale = 1f - (1f - finalFactor) * 0.3f;
+
+            sb.Draw(arrowTexture, drawPos, frame, c * finalFactor, 0f, origin, scale, SpriteEffects.None, 0f);
+
+            bool HandleSingleArrow(float lefternmost, float righternmost, Arrow arrow)
+            {
+                float prog = Utils.GetLerpValue(lefternmost, righternmost, mouseX, false);
+                if (arrow == Arrow.Right)
+                    prog = 1f - prog;
+                float grow = singleArrowHeight * 0.5f * prog;
+                if (prog >= 0f && prog <= 1f && MathF.Abs(mouseY - drawPos.Y) < grow)
+                {
+                    hoveredArrow = arrow;
+                    if (Main.mouseLeft && Main.mouseLeftRelease)
+                        hoveredArrowWasPressed = true;
+                    return true;
+                }
+                return false;
+            }
         }
         void IHaveBackButtonCommand.HandleBackButtonUsage()
         {
