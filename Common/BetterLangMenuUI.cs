@@ -152,41 +152,17 @@ namespace MoreLocales.Common
                     if (Main.mouseLeft && Main.mouseLeftRelease)
                     {
                         hoveredArrowWasPressed = true;
-                        MakeArrowPressSound(in arrow);
                     }
                     return true;
                 }
                 return false;
             }
-            void MakeArrowPressSound(in Arrow arrow)
-            {
-                SoundStyle accept = SoundID.MenuOpen;
-                SoundStyle decline = SoundID.Item150 with { Pitch = -0.4f, PitchVariance = 0f, Volume = 0.2f };
-
-                if (arrow == Arrow.Left)
-                {
-                    if (leftArrowAvailable)
-                    {
-                        SoundEngine.PlaySound(in accept);
-                        return;
-                    }
-                    SoundEngine.PlaySound(in decline);
-                    return;
-                }
-                else if (arrow == Arrow.Right)
-                {
-                    if (rightArrowAvailable)
-                    {
-                        SoundEngine.PlaySound(in accept);
-                        return;
-                    }
-                    SoundEngine.PlaySound(in decline);
-                    return;
-                }
-            }
         }
         void IHaveBackButtonCommand.HandleBackButtonUsage()
         {
+            BetterLangMenuV2.currentPage = 0;
+            BetterLangMenuV2.currentPageVisual = 0f;
+
             Main.MenuUI.SetState(null);
             Main.menuMode = MenuID.Settings;
 

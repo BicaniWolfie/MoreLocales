@@ -140,15 +140,22 @@ namespace MoreLocales.Common
 
                 float overshoot = 0.05f;
 
+                SoundStyle decline = SoundID.Item150 with { Pitch = -0.4f, PitchVariance = 0f, Volume = 0.2f };
                 if (currentPage < 0)
                 {
                     currentPage = 0;
                     currentPageVisual -= overshoot;
+                    SoundEngine.PlaySound(in decline);
                 }
                 else if (currentPage >= maxPage)
                 {
                     currentPage = maxPage - 1;
                     currentPageVisual += overshoot;
+                    SoundEngine.PlaySound(in decline);
+                }
+                else
+                {
+                    SoundEngine.PlaySound(in SoundID.MenuOpen);
                 }
             }
 
