@@ -217,7 +217,7 @@ namespace MoreLocales.Core
     }
 
     /// <summary>
-    /// <see href="https://bit.ly/4kPK4NQ"/>
+    /// <see href="https://bit.ly/458nsBZ"/>
     /// </summary>
     public readonly ref struct Ref<T>(ref T value)
     {
@@ -463,7 +463,7 @@ namespace MoreLocales.Core
         }
         public static void SupportForNewPluralization(ILContext il)
         {
-            Mod mod = ModContent.GetInstance<MoreLocales>();
+            Mod mod = MoreLocales.Instance;
             try
             {
                 var c = new ILCursor(il);
@@ -540,7 +540,7 @@ namespace MoreLocales.Core
         }
         private static void AddFallbacks(ILContext il)
         {
-            Mod mod = ModContent.GetInstance<MoreLocales>();
+            Mod mod = MoreLocales.Instance;
             try
             {
                 // first we need to add a local var for our custom GameCulture

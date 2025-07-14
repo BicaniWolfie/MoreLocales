@@ -7,6 +7,9 @@ using MoreLocales.Common;
 using System.Reflection;
 using Terraria.ID;
 using Terraria.Localization;
+using System.Collections.Generic;
+using Terraria.UI;
+using Terraria.DataStructures;
 
 namespace MoreLocales.Core
 {
@@ -15,6 +18,7 @@ namespace MoreLocales.Core
         //private static bool testOverlap = false;
         public const int betterLangMenuID = 74592; //LANGS
         public static BetterLangMenuUI betterLangMenu = new();
+        public static UserInterface ingameLangMenuButtonUI;
         public override void Load()
         {
             IL_Main.DrawMenu += GoToBetterLangMenuInstead;
@@ -70,6 +74,32 @@ namespace MoreLocales.Core
 
             Main.MenuUI.SetState(betterLangMenu);
             Main.menuMode = MenuID.FancyUI;
+        }
+        public override void ModifyInterfaceLayers(List<GameInterfaceLayer> layers)
+        {
+            if (InGameLanguageButtonUI.Instance is null)
+            {
+                var state = InGameLanguageButtonUI.Instance = new();
+                var ui = ingameLangMenuButtonUI = new();
+
+                ui.SetState(state);
+            }
+
+            layers.Insert(
+                layers.FindIndex(layer => layer.Name.Equals("Vanilla: Mouse Text")),
+                new LegacyGameInterfaceLayer("MoreLocales: In-Game Language Menu Button", () =>
+            {
+                if (Main.playerInventory)
+                    InGameLanguageButtonUI.Instance.Draw(Main.spriteBatch);
+                return true;
+            }, InterfaceScaleType.UI));
+        }
+        public override void UpdateUI(GameTime gameTime)
+        {
+            if (Main.ingameOptionsWindow || Main.InGameUI.IsVisible)
+                return;
+            if (ingameLangMenuButtonUI?.CurrentState != null)
+                ingameLangMenuButtonUI.Update(gameTime);
         }
         #region DEBUGGING
         private static void On_Main_DrawInterface(On_Main.orig_DrawInterface orig, Main self, GameTime gameTime)

@@ -146,8 +146,7 @@ namespace MoreLocales.Utilities
                 foreach (var file in CollectionsMarshal.AsSpan(write))
                 {
                     // make protected and write to disk
-                    LangFeaturesPlus.noFileWatcherTimer = 32;
-                    file.WriteToDisk(filesList, mod.SourceFolder, GameCulture.DefaultCulture);
+                    file.WriteToDisk(filesList, mod.SourceFolder, GameCulture.DefaultCulture, 32);
                 }
             }
         }
@@ -649,9 +648,12 @@ namespace MoreLocales.Utilities
         /// <param name="culture">The culture the file belongs to. If left null, it will be searched for based on the file name.</param>
         /// <param name="outputFolder">The output folder. Make this <see cref="Mod.SourceFolder"/> if you have the mod's instance.</param>
         /// <param name="sameCultureFiles">Files belonging to the same culture as the target file.</param>
+        /// <param name="protect">If you don't want tModLoader to detect changes to this file for whatever reason, set this to the amount of frames you'd like to pause tModLoader's file change detection system for.</param>
         /// <returns></returns>
-        public static bool WriteToDisk(this LocalizationFile file, IEnumerable<LocalizationFile> sameCultureFiles, string outputFolder, GameCulture culture = null)
+        public static bool WriteToDisk(this LocalizationFile file, IEnumerable<LocalizationFile> sameCultureFiles, string outputFolder, GameCulture culture = null, int protect = -1)
         {
+            if (protect > -1)
+                LangFeaturesPlus.noFileWatcherTimer = protect;
             // gets all of the entries from every provided file, flattens them to a list, converts them to a dictionary,
             // and finally, replaces all line endings with their platform-appropriate version
             string hjson = LocalizationFileToHJSONText(file, EntriesListToDictionary([.. sameCultureFiles.SelectMany(f => f.Entries)])).ReplaceLineEndings();
@@ -667,6 +669,11 @@ namespace MoreLocales.Utilities
 
             return true;
         }
+        /// <summary>
+        /// Pauses tModLoader's file detection system for <paramref name="time"/> amount of frames.
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void ProtectFiles(int time) => LangFeaturesPlus.noFileWatcherTimer = time;
         // note: rewrite LocalizationLoader.TryGetCultureAndPrefixFromPath when tMod moves to .NET 10?
         // i tried right now, and, changing all the Split() and Replace() calls to use their char overloads only gives a small advantage over the original
         // .NET 10 has MemoryExtensions.Split() which allows for faster splitting and iteration

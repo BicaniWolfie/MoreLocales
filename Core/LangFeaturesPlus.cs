@@ -209,7 +209,7 @@ namespace MoreLocales.Core
         {
             int prefix = context.prefix;
 
-            if (!ClientSideConfig.Instance.LocalizedPrefixGenderPluralization)
+            if (prefix == 0 || !ClientSideConfig.Instance.LocalizedPrefixGenderPluralization)
                 return Lang.prefix[prefix];
 
             MoreLocalesSets.CachedInflectionData[context.type].Deconstruct(out GrammaticalGender gender, out Pluralization pluralization);
@@ -258,7 +258,10 @@ namespace MoreLocales.Core
         }
         public static bool GPDataChangesAdjectiveForm(this GameCulture c, GrammaticalGender gender, Pluralization pluralization)
         {
-            return MoreLocalesAPI.extraCulturesV2[c.LegacyId].GrammarData.ContextChangesAdjective(gender, pluralization);
+            var possibleFunc = MoreLocalesAPI.extraCulturesV2[c.LegacyId].GrammarData.ContextChangesAdjective;
+            if (possibleFunc is null)
+                return true;
+            return possibleFunc(gender, pluralization);
         }
         public static bool gpNeverChanges(GrammaticalGender gender, Pluralization pluralization) => false;
         public static bool gpChangesWhenNotDefault(GrammaticalGender gender, Pluralization pluralization) => gender > 0 || pluralization > 0;

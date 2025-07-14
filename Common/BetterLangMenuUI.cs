@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.Audio;
 using Terraria.GameContent;
+using Terraria.GameInput;
 using Terraria.ID;
 using Terraria.UI;
 using Terraria.UI.Chat;
@@ -56,8 +57,10 @@ namespace MoreLocales.Common
             render.Request();
             if (render.IsReady)
             {
+                Main.LocalPlayer.controlHook = false;
+
                 Texture2D tex = render._target;
-                Vector2 offset = new(0f, 50f);
+                Vector2 offset = new(0f, Main.gameMenu ? 50f : 0f);
                 Vector2 drawCenter = newRes * 0.5f + offset;
                 Vector2 innerSize = tex.Size();
 
@@ -67,6 +70,9 @@ namespace MoreLocales.Common
                 centeredBig.Inflate(BetterLangMenuV2.PaddingXTotal, BetterLangMenuV2.PaddingYTotal);
 
                 UIHelper.DrawAdjustableBox(spriteBatch, BetterLangMenuV2._panelTexture.Value, centeredBig, Color.Gray);
+
+                if (centeredBig.Contains(Main.mouseX, Main.mouseY))
+                    Main.LocalPlayer.mouseInterface = true;
 
                 spriteBatch.End(out var spriteBatchData);
                 spriteBatchData.SortMode = SpriteSortMode.Immediate;
@@ -148,6 +154,7 @@ namespace MoreLocales.Common
                 float grow = singleArrowHeight * 0.5f * prog;
                 if (prog >= 0f && prog <= 1f && MathF.Abs(mouseY - drawPos.Y) < grow)
                 {
+                    Main.LocalPlayer.mouseInterface = true;
                     hoveredArrow = arrow;
                     if (Main.mouseLeft && Main.mouseLeftRelease)
                     {
@@ -163,8 +170,7 @@ namespace MoreLocales.Common
             BetterLangMenuV2.currentPage = 0;
             BetterLangMenuV2.currentPageVisual = 0f;
 
-            Main.MenuUI.SetState(null);
-            Main.menuMode = MenuID.Settings;
+            SoundEngine.PlaySound(in SoundID.MenuClose);
 
             if (backButton != null)
             {
@@ -172,7 +178,15 @@ namespace MoreLocales.Common
                 backButton.extraScale = 0f;
             }
 
-            SoundEngine.PlaySound(in SoundID.MenuClose);
+            if (Main.gameMenu)
+            {
+                Main.MenuUI.SetState(null);
+                Main.menuMode = MenuID.Settings;
+            }
+            else
+            {
+                IngameFancyUI.Close();
+            }
         }
     }
     public class BackButton : UIElement
