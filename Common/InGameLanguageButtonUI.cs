@@ -21,8 +21,8 @@ namespace MoreLocales.Common
         public InGameLanguageButtonUI()
         {
             Append(button = new());
-            button.Width.Set(32f, 0f);
-            button.Height.Set(32f, 0f);
+            button.Width.Set(36f, 0f);
+            button.Height.Set(36f, 0f);
         }
         public override void Update(GameTime gameTime)
         {
@@ -57,19 +57,22 @@ namespace MoreLocales.Common
     }
     internal class InGameLanguageButton : UIElement
     {
-        private static Asset<Texture2D> _modIcon;
+        private static Asset<Texture2D> _buttonGraphic;
         protected override void DrawSelf(SpriteBatch spriteBatch)
         {
             bool hovered = ContainsPoint(Main.MouseScreen);
-            _modIcon ??= MoreLocales.Instance.Assets.Request<Texture2D>("icon_small");
+            _buttonGraphic ??= MoreLocales.Instance.Assets.Request<Texture2D>("Assets/YouAreMoreLocales");
+
+            Rectangle frame = _buttonGraphic.Frame(1, 2);
 
             if (hovered)
             {
+                frame.Y += frame.Height;
                 UICommon.TooltipMouseText(Lang.menu[103].Value);
                 Main.LocalPlayer.mouseInterface = true;
             }
 
-            spriteBatch.Draw(_modIcon.Value, GetDimensions().Center(), null, Color.White, 0f, _modIcon.Size() * 0.5f, 1f, SpriteEffects.None, 0f);
+            spriteBatch.Draw(_buttonGraphic.Value, GetDimensions().Center(), frame, Color.White, 0f, frame.Size() * 0.5f, 1f, SpriteEffects.None, 0f);
 
         }
         public override void LeftClick(UIMouseEvent evt)

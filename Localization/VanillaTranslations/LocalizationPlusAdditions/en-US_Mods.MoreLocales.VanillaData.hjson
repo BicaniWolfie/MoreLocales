@@ -1545,141 +1545,141 @@ InflectionData: {
 		# DisplayName: Tragic Umbrella | Tragischer Regenschirm | Ombrello tragico | Parapluie tragique | Paraguas trágico | Трагический зонт | 悲剧雨伞 | Guarda-chuva Trágico | Tragiczny parasol
 		TragicUmbrella: "/"
 		# DisplayName: Gravedigger's Shovel | Totengräberschaufel | Pala del becchino | Pelle de fossoyeur | Pala del sepulturero | Лопата копателя могил | 掘墓者铲子 | Pá do Coveiro | Łopata grabarza
-		GravediggerShovel: "/"
+		GravediggerShovel: /
 		# DisplayName: Stellar Tune | Sternenmelodie | Motivetto stellare | Mélodie stellaire | Melodía Estelar | Звездный мотив | 星星吉他 | Tom Estelar | Gwiezdna Nuta
-		SparkleGuitar: "/"
+		SparkleGuitar: /
 		# DisplayName: Ghostar's Infinity Eight | Ghostars Unendliche Acht | Otto infinito di Ghostar | Signe infini de Ghostar | Ocho infinito de Ghostar | Бесконечная восьмерка Ghostar | 幽灵之星无极翼 | Oito da Infinidade da Ghostar | Nieskończoność Ghostar
-		GhostarsWings: "/"
+		GhostarsWings: /
 		# DisplayName: Safeman's Blanket Cape | Safemans Deckenumhang | Mantello coperta di Safeman | Cape couverture de Safeman | Capa de manta de Safeman | Плащ из одеяла Safeman | 萨菲曼的毛毯披肩 | Capa de Cobertor da Safeman | Peleryna Safemana
-		SafemanWings: "/"
+		SafemanWings: /
 		# DisplayName: FoodBarbarian's Tattered Dragon Wings | FoodBarbarians Zerfledderte Drachenflügel | Ali lacere di drago di FoodBarbarian | Ailes de dragon abîmées de FoodBarbarian | Alas de dragón andrajosas de FoodBarbarian | Изодранные крылья дракона FoodBarbarian | FoodBarbarian的褴褛龙之翼 | Asas de Dragão Esfarrapadas do FoodBarbarian | Poszarpane smocze skrzydła FoodBarbariana
-		FoodBarbarianWings: "/"
+		FoodBarbarianWings: /
 		# DisplayName: Grox The Great's Wings | Flügel von Grox The Great | Ali di Grox il Grande | Ailes de Grox The Great | Alas de Grox el Grande | Крылья Grox The Great | 了不起的格洛西翅翼 | Asas do Grox, o Grande | Skrzydła Groxa Wielkiego
-		GroxTheGreatWings: "/"
+		GroxTheGreatWings: /
 		# DisplayName: Blade Staff | Klingenstab | Bastone con lama | Sceptre à lame | Báculo de cuchillas | Посох лезвия | 刃杖 | Cajado com Lâminas | Ostry kostur
-		Smolstar: "/"
+		Smolstar: /
 		# DisplayName: Sergeant United Shield | Sergeant United-Schild | Scudo del sergente | Écu uni de sergent | Escudo unido de sargento | Щит сержанта Юнайтед | 中士联盾 | Escudo do Sargento Unido | Tarcza Sierżanta USA
-		BouncingShield: "/"
+		BouncingShield: /
 		# DisplayName: Shroomerang | Pilzerang | Miceterang | Champoomerang | Champiñerán | Сумеранг | 蘑菇回旋镖 | Cogumelorangue | Krewetkowy bumerang
-		Shroomerang: "/"
+		Shroomerang: /
 		# DisplayName: Jousting Lance | Turnierlanze | Asta da giostra | Lance de joute | Lanza de justas | Турнирное копье | 比武长戟 | Lança de Justa | Lanca turniejowa
-		JoustingLance: "/"
+		JoustingLance: /
 		# DisplayName: Shadow Jousting Lance | Schatten-Turnierlanze | Asta da giostra ombra | Lance de joute de l'ombre | Lanza de justas sombría | Теневое турнирное копье | 暗影比武长戟 | Lança de Justa das Sombras | Lanca turniejowa cienia
-		ShadowJoustingLance: "/"
+		ShadowJoustingLance: /
 		# DisplayName: Hallowed Jousting Lance | Heilige Turnierlanze | Asta da giostra consacrata | Lance de joute sacrée | Lanza de justas sagrada | Святое турнирное копье | 神圣比武长戟 | Lança de Justa Consagrada | Bajkowa lanca turniejowa
-		HallowJoustingLance: "/"
+		HallowJoustingLance: /
 		# DisplayName: Combat Wrench | Kampfschraubenschlüssel | Chiave inglese da combattimento | Clé de combat | Llave inglesa de combate | Боевой гаечный ключ | 战斗扳手 | Chave Inglesa de Combate | Klucz bojowy
-		CombatWrench: "/"
+		CombatWrench: /
 		# DisplayName: Empress Wings | Kaiserinnenflügel | Ali di imperatrice | Ailes d'impératrice | Ala de emperatriz | Крылья императрицы | 女皇翅翼 | Asas da Imperatriz | Skrzydła cesarzowej
-		RainbowWings: "/"
+		RainbowWings: /
 		# DisplayName: Hellfire Treads | Höllenfeuertreter | Abiti infernali | Pantalon de l'enfer | Bandas infernales | Протекторы адского огня | 狱炎花纹 | Pisantes do Fogo do Inferno | Buty piekielnego ognia
-		HellfireTreads: "/"
+		HellfireTreads: /
 		# DisplayName: Lavaproof Fishing Hook | Lavasicherer Angelhaken | Canna da pesca anti-lava | Hameçon pour lave | Anzuelo a prueba de lava | Лавонепроницаемый рыболовный крючок | 防熔岩钓钩 | Anzol Antilava | Lawoodporny hak wędkarski
-		LavaFishingHook: "/"
+		LavaFishingHook: /
 		# DisplayName: Cool Whip | Schlagsahne | Frusta fredda | Fouet glacial | Látigo gélido | Взбитые сливки | 冷鞭 | Chicote Gelado | Zimny bicz
-		CoolWhip: "/"
+		CoolWhip: /
 		# DisplayName: Firecracker | Flammenkracher | Petardo | Pétard | Petardo | Петарда | 鞭炮 | Estalinho | Petarda
-		FireWhip: "/"
+		FireWhip: /
 		# DisplayName: Snapthorn | Schnappdorn | Frusta spinata | Chaînépine | Latespinas | Шипохват | 荆鞭 | Chicotespinho | Cierń
-		ThornWhip: "/"
+		ThornWhip: /
 		# DisplayName: Kaleidoscope | Kaleidoskop | Caleidoscopio | Kaléidoscope | Caleidoscopio | Калейдоскоп | 万花筒 | Caleidoscópio | Kalejdoskop
-		RainbowWhip: "/"
+		RainbowWhip: /
 		# DisplayName: Starlight | Sternenlicht | Starlight | Starlight | Luz estelar | Звездный Лучик | 星光 | Estrelinha | Starlight
-		PiercingStarlight: "/"
+		PiercingStarlight: /
 		# DisplayName: Nightglow | Nachtglüh | Bagliore notturno | Illuminuit | Brillo nocturno | Ночное сияние | 夜光 | Brilho Noturno | Poświata
-		FairyQueenMagicItem: "/"
+		FairyQueenMagicItem: /
 		# DisplayName: Eventide | Abendzeit | Vespro | Tombée du jour | Anochecer | Сумерки | 日暮 | Poente | Szara Godzina
-		FairyQueenRangedItem: "/"
+		FairyQueenRangedItem: /
 		# DisplayName: Celestial Starboard | Himmlisches Sternenboard | Stellaboard celestiale | Planche étoile céleste | Tabla estelar celestial | Небесная парящая звезда | 天界星盘 | Plataforma da Estrela Celestial | Niebiańska gwiazda
-		LongRainbowTrailWings: "/"
+		LongRainbowTrailWings: /
 		# DisplayName: Zenith | Zenith | Zenith | Zénith | Cénit | Зенит | 天顶剑 | Zênite | Zenit
-		Zenith: "/"
+		Zenith: /
 		# DisplayName: Fledgling Wings | Jungvogelflügel | Ali inesperti | Ailes émergentes | Alas de polluelo | Крылья птенца | 雏翼 | Asas de Iniciante | Skrzydła pisklaka
-		CreativeWings: "/"
+		CreativeWings: /
 		# DisplayName: Volatile Gelatin | Sprunghafte Gelatine | Gelatina instabile | Gélatine volatile | Gelatina volátil | Нестабильный желатин | 挥发明胶 | Gelatina Volátil | Wybuchowa żelatyna
-		VolatileGelatin: "/"
+		VolatileGelatin: /
 		# DisplayName: Soaring Insignia | Aufsteigende Insignien | Blasone innalzato | Insigne volante | Insignia del surco | Парящая эмблема | 飞升之证 | Insígnia Voadora | Latające insygnia
-		EmpressFlightBooster: "/"
+		EmpressFlightBooster: /
 		# DisplayName: Terraspark Boots | Terrafunkenstiefel | Stivali terrascintilla | Bottes Terraspéciale | Botas de terrachispa | Терраискрометные ботинки | 泰拉闪耀靴 | Botas Terraísca | Buty Iskry Terrarii
-		TerrasparkBoots: "/"
+		TerrasparkBoots: /
 		# DisplayName: Terraprisma | Terraprisma | Terraprisma | Terraprisma | Terraprisma | Террапризма | 泰拉棱镜 | Terraprisma | Terraprisma
-		EmpressBlade: "/"
+		EmpressBlade: /
 		# DisplayName: Treasure Magnet | Schatzmagnet | Calamita del tesoro | Aimant à trésors | Imán de tesoros | Магнит сокровищ | 宝藏磁石 | Ímã de Tesouros | Magnes skarbów
-		TreasureMagnet: "/"
+		TreasureMagnet: /
 		# DisplayName: Mace | Streitkolben | Mazza | Massue | Maza | Жезл | 链锤 | Maça | Kiścień
-		Mace: "/"
+		Mace: /
 		# DisplayName: Flaming Mace | Flammender Streitkolben | Mazza infuocata | Massue enflammée | Maza llameante | Огненный жезл | 烈焰链锤 | Maça Flamejante | Płonący kiścień
-		FlamingMace: "/"
+		FlamingMace: /
 		# DisplayName: Lavaproof Tackle Bag | Lavafester Anglerkasten | Borsa a prova di lava | Sac de pêche résistant à la lave | Bolsa de aparejos a prueba de lava | Лавонепроницаемый чемоданчик рыбака | 防熔岩渔具袋 | Bolsa do Pescador à Prova de Lava | Lawoodporna torba na sprzęt
-		LavaproofTackleBag: "/"
+		LavaproofTackleBag: /
 		# DisplayName: Resonance Scepter | Resonanzzepter | Scettro della risonanza | Sceptre de résonnance | Cetro de resonancia | Резонирующий скипетр | 共鸣权杖 | Cetro da Ressonância | Berło rezonansu
-		PrincessWeapon: "/"
+		PrincessWeapon: /
 		# DisplayName: Flinx Staff | Flinxstab | Bastone di flinx | Sceptre de flinx | Báculo de copito | Посох флинкса | 小雪怪法杖 | Cajado de Flinx | Kostur flinxa
-		FlinxStaff: "/"
+		FlinxStaff: /
 		# DisplayName: Spinal Tap | Rückgratstich | Tocco osseo | Claquement vertébral | Latigazo espinal | Люмбальная пункция | 脊柱骨鞭 | Punção Lombar | Kręgarz
-		BoneWhip: "/"
+		BoneWhip: /
 		# DisplayName: Tentacle Spike | Tentakelstachel | Punta del tentacolo | Tentacule | Púa tentacular | Шип щупальца | 触手钉锤 | Espinho de Tentáculo | Ostrze macki
-		TentacleSpike: "/"
+		TentacleSpike: /
 		# DisplayName: Lucy the Axe | Lucy, die Axt | Lucy l'ascia | Lucy la hache | Lucy el Hacha | Люси «Топор» | 露西斧 | Lúcia, o Machado | Siekiera Lucy
-		LucyTheAxe: "/"
+		LucyTheAxe: /
 		# DisplayName: Ham Bat | Schinken-Schläger | Mazza di prosciutto | Batte-jambon | Bate de jamón | Ветчинная летучая мышь | 火腿棍 | Bastão de Presunto | Udziec bojowy
-		HamBat: "/"
+		HamBat: /
 		# DisplayName: Bat Bat | Fledermaus-Schläger | Mazza di pipistrello | Batte de l'aile | Bate de murciélago | Летучемышелом | 蝙蝠棍 | Bastão de Morcego | Nietoperzowy kij
-		BatBat: "/"
+		BatBat: /
 		# DisplayName: Bone Helm | Knochenhelm | Casco di ossa | Heaume osseux | Casco de huesos | Костяной шлем | 骸骨头盔 | Elmo de Osso | Kościany hełm
-		BoneHelm: "/"
+		BoneHelm: /
 		# DisplayName: Magiluminescence | Magilumineszenz | Magiluminescenza | Magiluminescence | Magiluminiscencia | Магисвет | 魔光护符 | Magiluminescência | Magiluminescencja
-		Magiluminescence: "/"
+		Magiluminescence: /
 		# DisplayName: Abigail's Flower | Abigails Blume | Fiore di Abigail | Fleur d'Abigail | Flor de Abigail | Цветок Эбигейл | 阿比盖尔的花 | Flor de Abigail | Kwiat Abigail
-		AbigailsFlower: "/"
+		AbigailsFlower: /
 		# DisplayName: Pew-matic Horn | Peng-tastisches Horn | Corno Pew-Matic | Klaxon Piou-matic | Bocina piumática | Пифматический рог | 气喇叭 | Chifre Pou-Mático | Strzałomatowy róg
-		PewMaticHorn: "/"
+		PewMaticHorn: /
 		# DisplayName: Weather Pain | Schmerzhafte Wetterfahne | Segnavento pericoloso | Girouette houleuse | Veleta dolorosa | Флюгер-боль | 天候棒 | Veleta Dolorosa | Wiatroból
-		WeatherPain: "/"
+		WeatherPain: /
 		# DisplayName: Houndius Shootius | Hundius Schießibus | Houndius Shootius | Houndius Shootius | Sabuesus protectus | Гончиус стрелятус | 眼球激光塔 | Dispparus Perseguiddorus | Ogarostrzelacz
-		HoundiusShootius: "/"
+		HoundiusShootius: /
 		# DisplayName: Hand Of Creation | Hand der Kreation | Mano della creazione | Main de la création | Mano de la creación | Рука творящая | 创造之手 | Mão da Criação | Ręka stworzenia
-		HandOfCreation: "/"
+		HandOfCreation: /
 		# DisplayName: Flymeal | Flymeal | Flymeal | Flymeal | Comida con alas | Летающая еда | 飞虫剑 | Comida de Mosca | Flymeal
-		Flymeal: "/"
+		Flymeal: /
 		# DisplayName: Fishing Bobber | Angelschwimmer | Bobina da pesca | Flotteur de pêche | Corcho de pesca | Поплавок для рыбалки | 钓鱼浮标 | Isca Flutuante de Pescaria | Spławik
-		FishingBobber: "/"
+		FishingBobber: /
 		# DisplayName: Glowing Fishing Bobber | Glühender Angelschwimmer | Bobina da pesca incandescente | Flotteur de pêche luisant | Corcho de pesca brillante | Светящийся поплавок для рыбалки | 发光钓鱼浮标 | Isca Flutuante de Pescaria Brilhante | Świecący spławik
-		FishingBobberGlowingStar: "/"
+		FishingBobberGlowingStar: /
 		# DisplayName: Lava Moss Fishing Bobber | Lavamoos-Angelschwimmer | Bobina da pesca al muschio lavico | Flotteur de pêche en mousse de lave | Corcho de pesca de musgo de lava | Поплавок для рыбалки из лавового мха | 熔岩苔藓钓鱼浮标 | Isca Flutuante de Pescaria do Musgo de Lava | Spławik z mchu lawowego
-		FishingBobberGlowingLava: "/"
+		FishingBobberGlowingLava: /
 		# DisplayName: Krypton Moss Fishing Bobber | Kryptonmoos-Angelschwimmer | Bobina da pesca al muschio di Krypton | Flotteur de pêche en mousse de krypton | Corcho de pesca de musgo de criptón | Поплавок для рыбалки из криптонового мха | 氪苔藓钓鱼浮标 | Isca Flutuante de Pescaria do Musgo de Criptônio | Spławik z mchu kryptonowego
-		FishingBobberGlowingKrypton: "/"
+		FishingBobberGlowingKrypton: /
 		# DisplayName: Xenon Moss Fishing Bobber | Xenonmoos-Angelschwimmer | Bobina da pesca al muschio di Xeno | Flotteur de pêche en mousse de xénon | Corcho de pesca de musgo de xenón | Поплавок для рыбалки из ксенонового мха | 氙苔藓钓鱼浮标 | Isca Flutuante de Pescaria do Musgo de Xenônio | Spławik z mchu ksenonowego
-		FishingBobberGlowingXenon: "/"
+		FishingBobberGlowingXenon: /
 		# DisplayName: Argon Moss Fishing Bobber | Argonmoos-Angelschwimmer | Bobina da pesca al muschio di Argon | Flotteur de pêche en mousse d’argon | Corcho de pesca de musgo de argón | Поплавок для рыбалки из аргонового мха | 氩苔藓钓鱼浮标 | Isca Flutuante de Pescaria do Musgo de Argônio | Spławik z mchu argonowego
-		FishingBobberGlowingArgon: "/"
+		FishingBobberGlowingArgon: /
 		# DisplayName: Neon Moss Fishing Bobber | Neonmoos-Angelschwimmer | Bobina da pesca al muschio al neon | Flotteur de pêche en mousse de néon | Corcho de pesca de musgo de neón | Поплавок для рыбалки из неонового мха | 氖苔藓钓鱼浮标 | Isca Flutuante de Pescaria do Musgo de Néon | Spławik z mchu neonowego
-		FishingBobberGlowingViolet: "/"
+		FishingBobberGlowingViolet: /
 		# DisplayName: Helium Moss Fishing Bobber | Heliummoos-Angelschwimmer | Bobina da pesca al muschio di elio | Flotteur de pêche en mousse d’hélium | Corcho de pesca de musgo de helio | Поплавок для рыбалки из гелиевого мха | 氦苔藓钓鱼浮标 | Isca Flutuante de Pescaria do Musgo de Hélio | Spławik z mchu helowego
-		FishingBobberGlowingRainbow: "/"
+		FishingBobberGlowingRainbow: /
 		# DisplayName: Wand of Frosting | Stab des Frosts | Bacchetta di ghiaccio | Baguette du givre | Varita de hielo | Морозящий жезл | 结霜魔杖 | Varinha Congelante | Mroźna różdżka
-		WandofFrosting: "/"
+		WandofFrosting: /
 		# DisplayName: Ash Wood Bow | Eschenholzbogen | Arco di frassino | Arc en frêne | Arco de madera de fresno | Ясеневый лук | 白蜡木弓 | Arco de Madeira de Freixo | Jesionowy łuk
-		AshWoodBow: "/"
+		AshWoodBow: /
 		# DisplayName: Ash Wood Hammer | Eschenholzhammer | Martello di frassino | Marteau en frêne | Martillo de madera de fresno | Ясеневый молот | 白蜡木锤 | Martelo de Madeira de Freixo | Jesionowy młot
-		AshWoodHammer: "/"
+		AshWoodHammer: /
 		# DisplayName: Ash Wood Sword | Eschenholzschwert | Spada di frassino | Épée en frêne | Espada de madera de fresno | Ясеневый меч | 白蜡木剑 | Espada de Madeira de Freixo | Jesionowy miecz
-		AshWoodSword: "/"
+		AshWoodSword: /
 		# DisplayName: Hive-Five | Bienen-Jojo | Yo-yo bzzz | Bzz | Palmada | Пчёл-йо | 蜂巢球 | Cincolmeia | Pszczela piątka
-		HiveFive: "/"
+		HiveFive: /
 		# DisplayName: Axe of Regrowth | Axt des Nachwachsens | Ascia della ricrescita | Hache de repousse | Hacha de regeneración | Топор выращивания | 再生之斧 | Machado do Renascimento | Topór porostu
-		AcornAxe: "/"
+		AcornAxe: /
 		# DisplayName: Trimarang | Trimerang | Trimarang | Trimarang | Trimarang | Тримаранг | 三尖回旋镖 | Trimerangue | Trimarang
-		Trimarang: "/"
+		Trimarang: /
 		# DisplayName: Bundle of Horseshoe Balloons | Hufeisenballonpaket | Fascio di palloncini a ferro di cavallo | Lot de fers à cheval ballons | Paquete de globos de herradura | Связка шариков «Подкова» | 马掌气球束 | Pacote de Balões da Ferradura | Zestaw balonów z podkową
-		HorseshoeBundle: "/"
+		HorseshoeBundle: /
 		# DisplayName: Reflective Shades | Spiegelbrille | Occhiali da sole riflettenti | Lunettes de soleil réfléchissantes | Gafas reflectantes | Светоотражающие очки | 反光墨镜 | Tons Refletores | Odblaskowe okulary przeciwsłoneczne
-		ReflectiveShades: "/"
+		ReflectiveShades: /
 		# DisplayName: Chromatic Cloak | Chromatischer Umhang | Mantello cromatico | Cape chromatique | Velo cromático | Красочный плащ | 多彩斗篷 | Capa Cromática | Płaszcz chromatyczny
-		ShimmerCloak: "/"
+		ShimmerCloak: /
 		# DisplayName: Waffle's Iron | Waffeleisen | Piastra per cialde | Fer de gaufre | Plancha para gofres | Вафельное железо | 华夫铁 | Assadeira de Waffle | Gofrownica
-		WaffleIron: "/"
+		WaffleIron: /
 		# DisplayName: FPV Goggles | FPV-Brille | Visore FPV | Lunettes de vue à la première personne | Gafas de visión en primera persona | ФПВ-очки | 第一人称视角护目镜 | Óculos FPV | Gogle FPV
 		JimsDroneVisor: /
 	}
