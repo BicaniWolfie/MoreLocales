@@ -13,12 +13,25 @@ using Terraria.DataStructures;
 
 namespace MoreLocales.Core
 {
+    /// <summary>
+    /// Contains stuff I could only do in a ModSystem.
+    /// </summary>
     public class MoreLocalesSystem : ModSystem
     {
         //private static bool testOverlap = false;
+        /// <summary>
+        /// The menu ID (<see cref="MenuID"/>) of the improved language menu added by MoreLocales, 'LANGS'
+        /// </summary>
         public const int betterLangMenuID = 74592; //LANGS
+        /// <summary>
+        /// The instance of the language menu UI.
+        /// </summary>
         public static BetterLangMenuUI betterLangMenu = new();
+        /// <summary>
+        /// The user interface used to display the in-game language menu button.
+        /// </summary>
         public static UserInterface ingameLangMenuButtonUI;
+        /// <inheritdoc/>
         public override void Load()
         {
             IL_Main.DrawMenu += GoToBetterLangMenuInstead;
@@ -26,12 +39,14 @@ namespace MoreLocales.Core
         }
         // the docs for OnModLoad are wrong: it's called if all content is autoloaded specifically for the mod it's called on, not all mods.
         // so we use SetStaticDefaults instead
+        /// <inheritdoc/>
         public override void SetStaticDefaults()
         {
             MoreLocalesAPI._canRegister = false;
             // also, create the arrays for UI
             BetterLangMenuV2.InitArrays();
         }
+        /// <inheritdoc/>
         public override void OnLocalizationsLoaded()
         {
             MoreLocalesSets.ReloadedLocalizations();
@@ -75,6 +90,7 @@ namespace MoreLocales.Core
             Main.MenuUI.SetState(betterLangMenu);
             Main.menuMode = MenuID.FancyUI;
         }
+        /// <inheritdoc/>
         public override void ModifyInterfaceLayers(List<GameInterfaceLayer> layers)
         {
             if (InGameLanguageButtonUI.Instance is null)
@@ -94,6 +110,7 @@ namespace MoreLocales.Core
                 return true;
             }, InterfaceScaleType.UI));
         }
+        /// <inheritdoc/>
         public override void UpdateUI(GameTime gameTime)
         {
             if (Main.ingameOptionsWindow || Main.InGameUI.IsVisible)
@@ -145,7 +162,7 @@ namespace MoreLocales.Core
 
             Main.spriteBatch.End();
         }
-
+        /// <inheritdoc/>
         public override void PostUpdateDusts()
         {
             return;

@@ -71,6 +71,9 @@ namespace MoreLocales.Common
         internal const int PaddingXTotal = PaddingX * 2;
         internal const int PaddingYTotal = PaddingY * 2;
         internal static readonly Vector2 PaddingTotal = new(PaddingXTotal, PaddingYTotal);
+        /// <summary>
+        /// The amount of flags (frames) in MoreLocales' flags spritesheet.
+        /// </summary>
         public const int FlagsCount = 28;
         internal static int columns = 2;
         internal static int rows = 5;

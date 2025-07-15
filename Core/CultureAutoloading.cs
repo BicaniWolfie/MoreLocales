@@ -16,6 +16,9 @@ namespace MoreLocales.Core
         private static readonly MethodInfo BaseAvailabilityMethod = typeof(ModCulture).GetMethod(nameof(IsAvailable));
         private static readonly MethodInfo BaseButtonPanelHijackMethod = typeof(ModCulture).GetMethod(nameof(PreDrawButtonPanel));
         private Mod _mod;
+        /// <summary>
+        /// The mod this belongs to.
+        /// </summary>
         public Mod Mod => _mod;
         /// <summary>
         /// The internal name of this. Used for localization generation.
@@ -177,16 +180,19 @@ namespace MoreLocales.Core
             Unload();
         }
         #region Sealed
+        /// <inheritdoc/>
         public sealed override bool Equals(object obj)
         {
             if (obj is ModCulture culture)
                 return culture.LanguageCode == LanguageCode;
             return false;
         }
+        /// <inheritdoc/>
         public sealed override int GetHashCode()
         {
             return LanguageCode.GetHashCode();
         }
+        /// <inheritdoc/>
         public sealed override string ToString()
         {
             return LanguageCode;

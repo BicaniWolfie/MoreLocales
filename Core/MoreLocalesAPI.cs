@@ -190,11 +190,13 @@ namespace MoreLocales.Core
         /// If this is true for a custom culture, the mod will search for (or create) a description key using <see cref="Mod.GetLocalization(string, Func{string})"/> using the "Cultures.{Name}.Description" suffix.
         /// </summary>
         public readonly bool HasDescription = description;
+        /// <inheritdoc cref="Core.GrammarData"/>
         public readonly GrammarData GrammarData = grammarData;
         /// <summary>
         /// Whether or not this culture should be visible on the language menu. Defaults to null (always available).
         /// </summary>
         public readonly Func<bool> Available = available;
+        /// <inheritdoc cref="LanguageButtonDrawData"/>
         public LanguageButtonDrawData ButtonDrawData = buttonDrawData;
         /// <summary>
         /// The parent mod for this <see cref="MoreLocalesCulture"/>. Null if this represents a vanilla culture.
@@ -221,8 +223,14 @@ namespace MoreLocales.Core
     /// </summary>
     public readonly ref struct Ref<T>(ref T value)
     {
+        /// <summary>
+        /// The reference contained in this.
+        /// </summary>
         public readonly ref T Value = ref value;
     }
+    /// <summary>
+    /// Contains methods to interface with the cultures API extended by MoreLocales.
+    /// </summary>
     public static class MoreLocalesAPI
     {
         private const string customCultureDataName = "LocalizationPlusData.dat";
@@ -231,7 +239,17 @@ namespace MoreLocales.Core
         internal static MoreLocalesCulture[] extraCulturesV2 = new MoreLocalesCulture[28]; // entry 0 is a dummy default entry
         private static int _registeredCount = 1; // starts at one because CultureName.English is 1
         internal static Dictionary<Type, int> _autoloadedCulturesRegistry;
-        public static MoreLocalesCulture ActiveCulture => extraCulturesV2[LanguageManager.Instance.ActiveCulture.LegacyId];
+        internal static HashSet<Mod> _protectedMods = [];
+        /// <summary>
+        /// Mods in this collection are protected from getting their localization files automatically marked as '.legacy' by tModLoader if they contain localization files without en-US counterparts.<para/>
+        /// Useful for making mods that register a culture to add localizations to vanilla.<para/>
+        /// Add your mod to this set using <see cref="ProtectFilesFromLegacyMarking(Mod)"/>.
+        /// </summary>
+        public static IReadOnlySet<Mod> ProtectedMods => _protectedMods;
+        /// <summary>
+        /// Gets a reference to the currently active <see cref="MoreLocalesCulture"/>.
+        /// </summary>
+        public static ref MoreLocalesCulture ActiveCulture => ref extraCulturesV2[LanguageManager.Instance.ActiveCulture.LegacyId];
         /// <summary>
         /// Returns a reference to the requested <see cref="MoreLocalesCulture"/> based on its <see cref="GameCulture.LegacyId"/>.
         /// </summary>
@@ -419,6 +437,21 @@ namespace MoreLocales.Core
         }
         internal static bool _canRegister = false;
         internal static bool _registerNative = false;
+        /// <summary>
+        /// Registers a new localizable culture. Can only be called during a Load hook.
+        /// </summary>
+        /// <param name="internalName">The internal name of this.</param>
+        /// <param name="languageCode">The language code of this culture, e. g. en-US, es-ES, etc.</param>
+        /// <param name="fallbackCulture">The <see cref="GameCulture.LegacyId"/> of a fallback culture. Localizations from the fallback culture will be loaded if one for this culture isn't found.</param>
+        /// <param name="hasSubtitle">Whether or not a subtitle should be searched for and shown in the language menu.</param>
+        /// <param name="hasDescription">Whether or not a hover text (description) should be searched for and shown in the language menu.</param>
+        /// <param name="grammarData">Data related to handling grammar for this culture.</param>
+        /// <param name="available">Whether or not this culture should be visible in the language menu. Useful if you want cultures to be 'unlockable' for whatever reason.</param>
+        /// <param name="buttonDrawData">Data related to the drawing of this culture's button in the language menu.</param>
+        /// <param name="mod">The mod that registers this culture.</param>
+        /// <returns>A reference to the newly registered culture.</returns>
+        /// <exception cref="InvalidOperationException"></exception>
+        /// <exception cref="NullReferenceException"></exception>
         public static ref MoreLocalesCulture RegisterCulture
         (
             string internalName,
@@ -436,6 +469,11 @@ namespace MoreLocales.Core
                 throw new InvalidOperationException("You cannot register a culture outside of a Load method.");
             if (!_registerNative && (mod is null || mod == MoreLocales.Instance))
                 throw new InvalidOperationException("Mods registered by external mods should have a valid mod instance. It cannot be left null or be MoreLocales.");
+            foreach (char c in internalName.AsSpan())
+            {
+                if (char.IsWhiteSpace(c))
+                    throw new InvalidOperationException($"An internal name for a culture ({internalName}) cannot contain whitespace.");
+            }
 
             GameCulture childCulture;
             if (_legacyCultures.TryGetValue(_registeredCount, out GameCulture vanillaCulture))
@@ -461,7 +499,12 @@ namespace MoreLocales.Core
             extraCulturesV2[_registeredCount] = newCulture;
             return ref extraCulturesV2[_registeredCount++];
         }
-        public static void SupportForNewPluralization(ILContext il)
+        /// <summary>
+        /// Adds this mod to <see cref="ProtectedMods"/> (read those docs for more information).
+        /// </summary>
+        /// <param name="mod">The mod to add to the protected list.</param>
+        public static void ProtectFilesFromLegacyMarking(Mod mod) => _protectedMods.Add(mod);
+        private static void SupportForNewPluralization(ILContext il)
         {
             Mod mod = MoreLocales.Instance;
             try
@@ -598,7 +641,7 @@ namespace MoreLocales.Core
         /// Sets the game's language without calling <see cref="LanguageManager.SetLanguage(GameCulture)"/>
         /// </summary>
         /// <param name="culture"></param>
-        public static void SetLanguageSoft(GameCulture culture)
+        internal static void SetLanguageSoft(GameCulture culture)
         {
             var lang = LanguageManager.Instance;
             lang.ActiveCulture = culture;
@@ -606,7 +649,7 @@ namespace MoreLocales.Core
             Thread.CurrentThread.CurrentUICulture = culture.CultureInfo;
         }
         private const byte FileVersion = 0;
-        public static void LoadCustomCultureData()
+        internal static void LoadCustomCultureData()
         {
             string pathToCustomCultureData = Path.Combine(Main.SavePath, customCultureDataName);
 

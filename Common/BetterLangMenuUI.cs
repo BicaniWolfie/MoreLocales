@@ -10,14 +10,15 @@ using Terraria.UI.Gamepad;
 
 namespace MoreLocales.Common
 {
+    /// <summary>
+    /// MoreLocales' UI. Generally you don't want to mess with this.
+    /// </summary>
     public class BetterLangMenuUI : UIState, IHaveBackButtonCommand
     {
         // i was testing different variables from screen dimensions, i'm not that lazy to not want to write Main ok¿¿
-        public static int ScreenWidth => Main.screenWidth;
-        public static int ScreenHeight => Main.screenHeight;
-        public static Vector2 ScreenResolution => new(ScreenWidth, ScreenHeight);
+        /// <inheritdoc/>
         public UIState PreviousUIState { get; set; }
-        public BackButton backButton;
+        internal BackButton backButton;
         private Vector2 _previousResolution;
         internal enum Arrow
         {
@@ -27,6 +28,7 @@ namespace MoreLocales.Common
         }
         internal static Arrow hoveredArrow;
         internal static bool hoveredArrowWasPressed;
+        /// <inheritdoc/>
         public override void OnInitialize()
         {
             backButton = new(70f, 50f);
@@ -49,9 +51,10 @@ namespace MoreLocales.Common
 
             Recalculate();
         }
+        /// <inheritdoc/>
         public override void Draw(SpriteBatch spriteBatch)
         {
-            Vector2 newRes = ScreenResolution;
+            Vector2 newRes = new(Main.screenWidth, Main.screenHeight);
 
             var render = BetterLangMenuV2.FinalRender;
             render.Request();
@@ -189,7 +192,7 @@ namespace MoreLocales.Common
             }
         }
     }
-    public class BackButton : UIElement
+    internal class BackButton : UIElement
     {
         private IHaveBackButtonCommand DoBackAction => Parent as IHaveBackButtonCommand;
         public bool grow = false;

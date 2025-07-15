@@ -9,7 +9,7 @@ using Terraria.Localization;
 
 namespace MoreLocales.Common
 {
-    public static class LocalizationTweaks
+    internal static class LocalizationTweaks
     {
         private static MethodReference terriblyUnperformantMethod;
         internal static void Apply()
@@ -105,10 +105,7 @@ namespace MoreLocales.Common
 
             c.EmitLdarg0();
 
-            c.EmitDelegate<Func<Mod, bool>>(m =>
-            {
-                return m.Name == ModContent.GetInstance<MoreLocales>().Name;
-            });
+            c.EmitDelegate(MoreLocalesAPI._protectedMods.Contains);
 
             c.EmitBrtrue(skipLabel);
 

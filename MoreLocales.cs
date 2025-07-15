@@ -30,19 +30,29 @@ using Terraria.Localization;
 
 namespace MoreLocales
 {
+    /// <summary>
+    /// A super cool localization extension mod. <para/>
+    /// <see href="https://github.com/queueAngel/MoreLocales"/>
+    /// </summary>
 	public class MoreLocales : Mod
 	{
+        /// <summary>
+        /// The instance of MoreLocales.
+        /// </summary>
         public static MoreLocales Instance { get; private set; }
         static MoreLocales()
         {
             LocalizationTweaks.Apply();
         }
+        /// <inheritdoc/>
         public MoreLocales()
         {
             Instance = this;
+            MoreLocalesAPI.ProtectFilesFromLegacyMarking(Instance);
             MoreLocalesAPI._canRegister = true;
             MoreLocalesAPI.DoLoad();
         }
+        /// <inheritdoc/>
         public override void Load()
         {
             AssetHelper.Setup(Instance);
@@ -50,6 +60,7 @@ namespace MoreLocales
             LangFeaturesPlus.DoLoad();
             MoreLocalesAPI.DoSafeLoad();
         }
+        /// <inheritdoc/>
         public override void PostSetupContent()
         {
             BetterLangMenuV2.InitAssetsSafe();
@@ -63,6 +74,7 @@ namespace MoreLocales
             if (FontHelperV2.CharDataInlined && OperatingSystem.IsWindows())
                 MessageBox.Show(GetLocalization("Misc.Error.FontPatchingError").Value, Language.GetTextValue("Error.Error"));
         }
+        /// <inheritdoc/>
         public override object Call(params object[] args)
         {
             throw new InvalidOperationException
@@ -71,6 +83,7 @@ namespace MoreLocales
                 This is in order to avoid extreme verbosity. Please consult the wiki for further information: https://github.com/queueAngel/MoreLocales/wiki/Home
                 """);
         }
+        /// <inheritdoc/>
         public override void Unload()
         {
             MoreLocalesAPI.DoUnload();
