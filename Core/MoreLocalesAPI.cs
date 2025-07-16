@@ -363,6 +363,13 @@ namespace MoreLocales.Core
         /// <returns>Whether or not this mod has localizations for the given culture.</returns>
         public static bool HasLocalizationsFor(this Mod mod, ref MoreLocalesCulture culture) => HasLocalizationsFor(mod, culture.Culture);
         /// <summary>
+        /// Checks if this mod has localizations for a given <see cref="GameCulture"/> using its <see cref="GameCulture.Name"/> (language code).
+        /// </summary>
+        /// <param name="mod">The mod.</param>
+        /// <param name="langCode">The language code.</param>
+        /// <returns></returns>
+        public static bool HasLocalizationsFor(this Mod mod, string langCode) => HasLocalizationsFor(mod, FromName(langCode));
+        /// <summary>
         /// Checks if this mod has localizations for a given <see cref="ModCulture"/> type.
         /// </summary>
         /// <param name="mod">The mod.</param>

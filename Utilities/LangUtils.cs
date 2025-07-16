@@ -95,10 +95,20 @@ namespace MoreLocales.Utilities
         /// </summary>
         /// <param name="culture">The culture.</param>
         /// <param name="backup">A backup suffix for lookup if a text isn't found. Used like this internally: <c>'Mods.LookupMod.{backup}'</c></param>
+        /// <param name="prioritizeActiveCulture">Looks for the value inside the keys for the active culture's owner first, and returns it if successful.</param>
         /// <returns></returns>
-        public LocalizedText GetForCulture(ref MoreLocalesCulture culture, string backup = null)
+        public LocalizedText GetForCulture(ref MoreLocalesCulture culture, string backup = null, bool prioritizeActiveCulture = true)
         {
             LocalizedText text;
+
+            if (prioritizeActiveCulture)
+            {
+                ref MoreLocalesCulture activeCulture = ref MoreLocalesAPI.ActiveCulture;
+                if (activeCulture.FunctionalOwner.HasLocalizationsFor(ref culture)) //&& Language.Exists(activeCulture.FunctionalOwner.GetLocalizationKey(backup)))
+                {
+                    return GetFromMod(activeCulture.FunctionalOwner, backup);
+                }
+            }
 
             if (culture.Culture == GameCulture.DefaultCulture || originalSource.HasLocalizationsFor(ref culture))
                 text = GetFromMod(originalSource, backup);
