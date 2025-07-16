@@ -51,6 +51,7 @@ namespace MoreLocales
         {
             Instance = this;
             MoreLocalesAPI.ProtectFilesFromLegacyMarking(Instance);
+            MoreLocalesAPI.InitCustomCultureModsArray();
             MoreLocalesAPI._canRegister = true;
             MoreLocalesAPI.DoLoad();
         }
@@ -69,7 +70,7 @@ namespace MoreLocales
 
             BetterLangMenuV2.InitAssetsSafe();
 
-            MoreLocalesSets._contentReady = true;
+            MoreLocalesSets._didFirstLoad = true;
             MoreLocalesSets.ReloadedLocalizations();
 
             MoreLocalesAPI.cachedVanillaCulture = LanguageManager.Instance.ActiveCulture.LegacyId;

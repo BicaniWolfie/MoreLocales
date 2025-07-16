@@ -7,24 +7,81 @@ namespace MoreLocales.Core
     /// </summary>
     public enum CultureNamePlus
     {
+        /// <summary>
+        /// en-GB
+        /// </summary>
         BritishEnglish = 10,
+        /// <summary>
+        /// ja-JP
+        /// </summary>
         Japanese,
+        /// <summary>
+        /// ko-KR
+        /// </summary>
         Korean,
+        /// <summary>
+        /// zh-Hant
+        /// </summary>
         TraditionalChinese,
+        /// <summary>
+        /// tr-TR
+        /// </summary>
         Turkish,
+        /// <summary>
+        /// th-TH
+        /// </summary>
         Thai,
+        /// <summary>
+        /// uk-UA
+        /// </summary>
         Ukrainian,
+        /// <summary>
+        /// es-MX
+        /// </summary>
         MexicanSpanish,
+        /// <summary>
+        /// cs-CZ
+        /// </summary>
         Czech,
+        /// <summary>
+        /// hu-HU
+        /// </summary>
         Hungarian,
+        /// <summary>
+        /// pt-PT
+        /// </summary>
         PortugalPortuguese,
+        /// <summary>
+        /// sv-SE
+        /// </summary>
         Swedish,
+        /// <summary>
+        /// nl-NL
+        /// </summary>
         Dutch,
+        /// <summary>
+        /// da-DK
+        /// </summary>
         Danish,
+        /// <summary>
+        /// vn-VN
+        /// </summary>
         Vietnamese, // omg is this a mirrorman reference
+        /// <summary>
+        /// fi-FI
+        /// </summary>
         Finnish,
+        /// <summary>
+        /// ro-RO
+        /// </summary>
         Romanian,
+        /// <summary>
+        /// id-ID
+        /// </summary>
         Indonesian,
+        /// <summary>
+        /// 9999
+        /// </summary>
         Unknown = 9999,
     }
     /// <summary>
@@ -33,11 +90,20 @@ namespace MoreLocales.Core
     public enum LocalizedFont
     {
         /// <summary>
-        /// Does not change the font. Additionally, sets <see cref="FontHelper.forcedFont"/> to false.
+        /// Does not change the font.
         /// </summary>
         None,
+        /// <summary>
+        /// Forces default style CJK characters.
+        /// </summary>
         Default,
+        /// <summary>
+        /// Forces Japanese style CJK characters.
+        /// </summary>
         Japanese,
+        /// <summary>
+        /// Forces Korean style CJK characters.
+        /// </summary>
         Korean,
     }
     /// <summary>
@@ -66,13 +132,22 @@ namespace MoreLocales.Core
         /// </summary>
         PolishThreeway = CultureName.Polish,
         /// <summary>
-        /// Needs special pluralization rule. Defined in <see cref="MoreLocalesCulture.CustomPluralizationRule"/> in <see cref="CultureHelper.CustomPluralization(int, int, int, int)"/>.
+        /// Needs special pluralization rule. Defined in <see cref="MoreLocalesCulture.GrammarData"/> in <see cref="CultureHelper.CustomPluralization(int, int, int, int)"/>.
         /// </summary>
         Custom = 10,
     }
+    /// <summary>
+    /// Adjective order type for <see cref="AdjectiveOrder"/>.
+    /// </summary>
     public enum AdjectiveOrderType
     {
+        /// <summary>
+        /// Adjective comes before the noun.
+        /// </summary>
         Before,
+        /// <summary>
+        /// Adjective comes after the noun.
+        /// </summary>
         After,
     }
 }

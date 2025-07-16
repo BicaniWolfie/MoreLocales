@@ -7,13 +7,13 @@ namespace MoreLocales.Core
     /// </summary>
     public static class MoreLocalesSets
     {
-        internal static bool _contentReady = false;
+        internal static bool _didFirstLoad = false;
         internal static bool _commentsAdded = false;
         internal static readonly InflectionData[] CachedInflectionData = ItemID.Sets.Factory.CreateCustomSet(InflectionData.Default);
         internal static void ReloadedLocalizations()
         {
             // AddComment actually causes files to be reloaded so i need to take that into account
-            if (!_contentReady)
+            if (!_didFirstLoad)
                 return;
             for (int i = 1; i < CachedInflectionData.Length; i++)
             {

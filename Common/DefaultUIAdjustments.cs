@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace MoreLocales.Common
 {
-    public class DefaultUIAdjustments : ILoadable
+    internal class DefaultUIAdjustments : ILoadable
     {
         [UnsafeAccessor(UnsafeAccessorKind.Field, Name = "_descriptionText")]
         public static extern ref UIText GetHubUIText(UIWorkshopHub instance);

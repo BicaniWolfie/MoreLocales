@@ -12,6 +12,7 @@ using static MoreLocales.Core.CultureNamePlus;
 using static Terraria.Localization.GameCulture.CultureName;
 using ReLogic.Content;
 using Terraria.DataStructures;
+using System.Linq;
 
 namespace MoreLocales.Core
 {
@@ -215,7 +216,7 @@ namespace MoreLocales.Core
         /// </summary>
         public readonly bool Vanilla => Mod is null;
 
-        internal readonly string OwnerFunctionalName => Vanilla ? "MoreLocales" : Mod.Name;
+        internal readonly Mod FunctionalOwner => Vanilla ? MoreLocales.Instance : Mod;
     }
 
     /// <summary>
@@ -237,8 +238,10 @@ namespace MoreLocales.Core
         private static int loadedCulture = 9999;
         internal static int cachedVanillaCulture = 1; // english by default
         internal static MoreLocalesCulture[] extraCulturesV2 = new MoreLocalesCulture[28]; // entry 0 is a dummy default entry
+        internal static Dictionary<Mod, ulong> _localizationFlags = [];
         private static int _registeredCount = 1; // starts at one because CultureName.English is 1
         internal static Dictionary<Type, int> _autoloadedCulturesRegistry;
+        internal static Mod[] _modsThatAddCustomCultures;
         internal static HashSet<Mod> _protectedMods = [];
         /// <summary>
         /// Mods in this collection are protected from getting their localization files automatically marked as '.legacy' by tModLoader if they contain localization files without en-US counterparts.<para/>
@@ -293,6 +296,89 @@ namespace MoreLocales.Core
             RegisterVanillaCultures();
             RegisterNativeCustomCultures();
             _registerNative = false;
+        }
+        internal static void InitModLocalizationFlags()
+        {
+            // checks every mod's localization capabilities and registers them into _localizationFlags
+
+            var mods = ModLoader.Mods;
+            for (int i = 0; i < mods.Length; i++)
+            {
+                SingleModLocalizationFlags(mods[i]);
+            }
+        }
+        private static void SingleModLocalizationFlags(Mod mod)
+        {
+            _localizationFlags[mod] = 0ul;
+            HashSet <GameCulture> cultures = [];
+
+            var files = mod.GetLocalizationFiles();
+
+            if (files is null)
+            {
+                MoreLocales.Instance.Logger.Warn($"Couldn't get localization files for mod {mod}.");
+                return;
+            }
+
+            for (int i = 0; i < files.Length; i++)
+            {
+                var file = files[i];
+
+                if (!LocalizationLoader.TryGetCultureAndPrefixFromPath(file.Name, out var culture, out _))
+                    continue;
+
+                if (cultures.Contains(culture))
+                    continue;
+
+                ulong place = 1ul << culture.LegacyId;
+                _localizationFlags[mod] |= place;
+
+                cultures.Add(culture);
+            }
+        }
+        /// <summary>
+        /// Checks if this mod has localizations for a given <see cref="GameCulture"/> using its <see cref="GameCulture.LegacyId"/>.
+        /// </summary>
+        /// <param name="mod">The mod.</param>
+        /// <param name="legacyID">The legacy ID for the localizable culture.</param>
+        /// <returns>Whether or not this mod has localizations for the given culture.</returns>
+        public static bool HasLocalizationsFor(this Mod mod, int legacyID)
+        {
+            if (_localizationFlags.TryGetValue(mod, out ulong flags))
+                return (flags & (1ul << legacyID)) != 0;
+            return false;
+        }
+        /// <summary>
+        /// Checks if this mod has localizations for a given <see cref="GameCulture"/>.
+        /// </summary>
+        /// <param name="mod">The mod.</param>
+        /// <param name="culture">The <see cref="GameCulture"/> instance.</param>
+        /// <returns>Whether or not this mod has localizations for the given culture.</returns>
+        public static bool HasLocalizationsFor(this Mod mod, GameCulture culture) => HasLocalizationsFor(mod, culture.LegacyId);
+        /// <summary>
+        /// Checks if this mod has localizations for a given <see cref="MoreLocalesCulture"/>.
+        /// </summary>
+        /// <param name="mod">The mod.</param>
+        /// <param name="culture">The <see cref="MoreLocalesCulture"/> instance.</param>
+        /// <returns>Whether or not this mod has localizations for the given culture.</returns>
+        public static bool HasLocalizationsFor(this Mod mod, ref MoreLocalesCulture culture) => HasLocalizationsFor(mod, culture.Culture);
+        /// <summary>
+        /// Checks if this mod has localizations for a given <see cref="ModCulture"/> type.
+        /// </summary>
+        /// <param name="mod">The mod.</param>
+        /// <typeparam name="TCulture">The ModCulture type.</typeparam>
+        /// <returns>Whether or not this mod has localizations for the given culture.</returns>
+        public static bool HasLocalizationsFor<TCulture>(this Mod mod) where TCulture : ModCulture => HasLocalizationsFor(mod, ref GetCulture<TCulture>());
+        internal static void InitCustomCultureModsArray()
+        {
+            HashSet<Mod> mods = new(extraCulturesV2.Length) { MoreLocales.Instance };
+            for (int i = 0; i < extraCulturesV2.Length; i++)
+            {
+                ref MoreLocalesCulture culture = ref extraCulturesV2[i];
+                if (culture.Mod != null && !mods.Contains(culture.Mod))
+                    mods.Add(culture.Mod);
+            }
+            _modsThatAddCustomCultures = [.. mods];
         }
         private static void RegisterVanillaCultures()
         {
@@ -491,6 +577,8 @@ namespace MoreLocales.Core
                 throw new NullReferenceException($"The parameter {languageCode} cannot be null for cultures that do not copy existing {nameof(GameCulture)}s.");
             }
 
+            Logging.tML.Info($"[MoreLocales] Culture {internalName} was registered by {(mod == MoreLocales.Instance ? "MoreLocales" : mod?.Name ?? "vanilla")}");
+
             MoreLocalesCulture newCulture = new(childCulture, internalName, fallbackCulture, hasSubtitle, hasDescription, grammarData, available, buttonDrawData, mod);
 
             if (extraCulturesV2.Length < _registeredCount + 1)
@@ -519,7 +607,7 @@ namespace MoreLocales.Core
                     mod.Logger.Warn("SupportForNewPluralization: Couldn't find GameCulture.LegacyId loading");
                     return;
                 }
-                c.EmitCall(typeof(CultureHelper).GetMethod("MapLegacyIDToPluralizationID")); // get the ID of a valid vanilla culture or 10 for custom
+                c.EmitCall(typeof(CultureHelper).GetMethod(nameof(CultureHelper.MapLegacyIDToPluralizationID))); // get the ID of a valid vanilla culture or 10 for custom
 
                 ILLabel[] targets = null;
 
@@ -551,7 +639,7 @@ namespace MoreLocales.Core
                 c.EmitLdloc0(); // mod10
                 c.EmitLdloc1(); // mod100
                 c.EmitLdarg1(); // count
-                c.EmitCall(typeof(CultureHelper).GetMethod("CustomPluralization"));
+                c.EmitCall(typeof(CultureHelper).GetMethod(nameof(CultureHelper.CustomPluralization), BindingFlags.Static | BindingFlags.NonPublic));
                 c.EmitRet();
 
                 c.Index = labelIndex;

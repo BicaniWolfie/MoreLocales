@@ -5,16 +5,39 @@ using Terraria;
 
 namespace MoreLocales.Utilities
 {
+    /// <summary>
+    /// Contains some helpers to work with <see cref="GameCulture"/> and <see cref="MoreLocalesCulture"/>.
+    /// </summary>
     public static class CultureHelper
     {
+        /// <summary>
+        /// Checks if a given MoreLocales culture is active.
+        /// </summary>
+        /// <param name="customCulture">Culture.</param>
+        /// <returns></returns>
         public static bool CustomCultureActive(CultureNamePlus customCulture) => LanguageManager.Instance.ActiveCulture.LegacyId == (int)customCulture;
+        /// <summary>
+        /// Internal name for a <see cref="GameCulture"/>.
+        /// </summary>
+        /// <param name="culture">The culture.</param>
+        /// <returns></returns>
         public static string FullName(this GameCulture culture) => MoreLocalesAPI.extraCulturesV2[culture.LegacyId].Name; // culture.IsCustom() ? ((CultureNamePlus)culture.LegacyId).ToString() : ((CultureName)culture.LegacyId).ToString();
+        /// <summary>
+        /// Checks if this culture isn't vanilla.
+        /// </summary>
+        /// <param name="culture">The culture.</param>
+        /// <returns></returns>
         public static bool IsCustom(this GameCulture culture) => !MoreLocalesAPI.extraCulturesV2[culture.LegacyId].Vanilla;
+        /// <summary>
+        /// Checks if the provided legacy ID corresponds to an actual culture or not.
+        /// </summary>
+        /// <param name="culture"></param>
+        /// <returns></returns>
         public static bool IsValid(int culture) => culture > 0 && culture < MoreLocalesAPI.extraCulturesV2.Length;
         /// <summary>
-        /// Maps a custom culture's ID to a vanilla culture with the same pluralization rule. Returns 10 for <see cref="PluralizationStyle.Custom"/>.
+        /// Maps a custom culture's legacy ID to a vanilla culture with the same pluralization rule. Returns 10 for <see cref="PluralizationStyle.Custom"/>.
         /// </summary>
-        /// <param name="realID"></param>
+        /// <param name="realID">The legacy ID.</param>
         /// <returns></returns>
         public static int MapLegacyIDToPluralizationID(int realID)
         {
@@ -22,11 +45,18 @@ namespace MoreLocales.Utilities
                 return realID;
             return (int)MoreLocalesAPI.extraCulturesV2[realID].GrammarData.PluralizationRule;
         }
-        public static int CustomPluralization(int c, int mod10, int mod100, int count)
+        internal static int CustomPluralization(int c, int mod10, int mod100, int count)
         {
             return MoreLocalesAPI.extraCulturesV2[c].GrammarData.CustomPluralizationRule(count, mod10, mod100);
         }
         #region Pluralization Rules
+        /// <summary>
+        /// cs-CZ style pluralization.
+        /// </summary>
+        /// <param name="count">The amount.</param>
+        /// <param name="mod10">The amount % 10.</param>
+        /// <param name="mod100">The amount % 100.</param>
+        /// <returns></returns>
         public static int czechPlural(int count, int mod10, int mod100)
         {
             if (count == 1)
@@ -35,12 +65,26 @@ namespace MoreLocales.Utilities
                 return 1;
             return 2;
         }
+        /// <summary>
+        /// tr-TR style pluralization.
+        /// </summary>
+        /// <param name="count">The amount.</param>
+        /// <param name="mod10">The amount % 10.</param>
+        /// <param name="mod100">The amount % 100.</param>
+        /// <returns></returns>
         public static int turkishPlural(int count, int mod10, int mod100)
         {
             if (count > 1)
                 return 1;
             return 0;
         }
+        /// <summary>
+        /// ro-RO style pluralization.
+        /// </summary>
+        /// <param name="count">The amount.</param>
+        /// <param name="mod10">The amount % 10.</param>
+        /// <param name="mod100">The amount % 100.</param>
+        /// <returns></returns>
         public static int romanianPlural(int count, int mod10, int mod100)
         {
             if (count == 1)
@@ -56,6 +100,7 @@ namespace MoreLocales.Utilities
         /// <param name="i"></param>
         /// <returns></returns>
         public static string GetRealName(this Item i) => i._nameOverride ?? Lang.GetItemNameValue(i.type);
+        /// <inheritdoc cref="MoreLocalesAPI.RegisterCulture(string, string, int, bool, bool, GrammarData, Func{bool}, LanguageButtonDrawData, Mod)"/>
         public static ref MoreLocalesCulture RegisterCulture(this Mod mod,
             string internalName,
             string languageCode,

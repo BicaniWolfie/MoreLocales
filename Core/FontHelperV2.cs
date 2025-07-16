@@ -16,9 +16,19 @@ namespace MoreLocales.Core
     /// <param name="Font">The child font</param>
     /// <param name="OverrideParent">Whether or not this font should override the parent font's character if the parent font contains that character</param>
     public readonly record struct ChildFont(Asset<DynamicSpriteFont> Font, Func<bool> OverrideParent = null);
+    /// <summary>
+    /// Contains data to include fonts inside other fonts.
+    /// </summary>
+    /// <param name="children"></param>
     public readonly struct ChildFontData(ChildFont[] children) : IEnumerable<ChildFont>
     {
+        /// <summary>
+        /// Children fonts which can override the parent.
+        /// </summary>
         public readonly ChildFont[] Children = children;
+        /// <summary>
+        /// Waits for the children assets to be loaded.
+        /// </summary>
         public readonly void Nudge()
         {
             for (int i = 0; i < Children.Length; i++)
@@ -29,7 +39,7 @@ namespace MoreLocales.Core
                     child.Font.Wait();
             }
         }
-        public static ChildFontData Create(string[] fileNames, Func<bool>[] overrideConds)
+        internal static ChildFontData Create(string[] fileNames, Func<bool>[] overrideConds)
         {
             if (fileNames.Length != overrideConds.Length)
                 throw new ArgumentException("FileNames and OverrideConds params must be the same length");
@@ -43,12 +53,12 @@ namespace MoreLocales.Core
 
             return new ChildFontData(children);
         }
-
+        /// <inheritdoc/>
         public IEnumerator<ChildFont> GetEnumerator()
         {
             return ((IEnumerable<ChildFont>)Children).GetEnumerator();
         }
-
+        /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator()
         {
             return Children.GetEnumerator();
@@ -57,7 +67,8 @@ namespace MoreLocales.Core
     internal class FontHelperV2
     {
         /// <summary>
-        /// I'm DEAD my guy
+        /// I'm DEAD my guy<para/>
+        /// (Returns the correct children for a given font in the worst way possible.)
         /// </summary>
         public static ChildFontData GetChildren(DynamicSpriteFont source)
         {

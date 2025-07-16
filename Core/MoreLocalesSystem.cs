@@ -48,6 +48,8 @@ namespace MoreLocales.Core
         /// <inheritdoc/>
         public override void OnLocalizationsLoaded()
         {
+            if (!MoreLocalesSets._didFirstLoad)
+                MoreLocalesAPI.InitModLocalizationFlags();
             MoreLocalesSets.ReloadedLocalizations();
         }
         private static void GoToBetterLangMenuInstead(ILContext il)
@@ -167,8 +169,15 @@ namespace MoreLocales.Core
             return;
             if (Main.keyState.IsKeyDown(Keys.F) && !Main.oldKeyState.IsKeyDown(Keys.F))
             {
+                for (int i = 0; i < MoreLocalesAPI.extraCulturesV2.Length; i++)
+                {
+                    var culture = MoreLocalesAPI.extraCulturesV2[i];
+                    Main.NewText($"{culture.Name}, {culture.Mod?.Name ?? "null"}, {culture.FunctionalOwner}");
+                }
+                /*
                 Main.NewText(Language.Exists("Mods.MoreLocales.VanillaData.InflectionData.Prefixes.Large"));
                 Main.NewText(LangUtils.CategoryExists("Mods.MoreLocales.VanillaData.InflectionData.Prefixes.Large"));
+                */
                 //Main.NewText(LangUtils.)
                 /*
                 foreach (string category in LangUtils.Categories)
@@ -183,7 +192,7 @@ namespace MoreLocales.Core
                 */
                 /*
                 MoreLocalesSets.ReloadedLocalizations();
-                if (!MoreLocalesSets._contentReady || LangUtils.FilesWillBeReloadedDueToCommentsChange)
+                if (!MoreLocalesSets._didFirstLoad || LangUtils.FilesWillBeReloadedDueToCommentsChange)
                     Main.NewText($"CAN'T {Main.rand.NextDouble()}");
                 */
                 /*

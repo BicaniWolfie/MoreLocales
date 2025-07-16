@@ -5,6 +5,8 @@ using Terraria.DataStructures;
 using Terraria.Graphics.Shaders;
 using Terraria.ID;
 
+#pragma warning disable
+
 namespace MoreLocales.Resources.Examples
 {
     // Since this class implements ILoadable, we can use AutoloadAttribute to stop loading conditionally.
@@ -82,3 +84,5 @@ namespace MoreLocales.Resources.Examples
         }
     }
 }
+
+#pragma warning restore

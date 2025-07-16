@@ -12,6 +12,7 @@ using System.Text.RegularExpressions;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader.Core;
+using static System.Net.Mime.MediaTypeNames;
 using static Terraria.ModLoader.LocalizationLoader;
 
 #pragma warning disable CS1572
@@ -31,6 +32,109 @@ namespace MoreLocales.Utilities
         /// # This is my comment!
         /// </summary>
         Hash,
+    }
+    /// <summary>
+    /// Like <see cref="LocalizedText"/>, but contains multiple <see cref="LocalizedText"/>s from different <see cref="Mod"/>s inside that refer to the same thing.<para/>
+    /// Designed to always retrieve the value from the original source for en-US.
+    /// </summary>
+    public sealed class MultisourceLocalizedText
+    {
+        private Mod originalSource;
+        private readonly Dictionary<Mod, LocalizedText> _map = [];
+        /// <summary>
+        /// Creates a new instance using the given localized texts.
+        /// </summary>
+        /// <param name="original">The 'base text' that is given by the source mod.</param>
+        /// <param name="alts">The 'alt texts' given by other mods.</param>
+        public MultisourceLocalizedText(LocalizedText original, params LocalizedText[] alts) : this(original.Key, [.. alts.Select(a => a.Key)])
+        {
+
+        }
+        /// <summary>
+        /// Creates a new instance using the given modded localization keys.
+        /// </summary>
+        /// <param name="original">The 'base key' that is given by the source mod.</param>
+        /// <param name="alts">The 'alt keys' given by other mods.</param>
+        /// <exception cref="InvalidOperationException"></exception>
+        public MultisourceLocalizedText(string original, params string[] alts)
+        {
+            WorkString(original, true);
+            for (int i = 0; i < alts.Length; i++)
+            {
+                WorkString(alts[i], false);
+            }
+
+            void WorkString(string key, bool isOriginal)
+            {
+                ArgumentNullException.ThrowIfNull(key);
+
+                string[] parts = key.Split('.');
+
+                if (parts.Length < 3 || parts[0] != "Mods" || !ModLoader.TryGetMod(parts[1], out Mod source))
+                {
+                    throw new InvalidOperationException
+                        (isOriginal
+                        ? "The provided original text must correspond to a valid modded localization entry."
+                        : "The provided alternative texts must correspond to valid modded localization entries.");
+                }
+
+                if (isOriginal)
+                    originalSource = source;
+
+                _map.Add(source, Language.GetText(key));
+            }
+        }
+        /// <summary>
+        /// Gets the appropriate text for the active culture.
+        /// </summary>
+        /// <param name="backup">A backup suffix for lookup if a text isn't found. Used like this internally: <c>'Mods.LookupMod.{backup}'</c></param>
+        /// <returns></returns>
+        public LocalizedText GetCurrent(string backup = null) => GetForCulture(ref MoreLocalesAPI.ActiveCulture, backup);
+        /// <summary>
+        /// Gets the appropriate text for the given culture (not translated in that culture, just contained in it).
+        /// </summary>
+        /// <param name="culture">The culture.</param>
+        /// <param name="backup">A backup suffix for lookup if a text isn't found. Used like this internally: <c>'Mods.LookupMod.{backup}'</c></param>
+        /// <returns></returns>
+        public LocalizedText GetForCulture(ref MoreLocalesCulture culture, string backup = null)
+        {
+            LocalizedText text;
+
+            if (culture.Culture == GameCulture.DefaultCulture || originalSource.HasLocalizationsFor(ref culture))
+                text = GetFromMod(originalSource, backup);
+            else
+                text = GetFromMod(culture.FunctionalOwner, backup);
+
+            return text;
+        }
+        /// <summary>
+        /// Gets the appropriate text using the given mod.
+        /// </summary>
+        /// <param name="mod">The mod.</param>
+        /// <param name="key">A fully qualified modded key (i. e. including <c>'Mods.ModName'</c>) or a suffix as used in <see cref="Mod.GetLocalizationKey(string)"/>.</param>
+        /// <returns></returns>
+        /// <exception cref="InvalidOperationException"></exception>
+        public LocalizedText GetFromMod(Mod mod, string key = null)
+        {
+            if (_map.TryGetValue(mod, out var result))
+                return result;
+
+            if (key is null)
+                throw new InvalidOperationException($"Mod {mod} has no entry in this {nameof(MultisourceLocalizedText)} and no lookup key was provided");
+            
+            var parts = key.Split('.');
+
+            if (parts.Length > 2 && parts[0] == "Mods" && ModLoader.TryGetMod(parts[1], out Mod test) && mod == test)
+            {
+                LocalizedText text = Language.GetText(key);
+                _map.Add(mod, text);
+                return text;
+            }
+
+            LocalizedText text0 = Language.GetText(mod.GetLocalizationKey(key));
+            _map.Add(mod, text0);
+            return text0;
+        }
     }
     /// <summary>
     /// Contains various helper methods for working with a mod's localization files.<para/>
@@ -380,7 +484,7 @@ namespace MoreLocales.Utilities
         {
             TmodFile file = mod.File;
 
-            if (!file.IsOpen)
+            if (file is null || !file.IsOpen)
                 return null;
 
             // allocate the span for comparison

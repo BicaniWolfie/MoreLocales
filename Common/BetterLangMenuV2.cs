@@ -20,24 +20,24 @@ namespace MoreLocales.Common
     /// </summary>
     public static class BetterLangMenuV2
     {
-        private readonly struct ButtonText
+        private struct ButtonText
         {
-            public readonly LocalizedText title;
-            public readonly LocalizedText subtitle;
-            public readonly LocalizedText description;
-            public ButtonText(MoreLocalesCulture source)
+            public MultisourceLocalizedText title;
+            public MultisourceLocalizedText subtitle;
+            public MultisourceLocalizedText description;
+            public ButtonText(ref MoreLocalesCulture source)
             {
                 string cultureName = source.Name;
-                string culturesKey = $"Mods.{source.OwnerFunctionalName}.Cultures";
+                string culturesKey = source.FunctionalOwner.GetLocalizationKey("Cultures");
                 string cultureKey = $"{culturesKey}.{cultureName}";
 
-                title = Language.GetOrRegister($"{cultureKey}.Title");
+                title = new(Language.GetOrRegister($"{cultureKey}.Title"));
 
                 if (source.HasSubtitle)
-                    subtitle = Language.GetOrRegister($"{cultureKey}.Subtitle");
+                    subtitle = new(Language.GetOrRegister($"{cultureKey}.Subtitle"));
 
                 if (source.HasDescription)
-                    description = Language.GetOrRegister($"{cultureKey}.Description");
+                    description = new(Language.GetOrRegister($"{cultureKey}.Description"));
             }
         }
         private struct ButtonDrawInfo
@@ -106,7 +106,7 @@ namespace MoreLocales.Common
             for (int i = 1; i < _drawInfoCache.Length; i++)
             {
                 ref var cache = ref _drawInfoCache[i];
-                cache.buttonText = new ButtonText(MoreLocalesAPI.extraCulturesV2[i]);
+                cache.buttonText = new ButtonText(ref MoreLocalesAPI.extraCulturesV2[i]);
                 cache.drawColor = Color.White;
             }
         }
@@ -353,14 +353,14 @@ namespace MoreLocales.Common
                 if (sub)
                 {
                     float subSize = 0.85f;
-                    string subtitle = text.subtitle.Value;
+                    string subtitle = text.subtitle.GetForCulture(ref culture, $"Cultures.{culture.Name}.Subtitle").Value;
                     float xSize = font.MeasureString(subtitle).X * subSize;
                     Color drawSubColor = Color.Lerp(drawColor, Color.Black, 0.25f);
                     Vector2 drawSubPos = (centerForTitles - new Vector2(xSize * 0.5f, 0f)).Floor();
                     ChatManager.DrawColorCodedStringWithShadow(sb, font, subtitle, drawSubPos, drawSubColor, 0f, Vector2.Zero, new Vector2(subSize));
                 }
 
-                string title = info.buttonText.title.Value;
+                string title = info.buttonText.title.GetForCulture(ref culture, $"Cultures.{culture.Name}.Title").Value;
                 float xSizeTitle = font.MeasureString(title).X;
                 Vector2 drawTitlePos = (centerForTitles - new Vector2(xSizeTitle * 0.5f, sub ? 18f : 10f)).Floor();
                 ChatManager.DrawColorCodedStringWithShadow(sb, font, title, drawTitlePos, drawColor, 0f, Vector2.Zero, Vector2.One);
@@ -403,10 +403,13 @@ namespace MoreLocales.Common
 
                 // handle description
 
-                LocalizedText possibleDesc = info.buttonText.description;
+
+                ref MoreLocalesCulture culture = ref MoreLocalesAPI.extraCulturesV2[index];
+
+                MultisourceLocalizedText possibleDesc = info.buttonText.description;
                 if (possibleDesc != null)
                 {
-                    Main.instance.MouseText(possibleDesc.Value);
+                    Main.instance.MouseText(possibleDesc.GetForCulture(ref culture, $"Cultures.{culture.Name}.Description").Value);
                 }
 
                 // handle hovering
@@ -416,8 +419,6 @@ namespace MoreLocales.Common
                 if (interact && !info.hovered)
                     SoundEngine.PlaySound(in SoundID.MenuTick);
                 info.hovered = true;
-
-                ref MoreLocalesCulture culture = ref MoreLocalesAPI.extraCulturesV2[index];
 
                 // handle clicking
 
