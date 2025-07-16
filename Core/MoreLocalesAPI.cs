@@ -296,14 +296,14 @@ namespace MoreLocales.Core
         }
         private static void RegisterVanillaCultures()
         {
-            var basicRomance = GrammarData.OrderContext(AdjectiveOrder.AfterWithSpace, gpChangesWhenNotDefault);
+            var basicRomance = GrammarData.OrderContext(AdjectiveOrder.AfterWithSpace, InflectionDelegates.inflectionChangesWhenNotDefault);
 
             RegisterCulture(nameof(English),
-                grammarData: GrammarData.Context(gpNeverChanges),
+                grammarData: GrammarData.Context(InflectionDelegates.inflectionNeverChanges),
                 buttonDrawData: new(sheetFrame: (int)English));
 
             RegisterCulture(nameof(German),
-                grammarData: GrammarData.Context(gpChangesWhenNotDefault),
+                grammarData: GrammarData.Context(InflectionDelegates.inflectionChangesWhenNotDefault),
                 buttonDrawData: new(sheetFrame: (int)German));
 
             RegisterCulture(nameof(Italian),
@@ -311,7 +311,7 @@ namespace MoreLocales.Core
                 buttonDrawData: new(sheetFrame: (int)Italian));
 
             RegisterCulture(nameof(French),
-                grammarData: GrammarData.StyleOrderContext(PluralizationStyle.SimpleWithSingularZero, AdjectiveOrder.AfterWithSpace, gpChangesWhenNotDefault),
+                grammarData: GrammarData.StyleOrderContext(PluralizationStyle.SimpleWithSingularZero, AdjectiveOrder.AfterWithSpace, InflectionDelegates.inflectionChangesWhenNotDefault),
                 buttonDrawData: new(sheetFrame: (int)French));
 
             RegisterCulture(nameof(Spanish),
@@ -319,11 +319,11 @@ namespace MoreLocales.Core
                 buttonDrawData: new(sheetFrame: (int)Spanish));
 
             RegisterCulture(nameof(Russian),
-                grammarData: GrammarData.StyleContext(PluralizationStyle.RussianThreeway, gpChangesWhenNotDefault),
+                grammarData: GrammarData.StyleContext(PluralizationStyle.RussianThreeway, InflectionDelegates.inflectionChangesWhenNotDefault),
                 buttonDrawData: new(sheetFrame: (int)Russian));
 
             RegisterCulture(nameof(Chinese),
-                grammarData: GrammarData.StyleOrderContext(PluralizationStyle.None, AdjectiveOrder.Before, gpNeverChanges),
+                grammarData: GrammarData.StyleOrderContext(PluralizationStyle.None, AdjectiveOrder.Before, InflectionDelegates.inflectionNeverChanges),
                 buttonDrawData: new(sheetFrame: (int)Chinese));
 
             RegisterCulture(nameof(Portuguese),
@@ -331,20 +331,20 @@ namespace MoreLocales.Core
                 buttonDrawData: new(sheetFrame: (int)Portuguese));
 
             RegisterCulture(nameof(Polish),
-                grammarData: GrammarData.StyleContext(PluralizationStyle.PolishThreeway, gpChangesWhenNotDefault),
+                grammarData: GrammarData.StyleContext(PluralizationStyle.PolishThreeway, InflectionDelegates.inflectionChangesWhenNotDefault),
                 buttonDrawData: new(sheetFrame: (int)Polish));
         }
         private static void RegisterNativeCustomCultures()
         {
             Mod mod = MoreLocales.Instance;
 
-            var basicRomance = GrammarData.OrderContext(AdjectiveOrder.AfterWithSpace, gpChangesWhenNotDefault);
+            var basicRomance = GrammarData.OrderContext(AdjectiveOrder.AfterWithSpace, InflectionDelegates.inflectionChangesWhenNotDefault);
 
             // MoreLocales provides you with this extension method: Mod.RegisterCulture, for simplicity (mod parameter automatically gets filled).
 
             mod.RegisterCulture(nameof(BritishEnglish),
                 "en-GB",
-                grammarData: GrammarData.Context(gpNeverChanges),
+                grammarData: GrammarData.Context(InflectionDelegates.inflectionNeverChanges),
                 buttonDrawData: new(sheetFrame: (int)BritishEnglish));
 
             mod.RegisterCulture(nameof(Japanese),

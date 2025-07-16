@@ -1687,504 +1687,588 @@ InflectionData: {
 	# For prefixes, the new entries are separated into Masculine, Feminine and Neuter.
 	# Plurality is included in the same way it is normally included in tMod localization files. Read: https://github.com/tModLoader/tModLoader/wiki/Localization#pluralization
 	Prefixes: {
+		# Large | (Groß) | (Grande) | (Grand) | (Grande) | Большой | 大 | (Grande) | Duży
 		Large: {
 			Masculine: Large
 			Feminine: Large
 			Neuter: Large
 		}
 
+		# Massive | (Riesig) | (Massiccio) | imposant(e) | (Enorme) | Массивный | 巨大 | (Enorme) | Solidny
 		Massive: {
 			Masculine: Massive
 			Feminine: Massive
 			Neuter: Massive
 		}
 
+		# Dangerous | (Gefährlich) | (Pericoloso) | (Dangereux) | (Peligroso) | Опасный | 危险 | (Perigoso) | Niebezpieczny
 		Dangerous: {
 			Masculine: Dangerous
 			Feminine: Dangerous
 			Neuter: Dangerous
 		}
 
+		# Savage | (Barbarisch) | (Selvaggio) | (Sauvage) | (Salvaje) | Дикий | 凶残 | (Bárbaro) | Brutalny
 		Savage: {
 			Masculine: Savage
 			Feminine: Savage
 			Neuter: Savage
 		}
 
+		# Sharp | (Scharf) | (Appuntito) | (Aiguisé) | (Afilado) | Острый | 锋利 | (Afiado) | Ostry
 		Sharp: {
 			Masculine: Sharp
 			Feminine: Sharp
 			Neuter: Sharp
 		}
 
+		# Pointy | (Spitz) | (Tagliente) | (Pointu) | (Puntiagudo) | Заостренный | 尖锐 | (Pontudo) | Szpiczasty
 		Pointy: {
 			Masculine: Pointy
 			Feminine: Pointy
 			Neuter: Pointy
 		}
 
+		# Tiny | (Winzig) | (Minuto) | (Minuscule) | (Diminuto) | Маленький | 微小 | (Minúsculo) | Drobny
 		Tiny: {
 			Masculine: Tiny
 			Feminine: Tiny
 			Neuter: Tiny
 		}
 
+		# Terrible | (Schrecklich) | (Terribile) | (Terrible) | (Malo) | Ужасный | 可怕 | (Terrível) | Straszliwy
 		Terrible: {
 			Masculine: Terrible
 			Feminine: Terrible
 			Neuter: Terrible
 		}
 
+		# Small | (Klein) | (Piccolo) | (Petit) | (Pequeño) | Маленький | 小 | (Pequeno) | Mały
 		Small: {
 			Masculine: Small
 			Feminine: Small
 			Neuter: Small
 		}
 
+		# Dull | (Stumpf) | (Opaco) | (Terne) | (Romo) | Тупой | 钝 | (Fraco) | Tępy
 		Dull: {
 			Masculine: Dull
 			Feminine: Dull
 			Neuter: Dull
 		}
 
+		# Unhappy | (Unglücklich) | (Infelice) | (Misérable) | (Infeliz) | Невезучий | 倒霉 | (Infeliz) | Nieszczęśliwy
 		Unhappy: {
 			Masculine: Unhappy
 			Feminine: Unhappy
 			Neuter: Unhappy
 		}
 
+		# Bulky | (Sperrig) | (Ingombrante) | (Mastoc) | (Voluminoso) | Массивный | 笨重 | (Volumoso) | Krzepki
 		Bulky: {
 			Masculine: Bulky
 			Feminine: Bulky
 			Neuter: Bulky
 		}
 
+		# Shameful | (Beschämend) | (Vergognoso) | (Coupable) | (Deshonroso) | Позорный | 可耻 | (Vergonhoso) | Haniebny
 		Shameful: {
 			Masculine: Shameful
 			Feminine: Shameful
 			Neuter: Shameful
 		}
 
+		# Heavy | (Schwer) | (Pesante) | (Lourd) | (Pesado) | Тяжелый | 重 | (Pesado) | Ciężki
 		Heavy: {
 			Masculine: Heavy
 			Feminine: Heavy
 			Neuter: Heavy
 		}
 
+		# Light | (Licht) | (Luce) | (Light) | (Luz) | Свет | 莱特 | (Luz) | Light
 		Light: {
 			Masculine: Light
 			Feminine: Light
 			Neuter: Light
 		}
 
+		# Sighted | (Gesichtet) | (Mirino) | (Voyant) | (Perspicaz) | Пристрелянный | 精准 | (Visto) | Celny
 		Sighted: {
 			Masculine: Sighted
 			Feminine: Sighted
 			Neuter: Sighted
 		}
 
+		# Rapid | (Schnell) | (Rapido) | (Rapide) | (Rápido) | Скорый | 迅速 | (Acelerado) | Błyskawiczny
 		Rapid: {
 			Masculine: Rapid
 			Feminine: Rapid
 			Neuter: Rapid
 		}
 
+		# Hasty | (Hastig) | (Frettoloso) | (Précipité) | (Precipitado) | Стремительный | 急速 | (Rápido) | Szybki
 		Hasty: {
 			Masculine: Hasty
 			Feminine: Hasty
 			Neuter: Hasty
 		}
 
+		# Intimidating | (Einschüchternd) | (Intimidatorio) | (Intimidant) | (Intimidante) | Пугающий | 恐怖 | (Intimidador) | Zastraszający
 		Intimidating: {
 			Masculine: Intimidating
 			Feminine: Intimidating
 			Neuter: Intimidating
 		}
 
+		# Deadly | (Tödlich) | (Mortale) | (Fatal) | (Letal) | Смертельный | 致命 | (Mortal) | Śmiercionośny
 		Deadly: {
 			Masculine: Deadly
 			Feminine: Deadly
 			Neuter: Deadly
 		}
 
+		# Staunch | (Unerschütterlich) | (Convinto) | (Fervent) | (Firme) | Крепкий | 可靠 | (Convicto) | Wierny
 		Staunch: {
 			Masculine: Staunch
 			Feminine: Staunch
 			Neuter: Staunch
 		}
 
+		# Awful | (Schrecklich) | (Mostruoso) | (Atroce) | (Atroz) | Отвратительный | 可畏 | (Terrível) | Okropny
 		Awful: {
 			Masculine: Awful
 			Feminine: Awful
 			Neuter: Awful
 		}
 
+		# Lethargic | (Lethargisch) | (Letargico) | (Léthargique) | (Letárgico) | Летаргический | 无力 | (Letárgico) | Ospały
 		Lethargic: {
 			Masculine: Lethargic
 			Feminine: Lethargic
 			Neuter: Lethargic
 		}
 
+		# Awkward | (Unbeholfen) | (Scomodo) | (Gauche) | (Torpe) | Странный | 粗笨 | (Estranho) | Niewygodny
 		Awkward: {
 			Masculine: Awkward
 			Feminine: Awkward
 			Neuter: Awkward
 		}
 
+		# Powerful | (Mächtig) | (Potente) | (Puissant) | (Poderoso) | Мощный | 强大 | (Poderoso) | Potężny
 		Powerful: {
 			Masculine: Powerful
 			Feminine: Powerful
 			Neuter: Powerful
 		}
 
+		# Mystic | (Mystisch) | (Mistico) | (Mystique) | (Místico) | Загадочный | 神秘 | (Místico) | Mistyczny
 		Mystic: {
 			Masculine: Mystic
 			Feminine: Mystic
 			Neuter: Mystic
 		}
 
+		# Adept | (Geschickt) | (Esperto) | (Adepte) | (Experto) | Экспертный | 精巧 | (Adepto) | Fachowy
 		Adept: {
 			Masculine: Adept
 			Feminine: Adept
 			Neuter: Adept
 		}
 
+		# Masterful | (Meisterhaft) | (Magistrale) | (Autoritaire) | (Maestro) | Грозный | 精湛 | (Mestre) | Mistrzowski
 		Masterful: {
 			Masculine: Masterful
 			Feminine: Masterful
 			Neuter: Masterful
 		}
 
+		# Inept | (Ungeschickt) | (Inetto) | (Inepte) | (Inepto) | Неподходящий | 笨拙 | (Incapaz) | Nieudany
 		Inept: {
 			Masculine: Inept
 			Feminine: Inept
 			Neuter: Inept
 		}
 
+		# Ignorant | (Unwissend) | (Ignorante) | (Ignorant) | (Ignorante) | Грубый | 无知 | (Ignorante) | Prostacki
 		Ignorant: {
 			Masculine: Ignorant
 			Feminine: Ignorant
 			Neuter: Ignorant
 		}
 
+		# Deranged | (Gestört) | (Squilibrato) | (Dérangé) | (Trastornado) | Неуравновешенный | 错乱 | (Demente) | Obłąkany
 		Deranged: {
 			Masculine: Deranged
 			Feminine: Deranged
 			Neuter: Deranged
 		}
 
+		# Intense | (Intensiv) | (Intenso) | (Intense) | (Intenso) | Значительный | 威猛 | (Intenso) | Intensywny
 		Intense: {
 			Masculine: Intense
 			Feminine: Intense
 			Neuter: Intense
 		}
 
+		# Taboo | (Tabu) | (Tabù) | (Tabou) | (Prohibido) | Запрещенный | 禁忌 | (Tabu) | Tabu
 		Taboo: {
 			Masculine: Taboo
 			Feminine: Taboo
 			Neuter: Taboo
 		}
 
+		# Celestial | (Himmlisch) | (Celeste) | (Céleste) | (Celeste) | Небесный | 天界 | (Celestial) | Niebiański
 		Celestial: {
 			Masculine: Celestial
 			Feminine: Celestial
 			Neuter: Celestial
 		}
 
+		# Furious | (Wütend) | (Furioso) | (Furieux) | (Furioso) | Яростный | 狂怒 | (Furioso) | Wściekły
 		Furious: {
 			Masculine: Furious
 			Feminine: Furious
 			Neuter: Furious
 		}
 
+		# Keen | (Scharf) | (Appassionato) | (Appliqué) | (Incisivo) | Заточенный | 锐利 | (Disposto) | Ochoczy
 		Keen: {
 			Masculine: Keen
 			Feminine: Keen
 			Neuter: Keen
 		}
 
+		# Superior | (Überlegen) | (Superiore) | (Supérieur) | (Superior) | Превосходный | 高端 | (Superior) | Ponadprzeciętny
 		Superior: {
 			Masculine: Superior
 			Feminine: Superior
 			Neuter: Superior
 		}
 
+		# Forceful | (Kraftvoll) | (Forte) | (Énergique) | (Fuerte) | Неистовый | 强力 | (Vigoroso) | Gwałtowny
 		Forceful: {
 			Masculine: Forceful
 			Feminine: Forceful
 			Neuter: Forceful
 		}
 
+		# Broken | (Gebrochen) | (Rotto) | (Cassé) | (Roto) | Сломаный | 碎裂 | (Quebrado) | Niesprawny
 		Broken: {
 			Masculine: Broken
 			Feminine: Broken
 			Neuter: Broken
 		}
 
+		# Damaged | (Beschädigt) | (Danneggiato) | (Endommagé) | (Estropeado) | Поврежденный | 破损 | (Danificado) | Uszkodzony
 		Damaged: {
 			Masculine: Damaged
 			Feminine: Damaged
 			Neuter: Damaged
 		}
 
+		# Shoddy | (Schäbig) | (Scadente) | (Exécrable) | (Chapucero) | Некачественный | 粗劣 | (Pobre) | Tandetny
 		Shoddy: {
 			Masculine: Shoddy
 			Feminine: Shoddy
 			Neuter: Shoddy
 		}
 
+		# Quick | (Rasch) | (Veloce) | (Bref) | (Veloz) | Быстрый | 迅捷 | (Rápido) | Prędki
 		Quick: {
 			Masculine: Quick
 			Feminine: Quick
 			Neuter: Quick
 		}
 
+		# Deadly | (Tödlich) | (Mortale) | (Fatal) | (Letal) | Смертельный | 致命 | (Mortal) | Śmiercionośny
 		Deadly2: {
 			Masculine: Deadly
 			Feminine: Deadly
 			Neuter: Deadly
 		}
 
+		# Agile | (Agil) | (Agile) | (Agile) | (Ágil) | Подвижный | 灵活 | (Ágil) | Zwinny
 		Agile: {
 			Masculine: Agile
 			Feminine: Agile
 			Neuter: Agile
 		}
 
+		# Nimble | (Wendig) | (Lesto) | (Leste) | (Listo) | Шустрый | 灵巧 | (Ligeiro) | Chyży
 		Nimble: {
 			Masculine: Nimble
 			Feminine: Nimble
 			Neuter: Nimble
 		}
 
+		# Murderous | (Mörderisch) | (Omicida) | (Meurtrier) | (Asesino) | Убийственный | 残暴 | (Assassino) | Morderczy
 		Murderous: {
 			Masculine: Murderous
 			Feminine: Murderous
 			Neuter: Murderous
 		}
 
+		# Slow | (Langsam) | (Lento) | (Lenteur) | (Lento) | Замедление | 缓慢 | (Lento) | Spowolnienie
 		Slow: {
 			Masculine: Slow
 			Feminine: Slow
 			Neuter: Slow
 		}
 
+		# Sluggish | (Träge) | (Indolente) | (Apathique) | (Perezoso) | Медлительный | 迟钝 | (Vagaroso) | Powolny
 		Sluggish: {
 			Masculine: Sluggish
 			Feminine: Sluggish
 			Neuter: Sluggish
 		}
 
+		# Lazy | (Faul) | (Pigro) | (Paresseux) | (Gandul) | Лентяйский | 呆滞 | (Preguiçoso) | Leniwy
 		Lazy: {
 			Masculine: Lazy
 			Feminine: Lazy
 			Neuter: Lazy
 		}
 
+		# Annoying | (Lästig) | (Fastidioso) | (Ennuyeux) | (Molesto) | Раздражающий | 惹恼 | (Irritante) | Denerwujący
 		Annoying: {
 			Masculine: Annoying
 			Feminine: Annoying
 			Neuter: Annoying
 		}
 
+		# Nasty | (Böse) | (Cattivo) | (Méchant) | (Feo) | Мерзкий | 凶险 | (Nojento) | Paskudny
 		Nasty: {
 			Masculine: Nasty
 			Feminine: Nasty
 			Neuter: Nasty
 		}
 
+		# Manic | (Manisch) | (Maniaco) | (Frénétique) | (Maníaco) | Маниакальный | 狂躁 | (Maníaco) | Maniakalny
 		Manic: {
 			Masculine: Manic
 			Feminine: Manic
 			Neuter: Manic
 		}
 
+		# Hurtful | (Verletzend) | (Offensivo) | (Offensant) | (Hiriente) | Вредный | 致伤 | (Doloroso) | Bolesny
 		Hurtful: {
 			Masculine: Hurtful
 			Feminine: Hurtful
 			Neuter: Hurtful
 		}
 
+		# Strong | (Stark) | (Robusto) | (Fort) | (Vigoroso) | Прочный | 强劲 | (Forte) | Silny
 		Strong: {
 			Masculine: Strong
 			Feminine: Strong
 			Neuter: Strong
 		}
 
+		# Unpleasant | (Unangenehm) | (Sgradevole) | (Désagréable) | (Desagradable) | Неприятный | 粗鲁 | (Desagradável) | Nieprzyjemny
 		Unpleasant: {
 			Masculine: Unpleasant
 			Feminine: Unpleasant
 			Neuter: Unpleasant
 		}
 
+		# Weak | (Schwach) | (Debole) | (Faible) | (Débil) | Слабый | 软弱 | (Fraco) | Słabość
 		Weak: {
 			Masculine: Weak
 			Feminine: Weak
 			Neuter: Weak
 		}
 
+		# Ruthless | (Rücksichtslos) | (Spietato) | (Impitoyable) | (Despiadado) | Безжалостный | 无情 | (Implacável) | Bezwzględny
 		Ruthless: {
 			Masculine: Ruthless
 			Feminine: Ruthless
 			Neuter: Ruthless
 		}
 
+		# Frenzying | (Rasend) | (Frenetico) | (Déchaîné) | (Frenético) | Буйный | 暴怒 | (Enlouquecedor) | Furiacki
 		Frenzying: {
 			Masculine: Frenzying
 			Feminine: Frenzying
 			Neuter: Frenzying
 		}
 
+		# Godly | (Fromm) | (Devoto) | (Divin) | (Piadoso) | Праведный | 神级 | (Divino) | Boski
 		Godly: {
 			Masculine: Godly
 			Feminine: Godly
 			Neuter: Godly
 		}
 
+		# Demonic | (Dämonisch) | (Diabolico) | (Démoniaque) | (Demoníaco) | Демонический | 恶魔 | (Demoníaco) | Demoniczny
 		Demonic: {
 			Masculine: Demonic
 			Feminine: Demonic
 			Neuter: Demonic
 		}
 
+		# Zealous | (Eifrig) | (Zelante) | (Zélé) | (Fanático) | Пылкий | 狂热 | (Zeloso) | Zaprzysięgły
 		Zealous: {
 			Masculine: Zealous
 			Feminine: Zealous
 			Neuter: Zealous
 		}
 
+		# Hard | (Schwer) | (Duro) | (Difficile) | (Duro) | Твердый | 坚硬 | (Difícil) | Twardy
 		Hard: {
 			Masculine: Hard
 			Feminine: Hard
 			Neuter: Hard
 		}
 
+		# Guarding | (Schützend) | (Protettivo) | (Protecteur) | (Protector) | Защитный | 守护 | (Protetor) | Strzegący
 		Guarding: {
 			Masculine: Guarding
 			Feminine: Guarding
 			Neuter: Guarding
 		}
 
+		# Armored | (Gepanzert) | (Corazzato) | (Blindé) | (Blindado) | Укрепленный | 装甲 | (Blindado) | Opancerzony
 		Armored: {
 			Masculine: Armored
 			Feminine: Armored
 			Neuter: Armored
 		}
 
+		# Warding | (Abwehrend) | (Difensivo) | (Défenseur) | (Defensivo) | Охранный | 护佑 | (Vigia) | Chroniący
 		Warding: {
 			Masculine: Warding
 			Feminine: Warding
 			Neuter: Warding
 		}
 
+		# Arcane | (Geheimnisvoll) | (Arcano) | (Obscur) | (Arcano) | Тайный | 奥秘 | (Arcano) | Tajemny
 		Arcane: {
 			Masculine: Arcane
 			Feminine: Arcane
 			Neuter: Arcane
 		}
 
+		# Precise | (Präzise) | (Preciso) | (Précis) | (Preciso) | Точный | 精确 | (Preciso) | Precyzyjny
 		Precise: {
 			Masculine: Precise
 			Feminine: Precise
 			Neuter: Precise
 		}
 
+		# Lucky | (Glückspilz) | (Fortunato) | (Chance) | (Afortunado) | Счастливый | 幸运 | (Sortudo) | Fart
 		Lucky: {
 			Masculine: Lucky
 			Feminine: Lucky
 			Neuter: Lucky
 		}
 
+		# Jagged | (Gezackt) | (Frastagliato) | (Denté) | (Dentado) | Зазубренный | 锯齿 | (Dentado) | Postrzępiony
 		Jagged: {
 			Masculine: Jagged
 			Feminine: Jagged
 			Neuter: Jagged
 		}
 
+		# Spiked | (Stachelig) | (Chiodato) | (Perçant) | (Claveteado) | Шипастый | 尖刺 | (Perfurante) | Kolczasty
 		Spiked: {
 			Masculine: Spiked
 			Feminine: Spiked
 			Neuter: Spiked
 		}
 
+		# Angry | (Wütend) | (Arrabbiato) | (Furieux) | (Enojado) | Сердящий | 愤怒 | (Raivoso) | Rozzłoszczony
 		Angry: {
 			Masculine: Angry
 			Feminine: Angry
 			Neuter: Angry
 		}
 
+		# Menacing | (Bedrohlich) | (Minaccioso) | (Menaçant) | (Amenazante) | Грозный | 险恶 | (Ameaçador) | Groźny
 		Menacing: {
 			Masculine: Menacing
 			Feminine: Menacing
 			Neuter: Menacing
 		}
 
+		# Brisk | (Rege) | (Vivace) | (Vif) | (Enérgico) | Бойкий | 轻快 | (Fugaz) | Energiczny
 		Brisk: {
 			Masculine: Brisk
 			Feminine: Brisk
 			Neuter: Brisk
 		}
 
+		# Fleeting | (Flüchtig) | (Fugace) | (Fugace) | (Fugaz) | Молниеносный | 快速 | (Apressado) | Przelotny
 		Fleeting: {
 			Masculine: Fleeting
 			Feminine: Fleeting
 			Neuter: Fleeting
 		}
 
+		# Hasty | (Hastig) | (Frettoloso) | (Précipité) | (Precipitado) | Стремительный | 急速 | (Rápido) | Szybki
 		Hasty2: {
 			Masculine: Hasty
 			Feminine: Hasty
 			Neuter: Hasty
 		}
 
+		# Quick | (Rasch) | (Veloce) | (Bref) | (Veloz) | Быстрый | 迅捷 | (Rápido) | Prędki
 		Quick2: {
 			Masculine: Quick
 			Feminine: Quick
 			Neuter: Quick
 		}
 
+		# Wild | (Wild) | (Selvaggio) | (Féroce) | (Salvaje) | Дикий | 狂野 | (Selvagem) | Dziki
 		Wild: {
 			Masculine: Wild
 			Feminine: Wild
 			Neuter: Wild
 		}
 
+		# Rash | (Rasch) | (Temerario) | (Imprudent) | (Temerario) | Безудержный | 鲁莽 | (Impetuoso) | Nierozważny
 		Rash: {
 			Masculine: Rash
 			Feminine: Rash
 			Neuter: Rash
 		}
 
+		# Intrepid | (Unerschrocken) | (Intrepido) | (Intrépide) | (Intrépido) | Отважный | 勇猛 | (Intrépido) | Nieustraszony
 		Intrepid: {
 			Masculine: Intrepid
 			Feminine: Intrepid
 			Neuter: Intrepid
 		}
 
+		# Violent | (Gewalttätig) | (Violento) | (Violent) | (Violento) | Жестокий | 暴力 | (Violento) | Agresywny
 		Violent: {
 			Masculine: Violent
 			Feminine: Violent
 			Neuter: Violent
 		}
 
+		# Legendary | (Legendär) | (Leggendario) | (Légendaire) | (Legendario) | Легендарный | 传奇 | (Lendário) | Legendarny
 		Legendary: {
 			Masculine: Legendary
 			Feminine: Legendary
 			Neuter: Legendary
 		}
 
+		# Unreal | (Unwirklich) | (Irreale) | (Iréel) | (Irreal) | Нереальный | 虚幻 | (Surreal) | Nierealny
 		Unreal: {
 			Masculine: Unreal
 			Feminine: Unreal
 			Neuter: Unreal
 		}
 
+		# Mythical | (Mythisch) | (Mitico) | (Mythique) | (Mítico) | Загадочный | 神话 | (Mítico) | Mityczny
 		Mythical: {
 			Masculine: Mythical
 			Feminine: Mythical
 			Neuter: Mythical
 		}
 
+		# Legendary | (Legendär) | (Leggendario) | (Légendaire) | (Legendario) | Легендарный | 传奇 | (Lendário) | Legendarny
 		Legendary2: {
 			Masculine: Legendary
 			Feminine: Legendary

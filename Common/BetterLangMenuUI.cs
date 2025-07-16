@@ -2,7 +2,6 @@
 using Terraria;
 using Terraria.Audio;
 using Terraria.GameContent;
-using Terraria.GameInput;
 using Terraria.ID;
 using Terraria.UI;
 using Terraria.UI.Chat;

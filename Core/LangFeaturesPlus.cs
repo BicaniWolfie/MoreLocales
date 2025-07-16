@@ -5,6 +5,8 @@ using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using System.Reflection;
+using System.IO;
+using System.Text;
 
 namespace MoreLocales.Core
 {
@@ -214,7 +216,7 @@ namespace MoreLocales.Core
 
             MoreLocalesSets.CachedInflectionData[context.type].Deconstruct(out GrammaticalGender gender, out Pluralization pluralization);
 
-            if (!LanguageManager.Instance.ActiveCulture.GPDataChangesAdjectiveForm(gender, pluralization))
+            if (!LanguageManager.Instance.ActiveCulture.InflectionDataChangesAdjectiveForm(gender, pluralization))
                 return Lang.prefix[prefix]; // adjective form stays the same
 
             bool vanilla = prefix < PrefixID.Count;
@@ -223,15 +225,16 @@ namespace MoreLocales.Core
             if (!vanilla)
                 modPrefix = PrefixLoader.GetPrefix(prefix);
 
+            if (!(modPrefix?.Mod ?? MoreLocales.Instance).TryGetInflectionFileKey(out string inflectionFile))
+                return Lang.prefix[prefix];
+
             string prefixName = vanilla ? PrefixID.Search.GetName(prefix) : modPrefix.Name;
 
             string genderName = GenderNames[(byte)gender];
 
-            Mod target = vanilla ? MoreLocales.Instance : modPrefix.Mod;
-            string preprefix = vanilla ? "VanillaData." : string.Empty;
-            return target.GetLocalization($"{preprefix}InflectionData.Prefixes.{prefixName}.{genderName}", () => Lang.prefix[prefix].Value).WithFormatArgs((byte)pluralization);
+            return Language.GetOrRegister($"{inflectionFile}.Prefixes.{prefixName}.{genderName}", () => Lang.prefix[prefix].Value).WithFormatArgs((byte)pluralization);
         }
-        internal static void EnsureKeysForPrefixExist(int prefix)
+        internal static void EnsureKeysForPrefixExist(int prefix, bool addComments)
         {
             bool vanilla = prefix < PrefixID.Count;
             ModPrefix modPrefix = null;
@@ -239,37 +242,56 @@ namespace MoreLocales.Core
             if (!vanilla)
                 modPrefix = PrefixLoader.GetPrefix(prefix);
 
+            if (!(modPrefix?.Mod ?? MoreLocales.Instance).TryGetInflectionFileKey(out string inflectionFile))
+                return;
+
             string prefixName = vanilla ? PrefixID.Search.GetName(prefix) : modPrefix.Name;
 
-            Mod target = vanilla ? MoreLocales.Instance : modPrefix.Mod;
-            string preprefix = vanilla ? "VanillaData." : string.Empty;
+            string fullNoGender = $"{inflectionFile}.Prefixes.{prefixName}";
 
             for (int i = 0; i < GenderNames.Length; i++)
             {
-                target.GetLocalization($"{preprefix}InflectionData.Prefixes.{prefixName}.{GenderNames[i]}", () => Lang.prefix[prefix]?.Value ?? prefixName);
-                // AAAA I NEED CATEGORY SUPPORT FOR THIS ONE
-                // target.AddComment
+                Language.GetOrRegister($"{fullNoGender}.{GenderNames[i]}", () => Lang.prefix[prefix].Value ?? prefixName);
+
+                if (addComments)
+                {
+                    string commentBody =
+                        vanilla
+                        ? string.Join(" | ", LangUtils.GetVanillaLocalizationValues(Lang.prefix[prefix]))
+                        : prefixName;
+                    LangUtils.AddComment(fullNoGender, commentBody, HjsonCommentType.Hash);
+                }
             }
         }
-        public static bool GPDataChangesAdjectiveForm(this GameCulture c, InflectionData data)
+#pragma warning disable CS1572
+        /// <summary>
+        /// Checks if this culture changes the adjective form based on grammatical gender and/or pluralization of the noun.<para/>
+        /// This is added to a custom culture via the <see cref="GrammarData"/> parameter when registering manually, or <see cref="ModCulture.ContextChangesAdjective(GrammaticalGender, Pluralization)"/> when using the autoloaded culture API.
+        /// </summary>
+        /// <param name="c">The culture to check.</param>
+        /// <param name="data">The inflection data to check for.</param>
+        /// <param name="gender">The grammatical gender to check for.</param>
+        /// <param name="pluralization">The pluralization to check for.</param>
+        /// <returns></returns>
+#pragma warning restore
+        public static bool InflectionDataChangesAdjectiveForm(this GameCulture c, InflectionData data)
         {
             data.Deconstruct(out GrammaticalGender gender, out Pluralization pluralization);
-            return c.GPDataChangesAdjectiveForm(gender, pluralization);
+            return c.InflectionDataChangesAdjectiveForm(gender, pluralization);
         }
-        public static bool GPDataChangesAdjectiveForm(this GameCulture c, GrammaticalGender gender, Pluralization pluralization)
+        /// <inheritdoc cref="InflectionDataChangesAdjectiveForm(GameCulture, InflectionData)"/>
+        public static bool InflectionDataChangesAdjectiveForm(this GameCulture c, GrammaticalGender gender, Pluralization pluralization)
         {
             var possibleFunc = MoreLocalesAPI.extraCulturesV2[c.LegacyId].GrammarData.ContextChangesAdjective;
             if (possibleFunc is null)
                 return true;
             return possibleFunc(gender, pluralization);
         }
-        public static bool gpNeverChanges(GrammaticalGender gender, Pluralization pluralization) => false;
-        public static bool gpChangesWhenNotDefault(GrammaticalGender gender, Pluralization pluralization) => gender > 0 || pluralization > 0;
         /// <summary>
         /// Only items that can be reforged should be able to affect adjectives.
         /// </summary>
         /// <param name="type">The type of the item to look up.</param>
-        /// <returns></returns>
+        /// <returns>Whether or not this item can have prefixes for localization purposes.</returns>
         public static bool ItemIsGenderPluralizable(int type)
         {
             Item dummy = ContentSamples.ItemsByType[type];
@@ -280,6 +302,12 @@ namespace MoreLocales.Core
             retur
             */
         }
+        /// <summary>
+        /// Gets this item type's current inflection data.
+        /// </summary>
+        /// <param name="type">Item type.</param>
+        /// <param name="addComments">Add comments to the localization file or not.</param>
+        /// <returns></returns>
         public static InflectionData GetItemInflection(int type, bool addComments = false)
         {
             if (!ItemIsGenderPluralizable(type))
@@ -298,11 +326,11 @@ namespace MoreLocales.Core
 
             LocalizedText data = null;
 
-            Mod target = vanilla ? MoreLocales.Instance : modItem.Mod;
-            string preprefix = vanilla ? "VanillaData." : string.Empty;
+            if (!(modItem?.Mod ?? MoreLocales.Instance).TryGetInflectionFileKey(out string inflectionFile))
+                return InflectionData.Default;
 
-            string key = $"{preprefix}InflectionData.Items.{itemName}";
-            data = target.GetLocalization(key, () => "/");
+            string key = $"{inflectionFile}.Items.{itemName}";
+            data = Language.GetOrRegister(key, () => "/");
 
             if (addComments)
             {
@@ -310,7 +338,7 @@ namespace MoreLocales.Core
                     vanilla
                     ? string.Join(" | ", LangUtils.GetVanillaLocalizationValues($"ItemName.{itemName}"))
                     : Lang.GetItemName(type).Value;
-                target.AddComment(key, $"DisplayName: {commentBody}", HjsonCommentType.Hash);
+                LangUtils.AddComment(key, $"DisplayName: {commentBody}", HjsonCommentType.Hash);
             }
 
             if (TryParse(data.Value, out InflectionData inflectionData))
@@ -318,7 +346,14 @@ namespace MoreLocales.Core
 
             return InflectionData.Default;
         }
-        public static bool TryParse(string value, out InflectionData result)
+        /// <summary>
+        /// Attempts to parse a string containing inflection data into <see cref="InflectionData"/>.
+        /// </summary>
+        /// <param name="value">The inflection data string.</param>
+        /// <param name="result">The result of the parsing operation if successful.</param>
+        /// <param name="sourceMod">The mod this value belongs to. If your mod contains pluralization aliases (set by the localizers), you must set this to your mod instance.</param>
+        /// <returns>Whether or not the operation was successful.</returns>
+        public static bool TryParse(string value, out InflectionData result, Mod sourceMod = null)
         {
             result = InflectionData.Default;
 
@@ -354,10 +389,14 @@ namespace MoreLocales.Core
                 {
                     finalPluralization = specialResult;
                 }
-                else
+                else if (sourceMod != null)
                 {
                     // custom alias support
-                    LocalizedText customAliasEntry = MoreLocales.Instance.GetLocalization("VanillaData.InflectionData.PluralizationAliases");
+                    if (!sourceMod.TryGetInflectionFileKey(out string inflectionFile))
+                        return false;
+
+                    LocalizedText customAliasEntry = Language.GetOrRegister($"{inflectionFile}.PluralizationAliases");
+
                     string[] aliasesCollection = new string[3];
                     if (!string.IsNullOrEmpty(customAliasEntry.Value)) // we have aliases
                     {
@@ -401,17 +440,136 @@ namespace MoreLocales.Core
 
             return true;
         }
+        /// <summary>
+        /// Deconstructs an <see cref="InflectionData"/> into its individual parts.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <param name="gender"></param>
+        /// <param name="pluralization"></param>
         public static void Deconstruct(this InflectionData data, out GrammaticalGender gender, out Pluralization pluralization)
         {
             gender = (GrammaticalGender)((byte)data & 0xF);
             pluralization = (Pluralization)((byte)data >> 4);
         }
+        /// <summary>
+        /// Tries to get the inflection file key for a given mod.<para/>
+        /// A mod can choose to opt out of having an inflection file generated by calling <see cref="MoreLocales.ProtectModFromInflectionFileGeneration(Mod)"/><br/>
+        /// or calling <see cref="Mod.Call(object[])"/> on MoreLocales' instance with the mod/mod name as a single argument. (Must be done during <see cref="Mod.Load"/> or earlier)
+        /// </summary>
+        /// <param name="target"></param>
+        /// <param name="inflectionFileKey"></param>
+        /// <returns></returns>
+        public static bool TryGetInflectionFileKey(this Mod target, out string inflectionFileKey)
+        {
+            inflectionFileKey = null;
+
+            if (Main.dedServ)
+                return false;
+
+            if (MoreLocales.inflectionFileKeys.TryGetValue(target, out string possibleInflectionFileKey))
+            {
+                if (possibleInflectionFileKey is null)
+                    return false;
+                inflectionFileKey = possibleInflectionFileKey;
+                return true;
+            }
+
+            string possibleKey = target.GetLocalizationKey($"{(target == MoreLocales.Instance ? "VanillaData." : string.Empty)}InflectionData");
+
+            if (LangUtils.CategoryExists(possibleKey) || Language.Exists($"{possibleKey}.PluralizationAliases"))
+            {
+                MoreLocales.inflectionFileKeys.Add(target, possibleKey);
+                inflectionFileKey = possibleInflectionFileKey;
+                return true;
+            }
+
+            // generate the file in ModPath/Localization if possible
+
+            if (!LangUtils.ModIsValidForWriting(target))
+                return false;
+
+            string localizationFolderPath = Path.Combine(target.SourceFolder, "Localization");
+
+            if (!Directory.Exists(localizationFolderPath))
+                Directory.CreateDirectory(localizationFolderPath);
+
+            string newFilePath = Path.Combine(localizationFolderPath, $"en-US_{target.GetLocalizationKey("InflectionData")}.hjson");
+
+            File.WriteAllText(newFilePath, InflectionDataFileTemplate, Encoding.UTF8);
+
+            LocalizationLoader.UpdateLocalizationFilesForMod(target);
+
+            if (Language.Exists($"{possibleKey}.PluralizationAliases"))
+            {
+                inflectionFileKey = possibleKey;
+                return true;
+            }
+
+            return false;
+        }
+        private const string InflectionDataFileTemplate = @"# This file contains custom localization data defined by LocalizationPlus. It was automatically generated. To opt out, read this: https://github.com/queueAngel/MoreLocales/wiki/'MoreLocales-is-generating-a-localization-file-when-I-don't-want-it-to!'
+
+# Gender and Pluralization (Used mainly for the Localized Prefixes config option)
+
+# If your language does not have the concept of grammatical gender,
+# and does not distinguish between one or many of a certain thing,
+# you can leave this section of the file completely untouched.
+
+# If your language has either, you can change the data fields that are necessary for your language.
+# The gender & pluralization data entries are structured in the following way:
+
+# Gender/Pluralization
+
+# If you wish to let both fields use their default values, keep the entry as ""/"".
+# Gender can similarly be skipped by simply leaving the gender field empty like so: ""/Pluralization"".
+# And pluralization can be skipped like this: ""Gender"" or like this: ""Gender/"".
+
+
+# Gender
+
+# For gender, the following starting characters are valid. You may also write the internal number value instead.
+# Gender defaults to 'M' if not specified.
+
+# 'M'		(Masculine)		Internally - 0
+# 'F'		(Feminine)		Internally - 1
+# 'N'		(Neuter)		Internally - 2
+# 'C'		(Common)		Internally - 0
+
+
+# Pluralization
+
+# Pluralization is a tad bit more complex. Internally, the game uses certain formulas to determine pluralization types.
+# Refer to this list to view your language's pluralization rules and types:
+# https://docs.translatehouse.org/projects/localization-guide/en/latest/l10n/pluralforms.html
+# This might also be a good resource:
+# https://www.unicode.org/cldr/charts/43/supplemental/language_plural_rules.html
+
+# There are two ways of writing pluralization types: Using the provided aliases, or the special format.
+# If you wish, you can add your own aliases for pluralization types if a type's value is larger than 2, or for whatever other reason. (Edit the value of PluralizationAliases)
+# Otherwise, read below.
+
+# For pluralization, the following starting characters are valid. You may also write the internal number value instead (except for the special format).
+# Pluralization defaults to 'S' if not specified.
+
+# 'S'		(Singular)		Internally - 0
+# 'P'		(Plural)		Internally - 1
+# 'F'		(Few)			Internally - 1
+# 'M'		(Many)			Internally - 2
+# You can also specify any pluralization type with the following special format:
+# 'Pn', where 'n' is any pluralization type.
+# For example, 'M' with the special format would be written 'P2'.
+
+PluralizationAliases: """"
+";
     }
     /// <summary>
     /// Container for grammatical gender and pluralization.
     /// </summary>
     public enum InflectionData : byte
     {
+        /// <summary>
+        /// No inflection.
+        /// </summary>
         Default = 0,
     }
     /// <summary>
@@ -419,8 +577,17 @@ namespace MoreLocales.Core
     /// </summary>
     public enum GrammaticalGender : byte
     {
+        /// <summary>
+        /// Masculine grammatical gender. Also known as Common gender in certain languages.
+        /// </summary>
         Masculine = 0,//, Common = 0,
+        /// <summary>
+        /// Feminine grammatical gender.
+        /// </summary>
         Feminine = 1,
+        /// <summary>
+        /// Neuter grammatical gender.
+        /// </summary>
         Neuter = 2,
     }
     /// <summary>
@@ -428,8 +595,21 @@ namespace MoreLocales.Core
     /// </summary>
     public enum Pluralization : byte
     {
+        /// <summary>
+        /// Singular noun.
+        /// </summary>
         Singular = 0,
-        Plural, Few = 1,
+        /// <summary>
+        /// Basic plural noun.
+        /// </summary>
+        Plural = 1,
+        /// <summary>
+        /// Basic plural noun (same value as <see cref="Plural"/>).
+        /// </summary>
+        Few = 1,
+        /// <summary>
+        /// 'Many' plural noun. Used in certain languages.
+        /// </summary>
         Many = 2,
     }
 }

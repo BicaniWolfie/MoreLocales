@@ -9,15 +9,18 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading;
 using Terraria;
-using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader.Core;
 using static Terraria.ModLoader.LocalizationLoader;
 
+#pragma warning disable CS1572
+
 namespace MoreLocales.Utilities
 {
+    /// <summary>
+    /// Type of Hjson comment delimiter.
+    /// </summary>
     public enum HjsonCommentType
     {
         /// <summary>
@@ -36,11 +39,27 @@ namespace MoreLocales.Utilities
     /// </summary>
     public static class LangUtils
     {
+        /// <summary>
+        /// Represents a comment in the comment queue.
+        /// </summary>
+        /// <param name="Mod">The mod that submitted this comment.</param>
+        /// <param name="Key">The category or key this comment is targeting.</param>
+        /// <param name="Comment">The content of the comment.</param>
+        /// <param name="CommentType">The Hjson comment delimiter this comment should use.</param>
+        /// <param name="OverwriteComment">Whether or not this comment should be overridden (usually yes) or if the contents should be appended to the end of the existing comment.</param>
         public record struct QueuedComment(Mod Mod, string Key, string Comment, HjsonCommentType CommentType, bool OverwriteComment);
+        internal static HashSet<string> _confirmedCategories = [];
+        /// <summary>
+        /// The localization categories recognized by MoreLocales. This is populated once during <see cref="Mod.PostSetupContent"/>.
+        /// </summary>
+        public static IReadOnlySet<string> Categories => _confirmedCategories;
         private static readonly HashSet<Mod> _probablyValidMods = [];
         private static readonly ConcurrentQueue<QueuedComment> _commentsQueue = [];
         internal static readonly Dictionary<GameCulture, Dictionary<string, string>[]> _flattenedCache = [];
         private static GameCulture[] _vanillaCultures;
+        /// <summary>
+        /// An array containing all vanilla <see cref="GameCulture"/>s in the order they appear.
+        /// </summary>
         public static GameCulture[] VanillaCultures
         {
             get
@@ -53,6 +72,27 @@ namespace MoreLocales.Utilities
                     _vanillaCultures[i] = GameCulture.FromLegacyId(i + 1);
                 }
                 return _vanillaCultures;
+            }
+        }
+        internal static void InitCategories()
+        {
+            // this is called in PostSetupContent
+            // not sure if that's the best place
+            foreach (var key in LanguageManager.Instance._localizedTexts.Keys) // the world if Dictionary<,> was publicizable
+            {
+                string[] keyParts = key.Split('.'); // split to get all parts of path
+
+                // check each subsequent part of path until full path is formed
+                // importantly, we don't have to check the last one since it's guaranteed to be bound to a value, so we can start with 1
+                for (int i = 1; i < keyParts.Length; i++)
+                {
+                    string checkPath = string.Join('.', keyParts, 0, i); // build up the path
+
+                    if (Language.Exists(checkPath)) // ignore values
+                        continue;
+
+                    _confirmedCategories.Add(checkPath); // yay
+                }
             }
         }
         internal static void ClearCommentsQueue() => _commentsQueue.Clear();
@@ -177,9 +217,10 @@ namespace MoreLocales.Utilities
             if (Main.dedServ)
                 return false;
 
-            // currently can't be added to categories. make that possible
+            if (!Enum.IsDefined(commentType))
+                return false;
 
-            if (!Language.Exists(key))
+            if (!EntryOrCategoryExists(key)) // comments can both be placed on entries and also on categories.
                 return false;
 
             string[] parts = key.Split('.');
@@ -188,8 +229,23 @@ namespace MoreLocales.Utilities
             if (parts[0] != "Mods")
                 return false;
 
-            // check if the mod exists, has an associated file, and that file is open. on failure to verify, exit
-            if (!ModLoader.TryGetMod(parts[1], out var mod) || mod.File == null || !mod.File.IsOpen)
+            // check if the mod exists. on failure to verify, exit
+            if (!ModLoader.TryGetMod(parts[1], out var mod))
+                return false;
+
+            if (!ModIsValidForWriting(mod))
+                return false;
+
+            // add the comment request to a queue
+            // this is needed because operating systems seemingly do not enjoy the same file being accessed like a hundred times in the same frame
+            _commentsQueue.Enqueue(new(mod, key, comment, commentType, overwriteComment));
+
+            return true;
+        }
+        internal static bool ModIsValidForWriting(Mod mod)
+        {
+            // check if the mod has an associated file, and that file is open. on failure to verify, exit
+            if (mod.File == null || !mod.File.IsOpen)
                 return false;
 
             // skip looking for files if we already know those files exist
@@ -203,14 +259,11 @@ namespace MoreLocales.Utilities
                 string localBuiltTModFile = Path.Combine(ModLoader.ModPath, mod.Name + ".tmod");
                 if (!File.Exists(localBuiltTModFile))
                     return false;
+
+                // both conditions succeed, so
+                // mark the files as existing
+                _probablyValidMods.Add(mod);
             }
-            // mark the files as existing
-            _probablyValidMods.Add(mod);
-
-            // add the comment request to a queue
-            // this is needed because operating systems seemingly do not enjoy the same file being accessed like a hundred times in the same frame
-            _commentsQueue.Enqueue(new(mod, key, comment, commentType, overwriteComment));
-
             return true;
         }
         /// <inheritdoc cref="AddComment(string, string, HjsonCommentType, bool)"/>
@@ -219,16 +272,38 @@ namespace MoreLocales.Utilities
             return AddComment(mod.GetLocalizationKey(suffix), comment, commentType, overwriteComment);
         }
         /// <summary>
+        /// Checks if the given localization category has been registered or not.<br/>
+        /// A localization category refers to a key in a localization file that isn't bound to a value directly, but rather contains other keys.<para/>
+        /// <b>Note:</b> If this is seemingly not working, rebuild your mod. If it still isn't working, check that you've spelled the category key correctly and that it is in fact a category and not an entry.
+        /// </summary>
+        /// <param name="categoryKey">The category to search for</param>
+        /// <returns></returns>
+        public static bool CategoryExists(string categoryKey) => _confirmedCategories.Contains(categoryKey);
+        /// <summary>
+        /// Checks if the given key exists in any way (localization category or entry).<br/>
+        /// MoreLocales uses this to check if a comment can be placed on a given key, as comments can both be added to entries and categories.
+        /// </summary>
+        /// <param name="keyNoContext">A localization key that corresponds to either a localization entry or a localization category.</param>
+        /// <returns></returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool EntryOrCategoryExists(string keyNoContext)
+        {
+            return LanguageManager.Instance._localizedTexts.ContainsKey(keyNoContext) || CategoryExists(keyNoContext);
+        }
+        /// <summary>
         /// Formats a string containing a substitution (e.g. <c>'{$Mods.ExampleMod.ExampleSubstitution}'</c>) with the key that's inside it,<br/>
         /// optionally with a pre-defined scope and/or lookup table.
         /// </summary>
-        /// <param name="containsSubstitution"></param>
-        /// <param name="scope"></param>
-        /// <param name="specificSearch"></param>
+        /// <param name="containsSubstitution">A string containing a substitution.</param>
+        /// <param name="scope">A scope to try to find the substituted key inside.<br/>
+        /// (e. g. <c>'Mods.ExampleMod'</c> if the substitution is just <c>'Items.ExampleStaff.DisplayName'</c>)</param>
+        /// <param name="specificSearch"><b>(Advanced)</b><br/>
+        /// If you wish to look for a substitution inside a localization dictionary that isn't the one currently loaded by tModLoader, set this.
+        /// </param>
         /// <returns>The string with the correct substituted value, or the original string if the given key isn't found.</returns>
         public static string Substitute(string containsSubstitution, string scope = null, Dictionary<string, string> specificSearch = null)
         {
-            string result = LocalizationLoader.referenceRegex.Replace(containsSubstitution, (Match match) =>
+            string result = referenceRegex.Replace(containsSubstitution, (Match match) =>
             {
                 HashSet<string> keysCollection;
                 if (specificSearch is null)
@@ -389,10 +464,12 @@ namespace MoreLocales.Utilities
         /// Allows you to get an array of the localization values for a given key, as long as all the target cultures are vanilla cultures.<br/>
         /// If no cultures are passed in, the value will be retrieved from every vanilla culture.<para/>
         /// If you wish for something similar to this for modded cultures, scream at me in the Discord because I am so incredibly tired from writing all of this code<br/>
-        /// or just impl it urself
+        /// or just impl it urself (and PR it if you're really cool)
         /// </summary>
-        /// <param name="key"></param>
-        /// <param name="targetCultures"></param>
+        /// <param name="key">The vanilla key to search values for.</param>
+        /// <param name="targetCultures">The vanilla cultures to search values from.</param>
+        /// <param name="textAnyCulture">A <see cref="LocalizedText"/> to search other culture localizations for.<br/>
+        /// This can be from any culture as long as it's a vanilla <see cref="LocalizedText"/>.</param>
         /// <returns></returns>
         public static string[] GetVanillaLocalizationValues(string key, params GameCulture[] targetCultures)
         {
@@ -410,6 +487,12 @@ namespace MoreLocales.Utilities
                 }
             }
             return values;
+        }
+        /// <inheritdoc cref="GetVanillaLocalizationValues(string, GameCulture[])"/>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static string[] GetVanillaLocalizationValues(LocalizedText textAnyCulture, params GameCulture[] targetCultures)
+        {
+            return GetVanillaLocalizationValues(textAnyCulture.Key, targetCultures);
         }
         /// <summary>
         /// Attempts to parse a vanilla localization file, and returns the result as a dictionary.<para/>
@@ -466,6 +549,7 @@ namespace MoreLocales.Utilities
         /// Reads a file assuming UTF8 encoding and returns the result as a string.
         /// </summary>
         /// <param name="file"></param>
+        /// <param name="mod">The mod this file belongs to.</param>
         /// <returns></returns>
         public static string ReadFileUTF8(Mod mod, TmodFile.FileEntry file)
         {
@@ -600,7 +684,8 @@ namespace MoreLocales.Utilities
             return dict;
         }
         /// <summary>
-        /// Attempts to find the <see cref="LocalizationEntry"/> in <see cref="LocalizationFile.Entries"/> which exactly matches the given key.
+        /// Attempts to find the <see cref="LocalizationEntry"/> in <see cref="LocalizationFile.Entries"/> which exactly matches the given key.<para/>
+        /// <b>Note:</b> Despite the name, this also works to find categories, which are also considered entries inside <see cref="LocalizationFile"/>s.
         /// </summary>
         /// <param name="file">The file to search in.</param>
         /// <param name="key">The key to search for. May or may not include the file prefix (doesn't matter).</param>
@@ -679,3 +764,5 @@ namespace MoreLocales.Utilities
         // .NET 10 has MemoryExtensions.Split() which allows for faster splitting and iteration
     }
 }
+
+#pragma warning restore

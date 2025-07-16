@@ -6,10 +6,9 @@ using System;
 using MoreLocales.Common;
 using System.Reflection;
 using Terraria.ID;
-using Terraria.Localization;
 using System.Collections.Generic;
 using Terraria.UI;
-using Terraria.DataStructures;
+using Terraria.Localization;
 
 namespace MoreLocales.Core
 {
@@ -166,10 +165,16 @@ namespace MoreLocales.Core
         public override void PostUpdateDusts()
         {
             return;
-
             if (Main.keyState.IsKeyDown(Keys.F) && !Main.oldKeyState.IsKeyDown(Keys.F))
             {
-                MoreLocalesSets.ReloadedLocalizations();
+                Main.NewText(Language.Exists("Mods.MoreLocales.VanillaData.InflectionData.Prefixes.Large"));
+                Main.NewText(LangUtils.CategoryExists("Mods.MoreLocales.VanillaData.InflectionData.Prefixes.Large"));
+                //Main.NewText(LangUtils.)
+                /*
+                foreach (string category in LangUtils.Categories)
+                    Main.NewText(category);
+                */
+                //MoreLocalesSets.ReloadedLocalizations();
                 /*
                 foreach (var item in (typeof(LangFeaturesPlus).GetField("GenderNames", BindingFlags.Static | BindingFlags.NonPublic).GetValue(null) as string[]))
                 {
