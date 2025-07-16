@@ -497,17 +497,15 @@ namespace MoreLocales.Core
 
             File.WriteAllText(newFilePath, InflectionDataFileTemplate, Encoding.UTF8);
 
-            LocalizationLoader.UpdateLocalizationFilesForMod(target);
+            // it doesn't matter if the file exists on disk now because it has to be packed into the actual mod for it to work, so return false
+            // just a warn will work for now but i wonder if there's a better way to signal that the mod has to be rebuilt
 
-            if (Language.Exists($"{possibleKey}.PluralizationAliases"))
-            {
-                inflectionFileKey = possibleKey;
-                return true;
-            }
+            MoreLocales.Instance.Logger.Warn($"Inflection file has been generated for mod {target.Name}.\nIf you wish to opt out, read this: https://github.com/queueAngel/MoreLocales/wiki/MoreLocales-is-generating-a-localization-file-when-I-don't-want-it-to \nThe mod needs to be rebuilt in order for the file to do anything.");
 
             return false;
         }
-        private const string InflectionDataFileTemplate = @"# This file contains custom localization data defined by LocalizationPlus. It was automatically generated. To opt out, read this: https://github.com/queueAngel/MoreLocales/wiki/'MoreLocales-is-generating-a-localization-file-when-I-don't-want-it-to!'
+        private const string InflectionDataFileTemplate = @"# This file contains custom localization data defined by LocalizationPlus. It was automatically generated.
+# To opt out, read this: https://github.com/queueAngel/MoreLocales/wiki/MoreLocales-is-generating-a-localization-file-when-I-don't-want-it-to
 
 # Gender and Pluralization (Used mainly for the Localized Prefixes config option)
 
