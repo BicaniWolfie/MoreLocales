@@ -12,7 +12,6 @@ using System.Text.RegularExpressions;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader.Core;
-using static System.Net.Mime.MediaTypeNames;
 using static Terraria.ModLoader.LocalizationLoader;
 
 #pragma warning disable CS1572

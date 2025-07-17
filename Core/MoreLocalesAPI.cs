@@ -1,18 +1,16 @@
 ﻿using MoreLocales.Common;
+using ReLogic.Content;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Threading;
 using Terraria;
-using Terraria.Localization;
-using static Terraria.Localization.GameCulture;
-using static MoreLocales.Core.LangFeaturesPlus;
-using static MoreLocales.Core.CultureNamePlus;
-using static Terraria.Localization.GameCulture.CultureName;
-using ReLogic.Content;
 using Terraria.DataStructures;
-using System.Linq;
+using Terraria.Localization;
+using static MoreLocales.Core.CultureNamePlus;
+using static Terraria.Localization.GameCulture;
+using static Terraria.Localization.GameCulture.CultureName;
 
 namespace MoreLocales.Core
 {
@@ -442,34 +440,34 @@ namespace MoreLocales.Core
 
             mod.RegisterCulture(nameof(Japanese),
                 "ja-JP",
-                grammarData: GrammarData.StyleOrder(PluralizationStyle.None, AdjectiveOrder.Before),
+                grammarData: GrammarData.StyleOrderContext(PluralizationStyle.None, AdjectiveOrder.Before, InflectionDelegates.inflectionNeverChanges),
                 buttonDrawData: new(sheetFrame: (int)Japanese));
 
             mod.RegisterCulture(nameof(Korean),
                 "ko-KR",
-                grammarData: new(PluralizationStyle.None),
+                grammarData: GrammarData.StyleContext(PluralizationStyle.None, InflectionDelegates.inflectionNeverChanges),
                 buttonDrawData: new(sheetFrame: (int)Korean));
 
             mod.RegisterCulture(nameof(TraditionalChinese),
                 "zh-Hant",
                 (int)Chinese,
-                grammarData: GrammarData.StyleOrder(PluralizationStyle.None, AdjectiveOrder.Before),
+                grammarData: GrammarData.StyleOrderContext(PluralizationStyle.None, AdjectiveOrder.Before, InflectionDelegates.inflectionNeverChanges),
                 buttonDrawData: new(sheetFrame: (int)TraditionalChinese));
 
             mod.RegisterCulture(nameof(Turkish),
                 "tr-TR",
-                grammarData: new(PluralizationStyle.Custom, CultureHelper.turkishPlural),
+                grammarData: new(PluralizationStyle.Custom, CultureHelper.turkishPlural, contextChangesAdjective: InflectionDelegates.inflectionNeverChanges),
                 buttonDrawData: new(sheetFrame: (int)Turkish));
 
             mod.RegisterCulture(nameof(Thai),
                 "th-TH",
-                grammarData: GrammarData.StyleOrder(PluralizationStyle.None, AdjectiveOrder.After),
+                grammarData: GrammarData.StyleOrderContext(PluralizationStyle.None, AdjectiveOrder.After, InflectionDelegates.inflectionNeverChanges),
                 buttonDrawData: new(sheetFrame: (int)Thai));
 
             mod.RegisterCulture(nameof(Ukrainian),
                 "uk-UA",
                 (int)Russian,
-                grammarData: new(PluralizationStyle.RussianThreeway),
+                grammarData: GrammarData.StyleContext(PluralizationStyle.RussianThreeway, InflectionDelegates.inflectionChangesWhenNotDefault),
                 buttonDrawData: new(sheetFrame: (int)Ukrainian));
 
             mod.RegisterCulture(nameof(MexicanSpanish),
@@ -480,11 +478,13 @@ namespace MoreLocales.Core
 
             mod.RegisterCulture(nameof(Czech),
                 "cs-CZ",
-                grammarData: new(PluralizationStyle.Custom, CultureHelper.czechPlural),
+                grammarData: new(PluralizationStyle.Custom, CultureHelper.czechPlural, contextChangesAdjective: InflectionDelegates.inflectionChangesWhenNotDefault),
                 buttonDrawData: new(sheetFrame: (int)Czech));
 
+            // hungarian's adjective agreement rules are a little weird, but irrelevant for the mod
             mod.RegisterCulture(nameof(Hungarian),
                 "hu-HU",
+                grammarData: GrammarData.StyleContext(PluralizationStyle.SimpleWithSingularZero, InflectionDelegates.inflectionNeverChanges),
                 buttonDrawData: new(sheetFrame: (int)Hungarian));
 
             mod.RegisterCulture(nameof(PortugalPortuguese),
@@ -495,33 +495,37 @@ namespace MoreLocales.Core
 
             mod.RegisterCulture(nameof(Swedish),
                 "sv-SE",
+                grammarData: GrammarData.Context(InflectionDelegates.inflectionChangesWhenNotDefault),
                 buttonDrawData: new(sheetFrame: (int)Swedish));
 
             mod.RegisterCulture(nameof(Dutch),
                 "nl-NL",
+                grammarData: GrammarData.Context(InflectionDelegates.inflectionChangesWhenNotDefault),
                 buttonDrawData: new(sheetFrame: (int)Dutch));
 
             mod.RegisterCulture(nameof(Danish),
                 "da-DK",
+                grammarData: GrammarData.StyleContext(PluralizationStyle.SimpleWithSingularZero, InflectionDelegates.inflectionChangesWhenNotDefault),
                 buttonDrawData: new(sheetFrame: (int)Danish));
 
             mod.RegisterCulture(nameof(Vietnamese),
                 "vi-VN",
                 hasSubtitle: false,
-                grammarData: GrammarData.StyleOrder(PluralizationStyle.None, AdjectiveOrder.AfterWithSpace),
+                grammarData: GrammarData.StyleOrderContext(PluralizationStyle.None, AdjectiveOrder.AfterWithSpace, InflectionDelegates.inflectionNeverChanges),
                 buttonDrawData: new(sheetFrame: (int)Vietnamese));
 
             mod.RegisterCulture(nameof(Finnish),
                 "fi-FI",
+                grammarData: GrammarData.Context(InflectionDelegates.inflectionChangesWhenNotDefault),
                 buttonDrawData: new(sheetFrame: (int)Finnish));
 
             mod.RegisterCulture(nameof(Romanian),
                 "ro-RO",
-                grammarData: new(PluralizationStyle.Custom, customPluralizationRule: CultureHelper.romanianPlural,AdjectiveOrder.AfterWithSpace),
+                grammarData: new(PluralizationStyle.Custom, CultureHelper.romanianPlural, AdjectiveOrder.AfterWithSpace, InflectionDelegates.inflectionChangesWhenNotDefault),
                 buttonDrawData: new(sheetFrame: (int)Romanian));
 
             mod.RegisterCulture(nameof(Indonesian),
-                "id-ID", grammarData: GrammarData.StyleOrder(PluralizationStyle.None, AdjectiveOrder.AfterWithSpace),
+                "id-ID", grammarData: GrammarData.StyleOrderContext(PluralizationStyle.None, AdjectiveOrder.AfterWithSpace, InflectionDelegates.inflectionNeverChanges),
                 buttonDrawData: new(sheetFrame: (int)Indonesian));
         }
         internal static void DoSafeLoad()

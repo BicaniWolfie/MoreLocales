@@ -8,7 +8,6 @@ using System.Reflection;
 using Terraria.ID;
 using System.Collections.Generic;
 using Terraria.UI;
-using Terraria.Localization;
 
 namespace MoreLocales.Core
 {
