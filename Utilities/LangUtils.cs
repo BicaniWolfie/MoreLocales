@@ -103,7 +103,8 @@ namespace MoreLocales.Utilities
             if (prioritizeActiveCulture)
             {
                 ref MoreLocalesCulture activeCulture = ref MoreLocalesAPI.ActiveCulture;
-                if (activeCulture.FunctionalOwner.HasLocalizationsFor(ref culture)) //&& Language.Exists(activeCulture.FunctionalOwner.GetLocalizationKey(backup)))
+                // this doesn't even involve the culture ICANT
+                if (Language.Exists(activeCulture.FunctionalOwner.GetLocalizationKey(backup)))
                 {
                     return GetFromMod(activeCulture.FunctionalOwner, backup);
                 }
