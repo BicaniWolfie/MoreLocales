@@ -928,230 +928,240 @@ tModLoader: {
 }
 
 Conditions: {
-	// NearWater: Near water
-	// NearLava: Near lava
-	// NearHoney: Near honey
-	// NearShimmer: Near shimmer
-	// TimeDay: During daytime
-	// TimeNight: At night
-	// InDungeon: In a Dungeon biome
-	// InCorrupt: In a Corruption biome
-	// InHallow: In a Hallow biome
-	// InMeteor: In a Meteorite biome
-	// InJungle: In a Jungle biome
-	// InSnow: In a Snow biome
-	// InCrimson: In a Crimson biome
-	// InWaterCandle: Near a Water Candle
-	// InPeaceCandle: Near a Peace Candle
-	// InTowerSolar: Near the Solar Tower
-	// InTowerVortex: Near the Vortex Tower
-	// InTowerNebula: Near the Nebula Tower
-	// InTowerStardust: Near the Stardust Tower
-	// InDesert: In a Desert biome
-	// InGlowshroom: In a Mushroom biome
-	// InUndergroundDesert: In an Underground Desert biome
-	// InSkyHeight: In the Sky
-	// InOverworldHeight: On the Surface
-	// InDirtLayerHeight: In the Underground, above the Caverns
-	// InRockLayerHeight: In the Caverns
-	// InUnderworldHeight: In the Underworld
-	// InBeach: In a Ocean biome
-	// InRain: When it is raining
-	// InSandstorm: During a Sandstorm
-	// InOldOneArmy: During the Old One's Army event
-	// InGranite: In a Granite biome
-	// InMarble: In a Marble biome
-	// InHive: In a Hive
-	// InGemCave: In a Gem Cave
-	// InLihzardTemple: In the Lihzard Temple
-	// InGraveyard: In a Graveyard biome
-	// InAether: In an Aether biome
-	// InShoppingForest: When above the surface and not in another major biome
-	// InBelowSurface: When in the Underground, Caverns, or Underworld
-	// InEvilBiome: In a Corruption or Crimson biome
-	// NotInEvilBiome: Not in an evil biome
-	// NotInHallow: Not in The Hallow biome
-	// NotInGraveyard: Not in a Graveyard biome
-	// NotInUnderworld: Not in the Underworld
-	// InClassicMode: In Classic mode
-	// InExpertMode: In Expert mode
-	// InMasterMode: In Master mode
-	// InJourneyMode: In Journey mode
-	// InHardmode: In hardmode
-	// PreHardmode: Before hardmode
-	// SmashedShadowOrb: After smashing a Shadow Orb or Crimson Heart
-	// WorldCrimson: In a world with The Crimson
-	// WorldCorrupt: In a world with The Corruption
-	// WorldDrunk: In an Drunk world
-	// WorldRemix: In a Remix world
-	// WorldNotTheBees: In a Not the Bees world
-	// WorldForTheWorthy: In a For the Worthy world
-	// WorldAnniversary: In a Celebration Mk 10 world
-	// WorldDontStarve: In a Don't Starve world
-	// WorldNoTraps: In a No Traps world
-	// WorldZenith: In a Zenith world
-	// WorldNotDrunk: Not in an Drunk world
-	// WorldNotRemix: Not in a Remix world
-	// WorldNotNotTheBees: Not in a Not the Bees world
-	// WorldNotAnniversary: Not in a Celebration Mk 10 world
-	// WorldNotForTheWorthy: Not in a For The Worthy world
-	// WorldNotDontStarve: Not in a Don't Starve world
-	// WorldNotNoTraps: Not in a No Traps world
-	// WorldNotZenith: Not in a Zenith world
-	// Christmas: During Christmas
-	// Halloween: During Halloween
-	// Thunderstorm: During a thunderstorm
-	// BirthdayParty: During an NPC birthday party
-	// NightLanterns: During a Lantern Night
-	// HappyWindyDay: During a happy windy day
-	// SolarEclipse: During a Solar Eclipse
-	// BloodMoon: During a Blood Moon
-	// NotSolarEclipse: Not during a Solar Eclipse
-	// NotBloodMoon: Not during a Blood Moon
-	// HappyEnough: When the vendor is happy enough
-	// DownedKingSlime: After defeating King Slime
-	// DownedEyeOfCthulhu: After defeating the Eye of Cthulhu
-	// DownedBoss2: After defeating Eater of Worlds or Brain of Cthulhu
-	// DownedEaterOfWorlds: After defeating Eater of Worlds
-	// DownedBrainOfCthulhu: After defeating Brain of Cthulhu
-	// DownedQueenBee: After defeating Queen Bee
-	// DownedSkeletron: After defeating Skeletron
-	// DownedDeerclops: After defeating Deerclops
-	// DownedQueenSlime: After defeating Queen Slime
-	// DownedEarlygameBoss: After defeating the Eye of Cthulhu, Eater of Worlds, Brain of Cthulhu, Queen Bee or Skeletron
-	// DownedMechBossAny: After defeating any mechanical boss
-	// DownedTwins: After defeating The Twins
-	// DownedDestroyer: After defeating The Destroyer
-	// DownedSkeletronPrime: After defeating Skeletron Prime
-	// DownedMechBossAll: After defeating all mechanical bosses
-	// DownedPlantera: After defeating Plantera
-	// DownedEmpressOfLight: After defeating Empress of Light
-	// DownedDukeFishron: After defeating Duke Fishron
-	// DownedGolem: After defeating Golem
-	// DownedMourningWood: After defeating Mourning Wood
-	// DownedPumpking: After defeating Pumpking
-	// DownedEverscream: After defeating Everscream
-	// DownedSantaNK1: After defeating Santa-NK1
-	// DownedIceQueen: After defeating Ice Queen
-	// DownedLunaticCultist: After defeating the Lunatic Cultist
-	// DownedMoonLord: After defeating Moon Lord
-	// DownedClown: After defeating a Clown
-	// DownedGoblinArmy: After defeating the Goblin Army
-	// DownedPirates: After defeating the Pirates
-	// DownedMartians: After defeating the Martians
-	// DownedFrostLegion: After defeating the Frost Legion
-	// DownedSolarPillar: After defeating the Solar Pillar
-	// DownedVortexPillar: After defeating the Vortex Pillar
-	// DownedNebulaPillar: After defeating the Nebula Pillar
-	// DownedStardustPillar: After defeating the Stardust Pillar
-	// DownedOldOnesArmyAny: After defeating any tier Old One's Army
-	// DownedOldOnesArmyT1: After defeating tier 1 Old One's Army
-	// DownedOldOnesArmyT2: After defeating tier 2 Old One's Army
-	// DownedOldOnesArmyT3: After defeating tier 3 Old One's Army
-	// NotDownedKingSlime: Before defeating King Slime
-	// NotDownedEyeOfCthulhu: Before defeating the Eye of Cthulhu
-	// NotDownedBoss2: Before defeating Eater of Worlds or Brain of Cthulhu
-	// NotDownedEaterOfWorlds: Before defeating Eater of Worlds
-	// NotDownedBrainOfCthulhu: Before defeating Brain of Cthulhu
-	// NotDownedQueenBee: Before defeating Queen Bee
-	// NotDownedSkeletron: Before defeating Skeletron
-	// NotDownedDeerclops: Before defeating Deerclops
-	// NotDownedQueenSlime: Before defeating Queen Slime
-	// NotDownedMechBossAny: Before defeating any mechanical boss
-	// NotDownedTwins: Before defeating The Twins
-	// NotDownedDestroyer: Before defeating The Destroyer
-	// NotDownedSkeletronPrime: Before defeating Skeletron Prime
-	// NotDownedPlantera: Before defeating Plantera
-	// NotDownedEmpressOfLight: Before defeating Empress of Light
-	// NotDownedDukeFishron: Before defeating Duke Fishron
-	// NotDownedGolem: Before defeating Golem
-	// NotDownedMourningWood: Before defeating Mourning Wood
-	// NotDownedPumpking: Before defeating Pumpking
-	// NotDownedEverscream: Before defeating Everscream
-	// NotDownedSantaNK1: Before defeating Santa-NK1
-	// NotDownedIceQueen: Before defeating Ice Queen
-	// NotDownedLunaticCultist: Before defeating the Lunatic Cultist
-	// NotDownedMoonLord: Before defeating Moon Lord
-	// NotDownedClown: Before defeating a Clown
-	// NotDownedGoblinArmy: Before defeating the Goblin Army
-	// NotDownedPirates: Before defeating the Pirates
-	// NotDownedMartians: Before defeating the Martians
-	// NotDownedFrostLegion: Before defeating the Frost Legion
-	// NotDownedSolarPillar: Before defeating the Solar Pillar
-	// NotDownedVortexPillar: Before defeating the Vortex Pillar
-	// NotDownedNebulaPillar: Before defeating the Nebula Pillar
-	// NotDownedStardustPillar: Before defeating the Stardust Pillar
-	// NotDownedOldOnesArmyAny: Before defeating any tier Old One's Army
-	// NotDownedOldOnesArmyT1: Before defeating tier 1 Old One's Army
-	// NotDownedOldOnesArmyT2: Before defeating tier 2 Old One's Army
-	// NotDownedOldOnesArmyT3: Before defeating tier 3 Old One's Army
-	// PlayerCarriesItem: When the player has a {0} in their inventory
-	// PlayerCarriesItem2: When the player has a {0} or {1} in the inventory
-	// NpcIsPresent: When the {0} is present
-	// IsNpcShimmered: When the vendor is a shimmer variant
-	// AtleastXHealth: When the player has at least {0} maximum life
-	// AtleastXMana: When the player has at least {0} maximum mana
-	// PlatinumCoin: When the player has at least 1 platinum coin in their inventory.
-	// GolfScoreOver: When the player has a golf score of {0} or more
-	// BestiaryPercentage: When the Bestiary has been filled to at least {0}%
-	// BestiaryFull: When the Bestiary has been filled completely
-	// BestiaryWinx: When the Bestiary contains entries for all three fairies
-	// InMultiplayer: In multiplayer
-	// Periodically: Periodically
-	// OnTeam: When the player is on a team in multiplayer
-	// StyleMoon: During the night and following day of moon phases Waning Gibbous, Waning Crescent, Waxing Crescent and Waxing Gibbous
-	// DownedB2B3HM: After defeating Eater of Worlds, Brain of Cthulhu, Skeletron, or Wall of Flesh
-	// DaytimeNotFullMoon: During daytime, during any moon phase except full
-	// NightDayFullMoon: At night, or all day during a full moon
-	// NoAteLoaf: When the player has not consumed an Artisan Loaf before
-	// BloodOrSun: During a Blood Moon or Solar Eclipse
-	// NotBloodOrSun: Not during a Blood Moon or Solar Eclipse
-	// HardmodeFTW: In Hardmode when in a For the Worthy world, otherwise anytime
-	// NightOrEclipse: At night or during Solar Eclipse
-	// BloodMoonOrHardmode: During a Blood Moon, or anytime in Hardmode
-	// WorldGenSilver: In a world with Silver Ore
-	// WorldGenTungsten: In a world with Tungsten Ore
-	// NightAfterEvilOrHardmode: During the night after defeating the Eater of Worlds or Brain of Cthulhu, or anytime in Hardmode
-	// AnglerQuestsFinishedOver: When the player has finished {0} Angler Quests or more
-	// HappyEnoughForPylons: When the vendor is happy enough to sell pylons
-	// AnotherTownNPCNearby: When the vendor has another Town NPC nearby
-	// ForestPylon: On the surface and not in another pylon biome
-	// UndergroundPylon: Below the surface and not in another pylon biome
-	// MoonPhasesHalf0OrPreHardmode: Anytime before hardmode, or during a full, waning gibbous, third quarter or waning crescent moon
-	// FullMoon: During a full moon
-	// WaningGibbousMoon: During a waning gibbous moon
-	// ThirdQuarterMoon: During a third quarter moon
-	// WaningCrescentMoon: During a waning crescent moon
-	// NewMoon: During a new moon
-	// WaxingCrescentMoon: During a waxing crescent moon
-	// FirstQuarterMoon: During a first quarter moon
-	// WaxingGibbousMoon: During a waxing gibbous moon
-	// MoonPhasesQuarter0: During a full or waning gibbous moon
-	// MoonPhasesQuarter1: During a third quarter or waning crescent moon
-	// MoonPhasesQuarter2: During a new or waxing crescent moon
-	// MoonPhasesQuarter3: During a first quarter or waxing gibbous moon
-	// MoonPhasesHalf0: During a full, waning gibbous, third quarter or waning crescent moon
-	// MoonPhasesHalf1: During a new, waxing crescent, first quarter or waxing gibbous moon
-	// MoonPhasesEven: During a full, third quarter, new or first quarter moon
-	// MoonPhasesOdd: During a gibbous or crescent moon
-	// MoonPhasesNearNew: During a third quarter, waning crescent or new moon
-	// MoonPhasesEvenQuarters: During a full, waning gibbous, new or waxing crescent moon
-	// MoonPhasesOddQuarters: During a third quarter, waning crescent, first quarter or waxing gibbous moon
-	// MoonPhases04: During a full or new moon
-	// MoonPhases15: During a waning gibbous or waxing crescent moon
-	// MoonPhases26: During a third quarter or first quarter moon
-	// MoonPhases37: During a waning crescent or waxing gibbous moon
+	NearWater: Nær vand
+	NearLava: Nær lava
+	NearHoney: Nær honning
+	NearShimmer: Nær shimmer
+	TimeDay: Om dagen
+	TimeNight: Om natten
+	InDungeon: I en Fangekælder
+	InCorrupt: I en Corruption-biome
+	InHallow: I en Hallow-biome
+	InMeteor: I en Meteorit-biome
+	InJungle: I en Jungelbiome
+	InSnow: I en Snebiome
+	InCrimson: I en Crimson-biome
+	InWaterCandle: Nær et Vand-Stearinlys
+	InPeaceCandle: Nær et Freds-Stearinlys
+	InTowerSolar: Nær Solar-Tårnet
+	InTowerVortex: Nær Vortex-Tårnet
+	InTowerNebula: Nær Nebula-Tårnet
+	InTowerStardust: Nær Stjernestøvs-Tårnet
+	InDesert: I en Ørkenbiome
+	InGlowshroom: I en Svampe-biome
+	InUndergroundDesert: I en Underjordisk Ørkenbiome
+	InSkyHeight: I Himlen
+	InOverworldHeight: På Overfladen
+	InDirtLayerHeight: I Undergrunden, over Hulerne
+	InRockLayerHeight: I Hulerne
+	InUnderworldHeight: I Underverdenen
+	InBeach: I en Ocean-biome
+	InRain: Når det regner
+	InSandstorm: Under en Sandstorm
+	InOldOneArmy: I løbet af Old One's Army-begivenheden
+	InGranite: I en Granit-biome
+	InMarble: I en Marmors-biome
+	InHive: I en Bikube
+	InGemCave: I en Ædelstens-Hule
+	InLihzardTemple: I Lihzard-Templet
+	InGraveyard: I en Kirkegård
+	InAether: I en Æter-biome
+	InShoppingForest: Når over overfladen og ikke i en anden, større biome
+	InBelowSurface: Når i Undergrunden, Hulerne, eller Underverdenen
+	InEvilBiome: I en Corruption- eller Crimson-biome
+	NotInEvilBiome: Ikke i en ond biome
+	NotInHallow: Ikke i Hallow-biomen
+	NotInGraveyard: Ikke i en Kirkegård
+	NotInUnderworld: Ikke i Underverdenen
+	InClassicMode: I Klassisk-tilstand
+	InExpertMode: I Ekspert-tilstand
+	InMasterMode: I Mester-tilstand
+	InJourneyMode: I Rejse-tilstand
+	InHardmode: I Hardmode
+	PreHardmode: Før Hardmode
+	SmashedShadowOrb: Efter at have knust en Skygge-Kugle eller Crimson-Hjerte
+	WorldCrimson: I en verden med Crimson
+	WorldCorrupt: I en verden med Corruption
+	WorldDrunk: I en Drunk-verden
+	WorldRemix: I en Remix-verden
+	WorldNotTheBees: I en "Not the Bees"-verden
+	WorldForTheWorthy: I en "For the Worthy"-verden
+	WorldAnniversary: I en "Celebration Mk 10"-verden
+	WorldDontStarve: I en "Don't Starve"-verden
+	WorldNoTraps: I en No Traps-verden
+	WorldZenith: I en Zenith-verden
+	WorldNotDrunk: Ikke i en Drunk-verden
+	WorldNotRemix: Ikke i en Remix-verden
+	WorldNotNotTheBees: Ikke i en "Not the Bees"-verden
+	WorldNotAnniversary: Ikke i en "For the Worthy"-verden
+	WorldNotForTheWorthy: Ikke i en "Celebration Mk 10"-verden
+	WorldNotDontStarve: Ikke i en "Don't Starve"-verden
+	WorldNotNoTraps: Ikke i en No Traps-verden
+	WorldNotZenith: Ikke i en Zenith-verden
+	Christmas: I Julen
+	Halloween: På Halloween
+	Thunderstorm: Under et tordenvejr
+	BirthdayParty: På en NPCs fødselsdag
+	NightLanterns: Under en Lanterne-Nat
+	HappyWindyDay: Under en "happy windy"-dag
+	SolarEclipse: Under en Solformørmørkelse
+	BloodMoon: Under en Blodmåne
+	NotSolarEclipse: Ikke under en Solformørmørkelse
+	NotBloodMoon: Ikke under en Blodmåne
+	HappyEnough: Når sælgeren er glad nok
+	DownedKingSlime: Efter at have besejret Slim-Kongen
+	DownedEyeOfCthulhu: Efter at have besejret Cthulhus Øje
+	DownedBoss2: Efter at have besejret Verdens-Æderen eller Cthulhus Hjerne
+	DownedEaterOfWorlds: Efter at have besejret Verdens-Æderen
+	DownedBrainOfCthulhu: Efter at have besejret Cthulhus Hjerne
+	DownedQueenBee: Efter at have besejret Bidronningen
+	DownedSkeletron: Efter at have besejret Skeletron
+	DownedDeerclops: Efter at have besejret Deerclops
+	DownedQueenSlime: Efter at have besejret Slim-Dronningen
+	DownedEarlygameBoss: Efter at have besejret Cthulhus Øje, Verdens-Æderen, Cthulhus Hjerne, Bidronningen, eller Skeletron
+	DownedMechBossAny: Efter at have besejret hvilken som helst mekanisk boss
+	DownedTwins: Efter at have besejret Tvillingene
+	DownedDestroyer: Efter at have besejret Ødelæggeren
+	DownedSkeletronPrime: Efter at have besejret Skeletron Prime
+	DownedMechBossAll: Efter at have besejret alle mekaniske bosser
+	DownedPlantera: Efter at have besejret Plantera
+	DownedEmpressOfLight: Efter at have besejret Lys-Kejserinden
+	DownedDukeFishron: Efter at have besejret Grev Fishron
+	DownedGolem: Efter at have besejret Golem
+	/* 
+		Also considered "Sorgen-Tømmer":
+		"Morning Wood" = "Morgentømmer", "Sorg" = "Sorrow"
+	*/
+	DownedMourningWood: Efter at have besejret Træ-Skræmme
+	DownedPumpking: Efter at have besejret Græs-Konge
+	DownedEverscream: Efter at have besejret Evigskrål
+	DownedSantaNK1: Efter at have besejret Jule-M4N1
+	DownedIceQueen: Efter at have besejret Isdronningen
+	DownedLunaticCultist: Efter at have besejret den Vanvittige Kultist
+	DownedMoonLord: Efter at have besejret Måne-Herren
+	DownedClown: Efter at have besejret en Klovn
+	DownedGoblinArmy: Efter at have besejret Goblinhærren
+	DownedPirates: Efter at have besejret Piraterne
+	DownedMartians: Efter at have besejret Marsianerne
+	DownedFrostLegion: Efter at have besejret Frostlegionen
+	DownedSolarPillar: Efter at have besejret Solar-Søjlen
+	DownedVortexPillar: Efter at have besejret Vortex-Søjlen
+	DownedNebulaPillar: Efter at have besejret Nebula-Søjlen
+	DownedStardustPillar: Efter at have besejret Stjernestøvs-Søjlen
+	DownedOldOnesArmyAny: Efter at have besejret hvilket som helst niveau af Old One's Army
+	DownedOldOnesArmyT1: Efter at have besejret niveau 1 af Old One's Army
+	DownedOldOnesArmyT2: Efter at have besejret niveau 2 af Old One's Army
+	DownedOldOnesArmyT3: Efter at have besejret niveau 3 af Old One's Army
+	NotDownedKingSlime: Før at have besejret Slim-Kongen
+	NotDownedEyeOfCthulhu: Før at have besejret Cthulhus Øje
+	NotDownedBoss2: Før at have besejret Verdens-Æderen eller Cthulhus Hjerne
+	NotDownedEaterOfWorlds: Før at have besejret Verdens-Æderen
+	NotDownedBrainOfCthulhu: Før at have besejret Cthulhus Hjerne
+	NotDownedQueenBee: Før at have besejret Bidronningen
+	NotDownedSkeletron: Før at have besejret Skeletron
+	NotDownedDeerclops: Før at have besejret Deerclops
+	NotDownedQueenSlime: Før at have besejret Slim-Dronningen
+	NotDownedEarlygameBoss: Før at have besejret Cthulhus Øje, Verdens-Æderen, Cthulhus Hjerne, Bidronningen, eller Skeletron
+	NotDownedMechBossAny: Før at have besejret hvilken som helst mekanisk boss
+	NotDownedTwins: Før at have besejret Tvillingene
+	NotDownedDestroyer: Før at have besejret Ødelæggeren
+	NotDownedSkeletronPrime: Før at have besejret Skeletron Prime
+	NotDownedMechBossAll: Før at have besejret alle mekaniske bosser
+	NotDownedPlantera: Før at have besejret Plantera
+	NotDownedEmpressOfLight: Før at have besejret Lys-Kejserinden
+	NotDownedDukeFishron: Før at have besejret Grev Fishron
+	NotDownedGolem: Før at have besejret Golem
+	/* 
+		Also considered "Sorgen-Tømmer":
+		"Morning Wood" = "Morgentømmer", "Sorg" = "Sorrow"
+	*/
+	NotDownedMourningWood: Før at have besejret Træ-Skræmme
+	NotDownedPumpking: Før at have besejret Græs-Konge
+	NotDownedEverscream: Før at have besejret Evigskrål
+	NotDownedSantaNK1: Før at have besejret Jule-M4N1
+	NotDownedIceQueen: Før at have besejret Isdronningen
+	NotDownedLunaticCultist: Før at have besejret den Vanvittige Kultist
+	NotDownedMoonLord: Før at have besejret Måne-Herren
+	NotDownedClown: Før at have besejret en Klovn
+	NotDownedGoblinArmy: Før at have besejret Goblinhærren
+	NotDownedPirates: Før at have besejret Piraterne
+	NotDownedMartians: Før at have besejret Marsianerne
+	NotDownedFrostLegion: Før at have besejret Frostlegionen
+	NotDownedSolarPillar: Før at have besejret Solar-Søjlen
+	NotDownedVortexPillar: Før at have besejret Vortex-Søjlen
+	NotDownedNebulaPillar: Før at have besejret Nebula-Søjlen
+	NotDownedStardustPillar: Før at have besejret Stjernestøvs-Søjlen
+	NotDownedOldOnesArmyAny: Før at have besejret hvilket som helst niveau af Old One's Army
+	NotDownedOldOnesArmyT1: Før at have besejret niveau 1 af Old One's Army
+	NotDownedOldOnesArmyT2: Før at have besejret niveau 2 af Old One's Army
+	NotDownedOldOnesArmyT3: Før at have besejret niveau 3 af Old One's Army
+	PlayerCarriesItem: Når spilleren har en/et {0} i deres rygsæk
+	PlayerCarriesItem2: Når spilleren har en/et {0} eller {1} i deres rygsæk
+	NpcIsPresent: Når {0} er til stede
+	IsNpcShimmered: Når sælgeren er en shimmer-variant
+	AtleastXHealth: Når spilleren har mindst {0} maksimal liv
+	AtleastXMana: Når spilleren har mindst {0} maksimal mana
+	PlatinumCoin: Når spilleren har mindst 1 platinmønt i deres pung.
+	GolfScoreOver: Når spilleren har en golf-score på {0} eller mere
+	BestiaryPercentage: Når Bestiariet er blevet mindst {0}% udfyldt
+	BestiaryFull: Når Bestiariet er blevet fuldstændigt udfyldt
+	BestiaryWinx: Når Bestiariet indeholder opslag for alle tre feer
+	InMultiplayer: I multiplayer
+	Periodically: Periodisk
+	OnTeam: Når spilleren er på et hold i multiplayer
+	StyleMoon: Om natten og på en dag med Aftagende Halv-, Aftagende Ny-, Tiltagende Halv-, eller Tiltagende Nymåne
+	DownedB2B3HM: Efter at have besejret Verdens-Æderen, Cthulhus Hjerne, Skeletron, eller Flæskmuren
+	DaytimeNotFullMoon: Om dagen på en dag med en given månefase udover fuldmåne
+	NightDayFullMoon: Om natten eller hele dagen under en fuldmåne
+	NoAteLoaf: Når spilleren ikke har spist et Håndværker-Brød endnu.
+	BloodOrSun: Under en Blodmåne eller Solformørkelse
+	NotBloodOrSun: Ikke under en Blodmåne eller Solformørkelse
+	HardmodeFTW: I Hardmode i en "For the Worthy"-verden. Ellers når som helst
+	NightOrEclipse: Om natten eller under en Solformørkelse
+	BloodMoonOrHardmode: Under en Blodmåne, eller når som helst i Hardmode
+	WorldGenSilver: I en verden med Sølvmalm
+	WorldGenTungsten: I en verden med Wolfram-malm
+	NightAfterEvilOrHardmode: Om natten efter at have besejret Verdens-Æderen eller Cthulhus Hjerne, eller når som helst i Hardmode
+	AnglerQuestsFinishedOver: Når spilleren har færdiggjort {0} eller flere opgaver hos Lystfiskeren
+	HappyEnoughForPylons: Når sælgeren er glad nok til at sælge pyloner
+	AnotherTownNPCNearby: Når sælgeren har en anden By-NPC i nærheden
+	ForestPylon: På overfladen og ikke i en anden pylon-biome
+	UndergroundPylon: Under overfladen og ikke i en anden pylon-biome
+	MoonPhasesHalf0OrPreHardmode: Når som helst før Hardmode, eller under en fuld-, aftagende halv-, trekvart-, eller aftagende nymåne
+	FullMoon: Under en fuldmåne
+	WaningGibbousMoon: Under en aftagende halvmåne
+	ThirdQuarterMoon: Under en trekvart-måne
+	WaningCrescentMoon: Under en aftagende nymåne
+	NewMoon: Under en nymåne
+	WaxingCrescentMoon: Under en tiltagende nymåne
+	FirstQuarterMoon: Under en kvart-måne
+	WaxingGibbousMoon: Under en tiltagende halvmåne
+	MoonPhasesQuarter0: Under en fuld- eller aftagende halvmåne
+	MoonPhasesQuarter1: Under en trekvart- eller aftagende nymåne
+	MoonPhasesQuarter2: Under en ny- eller tiltagende nymåne
+	MoonPhasesQuarter3: Under en kvart- eller tiltagende halvmåne
+	MoonPhasesHalf0: Under en fuld-, aftagende ny-, trekvart- eller aftagende halvmåne
+	MoonPhasesHalf1: Under en ny-, tiltagende ny-, kvart- eller tiltagende halvmåne
+	MoonPhasesEven: Under en fuld-, trekvart-, ny- eller hvart-måne
+	MoonPhasesOdd: Under en halvmåne
+	MoonPhasesNearNew: Under en trekvart-, aftagende ny-, eller nymåne
+	MoonPhasesEvenQuarters: Under en fuld-, aftagende halv-, ny-, eller tiltagende halv-måne
+	MoonPhasesOddQuarters: Under en trekvart-, aftagende ny-, kvart-, eller tiltagende halvmåne
+	MoonPhases04: Under en fuld- eller nymåne
+	MoonPhases15: Under en aftagende halv- eller tiltagende nymåne
+	MoonPhases26: Under en trekvart- eller kvart-måne
+	MoonPhases37: Under en aftagende ny- eller tiltagende halv-måne
 }
 
 Config: {
 	Color: {
-		// Hue.Label: Hue
-		// Saturation.Label: Saturation
-		// Lightness.Label: Lightness
-		// Red.Label: Red
-		// Green.Label: Green
-		// Blue.Label: Blue
-		// Alpha.Label: Alpha
+		Hue.Label: Farvetone
+		Saturation.Label: Mætning
+		Lightness.Label: Lysstyrke
+		Red.Label: Rød
+		Green.Label: Grøn
+		Blue.Label: Blå
+		Alpha.Label: Alfa
 	}
 
 	Vector2: {
@@ -1162,233 +1172,237 @@ Config: {
 
 Mods: {
 	ModLoader: {
-		// Unloaded: Unloaded
-		// Prefixes.UnloadedPrefix.Tooltip: Prefix from unloaded mod: {0}
+		Unloaded: Aflæst
+		Prefixes.UnloadedPrefix.Tooltip: Præfiks fra aflæste mod: {0}
 
 		Items: {
-			// AprilFools.DisplayName: April Fools Joke
+			AprilFools.DisplayName: Aprilsnar
 
 			StartBag: {
-				// DisplayName: Starting Bag
-				/* Tooltip:
+				DisplayName: Startsæk
+				Tooltip:
 					'''
-					Some starting items couldn't fit in your inventory
+					Noget grej kunne ikke være i din rygsæk
 					{$CommonItemTooltip.RightClickToOpen}
-					''' */
+					'''
 			}
 
 			UnloadedItem: {
-				// DisplayName: Unloaded Item
+				DisplayName: Aflæst Genstand
 				/* Tooltip: "\n" */
 				// UnloadedItemModTooltip: Mod: {0}
-				// UnloadedItemItemNameTooltip: Item: {0}
+				UnloadedItemItemNameTooltip: Genstand: {0}
 			}
 
 			Jofairden_Body: {
-				// DisplayName: Andromedon Body
-				// Tooltip: The power of the Andromedon flows within you
+				DisplayName: Andromedon-Krop
+				Tooltip: Andomedonens styrke strømmer igennem dig
 			}
 
 			Jofairden_Head: {
-				// DisplayName: Andromedon Head
-				// Tooltip: The power of the Andromedon flows within you
+				DisplayName: Andromedon-Hoved
+				Tooltip: Andomedonens styrke strømmer igennem dig
 			}
 
 			Jofairden_Legs: {
-				// DisplayName: Andromedon Legs
-				// Tooltip: The power of the Andromedon flows within you
+				DisplayName: Andromedon-Ben
+				Tooltip: Andomedonens styrke strømmer igennem dig
 			}
 
-			// AetherBreaker_Body.DisplayName: AetherBreaker's Body
-			// AetherBreaker_Head.DisplayName: AetherBreaker's Head
-			// WitchDaggah_Head.DisplayName: WitchDaggah's Head
-			// AetherBreaker_Legs.DisplayName: AetherBreaker's Legs
-			// AetherBreaker_Wings.DisplayName: AetherBreaker's Wings
-			// AlejandroAkbal_Body.DisplayName: AlejandroAkbal's Body
-			// AlejandroAkbal_Head.DisplayName: AlejandroAkbal's Head
-			// AlejandroAkbal_Legs.DisplayName: AlejandroAkbal's Legs
-			// AlejandroAkbal_Back.DisplayName: AlejandroAkbal's Back
-			// Coolmike5000_Body.DisplayName: Coolmike5000's Body
-			// Coolmike5000_Head.DisplayName: Coolmike5000's Head
-			// Coolmike5000_Legs.DisplayName: Coolmike5000's Legs
-			// Coolmike5000_Wings.DisplayName: Coolmike5000's Wings
-			// dinidini_Body.DisplayName: dinidini's Body
-			// dinidini_Head.DisplayName: dinidini's Head
-			// dinidini_Legs.DisplayName: dinidini's Legs
-			// dinidini_Wings.DisplayName: dinidini's Wings
-			// dschosen_Body.DisplayName: dschosen's Body
-			// dschosen_Head.DisplayName: dschosen's Head
-			// dschosen_Legs.DisplayName: dschosen's Legs
-			// dschosen_Wings.DisplayName: dschosen's Wings
-			// Elfinlocks_Body.DisplayName: Elfinlocks' Body
-			// Elfinlocks_Head.DisplayName: Elfinlocks' Head
-			// Elfinlocks_Legs.DisplayName: Elfinlocks' Legs
-			// Frosty_Hat.DisplayName: Frosty's Hat
-			// Frosty_Hoodie.DisplayName: Frosty's Hoodie
-			// Frosty_Pants.DisplayName: Frosty's Pants
-			// Glory_Body.DisplayName: Glory's Body
-			// Glory_Head.DisplayName: Glory's Head
-			// Glory_Legs.DisplayName: Glory's Legs
-			// Guildpack_Body.DisplayName: Guildpack's Body
-			// Guildpack_Head.DisplayName: Guildpack's Head
-			// Guildpack_Legs.DisplayName: Guildpack's Legs
-			// HER0zero_Body.DisplayName: HER0zero's Body
-			// HER0zero_Head.DisplayName: HER0zero's Head
-			// HER0zero_Legs.DisplayName: HER0zero's Legs
-			// KittyKitCatCat_Body.DisplayName: KittyKitCatCat's Body
-			// KittyKitCatCat_Head.DisplayName: KittyKitCatCat's Head
-			// KittyKitCatCat_Legs.DisplayName: KittyKitCatCat's Legs
+			AetherBreaker_Body.DisplayName: AetherBreakers Krop
+			AetherBreaker_Head.DisplayName: AetherBreakers Hoved
+			WitchDaggah_Head.DisplayName: WitchDaggahs Hoved
+			AetherBreaker_Legs.DisplayName: AetherBreakers Ben
+			AetherBreaker_Wings.DisplayName: AetherBreakers Vinger
+			AlejandroAkbal_Body.DisplayName: AlejandroAkbals Krop
+			AlejandroAkbal_Head.DisplayName: AlejandroAkbals Hoved
+			AlejandroAkbal_Legs.DisplayName: AlejandroAkbals Ben
+			AlejandroAkbal_Back.DisplayName: AlejandroAkbals Ryg
+			Coolmike5000_Body.DisplayName: Coolmike5000s Krop
+			Coolmike5000_Head.DisplayName: Coolmike5000s Hoved
+			Coolmike5000_Legs.DisplayName: Coolmike5000s Ben
+			Coolmike5000_Wings.DisplayName: Coolmike5000s Vinger
+			dinidini_Body.DisplayName: dinidinis Krop
+			dinidini_Head.DisplayName: dinidinis Hoved
+			dinidini_Legs.DisplayName: dinidinis Ben
+			dinidini_Wings.DisplayName: dinidinis Vinger
+			dschosen_Body.DisplayName: dschosens Krop
+			dschosen_Head.DisplayName: dschosens Hoved
+			dschosen_Legs.DisplayName: dschosens Ben
+			dschosen_Wings.DisplayName: dschosens Vinger
+			Elfinlocks_Body.DisplayName: Elfinlocks Krop
+			Elfinlocks_Head.DisplayName: Elfinlocks Hoved
+			Elfinlocks_Legs.DisplayName: Elfinlocks Ben
+			Frosty_Hat.DisplayName: Frostys Hat
+			Frosty_Hoodie.DisplayName: Frostys Hættetrøje
+			Frosty_Pants.DisplayName: Frostys Bukser
+			Glory_Body.DisplayName: Glorys Krop
+			Glory_Head.DisplayName: Glorys Hoved
+			Glory_Legs.DisplayName: Glorys Ben
+			Guildpack_Body.DisplayName: Guildpacks Krop
+			Guildpack_Head.DisplayName: Guildpacks Hoved
+			Guildpack_Legs.DisplayName: Guildpacks Ben
+			HER0zero_Body.DisplayName: HER0zeros Krop
+			HER0zero_Head.DisplayName: HER0zeros Hoved
+			HER0zero_Legs.DisplayName: HER0zeros Ben
+			KittyKitCatCat_Body.DisplayName: KittyKitCatCats Krop
+			KittyKitCatCat_Head.DisplayName: KittyKitCatCats Hoved
+			KittyKitCatCat_Legs.DisplayName: KittyKitCatCats Ben
 
 			Linus_Body: {
-				// DisplayName: Hunter Garb
-				/* Tooltip:
+				DisplayName: Jæger-Klæder
+				Tooltip:
 					'''
-					'One of the standard articles of hunter attire fashioned at the workshop,
-					accompanied with a short cape that wipes away blood.
-					Allows one to stalk beasts unannounced, by cover of night.'
-					''' */
+					'En essentiel del af en jægers påklædning - direkte fra værkstedet,
+					brugt i kombination med en kort kappe, der ment kan tørre blodet væk.
+					Gør en i stand til lydløst at jæge efter bæster i nattens mørke stund.'
+					'''
 			}
 
 			Linus_Head: {
-				// DisplayName: Hunter Hat
-				/* Tooltip:
+				DisplayName: Jægerhat
+				Tooltip:
 					'''
-					'One of the standard articles of hunter attire fashioned at the workshop.
-					Recognizable by its withered feathers, this cap is fashioned after one of the old hunters.'
-					''' */
+					'En essentiel del af en jægers påklædning - direkte fra værkstedet.
+					Genkendelig på sine visne fjer er denne hat formet efter en af de gamle jægere.'
+					'''
 			}
 
 			Linus_Legs: {
-				// DisplayName: Hunter Trousers
-				/* Tooltip:
+				DisplayName: Jæger-Bukser
+				Tooltip:
 					'''
-					'One of the standard articles of hunter attire, fashioned at the workshop.
-					Allows one to stalk beasts unannounced, by cover of night.'
-					''' */
+					'En essentiel del af en jægers påklædning - direkte fra værkstedet.
+					Gør en i stand til lydløst at jæge efter bæster i nattens mørke stund.'
+					'''
 			}
 
 			Linus_Wings: {
-				// DisplayName: A Call Beyond
-				/* Tooltip:
+				DisplayName: Et Kald fra Hindsides
+				Tooltip:
 					'''
-					'One of the secret rites of the Choir.
-					But it seems to have been repurposed by Linus.'
-					''' */
+					'Et af de hemmelige ritualet af Koret.
+					Den virker dog til at være blevet genanvendt af Linus,'
+					'''
 			}
 
-			// Mayne_Body.DisplayName: Mayne's Body
-			// Mayne_Head.DisplayName: Mayne's Head
-			// Mayne_Legs.DisplayName: Mayne's Legs
-			// Mayne_Wings.DisplayName: Mayne's Wings
-			// Orian_Body.DisplayName: Orian's Body
-			// Orian_Head.DisplayName: Orian's Head
-			// Orian_Legs.DisplayName: Orian's Legs
-			// POCKETS_Body.DisplayName: POCKETS' Body
-			// POCKETS_Head.DisplayName: POCKETS' Head
-			// POCKETS_Legs.DisplayName: POCKETS' Legs
-			// POCKETS_Wings.DisplayName: POCKETS' Wings
-			// Polyblank_Body.DisplayName: Polyblank's Body
-			// Polyblank_Head.DisplayName: Polyblank's Head
-			// Polyblank_Legs.DisplayName: Polyblank's Legs
-			// Remeus_Body.DisplayName: Remeus' Body
-			// Remeus_Head.DisplayName: Remeus' Head
-			// Remeus_Legs.DisplayName: Remeus' Legs
-			// Saethar_Body.DisplayName: Saethar's Body
-			// Saethar_Head.DisplayName: Saethar's Head
-			// Saethar_Legs.DisplayName: Saethar's Legs
-			// Saethar_Wings.DisplayName: Saethar's Wings
-			// Sailing_Squid_Body.DisplayName: Sailing_Squid's Body
-			// Sailing_Squid_Head.DisplayName: Sailing_Squid's Head
-			// Sailing_Squid_Legs.DisplayName: Sailing_Squid's Legs
-			// Sailing_Squid_Wings.DisplayName: Sailing_Squid's Wings
-			// Squid_Body.DisplayName: Squid's Body
-			// Squid_Head.DisplayName: Squid's Head
-			// Squid_Legs.DisplayName: Squid's Legs
-			// Tantamount_Body.DisplayName: Tantamount's Body
-			// Tantamount_Head.DisplayName: Tantamount's Head
-			// Tantamount_Legs.DisplayName: Tantamount's Legs
-			// Tantamount_Wings.DisplayName: Tantamount's Wings
-			// toplayz_Body.DisplayName: toplayz's Body
-			// toplayz_Head.DisplayName: toplayz's Head
-			// toplayz_Legs.DisplayName: toplayz's Legs
+			Mayne_Body.DisplayName: Maynes Krop
+			Mayne_Head.DisplayName: Maynes Hoved
+			Mayne_Legs.DisplayName: Maynes Ben
+			Mayne_Wings.DisplayName: Maynes Vinger
+			Orian_Body.DisplayName: Orian Krop
+			Orian_Head.DisplayName: Orian Hoved
+			Orian_Legs.DisplayName: Orian Ben
+			POCKETS_Body.DisplayName: POCKETS' Krop
+			POCKETS_Head.DisplayName: POCKETS' Hoved
+			POCKETS_Legs.DisplayName: POCKETS' Ben
+			POCKETS_Wings.DisplayName: POCKETS' Vinger
+			Polyblank_Body.DisplayName: Polyblanks Krop
+			Polyblank_Head.DisplayName: Polyblanks Hoved
+			Polyblank_Legs.DisplayName: Polyblanks Ben
+			Remeus_Body.DisplayName: Remeus' Krop
+			Remeus_Head.DisplayName: Remeus' Hoved
+			Remeus_Legs.DisplayName: Remeus' Ben
+			Saethar_Body.DisplayName: Saethars Krop
+			Saethar_Head.DisplayName: Saethars Hoved
+			Saethar_Legs.DisplayName: Saethars Ben
+			Saethar_Wings.DisplayName: Saethars Vinger
+			Sailing_Squid_Body.DisplayName: Sailing_Squids Krop
+			Sailing_Squid_Head.DisplayName: Sailing_Squids Hoved
+			Sailing_Squid_Legs.DisplayName: Sailing_Squids Ben
+			Sailing_Squid_Wings.DisplayName: Sailing_Squids Vinger
+			Squid_Body.DisplayName: Squids Krop
+			Squid_Head.DisplayName: Squids Hoved
+			Squid_Legs.DisplayName: Squids Ben
+			Tantamount_Body.DisplayName: Tantamounts Krop
+			Tantamount_Head.DisplayName: Tantamounts Hoved
+			Tantamount_Legs.DisplayName: Tantamounts Ben
+			Tantamount_Wings.DisplayName: Tantamounts Vinger
+			toplayz_Body.DisplayName: toplayz's Krop
+			toplayz_Head.DisplayName: toplayz's Hoved
+			toplayz_Legs.DisplayName: toplayz's Ben
 
 			xAqult_Body: {
-				// DisplayName: Catalyst's Soul
-				/* Tooltip:
+				DisplayName: Catalysts Sjæl
+				Tooltip:
 					'''
+					'Lav fred - specielt med din egen sjæl.'
+					(xAqults 
 					'Make peace, especially with your own soul.'
-					(xAqult's Vanity Set)
-					''' */
+					(xAqult's Påklædningssæt)
+					'''
 			}
 
 			xAqult_Head: {
-				// DisplayName: Catalyst's Honorable Tiara
-				/* Tooltip:
+				DisplayName: Catalysts Æres-Tiara
+				Tooltip:
 					'''
-					'Invaluable Tiara from Earthia.'
-					(xAqult's Vanity Set)
-					''' */
+					'Uundværlig Tiara fra Earthia.'
+					(xAqults Påklædningssæt)
+					'''
 			}
 
 			xAqult_Legs: {
-				// DisplayName: Catalyst's Stand
-				/* Tooltip:
+				DisplayName: Catalysts Stander
+				Tooltip:
 					'''
-					'Stand calmly and remember to focus.'
-					(xAqult's Vanity Set)
-					''' */
+					'Stå afslappet og husk på fokus.'
+					(xAqults Påklædningssæt)
+					'''
 			}
 
 			xAqult_Lens: {
-				// DisplayName: Catalyst's Sight
-				/* Tooltip:
+				DisplayName: Catalysts Syn
+				Tooltip:
 					'''
-					'Heterochromia!'
-					(xAqult's Vanity Set)
-					''' */
+					'Heterokromi!'
+					(xAqults Påklædningssæt)
+					'''
 			}
 
 			xAqult_Mask: {
-				// DisplayName: Catalyst Mask
-				/* Tooltip:
+				DisplayName: Catalyst-Maske
+				Tooltip:
 					'''
+					'Der kan kun være en.'
 					'There can be only one.'
-					(xAqult's Vanity Set)
-					''' */
+					(xAqults Påklædningssæt)
+					'''
 			}
 
 			xAqult_Wings: {
-				// DisplayName: Catalyst's Prismic Sabers
-				/* Tooltip:
+				DisplayName: Catalysts Prismiske Sabler
+				Tooltip:
 					'''
-					'Light and Dark. Perfectly balanced, as all things should be.'
-					(xAqult's Vanity Set)
-					''' */
+					'Lys og Mørke. I perfect afbalance, som alle ting bør være.'
+					(xAqults Påklædningssæt)
+					'''
 			}
 
-			// Zeph_Body.DisplayName: Zeph's Body
-			// Zeph_Head.DisplayName: Zeph's Head
-			// Zeph_Legs.DisplayName: Zeph's Legs
-			// Zeph_Wings.DisplayName: Zeph's Wings
+			Zeph_Body.DisplayName: Zephs Krop
+			Zeph_Head.DisplayName: Zephs Hoved
+			Zeph_Legs.DisplayName: Zephs Ben
+			Zeph_Wings.DisplayName: Zephs Vinger
 		}
 
 		Tiles: {
 			UnloadedChest: {
-				// MapEntry0: Unloaded Chest
-				// MapEntry1: Locked Unloaded Chest
+				MapEntry0: Aflæst Kiste
+				MapEntry1: Låst Aflæst Kiste
 			}
 		}
 	}
 }
 
 TownNPCHousingFailureReasons: {
-	// TooCloseToWorldEdge: We need better text for this!!!
-	// RoomIsTooBig: This room is too big
-	// RoomIsTooSmall: This room is too small
-	// HoleInWallIsTooBig: This room is missing a wall
-	// RoomCheckStartedInASolidTile: This is a solid block!
-	// RoomHasAStinkbug: This room is infested by a stinkbug!
-	// RoomHasAnEchoStinkbug: This room is infested by a ghostly stinkbug!
+	// Going off of interpretation "The room is too close to the world's edge"
+	TooCloseToWorldEdge: Rummet er for tæt på verdens kant
+	RoomIsTooBig: Rummet er for stort
+	RoomIsTooSmall: Rummet er for lille
+	HoleInWallIsTooBig: Rummet mangler en væg
+	RoomCheckStartedInASolidTile: Dette er en solid blok!
+	RoomHasAStinkbug: Rummet er infesteret af en tæge!
+	RoomHasAnEchoStinkbug: Rummet er infesteret af en spøgelig tæge!
 }
 
 MerchantNames: {
@@ -1812,13 +1826,13 @@ PirateNames: {
 	// "Red Beard": Red Beard
 	// Jack: Jack
 	// "Black Beard": Black Beard
-	// "Captain Morgan": Captain Morgan
+	"Captain Morgan": Kaptajn Morgan
 	// "Wet Beard": Wet Beard
 	// "James T. Beard": James T. Beard
-	// "Gunpowder Garry": Gunpowder Garry
-	// "Captain Stoney Dirt": Captain Stoney Dirt
+	"Gunpowder Garry": Krudt-Kurt
+	"Captain Stoney Dirt": Kaptajn Stenjord
 	// Jake: Jake
-	// "Captain Bullywort": Captain Bullywort
+	"Captain Bullywort": Kaptajn Bullywort
 }
 
 StylistNames: {
@@ -2108,7 +2122,7 @@ CatNames_White: {
 	// Storm: Storm
 	// Angel: Angel
 	// Vincent: Vincent
-	// MrCat: Mr. Cat
+	MrCat: Hr. Cat
 	// Holly: Holly
 	// Sam: Sam
 	// Rory: Rory
@@ -2556,106 +2570,106 @@ SlimeNames_Copper: {
 }
 
 AnglerQuestChatter: {
-	// Chatter_1: Wooow! You've bothered me, like, {AnglerCompletedQuestsCount} times! If I didn't have a cool fish for each time, I would be really mad!
-	// Chatter_2: Did you know I have {AnglerCompletedQuestsCount} amazingly awesome fish now!? That's because as far as errand monkeys go, you're actually a bit useful!
+	Chatter_1: Wooow! Du har forstyrret mig, sådan set {AnglerCompletedQuestsCount} gange! Hvis jeg ikke havde en sej fisk for hver af gangene ville jeg være meget sur!
+	Chatter_2: Vidste du at jeg har {AnglerCompletedQuestsCount} vidunderligt fantastiske fisk nu!? Det er fordi at når det kommer til tjenestefolk, kan du rent faktisk bruges til noget!
 }
 
 BartenderChatter: {
-	// Chatter_1: I've got the cure for what ails ya! Get it? Ale? No?
-	// Chatter_2: They say you're strong, well, I know strong. Let's see if you measure up.
-	// Chatter_3: Back where I'm from, we only serve Root Beer...
-	// Chatter_4: This is a big upgrade from wiping that table all day.
-	// Chatter_5: Life's a challenge when you're just naturally better than everyone else.
-	// Chatter_6: What am I doing here...
-	// Chatter_7: A lot of tenacity and a little bit of luck can go a long way...
-	// Chatter_8: Have you seen any Meburs around here?
-	// Chatter_9: "{Dryad} seems nice. I should bring her back with me."
-	// Chatter_10: Do you think {Steampunker} has an extra of that gun? I know a witch that may want one.
-	// Chatter_11: No wonder {Demolitionist} has so many accidents. You can't imagine how much ale he buys from me.
-	// Chatter_12: Normally, I'm not much of a fan of Goblins, but {GoblinTinkerer} seems to be an alright sort.
-	// Chatter_13: "{?Day}Anyone see where the Dryad went?"
-	// Chatter_14: "{?!Day}Really quiet out there. A little too quiet..."
-	// Chatter_15: "{?!Day}Check in with me, and do your job."
-	// Chatter_16: "{?BloodMoon}You know, where I'm from, a Blood Moon is actually just an excuse to get some fresh air."
-	// Chatter_17: "{?MoonLordDefeated}Moon Lord, don't you mean Abyss Lord?"
-	// Chatter_18: "{?HardMode}I know a Lavamancer that would really like that hellstone down in the underworld."
-	// Chatter_19: "{?Homeless}Know any good places to set up shop? Would love to open up a bar here."
+	Chatter_1: Jeg har en kur til enhver fork-øl-else! Fik du den? Øl? Nej?
+	Chatter_2: De siger 'du er stærk. Tjov, det kender jeg til. Lad os se hvordan du hamler op.
+	Chatter_3: Tilbage hvor jeg er fra serverer vi kun Rootbeer...
+	Chatter_4: Det her er en kæmpe opgradering fra at tørre borde af hele dagen.
+	Chatter_5: Livet er en udfordring når du ba'r er naturligt bedre end alle andre.
+	Chatter_6: Hvad laver jeg her...
+	Chatter_7: Med en masse udholdenhed og en smule held kan man komme langt...
+	Chatter_8: Har du set nogen Meburer heromkring?
+	Chatter_9: "{Dryad} virker fin. Jeg bør invitere hende med mig."
+	Chatter_10: Tror du at {Steampunker} har en mere af de skydevåben? Jeg kender en heks der sagtens kunne bruge en.
+	Chatter_11: Ingen tvivl om at {Demolitionist} har så mange ulykker. Du ville aldrig kunne tro hvor meget øl han køber fra mig.
+	Chatter_12: Normalt er jeg ikke særligt glad for Gobliner, men {GoblinTinkerer} virker til at være en ganske fornuftig en.
+	Chatter_13: "{?Day}Nogen, der har set Dryaden?"
+	Chatter_14: "{?!Day}Meget stille udenfor. En smule for stille..."
+	Chatter_15: "{?!Day}Tjek ind hos mig og gør dit arbejde."
+	Chatter_16: "{?BloodMoon}Ved du hvad. Hvor jeg er fra er en Blodmåne bare en undskyldning for at få en smule frisk luft."
+	Chatter_17: "{?MoonLordDefeated}Måne-Herskeren? Mener du ikke Abyss-Herskeren?"
+	Chatter_18: "{?HardMode}Jeg kender en Lavamantiker der virkelig ville kunne lide det der helvedssten nede i Underverdenen."
+	Chatter_19: "{?Homeless}Kender du gode steder at slå biksen op? Ville elske at åbne en bar i området."
 }
 
 GolferChatter: {
-	// Chatter_1: I'm not the type to scream and thrash around just because my ball lands in the water. I stay calm, and collected, and focus on the next shot.
-	// Chatter_2: Huh? You eat WHAT for breakfast?
-	// Chatter_3: An early bird catches the worm, but an early hole catches the birdie.
-	// Chatter_4: Lick your finger and hold it to the wind. Golf balls are lightweight and easily influenced by a breeze.
-	// Chatter_5: If sand is causing you nightmares, your wedge is your dreamcatcher.
-	// Chatter_6: Should I take up fishing? Bribing {Angler} to fetch my balls out of the water is emptying my wallet!
-	// Chatter_7: To strike high, strike far, or to get unstuck? It's all about the club you use. Choose wisely!
-	// Chatter_8: When I offer you to go clubbing, I don't mean downtown. I mean like, with a five iron?
-	// Chatter_9: In this game, only losers go for that high score.
-	// Chatter_10: Landscapers must make a lot of green off us golfers. Heh!
-	// Chatter_11: "{Armsdealer} has mistaken my golf balls as ammo for his musket on several occasions."
-	// Chatter_12: According to {Dryad}, I'm murdering a lot of her friends when I mow the lawn. I gotta have a fairway for my course!
-	// Chatter_13: If you land on the green, use a putter! Don't let your balls go flying away when you're THAT close.
-	// Chatter_14: Don't go chasing water hazards, please stick to the fairways and greens that you're used to.
-	// Chatter_15: "{?BloodMoon}The blood stains on my club? Have you seen the zombies outside?!"
-	// Chatter_16: "{?BloodMoon}I don't know what's scarier, a Blood Moon or my sister during a Blood Moon!"
-	// Chatter_17: "{?Rain}Golfing in THIS weather?! Only if you like swinging around a giant lightning rod!"
+	Chatter_1: Jeg er ikke typen som skriger og brokker mig bare fordi min kugle ender i vandet. I forholder mig rolig, afslappet, og fokuseret på mit næste skud.
+	Chatter_2: A' hva'? HVAD spiser du til morgenmad!?
+	Chatter_3: Først til møllen får først malet, men først til køllen får første-slaget.
+	Chatter_4: Slik din finger og hold den op i vinden. Golfbolde er meget lette og påvirkes nemt af en brise.
+	Chatter_5: Hvis sand giver dig marreridt, så lad din wedge være din drømmefanger.
+	Chatter_6: Bør jeg begynde med at fiske? Det at bestikke {Angler} til at hente mine bolde ud af vandet koster mig alt for dyrt!
+	Chatter_7: At slå højt, slå langt, eller at få dig selv revet ud? Det handler kun om den kølle du bruger. Vælg den med omhu!
+	Chatter_8: Når jeg tilbyder dig at komme ud på putten mener jeg ikke den i Skive midtby. Jeg tænker med, du ved, et 5-jern?
+	Chatter_9: I det her spil er det kun taberner, som går efter high-scoren.
+	Chatter_10: Anlægsgartnere må da kun være i det grønne med os golfspillere. Heh!
+	Chatter_11: "{Armsdealer} har i flere tilfælde forvekslet mine golfbolde med musket-ammumition."
+	Chatter_12: I følge {Dryad} dræber jeg samtlige af hendes venner, når jeg slår græsset. Jeg skal da have en freeway til banen!
+	Chatter_13: Lander du på green, så brug putteren! DU må ikke lade boldene flyve væk når du er SÅ TÆT på.
+	Chatter_14: Gå ikke på jagt efter vandet; venligst forbliv på de fairways og greens som du er vant til.
+	Chatter_15: "{?BloodMoon}Blodpletterne på min kølle? Har du set zombierne udenfor?!"
+	Chatter_16: "{?BloodMoon}Jeg ved ikke hvad der er mere skræmmende. En Blodmåne eller min søser under en Blodmåne!"
+	Chatter_17: "{?Rain}Golfing i DET HER vejr?! Kun hvis du kan lide at svinge rundt med en kæmpe lynafleder!"
 }
 
 BestiaryGirlChatter: {
-	// Chatter_1: I collected critters like you once, then I took a cursed fox bite to the knee!
-	// Chatter_2: "{?Eclipse}Like wow, I feel like I belong with the creepy killer things running around right now. So glad I'm not that mindless."
-	// Chatter_3: I may not know, like, a whole lot...but I can talk your head off about nature and critters and animals and wildlife and...
-	// Chatter_4: My older bro calls me a lycanthrope. It means I'm like, part animal or something. He'd know, though, because he spends all his time outside!
-	// Chatter_5: I love animals, like, a lot! I tried to pet this weird looking fox one time, he sooo bit me, and now I became like one! Rad!
-	// Chatter_6: Staahp pulling on my tail, bro, it's totally real, and like...totally hurts when you pull on it!
-	// Chatter_7: Huh?! No, {Stylist} didn't dye my hair. It's naturally this color! It was like, dark brown before I was bitten, though!
-	// Chatter_8: Oh, THESE ears? Haha, totes better to hear you with, my dear!
-	// Chatter_9: This one time, at critter camp, I woke up one morning and everything was torn apart! Like, wow, how did I sleep through THAT?!
-	// Chatter_10: Wow, like, I've never seen a full moon. For some reason, it's like I pass out every time one's around!
-	// Chatter_11: I have noooo idea how I got here, but it's mega rad.
+	Chatter_1: Jeg samlede på dyr som dig en gang, men så tog jeg et forhekset ræve-bid til knæet!
+	Chatter_2: "{?Eclipse}Altså wow, jeg føler at jeg passer ind med de skræmmende dræber-tingester, som er på færd lige mu. Jeg er så glad for, at jeg ikke er så hjernedød."
+	Chatter_3: Jeg ved måske ikke, sådan, en hel del...men jeg vil snakke ørerne af dig om natur og vilddyr og dyr og vilddyr og...
+	Chatter_4: Storebror kalder mig for en lyaktrop. Betyder at jeg ligesom er halv dyr eller noget. Det burde han vide, da han er udenfor hele tiden!
+	Chatter_5: Jeg elsker dyr, som i, en hel del! Jeg prøvede en gang at age denne her mærkelige ræv en gang - han bed mig så meget, og nu blev jeg som en! Fedt, mand!
+	Chatter_6: Gutten, stooop med at hive i min hale! Den er hel ægte og det går, sådan, meget ondt når du hiver i den!
+	Chatter_7: A' hva'?! Nej, {Stylist} farvede ikke mit hår. Farven er hel naturlig! Dog var den, ligesom, fuldkommen mørkebrun før jeg blev bidt!
+	Chatter_8: Øh, DE HER ører? Haha, klart til bere at kunne høre dig, min kære!
+	Chatter_9: Der var denne her ene gang i krybdyrslejren hvor jeg vågnede op en morgen og alting var rævet fra hinanden! Altså, waw, hvordan sov jeg igennem DET?!
+	Chatter_10: Waw, jeg har sådan aldrig nmogensinde set en fuldmåne. Af en eller anden årsag er det som om at jeg besvimer hver gang der er en!
+	Chatter_11: Jeg har iiingen ide om, hvordan jeg er endt her, men det er mega-fedt.
 }
 
 BestiaryGirlLycantropeChatter: {
-	// Chatter_1: Grrr!! Away. Stay. NOW!
-	// Chatter_2: Rawgh! Roo! Danger. Me. Wraaaath!
+	Chatter_1: Grrr!! Væk. Bliv. NU!
+	Chatter_2: Rawgh! Roo! Fare. Mig. Vreede!
 }
 
 PrincessChatter: {
-	// Chatter_1: I really appreciate all the good you've done for this land! Thank you!
-	// Chatter_2: Goblins are so cute! They are short, and have those little pointy ears, and they come in different colors!
-	// Chatter_3: "{?GolemDefeated}I tried to pet a lihzahrd once. Um... they didn't mind at all!"
-	// Chatter_4: "{?MartiansDefeated}I wish the martians were a little nicer. Our world doesn't normally get visitors!"
-	// Chatter_5: Like my dress? Gee, thanks! Just sewed it.
-	// Chatter_6: I am so fabulously grateful for my subjects!
-	// Chatter_7: "{?FrostLegionDefeated}Worry not, concerned citizen! I am well aware of the organized crime problem among snowfolk."
-	// Chatter_8: Hmm... do you think {Pirate} will be able to redeem some of his old seafaring friends, as well?
-	// Chatter_9: "{?IceQueenDefeated}Diplomacy did not work so well with the Ice Queen, I'm afraid. She's rather cold-hearted! He he!"
-	// Chatter_10: "{?PumpkingDefeated}The Pumpking can be rather two-faced, it seems. I shall not give up on peace with his spooky people!"
-	// Chatter_11: "Pink is the best color anyone could ask for! "
-	// Chatter_12: "{?DukeFishronDefeated}I once met with a Duke on the beach. He looked kinda fishy, and lacked good manners!"
-	// Chatter_13: "Um... being a princess can be so uneventful sometimes, so I took up many hobbies! "
-	// Chatter_14: I'm so happy to finally travel the world, and meet new people!
-	// Chatter_15: As much as I love people, I am rather shy. It takes me awhile to break the ice...
-	// Chatter_16: "{?BloodMoon}The rivers are running red, everyone seem awfully on edge, hmm... it's a trying night, indeed!"
-	// Chatter_17: "{?!Day}The stars at night remind me of glitter on a beautiful, black dress. I shall soon have one made!"
+	Chatter_1: Jeg sætter virkelig meget pris på alt det godt, du har gjort for dette land! Mange tak for det!
+	Chatter_2: Gobliner er så nuttede! De er korte og har de der spidsede ører, og de findes i alle mulige farver!
+	Chatter_3: "{?GolemDefeated}Jeg prøvede en gang at age en lihzahrd. Øh... det havde de slet ikke noget imod!"
+	Chatter_4: "{?MartiansDefeated}Jeg ønsker at marsianerne var en smule sødere. Vores verden får ikke så ofte besøgende!"
+	Chatter_5: Kan du lide min kjole? Gud, ta! Har lige syet den.
+	Chatter_6: Jeg er så vidunderligt taknemmelig for alle mine undersåtter!
+	Chatter_7: "{?FrostLegionDefeated}Bekymre jer ej, borgere! Jeg er ganske klar over organiseret kriminalitet blandt snefolket."
+	Chatter_8: Hmm... tror du at {Pirate} også ville kunne forløse nogen af hans gamle venner?
+	Chatter_9: "{?IceQueenDefeated}Forhandlingerne med Isdronningen gik desværre ikke så godt, som jeg havde håbet. Hun var hel is-kold. He he!"
+	Chatter_10: "{?PumpkingDefeated}Græs-Kongen ser ud til at være ret dobbelmoralsk. Jeg vil dog ikke give op i forsøget på fred med hans skræmmende folk!"
+	Chatter_11: "Lyserød er den bedste farve som man nogensinde kunne spørge efter! "
+	Chatter_12: "{?DukeFishronDefeated}Jeg mødte en gang en Grev på stranden. Han virkede en smule skummel ud og havde ingen manerer!"
+	Chatter_13: "Øh... at være en prinsesse kan være ret kedeligt til tider, så jeg besluttede at få en masse hobbier! "
+	Chatter_14: Jeg er så glad for endelig at kunne rejse Verden rundt og møde nye mennesker!
+	Chatter_15: På trods af at jeg elsker folk er jeg ret genert. Det ta'r mig lidt tid for at bryde isen...
+	Chatter_16: "{?BloodMoon}Floderne løber rødt, alle er forfærdeligt anspændt, hmm... The rivers are running red, everyone seem awfully on edge, hmm... natten er uden tvivl krævende!"
+	Chatter_17: "{?!Day}Stjernerne på nattehimlen minder mig om glitter på en vidunderlig, sort kjole. Jeg skal snart få sådan en lavet!"
 }
 
 CatChatter: {
-	// Chatter_1: Meow!
-	// Chatter_2: Purr...
-	// Chatter_3: Merrooow!
+	Chatter_1: Mjav!
+	Chatter_2: Purr...
+	Chatter_3: Mejaauv!
 }
 
 DogChatter: {
-	// Chatter_1: Woof!
-	// Chatter_2: Bark!
-	// Chatter_3: Woof woof!
+	Chatter_1: Vov!
+	Chatter_2: Gø!
+	Chatter_3: Vov vov!
 }
 
 BunnyChatter: {
-	// Chatter_1: *Rabbit noises*
-	// Chatter_2: *Bunny noises*
+	Chatter_1: *Kaninlyde*
+	Chatter_2: *Kaninlyde*
 }
 
 SlimeBlueChatter: {
@@ -2665,9 +2679,9 @@ SlimeBlueChatter: {
 }
 
 SlimeGreenChatter: {
-	// Chatter_1: Drip!
+	Chatter_1: Dryp!
 	// Chatter_2: Sizzle fo shizzle!
-	// Chatter_3: Yo, slurp glurp!
+	Chatter_3: Hva' så, slurp glurp!
 }
 
 SlimeOldChatter: {
@@ -2684,7 +2698,7 @@ SlimeRainbowChatter: {
 
 SlimePurpleChatter: {
 	// Chatter_1: Berp.
-	// Chatter_2: *Awkward Silence*
+	Chatter_2: *Akavet Stilhed*
 	// Chatter_3: Plop. Pop... splat.
 }
 
@@ -2707,39 +2721,39 @@ SlimeCopperChatter: {
 }
 
 BestiaryGirlSpecialText: {
-	// Party: So, uh, I can't wear the hat. Sorry. I'm still here for the party, no worries!
-	// Graveyard1: My instincts are totally going wild. I really need to get out of here!
-	// Graveyard2: Ok, like, this place is totally freaky. It makes my fur stand on end!
-	// Windy1: Running in the wind makes me feel so free and wild. Totes try it sometime!
-	// Windy2: The breeze blows through my hair, it's, like, woah.
-	// Storm1: Eek!! You have NO idea how much thunder hurts my sensitive ears.
-	// Storm2: Is it over yet? I have this, like, irrational fear of thunderstorms.
-	// Rain1: Staaaap! Ugh! Not you, this lame rain.
-	// Rain2: For real!? I can't STAND being wet! It's gross.
+	Party: Så øh... jeg kan ikke passe hatten - beklager. Jeg bliver dog stadig til festen, bare rolig!
+	Graveyard1: Mine instinker løber fuldkommen løbsk lige nu. Jeg må virkelig komme væk herfra!
+	Graveyard2: Ok, så det her sted er, ligesom, totalt skræmmende. Det får min pels til at stå på række!
+	Windy1: Jeg føler mig så vild og fri når jeg løber i blæsten. Klart noget du skal prøve!
+	Windy2: Brisen blæser blidt gennem håret på mig. Der er bare sådan... woah.
+	Storm1: Aah!! Du har INGEN ide hvor ondt torden gør i mine sensitive øre.
+	Storm2: Er det overstået? Tror jeg har en en form for irrationel frygt for tordenstorme.
+	Rain1: Stååååp! Ugh! Ikk' dig - denne her åndsvage regn.
+	Rain2: Seriøst!? Jeg kan ikke FORDRAGE at blive våd. Det' klamt.
 }
 
 BartenderHelpText: {
-	// Help_1: The first thing you need to know about are the special defensive artifacts I've got for sale, but only if you've got some Defender Medals!
-	// Help_2: You can use these artifacts to create traps and defensive towers. Doing so consumes Etherian mana, a special energy dropped only by members of the Old One's Army!
-	// Help_3: Challenging the Old One's Army is rather simple. They are attracted to the power of the Eternia Crystals, and that can be used to bait them out.
-	// Help_4: To place an Eternia Crystal, you must obtain an Eternia Crystal and a stand to put it in. It just so happens, you can buy em from me!
-	// Help_5: You'll want to place your Eternia Crystal stand in a pretty open, flat area. Lots of walls and stuff might make it pretty difficult to protect!
-	// Help_6: Once your stand is set up, just interact with it while holding an Eternia Crystal, and prepare for a fight!
-	// Help_7: Of course, you can't let the Old One's Army destroy the Eternia Crystal! This will have catastrophic consequences for my home world of Etheria!
-	// Help_8: You can place defenses at the cost of 10 Etherian mana. Once placed, the Eternia Crystal will release some of this mana. Otherwise, you will need to defeat enemies to get more.
-	// Help_9: With the help of the defenses, you will have to repel several waves of invaders who are attempting to destroy both you and the Eternia Crystal!
-	// Help_10: If you successfully repel the invasion, you'll be awarded with more Defender Medals, which you can bring to me to purchase more artifacts and some other special rewards!
-	// Help_11: I've also heard rumors that the power of the artifacts themselves may be further unlocked if you defeat the Old One's Army. Perhaps you could even use them any time you wish!
+	Help_1: Det første du bliver nødt til at vide om er de specielle forsvars-artifakter jeg sælger, men kun hvis du har nogle Forsvars-Medaljer!
+	Help_2: Du kan bruge de her artifakter til at lave fælder og defensive fæstninger. Dette kræver Etherisk mana - en unik energi som kun bliver dropped af medlemmerne af Old One's Army!
+	Help_3: Det er ganske simpelt at udfordre Old One's Army. De bliver tiltrukket af energien fra Eternia-Krystalen, og det kan bruges til at lokke dem ud.
+	Help_4: For at placere en Eternia-Krystal skal du skaffe dig en Eternia-Krystal og en stander til at holde den på. Af ren sammentræf kan du købe dem fra mig!
+	Help_5: Du bliver nødt til at sætte standeren til din Eternia-Krystal op i et ret åbent og fladt område. Det ville sikkert blive meget svært at forsvare hvis du satte en masse vægge og andet!
+	Help_6: Så snart din stander er sat op, skal du bare interagere med den mens du holder din Eternia-Krystal, og derefter forbered dig på kamp!
+	Help_7: Selfølgelig kan du heller ikke lade Old One's Army ødelægge Eternia-Krystalen! Dette ville have katastrofiske konsekvenser for min hjemverden Etheria!
+	Help_8:  Du kan sætte forsvarsværker op med en kost på 10 Etherisk mana. Så snart dette er sat ned, Eternia-Krystalen vil udgive noget af sin mana. Ellers kan du få mere ved at besejre fjenderne.
+	Help_9: Med hjælp fra forsvarsværket skal du holde flere bølger af invasionen hæn, som prøver at destruere både dig og Eternia-Krystalen!
+	Help_10: Hvis det lykkedes dig at holde invasionen hen vil du blive belønnet med flere Forsvars-Medaljer, der kan bringes til mig for at købe flere artifakter og nogle andre, specielle belønninger!
+	Help_11: Jeg har også hørt rygter om at kraften fra selve artifakterne kan blive åbnes yderligere hvis du besejre Old One's Army. Måske kunne du endda bruge dem når som helst du ønsker!
 }
 
 GuideHelpText: {
-	// Help_1063: Normally I'd try to teach you all about the Old One's Army, but you should probably ask {Bartender} about that.
-	// Help_1064: When the moon goes red, the water becomes like blood. Creatures submerged within may become grotesque and malicious.
-	// Help_1065: You can even remove people from their home from the housing interface! <right> the banner hanging in their house. You can also <left> to assign them to a new home.
+	Help_1063: Normalt ville jeg prøve at lære dig alt jeg ved om Old One's Army, men du bør hellere spørge {Bartender} om det.
+	Help_1064: Når månen bliver rød bliver vandet som blod. Væsener, der bliver nedsænket i det kunne ende med at blive groteske og ondskabsfulde.
+	Help_1065: Du kan endda fjerne folk fra deres hjem ved at bruge BoligPortalen! <right> banneret, der hænger i deres hus. Du kan også <left> for at tildele dem et nyt hjem.
 }
 
 GuideHelpTextSpecific: {
-	// Help_1100: I hear a race of lizardmen live in the jungle. Maybe you can get the attention of one by felling a giant beast of the jungle?
+	Help_1100: Jeg har hørt at en race reptil-folk bor i junglen. Måske kunne du fange opmærksomhed fra en af dem ved at fælde et af junglens mægtige bæster?
 	// Help_1101: I hear there's a woman out there well-versed in fighting back the forces you just unleashed. Maybe if you prove yourself, you can get her attention.
 	// Help_1102: Machines aren't so bad. Maybe we can build one of our own, if we can just get some explosive weaponry from the jungle...
 	// Help_1103: I once met a stylist in this region. She went off adventuring underground and that was the last I saw of her. Wonder what became of her?
