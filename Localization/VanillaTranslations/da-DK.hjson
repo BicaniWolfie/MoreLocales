@@ -2722,38 +2722,38 @@ SlimeCopperChatter: {
 
 BestiaryGirlSpecialText: {
 	Party: Så øh... jeg kan ikke passe hatten - beklager. Jeg bliver dog stadig til festen, bare rolig!
-	// Graveyard1: My instincts are totally going wild. I really need to get out of here!
-	// Graveyard2: Ok, like, this place is totally freaky. It makes my fur stand on end!
-	// Windy1: Running in the wind makes me feel so free and wild. Totes try it sometime!
-	// Windy2: The breeze blows through my hair, it's, like, woah.
-	// Storm1: Eek!! You have NO idea how much thunder hurts my sensitive ears.
-	// Storm2: Is it over yet? I have this, like, irrational fear of thunderstorms.
-	// Rain1: Staaaap! Ugh! Not you, this lame rain.
-	// Rain2: For real!? I can't STAND being wet! It's gross.
+	Graveyard1: Mine instinker løber fuldkommen løbsk lige nu. Jeg må virkelig komme væk herfra!
+	Graveyard2: Ok, så det her sted er, ligesom, totalt skræmmende. Det får min pels til at stå på række!
+	Windy1: Jeg føler mig så vild og fri når jeg løber i blæsten. Klart noget du skal prøve!
+	Windy2: Brisen blæser blidt gennem håret på mig. Der er bare sådan... woah.
+	Storm1: Aah!! Du har INGEN ide hvor ondt torden gør i mine sensitive øre.
+	Storm2: Er det overstået? Tror jeg har en en form for irrationel frygt for tordenstorme.
+	Rain1: Stååååp! Ugh! Ikk' dig - denne her åndsvage regn.
+	Rain2: Seriøst!? Jeg kan ikke FORDRAGE at blive våd. Det' klamt.
 }
 
 BartenderHelpText: {
-	// Help_1: The first thing you need to know about are the special defensive artifacts I've got for sale, but only if you've got some Defender Medals!
-	// Help_2: You can use these artifacts to create traps and defensive towers. Doing so consumes Etherian mana, a special energy dropped only by members of the Old One's Army!
-	// Help_3: Challenging the Old One's Army is rather simple. They are attracted to the power of the Eternia Crystals, and that can be used to bait them out.
-	// Help_4: To place an Eternia Crystal, you must obtain an Eternia Crystal and a stand to put it in. It just so happens, you can buy em from me!
-	// Help_5: You'll want to place your Eternia Crystal stand in a pretty open, flat area. Lots of walls and stuff might make it pretty difficult to protect!
-	// Help_6: Once your stand is set up, just interact with it while holding an Eternia Crystal, and prepare for a fight!
-	// Help_7: Of course, you can't let the Old One's Army destroy the Eternia Crystal! This will have catastrophic consequences for my home world of Etheria!
-	// Help_8: You can place defenses at the cost of 10 Etherian mana. Once placed, the Eternia Crystal will release some of this mana. Otherwise, you will need to defeat enemies to get more.
-	// Help_9: With the help of the defenses, you will have to repel several waves of invaders who are attempting to destroy both you and the Eternia Crystal!
-	// Help_10: If you successfully repel the invasion, you'll be awarded with more Defender Medals, which you can bring to me to purchase more artifacts and some other special rewards!
-	// Help_11: I've also heard rumors that the power of the artifacts themselves may be further unlocked if you defeat the Old One's Army. Perhaps you could even use them any time you wish!
+	Help_1: Det første du bliver nødt til at vide om er de specielle forsvars-artifakter jeg sælger, men kun hvis du har nogle Forsvars-Medaljer!
+	Help_2: Du kan bruge de her artifakter til at lave fælder og defensive fæstninger. Dette kræver Etherisk mana - en unik energi som kun bliver dropped af medlemmerne af Old One's Army!
+	Help_3: Det er ganske simpelt at udfordre Old One's Army. De bliver tiltrukket af energien fra Eternia-Krystalen, og det kan bruges til at lokke dem ud.
+	Help_4: For at placere en Eternia-Krystal skal du skaffe dig en Eternia-Krystal og en stander til at holde den på. Af ren sammentræf kan du købe dem fra mig!
+	Help_5: Du bliver nødt til at sætte standeren til din Eternia-Krystal op i et ret åbent og fladt område. Det ville sikkert blive meget svært at forsvare hvis du satte en masse vægge og andet!
+	Help_6: Så snart din stander er sat op, skal du bare interagere med den mens du holder din Eternia-Krystal, og derefter forbered dig på kamp!
+	Help_7: Selfølgelig kan du heller ikke lade Old One's Army ødelægge Eternia-Krystalen! Dette ville have katastrofiske konsekvenser for min hjemverden Etheria!
+	Help_8:  Du kan sætte forsvarsværker op med en kost på 10 Etherisk mana. Så snart dette er sat ned, Eternia-Krystalen vil udgive noget af sin mana. Ellers kan du få mere ved at besejre fjenderne.
+	Help_9: Med hjælp fra forsvarsværket skal du holde flere bølger af invasionen hæn, som prøver at destruere både dig og Eternia-Krystalen!
+	Help_10: Hvis det lykkedes dig at holde invasionen hen vil du blive belønnet med flere Forsvars-Medaljer, der kan bringes til mig for at købe flere artifakter og nogle andre, specielle belønninger!
+	Help_11: Jeg har også hørt rygter om at kraften fra selve artifakterne kan blive åbnes yderligere hvis du besejre Old One's Army. Måske kunne du endda bruge dem når som helst du ønsker!
 }
 
 GuideHelpText: {
-	// Help_1063: Normally I'd try to teach you all about the Old One's Army, but you should probably ask {Bartender} about that.
-	// Help_1064: When the moon goes red, the water becomes like blood. Creatures submerged within may become grotesque and malicious.
-	// Help_1065: You can even remove people from their home from the housing interface! <right> the banner hanging in their house. You can also <left> to assign them to a new home.
+	Help_1063: Normalt ville jeg prøve at lære dig alt jeg ved om Old One's Army, men du bør hellere spørge {Bartender} om det.
+	Help_1064: Når månen bliver rød bliver vandet som blod. Væsener, der bliver nedsænket i det kunne ende med at blive groteske og ondskabsfulde.
+	Help_1065: Du kan endda fjerne folk fra deres hjem ved at bruge BoligPortalen! <right> banneret, der hænger i deres hus. Du kan også <left> for at tildele dem et nyt hjem.
 }
 
 GuideHelpTextSpecific: {
-	// Help_1100: I hear a race of lizardmen live in the jungle. Maybe you can get the attention of one by felling a giant beast of the jungle?
+	Help_1100: Jeg har hørt at en race reptil-folk bor i junglen. Måske kunne du fange opmærksomhed fra en af dem ved at fælde et af junglens mægtige bæster?
 	// Help_1101: I hear there's a woman out there well-versed in fighting back the forces you just unleashed. Maybe if you prove yourself, you can get her attention.
 	// Help_1102: Machines aren't so bad. Maybe we can build one of our own, if we can just get some explosive weaponry from the jungle...
 	// Help_1103: I once met a stylist in this region. She went off adventuring underground and that was the last I saw of her. Wonder what became of her?
